@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="Com_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Seg_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="display" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="xor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="DMA_Seg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="DMA_BC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ZeroTerminal_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="BUS_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="or_bus" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="DMA_Com" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="bLED_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ClkInternal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="display_Seg_Driver_L" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="display_Seg_Driver_L_CONTROL_REG" address="0x4000647B" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="display_Com_Driver" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="display_Com_Driver_CONTROL_REG" address="0x4000647A" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="or_internal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  </block>
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="sw" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="SW_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+</blockRegMap>
