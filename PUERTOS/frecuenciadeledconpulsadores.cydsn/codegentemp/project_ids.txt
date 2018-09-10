@@ -1,0 +1,7 @@
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\Workspace01\Design01.cydsn\Design01.cyprj|ba152321-ef07-4193-8b24-2d983f8b7752
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|fd32fb95-5d09-4213-959f-401f251d32ab
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|03768337-313b-487b-a67a-b5661761b11c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7838a214-bfe2-44e0-81d0-ad52a56c5359
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|0acb14ce-8380-4742-9557-bf74564b7d33
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|5ea02371-5ec2-4b26-9f16-c8b30859cc04
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\Workspace01\frecuenciadeledconpulsadores.cydsn\frecuenciadeledconpulsadores.cyprj|4064a0e6-944e-4881-af47-8a9666706b14

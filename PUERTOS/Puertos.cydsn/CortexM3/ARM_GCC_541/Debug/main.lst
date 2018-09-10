@@ -1,0 +1,642 @@
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** 
+  15:main.c        **** uint8 aux=0;
+  16:main.c        **** 
+  17:main.c        **** int main(void)
+  18:main.c        **** {
+  28              		.loc 1 18 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  19:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 19 0
+  38              		.syntax unified
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 2
+
+
+  39              	@ 19 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+  42              		.thumb
+  43              		.syntax unified
+  44              	.L2:
+  20:main.c        **** 
+  21:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  22:main.c        **** 
+  23:main.c        ****     for(;;)
+  24:main.c        ****     {
+  25:main.c        ****      while(swi_Read()==1){};
+  45              		.loc 1 25 0 discriminator 1
+  46 0004 FFF7FEFF 		bl	swi_Read
+  47              	.LVL0:
+  48 0008 0128     		cmp	r0, #1
+  49 000a FBD0     		beq	.L2
+  26:main.c        ****       led_Write(~led_Read());
+  50              		.loc 1 26 0
+  51 000c FFF7FEFF 		bl	led_Read
+  52              	.LVL1:
+  53 0010 C043     		mvns	r0, r0
+  54 0012 C0B2     		uxtb	r0, r0
+  55 0014 FFF7FEFF 		bl	led_Write
+  56              	.LVL2:
+  27:main.c        ****       CyDelay(100);
+  57              		.loc 1 27 0
+  58 0018 6420     		movs	r0, #100
+  59 001a FFF7FEFF 		bl	CyDelay
+  60              	.LVL3:
+  61              	.L3:
+  28:main.c        ****     while(swi_Read()==0){};
+  62              		.loc 1 28 0 discriminator 1
+  63 001e FFF7FEFF 		bl	swi_Read
+  64              	.LVL4:
+  65 0022 0028     		cmp	r0, #0
+  66 0024 FBD0     		beq	.L3
+  67 0026 EDE7     		b	.L2
+  68              		.cfi_endproc
+  69              	.LFE63:
+  70              		.size	main, .-main
+  71              		.global	aux
+  72              		.bss
+  73              		.type	aux, %object
+  74              		.size	aux, 1
+  75              	aux:
+  76 0000 00       		.space	1
+  77              		.text
+  78              	.Letext0:
+  79              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  80              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  81              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  82              		.file 5 "Generated_Source\\PSoC5/swi.h"
+  83              		.file 6 "Generated_Source\\PSoC5/led.h"
+  84              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
+  85              		.file 8 "Generated_Source\\PSoC5/core_cm3.h"
+  86              		.section	.debug_info,"",%progbits
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 3
+
+
+  87              	.Ldebug_info0:
+  88 0000 4D010000 		.4byte	0x14d
+  89 0004 0400     		.2byte	0x4
+  90 0006 00000000 		.4byte	.Ldebug_abbrev0
+  91 000a 04       		.byte	0x4
+  92 000b 01       		.uleb128 0x1
+  93 000c 2C000000 		.4byte	.LASF22
+  94 0010 0C       		.byte	0xc
+  95 0011 20000000 		.4byte	.LASF23
+  96 0015 63010000 		.4byte	.LASF24
+  97 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  98 001d 00000000 		.4byte	0
+  99 0021 00000000 		.4byte	.Ldebug_line0
+ 100 0025 02       		.uleb128 0x2
+ 101 0026 01       		.byte	0x1
+ 102 0027 06       		.byte	0x6
+ 103 0028 41010000 		.4byte	.LASF0
+ 104 002c 02       		.uleb128 0x2
+ 105 002d 01       		.byte	0x1
+ 106 002e 08       		.byte	0x8
+ 107 002f FA000000 		.4byte	.LASF1
+ 108 0033 02       		.uleb128 0x2
+ 109 0034 02       		.byte	0x2
+ 110 0035 05       		.byte	0x5
+ 111 0036 B3010000 		.4byte	.LASF2
+ 112 003a 02       		.uleb128 0x2
+ 113 003b 02       		.byte	0x2
+ 114 003c 07       		.byte	0x7
+ 115 003d 00000000 		.4byte	.LASF3
+ 116 0041 03       		.uleb128 0x3
+ 117 0042 59010000 		.4byte	.LASF9
+ 118 0046 02       		.byte	0x2
+ 119 0047 3F       		.byte	0x3f
+ 120 0048 4C000000 		.4byte	0x4c
+ 121 004c 02       		.uleb128 0x2
+ 122 004d 04       		.byte	0x4
+ 123 004e 05       		.byte	0x5
+ 124 004f 0D010000 		.4byte	.LASF4
+ 125 0053 02       		.uleb128 0x2
+ 126 0054 04       		.byte	0x4
+ 127 0055 07       		.byte	0x7
+ 128 0056 C8000000 		.4byte	.LASF5
+ 129 005a 02       		.uleb128 0x2
+ 130 005b 08       		.byte	0x8
+ 131 005c 05       		.byte	0x5
+ 132 005d 1D010000 		.4byte	.LASF6
+ 133 0061 02       		.uleb128 0x2
+ 134 0062 08       		.byte	0x8
+ 135 0063 07       		.byte	0x7
+ 136 0064 DA000000 		.4byte	.LASF7
+ 137 0068 04       		.uleb128 0x4
+ 138 0069 04       		.byte	0x4
+ 139 006a 05       		.byte	0x5
+ 140 006b 696E7400 		.ascii	"int\000"
+ 141 006f 02       		.uleb128 0x2
+ 142 0070 04       		.byte	0x4
+ 143 0071 07       		.byte	0x7
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 4
+
+
+ 144 0072 13000000 		.4byte	.LASF8
+ 145 0076 03       		.uleb128 0x3
+ 146 0077 BD010000 		.4byte	.LASF10
+ 147 007b 03       		.byte	0x3
+ 148 007c 2C       		.byte	0x2c
+ 149 007d 41000000 		.4byte	0x41
+ 150 0081 05       		.uleb128 0x5
+ 151 0082 C2000000 		.4byte	.LASF11
+ 152 0086 04       		.byte	0x4
+ 153 0087 E401     		.2byte	0x1e4
+ 154 0089 2C000000 		.4byte	0x2c
+ 155 008d 02       		.uleb128 0x2
+ 156 008e 04       		.byte	0x4
+ 157 008f 04       		.byte	0x4
+ 158 0090 AD010000 		.4byte	.LASF12
+ 159 0094 02       		.uleb128 0x2
+ 160 0095 08       		.byte	0x8
+ 161 0096 04       		.byte	0x4
+ 162 0097 16010000 		.4byte	.LASF13
+ 163 009b 02       		.uleb128 0x2
+ 164 009c 01       		.byte	0x1
+ 165 009d 08       		.byte	0x8
+ 166 009e 08010000 		.4byte	.LASF14
+ 167 00a2 02       		.uleb128 0x2
+ 168 00a3 04       		.byte	0x4
+ 169 00a4 07       		.byte	0x7
+ 170 00a5 CF010000 		.4byte	.LASF15
+ 171 00a9 02       		.uleb128 0x2
+ 172 00aa 08       		.byte	0x8
+ 173 00ab 04       		.byte	0x4
+ 174 00ac 4D010000 		.4byte	.LASF16
+ 175 00b0 06       		.uleb128 0x6
+ 176 00b1 27000000 		.4byte	.LASF25
+ 177 00b5 01       		.byte	0x1
+ 178 00b6 11       		.byte	0x11
+ 179 00b7 68000000 		.4byte	0x68
+ 180 00bb 00000000 		.4byte	.LFB63
+ 181 00bf 28000000 		.4byte	.LFE63-.LFB63
+ 182 00c3 01       		.uleb128 0x1
+ 183 00c4 9C       		.byte	0x9c
+ 184 00c5 02010000 		.4byte	0x102
+ 185 00c9 07       		.uleb128 0x7
+ 186 00ca 08000000 		.4byte	.LVL0
+ 187 00ce 24010000 		.4byte	0x124
+ 188 00d2 07       		.uleb128 0x7
+ 189 00d3 10000000 		.4byte	.LVL1
+ 190 00d7 2F010000 		.4byte	0x12f
+ 191 00db 07       		.uleb128 0x7
+ 192 00dc 18000000 		.4byte	.LVL2
+ 193 00e0 3A010000 		.4byte	0x13a
+ 194 00e4 08       		.uleb128 0x8
+ 195 00e5 1E000000 		.4byte	.LVL3
+ 196 00e9 45010000 		.4byte	0x145
+ 197 00ed F8000000 		.4byte	0xf8
+ 198 00f1 09       		.uleb128 0x9
+ 199 00f2 01       		.uleb128 0x1
+ 200 00f3 50       		.byte	0x50
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 5
+
+
+ 201 00f4 02       		.uleb128 0x2
+ 202 00f5 08       		.byte	0x8
+ 203 00f6 64       		.byte	0x64
+ 204 00f7 00       		.byte	0
+ 205 00f8 07       		.uleb128 0x7
+ 206 00f9 22000000 		.4byte	.LVL4
+ 207 00fd 24010000 		.4byte	0x124
+ 208 0101 00       		.byte	0
+ 209 0102 0A       		.uleb128 0xa
+ 210 0103 34010000 		.4byte	.LASF17
+ 211 0107 08       		.byte	0x8
+ 212 0108 1207     		.2byte	0x712
+ 213 010a 0E010000 		.4byte	0x10e
+ 214 010e 0B       		.uleb128 0xb
+ 215 010f 76000000 		.4byte	0x76
+ 216 0113 0C       		.uleb128 0xc
+ 217 0114 61757800 		.ascii	"aux\000"
+ 218 0118 01       		.byte	0x1
+ 219 0119 0F       		.byte	0xf
+ 220 011a 81000000 		.4byte	0x81
+ 221 011e 05       		.uleb128 0x5
+ 222 011f 03       		.byte	0x3
+ 223 0120 00000000 		.4byte	aux
+ 224 0124 0D       		.uleb128 0xd
+ 225 0125 2B010000 		.4byte	.LASF18
+ 226 0129 2B010000 		.4byte	.LASF18
+ 227 012d 05       		.byte	0x5
+ 228 012e 29       		.byte	0x29
+ 229 012f 0D       		.uleb128 0xd
+ 230 0130 F1000000 		.4byte	.LASF19
+ 231 0134 F1000000 		.4byte	.LASF19
+ 232 0138 06       		.byte	0x6
+ 233 0139 29       		.byte	0x29
+ 234 013a 0D       		.uleb128 0xd
+ 235 013b C5010000 		.4byte	.LASF20
+ 236 013f C5010000 		.4byte	.LASF20
+ 237 0143 06       		.byte	0x6
+ 238 0144 26       		.byte	0x26
+ 239 0145 0D       		.uleb128 0xd
+ 240 0146 BA000000 		.4byte	.LASF21
+ 241 014a BA000000 		.4byte	.LASF21
+ 242 014e 07       		.byte	0x7
+ 243 014f 76       		.byte	0x76
+ 244 0150 00       		.byte	0
+ 245              		.section	.debug_abbrev,"",%progbits
+ 246              	.Ldebug_abbrev0:
+ 247 0000 01       		.uleb128 0x1
+ 248 0001 11       		.uleb128 0x11
+ 249 0002 01       		.byte	0x1
+ 250 0003 25       		.uleb128 0x25
+ 251 0004 0E       		.uleb128 0xe
+ 252 0005 13       		.uleb128 0x13
+ 253 0006 0B       		.uleb128 0xb
+ 254 0007 03       		.uleb128 0x3
+ 255 0008 0E       		.uleb128 0xe
+ 256 0009 1B       		.uleb128 0x1b
+ 257 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 6
+
+
+ 258 000b 55       		.uleb128 0x55
+ 259 000c 17       		.uleb128 0x17
+ 260 000d 11       		.uleb128 0x11
+ 261 000e 01       		.uleb128 0x1
+ 262 000f 10       		.uleb128 0x10
+ 263 0010 17       		.uleb128 0x17
+ 264 0011 00       		.byte	0
+ 265 0012 00       		.byte	0
+ 266 0013 02       		.uleb128 0x2
+ 267 0014 24       		.uleb128 0x24
+ 268 0015 00       		.byte	0
+ 269 0016 0B       		.uleb128 0xb
+ 270 0017 0B       		.uleb128 0xb
+ 271 0018 3E       		.uleb128 0x3e
+ 272 0019 0B       		.uleb128 0xb
+ 273 001a 03       		.uleb128 0x3
+ 274 001b 0E       		.uleb128 0xe
+ 275 001c 00       		.byte	0
+ 276 001d 00       		.byte	0
+ 277 001e 03       		.uleb128 0x3
+ 278 001f 16       		.uleb128 0x16
+ 279 0020 00       		.byte	0
+ 280 0021 03       		.uleb128 0x3
+ 281 0022 0E       		.uleb128 0xe
+ 282 0023 3A       		.uleb128 0x3a
+ 283 0024 0B       		.uleb128 0xb
+ 284 0025 3B       		.uleb128 0x3b
+ 285 0026 0B       		.uleb128 0xb
+ 286 0027 49       		.uleb128 0x49
+ 287 0028 13       		.uleb128 0x13
+ 288 0029 00       		.byte	0
+ 289 002a 00       		.byte	0
+ 290 002b 04       		.uleb128 0x4
+ 291 002c 24       		.uleb128 0x24
+ 292 002d 00       		.byte	0
+ 293 002e 0B       		.uleb128 0xb
+ 294 002f 0B       		.uleb128 0xb
+ 295 0030 3E       		.uleb128 0x3e
+ 296 0031 0B       		.uleb128 0xb
+ 297 0032 03       		.uleb128 0x3
+ 298 0033 08       		.uleb128 0x8
+ 299 0034 00       		.byte	0
+ 300 0035 00       		.byte	0
+ 301 0036 05       		.uleb128 0x5
+ 302 0037 16       		.uleb128 0x16
+ 303 0038 00       		.byte	0
+ 304 0039 03       		.uleb128 0x3
+ 305 003a 0E       		.uleb128 0xe
+ 306 003b 3A       		.uleb128 0x3a
+ 307 003c 0B       		.uleb128 0xb
+ 308 003d 3B       		.uleb128 0x3b
+ 309 003e 05       		.uleb128 0x5
+ 310 003f 49       		.uleb128 0x49
+ 311 0040 13       		.uleb128 0x13
+ 312 0041 00       		.byte	0
+ 313 0042 00       		.byte	0
+ 314 0043 06       		.uleb128 0x6
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 7
+
+
+ 315 0044 2E       		.uleb128 0x2e
+ 316 0045 01       		.byte	0x1
+ 317 0046 3F       		.uleb128 0x3f
+ 318 0047 19       		.uleb128 0x19
+ 319 0048 03       		.uleb128 0x3
+ 320 0049 0E       		.uleb128 0xe
+ 321 004a 3A       		.uleb128 0x3a
+ 322 004b 0B       		.uleb128 0xb
+ 323 004c 3B       		.uleb128 0x3b
+ 324 004d 0B       		.uleb128 0xb
+ 325 004e 27       		.uleb128 0x27
+ 326 004f 19       		.uleb128 0x19
+ 327 0050 49       		.uleb128 0x49
+ 328 0051 13       		.uleb128 0x13
+ 329 0052 8701     		.uleb128 0x87
+ 330 0054 19       		.uleb128 0x19
+ 331 0055 11       		.uleb128 0x11
+ 332 0056 01       		.uleb128 0x1
+ 333 0057 12       		.uleb128 0x12
+ 334 0058 06       		.uleb128 0x6
+ 335 0059 40       		.uleb128 0x40
+ 336 005a 18       		.uleb128 0x18
+ 337 005b 9742     		.uleb128 0x2117
+ 338 005d 19       		.uleb128 0x19
+ 339 005e 01       		.uleb128 0x1
+ 340 005f 13       		.uleb128 0x13
+ 341 0060 00       		.byte	0
+ 342 0061 00       		.byte	0
+ 343 0062 07       		.uleb128 0x7
+ 344 0063 898201   		.uleb128 0x4109
+ 345 0066 00       		.byte	0
+ 346 0067 11       		.uleb128 0x11
+ 347 0068 01       		.uleb128 0x1
+ 348 0069 31       		.uleb128 0x31
+ 349 006a 13       		.uleb128 0x13
+ 350 006b 00       		.byte	0
+ 351 006c 00       		.byte	0
+ 352 006d 08       		.uleb128 0x8
+ 353 006e 898201   		.uleb128 0x4109
+ 354 0071 01       		.byte	0x1
+ 355 0072 11       		.uleb128 0x11
+ 356 0073 01       		.uleb128 0x1
+ 357 0074 31       		.uleb128 0x31
+ 358 0075 13       		.uleb128 0x13
+ 359 0076 01       		.uleb128 0x1
+ 360 0077 13       		.uleb128 0x13
+ 361 0078 00       		.byte	0
+ 362 0079 00       		.byte	0
+ 363 007a 09       		.uleb128 0x9
+ 364 007b 8A8201   		.uleb128 0x410a
+ 365 007e 00       		.byte	0
+ 366 007f 02       		.uleb128 0x2
+ 367 0080 18       		.uleb128 0x18
+ 368 0081 9142     		.uleb128 0x2111
+ 369 0083 18       		.uleb128 0x18
+ 370 0084 00       		.byte	0
+ 371 0085 00       		.byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 8
+
+
+ 372 0086 0A       		.uleb128 0xa
+ 373 0087 34       		.uleb128 0x34
+ 374 0088 00       		.byte	0
+ 375 0089 03       		.uleb128 0x3
+ 376 008a 0E       		.uleb128 0xe
+ 377 008b 3A       		.uleb128 0x3a
+ 378 008c 0B       		.uleb128 0xb
+ 379 008d 3B       		.uleb128 0x3b
+ 380 008e 05       		.uleb128 0x5
+ 381 008f 49       		.uleb128 0x49
+ 382 0090 13       		.uleb128 0x13
+ 383 0091 3F       		.uleb128 0x3f
+ 384 0092 19       		.uleb128 0x19
+ 385 0093 3C       		.uleb128 0x3c
+ 386 0094 19       		.uleb128 0x19
+ 387 0095 00       		.byte	0
+ 388 0096 00       		.byte	0
+ 389 0097 0B       		.uleb128 0xb
+ 390 0098 35       		.uleb128 0x35
+ 391 0099 00       		.byte	0
+ 392 009a 49       		.uleb128 0x49
+ 393 009b 13       		.uleb128 0x13
+ 394 009c 00       		.byte	0
+ 395 009d 00       		.byte	0
+ 396 009e 0C       		.uleb128 0xc
+ 397 009f 34       		.uleb128 0x34
+ 398 00a0 00       		.byte	0
+ 399 00a1 03       		.uleb128 0x3
+ 400 00a2 08       		.uleb128 0x8
+ 401 00a3 3A       		.uleb128 0x3a
+ 402 00a4 0B       		.uleb128 0xb
+ 403 00a5 3B       		.uleb128 0x3b
+ 404 00a6 0B       		.uleb128 0xb
+ 405 00a7 49       		.uleb128 0x49
+ 406 00a8 13       		.uleb128 0x13
+ 407 00a9 3F       		.uleb128 0x3f
+ 408 00aa 19       		.uleb128 0x19
+ 409 00ab 02       		.uleb128 0x2
+ 410 00ac 18       		.uleb128 0x18
+ 411 00ad 00       		.byte	0
+ 412 00ae 00       		.byte	0
+ 413 00af 0D       		.uleb128 0xd
+ 414 00b0 2E       		.uleb128 0x2e
+ 415 00b1 00       		.byte	0
+ 416 00b2 3F       		.uleb128 0x3f
+ 417 00b3 19       		.uleb128 0x19
+ 418 00b4 3C       		.uleb128 0x3c
+ 419 00b5 19       		.uleb128 0x19
+ 420 00b6 6E       		.uleb128 0x6e
+ 421 00b7 0E       		.uleb128 0xe
+ 422 00b8 03       		.uleb128 0x3
+ 423 00b9 0E       		.uleb128 0xe
+ 424 00ba 3A       		.uleb128 0x3a
+ 425 00bb 0B       		.uleb128 0xb
+ 426 00bc 3B       		.uleb128 0x3b
+ 427 00bd 0B       		.uleb128 0xb
+ 428 00be 00       		.byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 9
+
+
+ 429 00bf 00       		.byte	0
+ 430 00c0 00       		.byte	0
+ 431              		.section	.debug_aranges,"",%progbits
+ 432 0000 1C000000 		.4byte	0x1c
+ 433 0004 0200     		.2byte	0x2
+ 434 0006 00000000 		.4byte	.Ldebug_info0
+ 435 000a 04       		.byte	0x4
+ 436 000b 00       		.byte	0
+ 437 000c 0000     		.2byte	0
+ 438 000e 0000     		.2byte	0
+ 439 0010 00000000 		.4byte	.LFB63
+ 440 0014 28000000 		.4byte	.LFE63-.LFB63
+ 441 0018 00000000 		.4byte	0
+ 442 001c 00000000 		.4byte	0
+ 443              		.section	.debug_ranges,"",%progbits
+ 444              	.Ldebug_ranges0:
+ 445 0000 00000000 		.4byte	.LFB63
+ 446 0004 28000000 		.4byte	.LFE63
+ 447 0008 00000000 		.4byte	0
+ 448 000c 00000000 		.4byte	0
+ 449              		.section	.debug_line,"",%progbits
+ 450              	.Ldebug_line0:
+ 451 0000 8B010000 		.section	.debug_str,"MS",%progbits,1
+ 451      02006901 
+ 451      00000201 
+ 451      FB0E0D00 
+ 451      01010101 
+ 452              	.LASF3:
+ 453 0000 73686F72 		.ascii	"short unsigned int\000"
+ 453      7420756E 
+ 453      7369676E 
+ 453      65642069 
+ 453      6E7400
+ 454              	.LASF8:
+ 455 0013 756E7369 		.ascii	"unsigned int\000"
+ 455      676E6564 
+ 455      20696E74 
+ 455      00
+ 456              	.LASF23:
+ 457 0020 6D61696E 		.ascii	"main.c\000"
+ 457      2E6300
+ 458              	.LASF25:
+ 459 0027 6D61696E 		.ascii	"main\000"
+ 459      00
+ 460              	.LASF22:
+ 461 002c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 461      43313120 
+ 461      352E342E 
+ 461      31203230 
+ 461      31363036 
+ 462 005f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 462      20726576 
+ 462      6973696F 
+ 462      6E203233 
+ 462      37373135 
+ 463 0092 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 463      66756E63 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 10
+
+
+ 463      74696F6E 
+ 463      2D736563 
+ 463      74696F6E 
+ 464              	.LASF21:
+ 465 00ba 43794465 		.ascii	"CyDelay\000"
+ 465      6C617900 
+ 466              	.LASF11:
+ 467 00c2 75696E74 		.ascii	"uint8\000"
+ 467      3800
+ 468              	.LASF5:
+ 469 00c8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 469      20756E73 
+ 469      69676E65 
+ 469      6420696E 
+ 469      7400
+ 470              	.LASF7:
+ 471 00da 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 471      206C6F6E 
+ 471      6720756E 
+ 471      7369676E 
+ 471      65642069 
+ 472              	.LASF19:
+ 473 00f1 6C65645F 		.ascii	"led_Read\000"
+ 473      52656164 
+ 473      00
+ 474              	.LASF1:
+ 475 00fa 756E7369 		.ascii	"unsigned char\000"
+ 475      676E6564 
+ 475      20636861 
+ 475      7200
+ 476              	.LASF14:
+ 477 0108 63686172 		.ascii	"char\000"
+ 477      00
+ 478              	.LASF4:
+ 479 010d 6C6F6E67 		.ascii	"long int\000"
+ 479      20696E74 
+ 479      00
+ 480              	.LASF13:
+ 481 0116 646F7562 		.ascii	"double\000"
+ 481      6C6500
+ 482              	.LASF6:
+ 483 011d 6C6F6E67 		.ascii	"long long int\000"
+ 483      206C6F6E 
+ 483      6720696E 
+ 483      7400
+ 484              	.LASF18:
+ 485 012b 7377695F 		.ascii	"swi_Read\000"
+ 485      52656164 
+ 485      00
+ 486              	.LASF17:
+ 487 0134 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 487      52784275 
+ 487      66666572 
+ 487      00
+ 488              	.LASF0:
+ 489 0141 7369676E 		.ascii	"signed char\000"
+ 489      65642063 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\ccMP62na.s 			page 11
+
+
+ 489      68617200 
+ 490              	.LASF16:
+ 491 014d 6C6F6E67 		.ascii	"long double\000"
+ 491      20646F75 
+ 491      626C6500 
+ 492              	.LASF9:
+ 493 0159 5F5F696E 		.ascii	"__int32_t\000"
+ 493      7433325F 
+ 493      7400
+ 494              	.LASF24:
+ 495 0163 433A5C55 		.ascii	"C:\\Users\\Nicolas Zamora\\Documents\\PSoC Creator\\"
+ 495      73657273 
+ 495      5C4E6963 
+ 495      6F6C6173 
+ 495      205A616D 
+ 496 0192 576F726B 		.ascii	"Workspace01\\Design01.cydsn\000"
+ 496      73706163 
+ 496      6530315C 
+ 496      44657369 
+ 496      676E3031 
+ 497              	.LASF12:
+ 498 01ad 666C6F61 		.ascii	"float\000"
+ 498      7400
+ 499              	.LASF2:
+ 500 01b3 73686F72 		.ascii	"short int\000"
+ 500      7420696E 
+ 500      7400
+ 501              	.LASF10:
+ 502 01bd 696E7433 		.ascii	"int32_t\000"
+ 502      325F7400 
+ 503              	.LASF20:
+ 504 01c5 6C65645F 		.ascii	"led_Write\000"
+ 504      57726974 
+ 504      6500
+ 505              	.LASF15:
+ 506 01cf 73697A65 		.ascii	"sizetype\000"
+ 506      74797065 
+ 506      00
+ 507              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,28 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2018-08-31T16:03:16Z")
+ (DESIGN "Design01")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Design01")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT LED1\(0\).pad_out LED1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Net_62.q LED1\(0\).pin_input (6.354:6.354:6.354))
+    (INTERCONNECT \\Timer_1\:TimerHW\\.tc Net_62.clock_0 (7.312:7.312:7.312))
+    (INTERCONNECT __ONE__.q \\Timer_1\:TimerHW\\.enable (0.000:0.000:0.000))
+    (INTERCONNECT __ONE__.q \\Timer_2\:TimerHW\\.enable (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_ff_0 \\Timer_2\:TimerHW\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.dclk_glb_ff_1 \\Timer_1\:TimerHW\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT LED1\(0\).pad_out LED1\(0\)_PAD (0.000:0.000:0.000))
+    (INTERCONNECT LED1\(0\)_PAD LED1\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT LED2\(0\)_PAD LED2\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
