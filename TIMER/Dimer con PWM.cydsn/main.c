@@ -10,7 +10,9 @@
  * ========================================
 */
 #include "project.h"
-volatile uint8 count;
+uint16 count;
+uint8 de=1;
+/*
 CY_ISR(INT_sw){
     switch(sw_Read())
     {
@@ -31,11 +33,12 @@ CY_ISR(INT_sw){
     sw_ClearInterrupt();
     
 }
+    */
 int main(void)
 {
     LCD_Start();
     LCD_Position(0,3);
-    LCD_PrintString("valor pwm:");
+    LCD_PrintString("Valor PWM:");
     
     
     CyGlobalIntEnable; /* Enable global interrupts. */
@@ -43,19 +46,32 @@ int main(void)
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     
     PWM_Start();
-    sw_int_StartEx(INT_sw);
-    count=127;
+    count=150;
+    PWM_WriteCompare(count);
 
     for(;;)
     {
        /* Place your application code here. */
+       if (count==800){
+		de=0;
+	}
+	if(count==150){
+		de=1;
+	}
+         if(de==1){
+            count=count+25;
+        }else{
+            count=count-25;}
+        
+            while(PWM_STATUS_TC==0);
+            PWM_WriteCompare(count);
         LCD_Position(1,0);
         LCD_PrintString("            ");
         LCD_Position(1,0);
         LCD_PrintNumber(count);
+            
         CyDelay(1000);
         
     }
 }
-
-/* [] END OF FILE */
+         
