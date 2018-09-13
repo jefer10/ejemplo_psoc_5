@@ -1,0 +1,20 @@
+--------------- Rebuild Started: 08/17/2018 11:56:17 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:23:20: error: too few arguments to function 'led_Write'
+         led_Write(~led_Write());
+                    ^
+In file included from Generated_Source\PSoC5/project.h:25:0,
+                 from main.c:12:
+Generated_Source\PSoC5/led.h:38:9: note: declared here
+ void    led_Write(uint8 value);
+         ^
+main.c:27:9: error: 'dato' undeclared (first use in this function)
+         dato=swi_read();
+         ^
+main.c:27:9: note: each undeclared identifier is reported only once for each function it appears in
+main.c:27:14: warning: implicit declaration of function 'swi_read' [-Wimplicit-function-declaration]
+         dato=swi_read();
+              ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 08/17/2018 11:56:18 ---------------

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="LCD con Bloques personalizados-000">
+<ExpandedNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\TopDesign</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Pins</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Analog</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Clocks</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Interrupts</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\DMA</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\System</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Directives</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\Flash Security</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD_PERSONALIZADO.cydwr\EEPROM</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\Header Files</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\Header Files\cyapicallbacks.h</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\Source Files</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\Source Files\main.c</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\Generated_Source</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\TopDesign</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\TopDesign</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\IRS_SW.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_CustChars.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\sw.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.elf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.hex</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.map</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados.gpdsc</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados.rpt</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\IRS_SW.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_CustChars.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\Listing Files\sw.lst</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.elf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.hex</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CortexM3\ARM_GCC_541\Debug\LCD con Bloques personalizados.map</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados.gpdsc</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados.rpt</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\LCD con Bloques personalizados_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\PSoC 5LP Architecture TRM</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CY8C58LP Family Datasheet</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\System Reference Guides</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\System Reference Guides\cy_boot_v5_70</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CharLCD_v2_20.pdf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\cy_isr_v1_70.pdf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\cy_pins_v2_20.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>LCD con Bloques personalizados-000</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\PSoC 5LP Architecture TRM</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CY8C58LP Family Datasheet</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\System Reference Guides</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\System Reference Guides\cy_boot_v5_70</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\CharLCD_v2_20.pdf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\cy_isr_v1_70.pdf</v>
+<v>LCD con Bloques personalizados-000\LCD con Bloques personalizados\cy_pins_v2_20.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\LCD_PERSONALIZADO.cydwr" />
+<name v=".\main.c" />
+<name v=".\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="833, 416" SelectedTabbedMdiWindow="7d2cc814-e445-435f-b103-f2aff09e8950"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\LCD\LCD con Bloques personalizados.cydsn\LCD_PERSONALIZADO.cydwr" Guid="18560ec1-218f-4850-9a0b-8d01d14f8956" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\LCD\LCD con Bloques personalizados.cydsn\main.c" Guid="292ea2e9-2c35-49b1-84e7-b765afce339d" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\LCD\LCD con Bloques personalizados.cydsn\TopDesign\TopDesign.cysch" Guid="7d2cc814-e445-435f-b103-f2aff09e8950" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
