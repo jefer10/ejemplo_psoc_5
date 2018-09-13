@@ -1,0 +1,20 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2018-09-12T16:16:13Z")
+ (DESIGN "generador_de_senales")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "generador_de_senales")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT SW\(0\)_PAD SW\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT SW\(1\)_PAD SW\(1\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)

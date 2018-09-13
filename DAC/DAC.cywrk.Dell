@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="DAC\DAC\Source Files\main.c">
+<ExpandedNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\TopDesign</v>
+<v>DAC\DAC\DAC.cydwr</v>
+<v>DAC\DAC\DAC.cydwr\Pins</v>
+<v>DAC\DAC\DAC.cydwr\Analog</v>
+<v>DAC\DAC\DAC.cydwr\Clocks</v>
+<v>DAC\DAC\DAC.cydwr\Interrupts</v>
+<v>DAC\DAC\DAC.cydwr\DMA</v>
+<v>DAC\DAC\DAC.cydwr\System</v>
+<v>DAC\DAC\DAC.cydwr\Directives</v>
+<v>DAC\DAC\DAC.cydwr\Flash Security</v>
+<v>DAC\DAC\DAC.cydwr\EEPROM</v>
+<v>DAC\DAC\Header Files</v>
+<v>DAC\DAC\Header Files\cyapicallbacks.h</v>
+<v>DAC\DAC\Source Files</v>
+<v>DAC\DAC\Source Files\main.c</v>
+<v>DAC\DAC\Generated_Source</v>
+<v>DAC\DAC\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\TopDesign</v>
+<v>DAC\DAC\DAC.cydwr</v>
+<v>DAC\DAC\DAC.cydwr\Pins</v>
+<v>DAC\DAC\DAC.cydwr\Analog</v>
+<v>DAC\DAC\DAC.cydwr\Clocks</v>
+<v>DAC\DAC\DAC.cydwr\Interrupts</v>
+<v>DAC\DAC\DAC.cydwr\DMA</v>
+<v>DAC\DAC\DAC.cydwr\System</v>
+<v>DAC\DAC\DAC.cydwr\Directives</v>
+<v>DAC\DAC\DAC.cydwr\Flash Security</v>
+<v>DAC\DAC\DAC.cydwr\EEPROM</v>
+<v>DAC\DAC\Header Files</v>
+<v>DAC\DAC\Header Files\cyapicallbacks.h</v>
+<v>DAC\DAC\Source Files</v>
+<v>DAC\DAC\Source Files\main.c</v>
+<v>DAC\DAC\Generated_Source</v>
+<v>DAC\DAC\Generated_Source\PSoC5</v>
+<v>DAC\DAC\Generated_Source\PSoC5\ADC</v>
+<v>DAC\DAC\Generated_Source\PSoC5\ADC_IRQ</v>
+<v>DAC\DAC\Generated_Source\PSoC5\ADC_theACLK</v>
+<v>DAC\DAC\Generated_Source\PSoC5\cy_boot</v>
+<v>DAC\DAC\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>DAC\DAC\Generated_Source\PSoC5\LED</v>
+<v>DAC\DAC\Generated_Source\PSoC5\potenciometro</v>
+<v>DAC\DAC\Generated_Source\PSoC5\VDAC8</v>
+<v>DAC\DAC\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>DAC\DAC\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>DAC\DAC\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\TopDesign</v>
+<v>DAC\DAC\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\TopDesign</v>
+<v>DAC\DAC\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\DAC.gpdsc</v>
+<v>DAC\DAC\DAC.rpt</v>
+<v>DAC\DAC\DAC_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\DAC.gpdsc</v>
+<v>DAC\DAC\DAC.rpt</v>
+<v>DAC\DAC\DAC_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\PSoC 5LP Architecture TRM</v>
+<v>DAC\DAC\CY8C58LP Family Datasheet</v>
+<v>DAC\DAC\System Reference Guides</v>
+<v>DAC\DAC\System Reference Guides\cy_boot_v5_70</v>
+<v>DAC\DAC\ADC_SAR_v3_10.pdf</v>
+<v>DAC\DAC\cy_pins_v2_20</v>
+<v>DAC\DAC\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>DAC\DAC\VDAC8_v1_90.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DAC</v>
+<v>DAC\DAC</v>
+<v>DAC\DAC\PSoC 5LP Architecture TRM</v>
+<v>DAC\DAC\CY8C58LP Family Datasheet</v>
+<v>DAC\DAC\System Reference Guides</v>
+<v>DAC\DAC\System Reference Guides\cy_boot_v5_70</v>
+<v>DAC\DAC\ADC_SAR_v3_10.pdf</v>
+<v>DAC\DAC\cy_pins_v2_20</v>
+<v>DAC\DAC\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>DAC\DAC\VDAC8_v1_90.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\DAC.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\DAC.cydsn\DAC.cydwr" />
+<name v=".\DAC.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="884, 459" SelectedTabbedMdiWindow="87db36fa-4bef-45c8-b5c0-54ddc9119f9e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="b64f67f6-86f2-44ca-877a-1b96a02589c5" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\DAC\DAC.cydsn\TopDesign\TopDesign.cysch" Guid="87db36fa-4bef-45c8-b5c0-54ddc9119f9e" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\DAC\DAC.cydsn\DAC.cydwr" Guid="04b3f384-a692-4b90-8e6b-855ea669ba5a" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\DAC\DAC.cydsn\main.c" Guid="5168b986-fcf9-4ad6-9250-4ee653247da4" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

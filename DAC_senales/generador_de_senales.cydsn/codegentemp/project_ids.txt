@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9d745b09-8ed4-4147-9d8b-a2ad47ad53d6
+C:\Users\Dell\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|bf43d137-64ee-4a58-b755-af8aed93805f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7c227b3e-101b-4003-82a1-9cb2de7859e3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|39115ff1-64e7-465f-82e5-ab70ad69822b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|70d0f5fa-8386-4b23-8907-e8d9f239121b
+C:\Users\Dell\Documents\PSoC Creator\DAC_senales\generador_de_senales.cydsn\generador_de_senales.cyprj|1b2ae4d0-a760-4001-803c-233746c1c666
