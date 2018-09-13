@@ -2,7 +2,7 @@
 --	Conversion of Dimer con PWM.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Sep 12 13:26:53 2018
+--	Wed Sep 12 20:00:21 2018
 --
 
 USE cypress.cypress.all;
@@ -497,16 +497,11 @@ zero <=  ('0') ;
 \PWM:PWMUDB:dith_count_0\\D\ <= ((not \PWM:PWMUDB:dith_count_0\ and \PWM:PWMUDB:tc_i\)
 	OR (not \PWM:PWMUDB:tc_i\ and \PWM:PWMUDB:dith_count_0\));
 
-\PWM:PWMUDB:cmp1_status\ <= ((not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_less\)
-	OR (not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_eq\));
+\PWM:PWMUDB:cmp1_status\ <= ((not \PWM:PWMUDB:prevCompare1\ and \PWM:PWMUDB:cmp1_less\));
 
 \PWM:PWMUDB:status_2\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:tc_i\));
 
-\PWM:PWMUDB:pwm_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_less\)
-	OR (\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_eq\));
-
-\PWM:PWMUDB:cmp1\ <= (\PWM:PWMUDB:cmp1_less\
-	OR \PWM:PWMUDB:cmp1_eq\);
+\PWM:PWMUDB:pwm_i\ <= ((\PWM:PWMUDB:runmode_enable\ and \PWM:PWMUDB:cmp1_less\));
 
 \PWM:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
@@ -912,7 +907,7 @@ Clock_1:cy_clock_v1_0
 		clk=>\PWM:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM:PWMUDB:dith_count_0\);
 \PWM:PWMUDB:prevCompare1\:cy_dff
-	PORT MAP(d=>\PWM:PWMUDB:cmp1\,
+	PORT MAP(d=>\PWM:PWMUDB:cmp1_less\,
 		clk=>\PWM:PWMUDB:ClockOutFromEnBlock\,
 		q=>\PWM:PWMUDB:prevCompare1\);
 \PWM:PWMUDB:cmp1_status_reg\:cy_dsrff

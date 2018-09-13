@@ -75,45 +75,21 @@ net \PWM:PWMUDB:cmp1_less\
 	switch ":udbswitch@[UDB=(0,4)][side=top]:18,17_f"
 	switch "IStub-:udbswitch@[UDB=(0,4)][side=top]:v18"
 	switch "Stub-:udbswitch@[UDB=(0,4)][side=top]:v18==>:udb@[UDB=(0,4)]:pld0:input_permute.input_9"
-	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc3_main_1==>:udb@[UDB=(0,4)]:pld0:mc3.main_1"
-	term   ":udb@[UDB=(0,4)]:pld0:mc3.main_1"
-	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc2_main_2==>:udb@[UDB=(0,4)]:pld0:mc2.main_2"
-	term   ":udb@[UDB=(0,4)]:pld0:mc2.main_2"
+	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(0,4)]:pld0:mc3.main_0"
+	term   ":udb@[UDB=(0,4)]:pld0:mc3.main_0"
+	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc2_main_1==>:udb@[UDB=(0,4)]:pld0:mc2.main_1"
+	term   ":udb@[UDB=(0,4)]:pld0:mc2.main_1"
 	switch ":udbswitch@[UDB=(0,4)][side=top]:50,17_f"
 	switch "IStub-:udbswitch@[UDB=(0,4)][side=top]:v50"
 	switch "Stub-:udbswitch@[UDB=(0,4)][side=top]:v50==>:udb@[UDB=(0,4)]:pld1:input_permute.input_6"
-	switch ":udb@[UDB=(0,4)]:pld1:input_permute.mc0_main_2==>:udb@[UDB=(0,4)]:pld1:mc0.main_2"
-	term   ":udb@[UDB=(0,4)]:pld1:mc0.main_2"
+	switch ":udb@[UDB=(0,4)]:pld1:input_permute.mc0_main_1==>:udb@[UDB=(0,4)]:pld1:mc0.main_1"
+	term   ":udb@[UDB=(0,4)]:pld1:mc0.main_1"
 end \PWM:PWMUDB:cmp1_less\
 net \PWM:PWMUDB:sP16:pwmdp:u0.cl0__sig\
 	term   ":udb@[UDB=(1,4)]:dp_wrapper:datapath.cl0"
 	switch ":udb@[UDB=(1,4)]:dp_wrapper:datapath.cl0==>:udb@[UDB=(0,4)]:dp_wrapper:datapath.cl0i"
 	term   ":udb@[UDB=(0,4)]:dp_wrapper:datapath.cl0i"
 end \PWM:PWMUDB:sP16:pwmdp:u0.cl0__sig\
-net \PWM:PWMUDB:cmp1_eq\
-	term   ":udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0_comb"
-	switch ":udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0_comb==>:udb@[UDB=(0,4)]:dp_wrapper:output_permute.ce0_comb"
-	switch ":udb@[UDB=(0,4)]:dp_wrapper:output_permute.outs_4==>Stub-:udbswitch@[UDB=(0,4)][side=top]:v84"
-	switch "OStub-:udbswitch@[UDB=(0,4)][side=top]:v84"
-	switch ":udbswitch@[UDB=(0,4)][side=top]:84,11"
-	switch ":udbswitch@[UDB=(0,4)][side=top]:20,11_f"
-	switch "IStub-:udbswitch@[UDB=(0,4)][side=top]:v20"
-	switch "Stub-:udbswitch@[UDB=(0,4)][side=top]:v20==>:udb@[UDB=(0,4)]:pld0:input_permute.input_10"
-	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc3_main_0==>:udb@[UDB=(0,4)]:pld0:mc3.main_0"
-	term   ":udb@[UDB=(0,4)]:pld0:mc3.main_0"
-	switch ":udb@[UDB=(0,4)]:pld0:input_permute.mc2_main_1==>:udb@[UDB=(0,4)]:pld0:mc2.main_1"
-	term   ":udb@[UDB=(0,4)]:pld0:mc2.main_1"
-	switch ":udbswitch@[UDB=(0,4)][side=top]:52,11_f"
-	switch "IStub-:udbswitch@[UDB=(0,4)][side=top]:v52"
-	switch "Stub-:udbswitch@[UDB=(0,4)][side=top]:v52==>:udb@[UDB=(0,4)]:pld1:input_permute.input_5"
-	switch ":udb@[UDB=(0,4)]:pld1:input_permute.mc0_main_1==>:udb@[UDB=(0,4)]:pld1:mc0.main_1"
-	term   ":udb@[UDB=(0,4)]:pld1:mc0.main_1"
-end \PWM:PWMUDB:cmp1_eq\
-net \PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\
-	term   ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ce0"
-	switch ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0i"
-	term   ":udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0i"
-end \PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \PWM:PWMUDB:prevCompare1\
 	term   ":udb@[UDB=(0,4)]:pld0:mc3.q"
 	switch ":udb@[UDB=(0,4)]:pld0:mc3.q==>:udb@[UDB=(0,4)]:pld0:output_permute0.q_3"
@@ -208,6 +184,11 @@ net \PWM:PWMUDB:status_3\
 	switch "Stub-:udbswitch@[UDB=(0,4)][side=top]:v94==>:udb@[UDB=(0,4)]:statusicell.status_3"
 	term   ":udb@[UDB=(0,4)]:statusicell.status_3"
 end \PWM:PWMUDB:status_3\
+net \PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\
+	term   ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ce0"
+	switch ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ce0==>:udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0i"
+	term   ":udb@[UDB=(0,4)]:dp_wrapper:datapath.ce0i"
+end \PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\
 net \PWM:PWMUDB:sP16:pwmdp:u0.ff0__sig\
 	term   ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ff0"
 	switch ":udb@[UDB=(1,4)]:dp_wrapper:datapath.ff0==>:udb@[UDB=(0,4)]:dp_wrapper:datapath.ff0i"

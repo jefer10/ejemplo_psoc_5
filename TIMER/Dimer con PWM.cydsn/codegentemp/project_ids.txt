@@ -1,6 +1,6 @@
-C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj|cea5cc43-8f68-499e-8eb9-df81cc0c3909
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|7466e29d-f3ac-4a08-9a6c-7a315dd482e0
-C:\Users\LASER_2\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|c7568504-d523-43f0-8be4-a27441d4a9f5
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|e96026a3-dbb4-40da-bef3-e590427d4a45
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|39fd7317-0ff5-4252-84d0-44d6302c63c8
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a8f49b0d-7ba3-4836-b609-08cc6e7814cb
+C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj|beea560f-6d87-45a8-aa2b-5246d42d8886
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|978ef223-2e8a-43b8-a3be-6e5afe3156cb
+C:\Users\Dell\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|8f4e0b91-b148-4c4a-bc08-cb7ba611dc0f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|839d2b5a-08e5-4d66-b29f-59ee5cbf92c0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|075cb608-ef4d-4eab-94cf-3fa11a37ff89
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|6b2deb27-95c2-418e-87fd-5a3136a1e64d

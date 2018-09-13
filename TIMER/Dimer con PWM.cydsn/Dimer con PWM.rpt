@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.234ms
+Loading plugins phase: Elapsed time ==> 0s.210ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 -s C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.639ms
+Elaboration phase: Elapsed time ==> 1s.616ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.031ms
+HDL generation phase: Elapsed time ==> 0s.030ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.031ms
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Wed Sep 12 13:26:51 2018
+Wed Sep 12 20:00:20 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Dimer con PWM.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Wed Sep 12 13:26:51 2018
+Wed Sep 12 20:00:20 2018
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
@@ -87,11 +87,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Wed Sep 12 13:26:52 2018
+Wed Sep 12 20:00:20 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -102,11 +102,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
+Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
+Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
@@ -121,11 +121,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Wed Sep 12 13:26:53 2018
+Wed Sep 12 20:00:21 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -136,11 +136,11 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
+Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
+Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
@@ -425,6 +425,7 @@ Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\S\[80] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:cs_addr_2\[82] = \PWM:PWMUDB:tc_i\[38]
 Removing Lhs of wire \PWM:PWMUDB:cs_addr_1\[83] = \PWM:PWMUDB:runmode_enable\[32]
 Removing Lhs of wire \PWM:PWMUDB:cs_addr_0\[84] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:compare1\[165] = \PWM:PWMUDB:cmp1_less\[136]
 Removing Lhs of wire \PWM:PWMUDB:pwm1_i\[170] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:pwm2_i\[172] = zero[7]
 Removing Rhs of wire \PWM:Net_96\[175] = \PWM:PWMUDB:pwm_i_reg\[167]
@@ -479,7 +480,7 @@ Removing Lhs of wire \PWM:PWMUDB:pwm2_i_reg\\D\[429] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:tc_i_reg\\D\[430] = \PWM:PWMUDB:status_2\[63]
 
 ------------------------------------------------------
-Aliased 0 equations, 88 wires.
+Aliased 0 equations, 89 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -494,9 +495,8 @@ one <=  ('1') ;
 Note:  Expanding virtual equation for 'zero' (cost = 0):
 zero <=  ('0') ;
 
-Note:  Expanding virtual equation for '\PWM:PWMUDB:compare1\' (cost = 2):
-\PWM:PWMUDB:compare1\ <= (\PWM:PWMUDB:cmp1_less\
-	OR \PWM:PWMUDB:cmp1_eq\);
+Note:  Expanding virtual equation for '\PWM:PWMUDB:cmp1\' (cost = 0):
+\PWM:PWMUDB:cmp1\ <= (\PWM:PWMUDB:cmp1_less\);
 
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\PWM:PWMUDB:dith_count_0\);
@@ -515,10 +515,6 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 
 
 Substituting virtuals - pass 2:
-
-Note:  Expanding virtual equation for '\PWM:PWMUDB:cmp1\' (cost = 4):
-\PWM:PWMUDB:cmp1\ <= (\PWM:PWMUDB:cmp1_less\
-	OR \PWM:PWMUDB:cmp1_eq\);
 
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:s_1\' (cost = 2):
 \PWM:PWMUDB:MODULE_1:g2:a0:s_1\ <= ((not \PWM:PWMUDB:dith_count_0\ and \PWM:PWMUDB:dith_count_1\)
@@ -597,7 +593,7 @@ Substituting virtuals - pass 8:
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 27 signals.
+	Expanded 26 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -646,16 +642,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj" -dcpsoc3 "Dimer con PWM.v" -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj" -dcpsoc3 "Dimer con PWM.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.923ms
+Warp synthesis phase: Elapsed time ==> 1s.250ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Wednesday, 12 September 2018 13:26:53
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\LASER_2\Documents\PSoC Creator\ejemplo_psoc_5\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 Dimer con PWM.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Wednesday, 12 September 2018 20:00:21
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 Dimer con PWM.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.015ms
+Design parsing phase: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1044,40 +1040,38 @@ Design Equations
         Output = \PWM:PWMUDB:runmode_enable\ (fanout=4)
 
     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:cmp1_less\
+        );
+        Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
+
+    MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
             Clock  = (Net_31) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
-        !(
-              !\PWM:PWMUDB:cmp1_eq\ * !\PWM:PWMUDB:cmp1_less\
-        );
-        Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
-
-    MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register)
-        Total # of inputs        : 3
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_31) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
         (
-              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_eq\
-            + !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_less\
+              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_less\
         );
         Output = \PWM:PWMUDB:status_0\ (fanout=1)
 
     MacroCell: Name=Net_41, Mode=(D-Register)
-        Total # of inputs        : 3
-        Total # of product terms : 2
+        Total # of inputs        : 2
+        Total # of product terms : 1
         List of special equations: 
             Clock  = (Net_31) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 1 pterm
         (
-              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_eq\
-            + \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_less\
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_less\
         );
         Output = Net_41 (fanout=1)
     </CYPRESSTAG>
@@ -1126,7 +1120,6 @@ Design Equations
             clock => Net_31 ,
             cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
             cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-            ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
             cl0_comb => \PWM:PWMUDB:cmp1_less\ ,
             z0_comb => \PWM:PWMUDB:tc_i\ ,
             f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
@@ -1241,8 +1234,8 @@ DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    0 :    4 :    4 :  0.00 %
 UDB                           :      :      :      :        
   Macrocells                  :    5 :  187 :  192 :  2.60 %
-  Unique P-terms              :    7 :  377 :  384 :  1.82 %
-  Total P-terms               :    7 :      :      :        
+  Unique P-terms              :    5 :  379 :  384 :  1.30 %
+  Total P-terms               :    5 :      :      :        
   Datapath Cells              :    2 :   22 :   24 :  8.33 %
   Status Cells                :    1 :   23 :   24 :  4.17 %
     StatusI Registers         :    1 :      :      :        
@@ -1257,8 +1250,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.093ms
-Tech Mapping phase: Elapsed time ==> 0s.187ms
+Technology Mapping: Elapsed time ==> 0s.078ms
+Tech Mapping phase: Elapsed time ==> 0s.168ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -1270,10 +1263,10 @@ IO_3@[IOP=(12)][IoId=(3)] : \LCD:LCDPort(3)\ (fixed)
 IO_4@[IOP=(12)][IoId=(4)] : \LCD:LCDPort(4)\ (fixed)
 IO_5@[IOP=(12)][IoId=(5)] : \LCD:LCDPort(5)\ (fixed)
 IO_6@[IOP=(12)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
-Analog Placement phase: Elapsed time ==> 0s.078ms
+Analog Placement phase: Elapsed time ==> 0s.020ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.015ms
+Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1288,11 +1281,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.390ms
+Analog Code Generation phase: Elapsed time ==> 0s.341ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.2 sec.
+I2076: Total run-time: 0.7 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1309,21 +1302,21 @@ PLD Packing Summary
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            4.00
-                   Pterms :            3.50
+                   Inputs :            3.00
+                   Pterms :            2.50
                Macrocells :            2.50
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.000ms
+PLD Packing: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.015ms
+Partitioning: Elapsed time ==> 0s.010ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1333,7 +1326,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          2 :       3.00 :       2.50
+                 UDB :          2 :       2.50 :       2.50
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1345,7 +1338,7 @@ UDB [UDB=(0,1)] is empty.
 UDB [UDB=(0,2)] is empty.
 UDB [UDB=(0,3)] is empty.
 UDB [UDB=(0,4)] contents:
-LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=5
+LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
 {
     [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:runmode_enable\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=0]
         Total # of inputs        : 1
@@ -1376,15 +1369,14 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=5
         }
 
     [McSlotId=2]:     MacroCell: Name=Net_41, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 2
+        Total # of inputs        : 2
+        Total # of product terms : 1
         List of special equations: 
             Clock  = (Net_31) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 1 pterm
         (
-              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_eq\
-            + \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_less\
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_less\
         );
         Output = Net_41 (fanout=1)
         Properties               : 
@@ -1392,14 +1384,14 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=5
         }
 
     [McSlotId=3]:     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=3]
-        Total # of inputs        : 2
+        Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
             Clock  = (Net_31) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
-        !(
-              !\PWM:PWMUDB:cmp1_eq\ * !\PWM:PWMUDB:cmp1_less\
+        (
+              \PWM:PWMUDB:cmp1_less\
         );
         Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
         Properties               : 
@@ -1407,18 +1399,17 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=5
         }
 }
 
-LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=3, #pterms=2
+LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=2, #pterms=1
 {
     [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=0]
-        Total # of inputs        : 3
-        Total # of product terms : 2
+        Total # of inputs        : 2
+        Total # of product terms : 1
         List of special equations: 
             Clock  = (Net_31) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 1 pterm
         (
-              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_eq\
-            + !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_less\
+              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_less\
         );
         Output = \PWM:PWMUDB:status_0\ (fanout=1)
         Properties               : 
@@ -1435,7 +1426,6 @@ datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u1\
         clock => Net_31 ,
         cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
         cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-        ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
         cl0_comb => \PWM:PWMUDB:cmp1_less\ ,
         z0_comb => \PWM:PWMUDB:tc_i\ ,
         f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
@@ -1955,33 +1945,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connectio
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.046ms
-Digital Placement phase: Elapsed time ==> 1s.731ms
+Digital component placer commit/Report: Elapsed time ==> 0s.040ms
+Digital Placement phase: Elapsed time ==> 0s.991ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dimer con PWM_r.vh2" --pcf-path "Dimer con PWM.pco" --des-name "Dimer con PWM" --dsf-path "Dimer con PWM.dsf" --sdc-path "Dimer con PWM.sdc" --lib-path "Dimer con PWM_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.918ms
+Digital Routing phase: Elapsed time ==> 1s.638ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.280ms
+Bitstream Generation phase: Elapsed time ==> 0s.250ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
 Bitstream Verification phase: Elapsed time ==> 0s.080ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Dimer con PWM_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.795ms
+Static timing analysis phase: Elapsed time ==> 0s.329ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.234ms
+Design database save phase: Elapsed time ==> 0s.222ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 5s.758ms
+cydsfit: Elapsed time ==> 4s.059ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 5s.758ms
-API generation phase: Elapsed time ==> 2s.170ms
-Dependency generation phase: Elapsed time ==> 0s.062ms
+Fitter phase: Elapsed time ==> 4s.059ms
+API generation phase: Elapsed time ==> 0s.919ms
+Dependency generation phase: Elapsed time ==> 0s.010ms
 Cleanup phase: Elapsed time ==> 0s.000ms
