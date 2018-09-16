@@ -47,17 +47,17 @@ int main(void)
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     
     PWM_Start();
-    count=468;//90°
+    count=0;//90°
     PWM_WriteCompare(count);
 
     for(;;)
     {
        /* Place your application code here. */
-    if (count>=780)//maximo 784 (180°)
+    if (count>=640)//(5700 azul) maximo 784 (180°)
     {
 		de=0;
 	}
-	if(count<=154)//minimo 154(0°) ó 155 
+	if(count<=319)// (1600 azul) minimo 154(0°) ó 155 
     {
 		de=1;
 	}
@@ -67,14 +67,23 @@ int main(void)
             count=count-40;}
         
         while(PWM_STATUS_TC==0);
-        if(count<154)
+        if(count<320)
         {
-            count=154;
+            count=320;
         }
-        if (count>780)
+        if (count>639)
         {
-            count=780;
+            count=639;
         }
+        count=1600;
+        PWM_WriteCompare(count);
+        LCD_Position(1,0);
+        LCD_PrintString("            ");
+        LCD_Position(1,0);
+        LCD_PrintNumber(count);
+        PWM_WriteCompare(count);
+        CyDelay(1000);
+        count=5700;
         PWM_WriteCompare(count);
         LCD_Position(1,0);
         LCD_PrintString("            ");

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Timer\Dimer con PWM\TopDesign">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Timer</v>
 <v>Timer\Dimer con PWM</v>
@@ -161,7 +161,18 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Dimer con PWM.cydsn\main.c" />
+<name v=".\Dimer con PWM.cydsn\Dimer con PWM.cydwr" />
+<name v=".\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="852, 465" SelectedTabbedMdiWindow="26d56ab1-fd31-4513-a3e9-ad47f621c1e9"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="b64f67f6-86f2-44ca-877a-1b96a02589c5" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\main.c" Guid="8ca286b0-1a95-4925-b24c-82a4405f6e4e" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cydwr" Guid="b132b450-8c7f-45ac-ac9e-2d98cf9d360f" /><DocumentWindow Key="C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch" Guid="26d56ab1-fd31-4513-a3e9-ad47f621c1e9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
