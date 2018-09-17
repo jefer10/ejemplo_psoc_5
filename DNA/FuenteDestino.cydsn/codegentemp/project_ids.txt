@@ -1,0 +1,6 @@
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\DNA\FuenteDestino.cydsn\FuenteDestino.cyprj|5a3dfa3a-fb7e-4466-91e4-61621876650a
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|df72a592-ffa7-48bf-b7f5-922ba96e0557
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|566b7363-9660-4876-b630-e3b17cd636d8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|52f13642-dc4a-4beb-adf7-18aad5f67f2b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7effd39e-3844-4676-8b1f-5e157fc42d7d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|02958264-cb1e-4cfe-a3a7-7cdaec4af6b2

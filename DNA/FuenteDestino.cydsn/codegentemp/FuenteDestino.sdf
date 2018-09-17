@@ -1,0 +1,24 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2018-09-14T16:39:12Z")
+ (DESIGN "FuenteDestino")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "FuenteDestino")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb DMA.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb \\ADC\:IRQ\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\ADC\:ADC_SAR\\.eof_udb DMA.dmareq (10.325:10.325:10.325))
+    (INTERCONNECT \\ADC\:ADC_SAR\\.eof_udb \\ADC\:IRQ\\.interrupt (10.111:10.111:10.111))
+    (INTERCONNECT ClockBlock.aclk_glb_ff_0 \\ADC\:ADC_SAR\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.aclk_glb_ff_0 \\ADC\:ADC_SAR\\.pump_clock (0.000:0.000:0.000))
+   )
+  )
+ )
+)

@@ -1,0 +1,24 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2018-09-14T16:31:57Z")
+ (DESIGN "ADC_DMA")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "ADC_DMA")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb DMA.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb \\ADC\:IRQ\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT \\ADC\:ADC_SAR\\.eof_udb DMA.dmareq (8.870:8.870:8.870))
+    (INTERCONNECT \\ADC\:ADC_SAR\\.eof_udb \\ADC\:IRQ\\.interrupt (8.667:8.667:8.667))
+    (INTERCONNECT ClockBlock.aclk_glb_ff_0 \\ADC\:ADC_SAR\\.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.aclk_glb_ff_0 \\ADC\:ADC_SAR\\.pump_clock (0.000:0.000:0.000))
+   )
+  )
+ )
+)
