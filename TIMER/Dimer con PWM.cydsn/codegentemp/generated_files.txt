@@ -29,14 +29,18 @@
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD.c" value="SOURCE_C;CortexM3;;;;LCD" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD.h" value="HEADER;;;;;LCD" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD_PM.c" value="SOURCE_C;CortexM3;;;;LCD" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_MI.c" value="SOURCE_C;CortexM3;;;;ISR_MI" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_MI.h" value="HEADER;;;;;ISR_MI" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_HO.c" value="SOURCE_C;CortexM3;;;;ISR_HO" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_HO.h" value="HEADER;;;;;ISR_HO" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_DI.c" value="SOURCE_C;CortexM3;;;;ISR_DI" />
-  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_DI.h" value="HEADER;;;;;ISR_DI" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Clock_2.c" value="SOURCE_C;CortexM3;;;;Clock_2" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Timer.c" value="SOURCE_C;CortexM3;;;;Timer" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Timer.h" value="HEADER;;;;;Timer" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Timer_PM.c" value="SOURCE_C;CortexM3;;;;Timer" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_SE.c" value="SOURCE_C;CortexM3;;;;ISR_SE" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_SE.h" value="HEADER;;;;;ISR_SE" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_SWI.c" value="SOURCE_C;CortexM3;;;;ISR_SWI" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\ISR_SWI.h" value="HEADER;;;;;ISR_SWI" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\SWI_aliases.h" value="HEADER;;;;;SWI" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\SWI.c" value="SOURCE_C;CortexM3;;;;SWI" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\SWI.h" value="HEADER;;;;;SWI" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2_aliases.h" value="HEADER;;;;;Pin_min2" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2.c" value="SOURCE_C;CortexM3;;;;Pin_min2" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2.h" value="HEADER;;;;;Pin_min2" />

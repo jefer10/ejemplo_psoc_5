@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: ISR_DI.c  
+* File Name: ISR_SWI.c  
 * Version 1.70
 *
 *  Description:
@@ -18,15 +18,15 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <ISR_DI.h>
+#include <ISR_SWI.h>
 #include "cyapicallbacks.h"
 
-#if !defined(ISR_DI__REMOVED) /* Check for removal by optimization */
+#if !defined(ISR_SWI__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START ISR_DI_intc` */
+/* `#START ISR_SWI_intc` */
 
 /* `#END` */
 
@@ -42,7 +42,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_Start
+* Function Name: ISR_SWI_Start
 ********************************************************************************
 *
 * Summary:
@@ -58,24 +58,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void ISR_DI_Start(void)
+void ISR_SWI_Start(void)
 {
     /* For all we know the interrupt is active. */
-    ISR_DI_Disable();
+    ISR_SWI_Disable();
 
-    /* Set the ISR to point to the ISR_DI Interrupt. */
-    ISR_DI_SetVector(&ISR_DI_Interrupt);
+    /* Set the ISR to point to the ISR_SWI Interrupt. */
+    ISR_SWI_SetVector(&ISR_SWI_Interrupt);
 
     /* Set the priority. */
-    ISR_DI_SetPriority((uint8)ISR_DI_INTC_PRIOR_NUMBER);
+    ISR_SWI_SetPriority((uint8)ISR_SWI_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    ISR_DI_Enable();
+    ISR_SWI_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_StartEx
+* Function Name: ISR_SWI_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -101,24 +101,24 @@ void ISR_DI_Start(void)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_StartEx(cyisraddress address)
+void ISR_SWI_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    ISR_DI_Disable();
+    ISR_SWI_Disable();
 
-    /* Set the ISR to point to the ISR_DI Interrupt. */
-    ISR_DI_SetVector(address);
+    /* Set the ISR to point to the ISR_SWI Interrupt. */
+    ISR_SWI_SetVector(address);
 
     /* Set the priority. */
-    ISR_DI_SetPriority((uint8)ISR_DI_INTC_PRIOR_NUMBER);
+    ISR_SWI_SetPriority((uint8)ISR_SWI_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    ISR_DI_Enable();
+    ISR_SWI_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_Stop
+* Function Name: ISR_SWI_Stop
 ********************************************************************************
 *
 * Summary:
@@ -131,22 +131,22 @@ void ISR_DI_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_Stop(void)
+void ISR_SWI_Stop(void)
 {
     /* Disable this interrupt. */
-    ISR_DI_Disable();
+    ISR_SWI_Disable();
 
     /* Set the ISR to point to the passive one. */
-    ISR_DI_SetVector(&IntDefaultHandler);
+    ISR_SWI_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_Interrupt
+* Function Name: ISR_SWI_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for ISR_DI.
+*   The default Interrupt Service Routine for ISR_SWI.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -157,27 +157,27 @@ void ISR_DI_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(ISR_DI_Interrupt)
+CY_ISR(ISR_SWI_Interrupt)
 {
-    #ifdef ISR_DI_INTERRUPT_INTERRUPT_CALLBACK
-        ISR_DI_Interrupt_InterruptCallback();
-    #endif /* ISR_DI_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef ISR_SWI_INTERRUPT_INTERRUPT_CALLBACK
+        ISR_SWI_Interrupt_InterruptCallback();
+    #endif /* ISR_SWI_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START ISR_DI_Interrupt` */
+    /* `#START ISR_SWI_Interrupt` */
 
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_SetVector
+* Function Name: ISR_SWI_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling ISR_DI_Start
+*   Change the ISR vector for the Interrupt. Note calling ISR_SWI_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use ISR_DI_StartEx instead.
+*   before the component has been started use ISR_SWI_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -197,18 +197,18 @@ CY_ISR(ISR_DI_Interrupt)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_SetVector(cyisraddress address)
+void ISR_SWI_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)ISR_DI__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)ISR_SWI__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_GetVector
+* Function Name: ISR_SWI_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -221,26 +221,26 @@ void ISR_DI_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress ISR_DI_GetVector(void)
+cyisraddress ISR_SWI_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)ISR_DI__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)ISR_SWI__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_SetPriority
+* Function Name: ISR_SWI_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling ISR_DI_Start or ISR_DI_StartEx will 
+*   Note calling ISR_SWI_Start or ISR_SWI_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after ISR_DI_Start or ISR_DI_StartEx has been called. 
+*   after ISR_SWI_Start or ISR_SWI_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -255,14 +255,14 @@ cyisraddress ISR_DI_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_SetPriority(uint8 priority)
+void ISR_SWI_SetPriority(uint8 priority)
 {
-    *ISR_DI_INTC_PRIOR = priority << 5;
+    *ISR_SWI_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_GetPriority
+* Function Name: ISR_SWI_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -277,19 +277,19 @@ void ISR_DI_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 ISR_DI_GetPriority(void)
+uint8 ISR_SWI_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *ISR_DI_INTC_PRIOR >> 5;
+    priority = *ISR_SWI_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_Enable
+* Function Name: ISR_SWI_Enable
 ********************************************************************************
 *
 * Summary:
@@ -304,15 +304,15 @@ uint8 ISR_DI_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_Enable(void)
+void ISR_SWI_Enable(void)
 {
     /* Enable the general interrupt. */
-    *ISR_DI_INTC_SET_EN = ISR_DI__INTC_MASK;
+    *ISR_SWI_INTC_SET_EN = ISR_SWI__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_GetState
+* Function Name: ISR_SWI_GetState
 ********************************************************************************
 *
 * Summary:
@@ -325,15 +325,15 @@ void ISR_DI_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 ISR_DI_GetState(void)
+uint8 ISR_SWI_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*ISR_DI_INTC_SET_EN & (uint32)ISR_DI__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*ISR_SWI_INTC_SET_EN & (uint32)ISR_SWI__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_Disable
+* Function Name: ISR_SWI_Disable
 ********************************************************************************
 *
 * Summary:
@@ -346,15 +346,15 @@ uint8 ISR_DI_GetState(void)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_Disable(void)
+void ISR_SWI_Disable(void)
 {
     /* Disable the general interrupt. */
-    *ISR_DI_INTC_CLR_EN = ISR_DI__INTC_MASK;
+    *ISR_SWI_INTC_CLR_EN = ISR_SWI__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_SetPending
+* Function Name: ISR_SWI_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -373,14 +373,14 @@ void ISR_DI_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void ISR_DI_SetPending(void)
+void ISR_SWI_SetPending(void)
 {
-    *ISR_DI_INTC_SET_PD = ISR_DI__INTC_MASK;
+    *ISR_SWI_INTC_SET_PD = ISR_SWI__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: ISR_DI_ClearPending
+* Function Name: ISR_SWI_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -398,9 +398,9 @@ void ISR_DI_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void ISR_DI_ClearPending(void)
+void ISR_SWI_ClearPending(void)
 {
-    *ISR_DI_INTC_CLR_PD = ISR_DI__INTC_MASK;
+    *ISR_SWI_INTC_CLR_PD = ISR_SWI__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

@@ -1,6 +1,6 @@
 // ======================================================================
 // Dimer con PWM.v generated from TopDesign.cysch
-// 09/17/2018 at 20:05
+// 09/18/2018 at 11:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -369,30 +369,82 @@ module CharLCD_v2_20_1 ;
 
 endmodule
 
-// Component: FreqDiv_v1_0
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
+// Timer_v2_80(CaptureAlternatingFall=false, CaptureAlternatingRise=false, CaptureCount=2, CaptureCounterEnabled=false, CaptureInputEnabled=false, CaptureMode=0, CONTROL3=1, ControlRegRemoved=0, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG16, CySetRegReplacementString=CY_SET_REG16, DeviceFamily=PSoC5, EnableMode=0, FF16=true, FF8=false, FixedFunction=true, FixedFunctionUsed=1, HWCaptureCounterEnabled=false, InterruptOnCapture=false, InterruptOnFIFOFull=false, InterruptOnTC=false, IntOnCapture=0, IntOnFIFOFull=0, IntOnTC=0, NumberOfCaptures=1, param45=1, Period=1999, RegDefReplacementString=reg16, RegSizeReplacementString=uint16, Resolution=16, RstStatusReplacementString=rstSts, RunMode=0, SiliconRevision=0, SoftwareCaptureModeEnabled=false, SoftwareTriggerModeEnabled=false, TriggerInputEnabled=false, TriggerMode=0, UDB16=false, UDB24=false, UDB32=false, UDB8=false, UDBControlReg=false, UsesHWEnable=0, VerilogSectionReplacementString=sT16, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Timer_v2_80, CY_CONFIG_TITLE=Timer, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Timer, CY_INSTANCE_SHORT_NAME=Timer, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=80, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.2, INSTANCE_NAME=Timer, )
+module Timer_v2_80_2 (
+    reset,
+    interrupt,
+    enable,
+    trigger,
+    capture,
+    capture_out,
+    tc,
+    clock);
+    input       reset;
+    output      interrupt;
+    input       enable;
+    input       trigger;
+    input       capture;
+    output      capture_out;
+    output      tc;
+    input       clock;
 
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v"
-`endif
+    parameter CaptureCount = 2;
+    parameter CaptureCounterEnabled = 0;
+    parameter DeviceFamily = "PSoC5";
+    parameter InterruptOnCapture = 0;
+    parameter InterruptOnTC = 0;
+    parameter Resolution = 16;
+    parameter SiliconRevision = "0";
+
+          wire  Net_261;
+          wire  Net_260;
+          wire  Net_266;
+          wire  Net_102;
+          wire  Net_55;
+          wire  Net_57;
+          wire  Net_53;
+          wire  Net_51;
+
+    cy_psoc3_timer_v1_0 TimerHW (
+        .timer_reset(reset),
+        .capture(capture),
+        .enable(Net_266),
+        .kill(Net_260),
+        .clock(clock),
+        .tc(Net_51),
+        .compare(Net_261),
+        .interrupt(Net_57));
+
+    ZeroTerminal ZeroTerminal_1 (
+        .z(Net_260));
+
+	// VirtualMux_2 (cy_virtualmux_v1_0)
+	assign interrupt = Net_57;
+
+	// VirtualMux_3 (cy_virtualmux_v1_0)
+	assign tc = Net_51;
+
+    OneTerminal OneTerminal_1 (
+        .o(Net_102));
+
+	// VirtualMux_1 (cy_virtualmux_v1_0)
+	assign Net_266 = Net_102;
+
+
+
+endmodule
 
 // top
 module top ;
 
-          wire  Net_568;
-          wire  Net_497;
-          wire  Net_495;
-          wire  Net_488;
-          wire  Net_486;
-          wire  Net_480;
-          wire  Net_478;
-          wire  Net_471;
+    electrical  Net_645;
+    electrical  Net_642;
+          wire  Net_669;
+          wire  Net_668;
+          wire  Net_667;
+          wire  Net_666;
+          wire  Net_665;
+          wire  Net_656;
           wire  Net_48;
           wire  Net_458;
           wire  Net_457;
@@ -404,15 +456,13 @@ module top ;
           wire  Net_452;
           wire  Net_451;
           wire  Net_448;
+          wire  Net_681;
+          wire  Net_682;
+          wire  Net_10;
+          wire  Net_31;
+          wire  Net_643;
           wire  Net_610;
           wire  Net_41;
-          wire  Net_590;
-          wire  Net_569;
-          wire  Net_565;
-          wire  Net_496;
-          wire  Net_498;
-          wire  Net_489;
-          wire  Net_31;
           wire  Net_30;
 
     PWM_v3_30_0 PWM (
@@ -525,87 +575,121 @@ module top ;
 
 
 	cy_clock_v1_0
-		#(.id("c0fb34bd-1044-4931-9788-16b01ce89812"),
-		  .source_clock_id("315365C3-2E3E-4f04-84A2-BB564A173261"),
+		#(.id("6f0be219-9fe7-45c6-8ace-8d1b1dd0484c"),
+		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("0"),
-		  .is_direct(1),
+		  .period("500000000000"),
+		  .is_direct(0),
 		  .is_digital(1))
-		timer_clock
-		 (.clock_out(Net_569));
+		Clock_2
+		 (.clock_out(Net_10));
 
 
-    FreqDiv_v1_0 FreqDiv_1 (
-        .en(Net_478),
-        .div(Net_489),
-        .reset(1'b0),
-        .clock(Net_590));
-    defparam FreqDiv_1.Divider = 60;
-    defparam FreqDiv_1.highPulse = 30;
-    defparam FreqDiv_1.numBits = 6;
-
-    FreqDiv_v1_0 FreqDiv_2 (
-        .en(Net_486),
-        .div(Net_498),
-        .reset(1'b0),
-        .clock(Net_489));
-    defparam FreqDiv_2.Divider = 60;
-    defparam FreqDiv_2.highPulse = 30;
-    defparam FreqDiv_2.numBits = 6;
-
-    FreqDiv_v1_0 FreqDiv_3 (
-        .en(Net_495),
-        .div(Net_496),
-        .reset(1'b0),
-        .clock(Net_498));
-    defparam FreqDiv_3.Divider = 12;
-    defparam FreqDiv_3.highPulse = 6;
-    defparam FreqDiv_3.numBits = 4;
+    Timer_v2_80_2 Timer (
+        .reset(Net_682),
+        .interrupt(Net_665),
+        .enable(1'b1),
+        .trigger(1'b1),
+        .capture(1'b0),
+        .capture_out(Net_669),
+        .tc(Net_681),
+        .clock(Net_10));
+    defparam Timer.CaptureCount = 2;
+    defparam Timer.CaptureCounterEnabled = 0;
+    defparam Timer.DeviceFamily = "PSoC5";
+    defparam Timer.InterruptOnCapture = 0;
+    defparam Timer.InterruptOnTC = 0;
+    defparam Timer.Resolution = 16;
+    defparam Timer.SiliconRevision = "0";
 
 
 	cy_isr_v1_0
-		#(.int_type(2'b00))
-		ISR_MI
-		 (.int_signal(Net_489));
-
-
-
-	cy_isr_v1_0
-		#(.int_type(2'b00))
-		ISR_HO
-		 (.int_signal(Net_498));
-
-
-
-	cy_isr_v1_0
-		#(.int_type(2'b00))
-		ISR_DI
-		 (.int_signal(Net_496));
-
-
-
-	cy_isr_v1_0
-		#(.int_type(2'b00))
+		#(.int_type(2'b10))
 		ISR_SE
-		 (.int_signal(Net_590));
+		 (.int_signal(Net_681));
 
 
-    FreqDiv_v1_0 FreqDiv_4 (
-        .en(Net_565),
-        .div(Net_590),
-        .reset(1'b0),
-        .clock(Net_569));
-    defparam FreqDiv_4.Divider = 2;
-    defparam FreqDiv_4.highPulse = 1;
-    defparam FreqDiv_4.numBits = 1;
 
-    assign Net_565 = 1'h1;
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		ISR_SWI
+		 (.int_signal(Net_643));
 
-    assign Net_478 = 1'h1;
 
-    assign Net_486 = 1'h1;
+	wire [1:0] tmpOE__SWI_net;
+	wire [1:0] tmpFB_1__SWI_net;
+	wire [1:0] tmpIO_1__SWI_net;
+	electrical [0:0] tmpSIOVREF__SWI_net;
 
-    assign Net_495 = 1'h1;
+	cy_psoc3_pins_v1_10
+		#(.id("8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba"),
+		  .drive_mode(6'b010_010),
+		  .ibuf_enabled(2'b1_1),
+		  .init_dr_st(2'b1_1),
+		  .input_clk_en(0),
+		  .input_sync(2'b0_0),
+		  .input_sync_mode(2'b0_0),
+		  .intr_mode(4'b10_10),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(","),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(2'b0_0),
+		  .oe_reset(0),
+		  .oe_sync(2'b0_0),
+		  .output_clk_en(0),
+		  .output_clock_mode(2'b0_0),
+		  .output_conn(2'b0_0),
+		  .output_mode(2'b0_0),
+		  .output_reset(0),
+		  .output_sync(2'b0_0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(","),
+		  .pin_mode("II"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(2'b1_1),
+		  .sio_ibuf(""),
+		  .sio_info(4'b00_00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(2'b0_0),
+		  .spanning(0),
+		  .use_annotation(2'b1_1),
+		  .vtrip(4'b00_00),
+		  .width(2),
+		  .ovt_hyst_trim(2'b0_0),
+		  .ovt_needed(2'b0_0),
+		  .ovt_slew_control(4'b00_00),
+		  .input_buffer_sel(4'b00_00))
+		SWI
+		 (.oe(tmpOE__SWI_net),
+		  .y({2'b0}),
+		  .fb({tmpFB_1__SWI_net[1:0]}),
+		  .io({tmpIO_1__SWI_net[1:0]}),
+		  .siovref(tmpSIOVREF__SWI_net),
+		  .interrupt({Net_643}),
+		  .annotation({Net_645, Net_642}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__SWI_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{2'b11} : {2'b11};
 
 	wire [0:0] tmpOE__Pin_min2_net;
 	wire [0:0] tmpFB_0__Pin_min2_net;
@@ -681,6 +765,8 @@ module top ;
 		  .out_reset({1'b0}));
 
 	assign tmpOE__Pin_min2_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+    assign Net_682 = 1'h0;
 
 
 

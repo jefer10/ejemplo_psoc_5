@@ -1,7 +1,16 @@
---------------- Rebuild Started: 09/17/2018 19:57:55 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Rebuild Started: 09/18/2018 09:42:27 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
-main.c: In function 'Numero':
-main.c:36:5: warning: implicit declaration of function 'PWM_WriteCompare' [-Wimplicit-function-declaration]
-     PWM_WriteCompare(i);
+main.c: In function 'main':
+main.c:118:5: error: unknown type name 'ISR_SW_Start'
+     ISR_SW_Start
      ^
---------------- Rebuild Succeeded: 09/17/2018 19:57:56 ---------------
+main.c:119:5: error: conflicting types for 'PWM_Start'
+     PWM_Start();
+     ^
+In file included from Generated_Source\PSoC5/project.h:22:0,
+                 from main.c:12:
+Generated_Source\PSoC5/PWM.h:146:9: note: previous declaration of 'PWM_Start' was here
+ void    PWM_Start(void) ;
+         ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 09/18/2018 09:42:31 ---------------

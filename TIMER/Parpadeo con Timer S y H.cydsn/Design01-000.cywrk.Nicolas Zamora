@@ -216,7 +216,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 416" SelectedTabbedMdiWindow="63327c74-ca8a-4a29-8d08-31e3ba40288e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Parpadeo con Timer S y H.cydsn\TopDesign\TopDesign.cysch" Guid="da55e300-219a-4e23-86a1-538d45500ccd" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Parpadeo con Timer S y H.cydsn\main.c" Guid="63327c74-ca8a-4a29-8d08-31e3ba40288e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="889, 422" SelectedTabbedMdiWindow="da55e300-219a-4e23-86a1-538d45500ccd"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Parpadeo con Timer S y H.cydsn\TopDesign\TopDesign.cysch" Guid="da55e300-219a-4e23-86a1-538d45500ccd" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Parpadeo con Timer S y H.cydsn\main.c" Guid="63327c74-ca8a-4a29-8d08-31e3ba40288e" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

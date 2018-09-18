@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: sw.h  
+* File Name: SW.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_sw_ALIASES_H) /* Pins sw_ALIASES_H */
-#define CY_PINS_sw_ALIASES_H
+#if !defined(CY_PINS_SW_ALIASES_H) /* Pins SW_ALIASES_H */
+#define CY_PINS_SW_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,15 +25,15 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define sw_0			(sw__0__PC)
-#define sw_0_INTR	((uint16)((uint16)0x0001u << sw__0__SHIFT))
+#define SW_0			(SW__0__PC)
+#define SW_0_INTR	((uint16)((uint16)0x0001u << SW__0__SHIFT))
 
-#define sw_1			(sw__1__PC)
-#define sw_1_INTR	((uint16)((uint16)0x0001u << sw__1__SHIFT))
+#define SW_1			(SW__1__PC)
+#define SW_1_INTR	((uint16)((uint16)0x0001u << SW__1__SHIFT))
 
-#define sw_INTR_ALL	 ((uint16)(sw_0_INTR| sw_1_INTR))
+#define SW_INTR_ALL	 ((uint16)(SW_0_INTR| SW_1_INTR))
 
-#endif /* End Pins sw_ALIASES_H */
+#endif /* End Pins SW_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -11,24 +11,70 @@
 */
 #include "project.h"
 volatile uint8 seg;
-volatile uint8 min;
-volatile uint8 hora;
-volatile uint8 medio_dia;
+volatile uint8 u_min;
+volatile uint8 d_min;
+volatile uint8 u_hora;
+volatile uint8 d_hora;
+
 uint16 count;
 uint8 de=1;
+uint8 aux=0;
 uint8 Inferior[]={12,9,11,10,9,10,0,9,0,9};
 uint8 Superior[]={8,7,6,6,4,5,5,6,8,8};
-//                0     1    2   3     4   5    6    7     8*    9*   10   11   12
-uint16 PasosS[]={5700,5380,5140,4810,4500,4200,4000,3990,3260,2800,2400,2070,1740};
+//                0     1    2   3     4   5    6*    7*     8*    9*   10   11   12
+uint16 PasosS[]={5700/* 0*/,5380/* 1*/,5140/* 2*/,4810/* 3*/,4500/* 4*/,3900/* 5*/,3680/* 6*/,3500/* 7*/,3100/* 8*/,2925/* 9*/,2300/* 10*/,2070/* 11*/,1740/* 12*/};
+//    
 
-void visual(uint16 co){
+void visualLCD(){
 
- LCD_Position(1,0);
-        LCD_PrintString("            ");
-        LCD_Position(1,0);
-        LCD_PrintNumber(co);
+     LCD_Position(0,0);
+     LCD_PrintString("             ");//Se Borra
+     LCD_Position(0,0);
+     LCD_PrintNumber(d_hora);
+     LCD_PrintNumber(u_hora);
+     LCD_PrintString(":");
+     LCD_PrintNumber(d_min);
+     LCD_PrintNumber(u_min);
+     LCD_PrintString(":");
+     LCD_PrintNumber(seg/10);
+    LCD_PrintNumber(seg%10);
 
 }
+
+void tiempo(uint8 aumento){
+seg=seg+aumento;
+ if(seg>=60){    
+		seg=0;
+		u_min++;
+		if(u_min == 10){
+			u_min=0;
+			d_min++;
+			if(d_min==6){
+				d_min=0;
+				u_hora++;
+				if(u_hora==10){
+					u_hora=0;
+					d_hora++;
+				}else{
+					if(u_hora==1){
+						if(d_hora==2){
+						    //Reinicia Reloj
+                            u_hora=0;
+							d_hora=0;
+                            u_min=0;
+                            d_min=0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
 
 void Numero(uint8 numero)
 {
@@ -47,119 +93,91 @@ void Numero(uint8 numero)
         for(uint8 i=0;i<=Superior[numero];i++){ 
         PWM_WriteCompare1(PasosS[i]);
         visual(i); 
+       
         CyDelay(200);
         }
     }else{
         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
         PWM_WriteCompare1(PasosS[i]);
         visual(i); 
+        if(numero==0)
+        {
+            PWM_WriteCompare1(2800);
+        }
+         if (numero==1)
+        {
+           
+            PWM_WriteCompare1(3300);
+            i=Superior[numero]+1;
+        }
+        if(numero==4)
+        {
+            PWM_WriteCompare1(4200);
+            i=Superior[numero]+1;
+        }
+        
         CyDelay(200);
         }
     }
 }
 
-
-CY_ISR(INT_DI){
-    hora=0;
-    min=0;
-    medio_dia=1+medio_dia;
-    if (medio_dia>1)
-    {
-        medio_dia=0;
-    }
-    
-}
-
-
-CY_ISR(INT_HO){
-    hora=hora+1;
-    if (hora>12)
-    {
-        hora=0;
-    }
-}
-
-
-CY_ISR(INT_MI){
-    min=min+1;
-    if (min>60)
-    {
-        min=0;
-    }
- 
-}
-
-
 CY_ISR(INT_SE){
-    
+      tiempo(1); // Se llama tiempo cuando se llega al limite
+      visualLCD();  
 }
-
-
+    
+CY_ISR(INT_SWI){
+    CyDelay(1);
+    switch(SWI_Read()){
+    case 0b00000001:
+      if(aux==1){
+        LCD_Position(1,0);
+        LCD_PrintString("Configuracion");
+        Timer_Stop();
+        aux=0;
+        }else{
+        LCD_Position(1,0);
+        LCD_PrintString("             ");
+        Timer_Start();
+        aux=1;
+      }
+        break;
+    case 0b00000010:
+        if(aux==0){
+        tiempo(60);
+        seg=0;//Segundos en Cero
+        }
+        visualLCD();
+        break;
+     default:
+        break;
+    }
+    SWI_ClearInterrupt();
+}
 
 int main(){
 
-    min=0;
-    hora=0;
-    seg=0;
-    medio_dia=0;
     
-    LCD_Start();
-    LCD_Position(0,0);
-    LCD_PrintString("Numero");
+    d_hora=0;
+    u_hora=2;
+    d_min=1;
+    u_min=1;
+    seg=9;
+
     
     
     CyGlobalIntEnable; /* Enable global interrupts. */
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    ISR_HO_StartEx(INT_HO);
+    ISR_SWI_StartEx(INT_SWI);
     ISR_SE_StartEx(INT_SE);
-    ISR_MI_StartEx(INT_MI);
-    ISR_DI_StartEx(INT_DI);
     PWM_Start();
+    LCD_Start();
+    Timer_Start();
+
     
     for(;;)
-    {   /*
-        LCD_Position(0,10);
-        LCD_PrintNumber(0);        
-        Numero(0);
-        CyDelay(10000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(1);
-        Numero(1);
-        CyDelay(10000);
- */
-        LCD_Position(0,10);
-        LCD_PrintNumber(2);
-        Numero(2);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(3);
-        Numero(3);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(4);
-        Numero(4);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(5);
-        Numero(5);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(6);
-        Numero(6);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(7);
-        Numero(7);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(8);
-        Numero(8);
-        CyDelay(8000);
-        LCD_Position(0,10);
-        LCD_PrintNumber(9);
-        Numero(9);
-        CyDelay(80000);
+    {   
         
     /* CODIGO DE PRUEBA MOTOR*/    
        /*

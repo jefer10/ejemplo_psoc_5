@@ -102,20 +102,24 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_LCDPort_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_LCDPort.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LCD_LCDPort.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_MI.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_MI.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_HO.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_HO.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_SE.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_SE.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_DI.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_DI.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_min2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_SWI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ISR_SWI.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SWI_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SWI.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SWI.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Export\ARM_GCC_Generic">
