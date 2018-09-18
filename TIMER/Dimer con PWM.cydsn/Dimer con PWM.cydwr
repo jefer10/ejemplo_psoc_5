@@ -253,7 +253,8 @@
     <Group key="Pin">
       <Data key="0a634f49-22e3-4153-877b-031c440d1bf5/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_LCDPort" />
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="sw" />
-      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_2" />
+      <Data key="c3020af1-6f33-4c27-b4ed-d3829b1ae340" value="Pin_min2" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin_min1" />
     </Group>
   </Group>
   <Group key="EEPROM">
@@ -3369,6 +3370,11 @@
       </Group>
       <Group key="1">
         <Data key="Port Format" value="3,1" />
+      </Group>
+    </Group>
+    <Group key="c3020af1-6f33-4c27-b4ed-d3829b1ae340">
+      <Group key="0">
+        <Data key="Port Format" value="2,0" />
       </Group>
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">

@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> Dimer con PWM</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 09/15/18 20:35:29</td></tr>
+<td class="proptext"> 09/17/18 20:06:11</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C5888LTI-LP097</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -601,8 +601,8 @@ Clock Summary Section</span>
  <td class = "text_info">CyILO</td>
  <td class = "number">1.000&nbsp;kHz</td>
  <td class = "number">1.000&nbsp;kHz</td>
- <td class = "number"> N/A </td>
- <td class = "text_info"> </td>
+ <td class = "number">102.902&nbsp;MHz</td>
+ <td class = "text_info"></td>
 </tr>
 <tr> 
  <td class = "text_info">CyIMO</td>
@@ -1501,6 +1501,667 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 2.4&nbsp;MHz)</sp
 </div>
 </div>
 </div>
+<div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Source Clock : CyILO : Positive edge(Required Frequency 1&nbsp;kHz)</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Destination Clock : CyILO : Positive edge(Required Frequency 1&nbsp;kHz)</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec_desc">Path Delay Requirement : 1e+006ns(1&nbsp;kHz)</div>
+<table class="sta_tscs">
+ <thead> 
+<tr> 
+<th>Source</th>
+<th>Destination</th>
+<th>FMax</th>
+<th>Delay (ns)</th>
+<th>Slack (ns)</th>
+<th>Violation</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">Net_498/main_1</td>
+ <td class = "number">102.902&nbsp;MHz</td>
+ <td class = "number">9.718</td>
+ <td class = "number">999990.282</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">Net_498/main_1</td>
+ <td class = "number">4.958</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:not_last_reset\/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:not_last_reset\/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell26</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:not_last_reset\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">Net_496/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">Net_496/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_496</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_3\/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_3\/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell28</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_3\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_2\/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_2\/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell29</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_2\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_1\/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_1\/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell30</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_0\/clk_en</td>
+ <td class = "number">106.553&nbsp;MHz</td>
+ <td class = "number">9.385</td>
+ <td class = "number">999990.615</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell19</td>
+ <td class = "text_info">U(1,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/clock_0</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_498</td>
+ <td class = "text_info">Net_498/q</td>
+ <td class = "text_info">\FreqDiv_3:count_0\/clk_en</td>
+ <td class = "number">6.037</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell31</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">2.100</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.002</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_489/q</td>
+ <td class = "text_info">Net_489/main_1</td>
+ <td class = "number">112.575&nbsp;MHz</td>
+ <td class = "number">8.883</td>
+ <td class = "number">999991.117</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_489</td>
+ <td class = "text_info">Net_489/clock_0</td>
+ <td class = "text_info">Net_489/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_489</td>
+ <td class = "text_info">Net_489/q</td>
+ <td class = "text_info">Net_489/main_1</td>
+ <td class = "number">4.123</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_489</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/main_1</td>
+ <td class = "number">132.415&nbsp;MHz</td>
+ <td class = "number">7.552</td>
+ <td class = "number">999992.448</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/clock_0</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/main_1</td>
+ <td class = "number">2.792</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "text_info">\FreqDiv_1:count_4\/main_1</td>
+ <td class = "number">132.415&nbsp;MHz</td>
+ <td class = "number">7.552</td>
+ <td class = "number">999992.448</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/clock_0</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/q</td>
+ <td class = "text_info">\FreqDiv_1:count_4\/main_1</td>
+ <td class = "number">2.792</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_4\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+</tbody>
+ </table> 
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sta_sec" >
@@ -1532,6 +2193,67 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
+ <td class = "text_info">\PWM:PWMUDB:status_1\/q</td>
+ <td class = "text_info">\PWM:PWMUDB:genblk8:stsreg\/status_1</td>
+ <td class = "number">1.571</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\/clock_0</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\/q</td>
+ <td class = "text_info">\PWM:PWMUDB:genblk8:stsreg\/status_1</td>
+ <td class = "number">2.321</td>
+</tr>
+<tr> 
+ <td class = "text_info">statusicell1</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:genblk8:stsreg\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">-2.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\PWM:PWMUDB:status_0\/q</td>
  <td class = "text_info">\PWM:PWMUDB:genblk8:stsreg\/status_0</td>
  <td class = "number">1.573</td>
@@ -1553,7 +2275,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell4</td>
+ <td class = "text_info">macrocell5</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM:PWMUDB:status_0\</td>
@@ -1656,7 +2378,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\PWM:PWMUDB:genblk1:ctrlreg\/control_7</td>
  <td class = "text_info">\PWM:PWMUDB:runmode_enable\/main_0</td>
- <td class = "number">2.686</td>
+ <td class = "number">2.700</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1690,13 +2412,74 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "text_info">\PWM:PWMUDB:control_7\</td>
  <td class = "text_info">\PWM:PWMUDB:genblk1:ctrlreg\/control_7</td>
  <td class = "text_info">\PWM:PWMUDB:runmode_enable\/main_0</td>
- <td class = "number">2.326</td>
+ <td class = "number">2.340</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell2</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM:PWMUDB:runmode_enable\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
+ <td class = "number">3.372</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
+ <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/clock</td>
+ <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
+ <td class = "number">0.780</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:cmp1_less\</td>
+ <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
+ <td class = "number">2.592</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell3</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare1\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -1754,7 +2537,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.592</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell4</td>
+ <td class = "text_info">macrocell5</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM:PWMUDB:status_0\</td>
@@ -1777,67 +2560,6 @@ Destination Clock : Clock_1 : Positive edge</span>
 </tr>
 <tr> 
  <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">3.381</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/clock</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "number">0.780</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:cmp1_less\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">2.601</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell3</td>
- <td class = "text_info">U(0,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
  <td class = "text_info">Net_41/main_1</td>
  <td class = "number">3.381</td>
  <td class = "text_info"></td>
@@ -1876,7 +2598,7 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">2.601</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_41</td>
@@ -1900,7 +2622,7 @@ Destination Clock : Clock_1 : Positive edge</span>
 <tr> 
  <td class = "text_info">\PWM:PWMUDB:prevCompare1\/q</td>
  <td class = "text_info">\PWM:PWMUDB:status_0\/main_0</td>
- <td class = "number">3.562</td>
+ <td class = "number">3.541</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1934,10 +2656,10 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "text_info">\PWM:PWMUDB:prevCompare1\</td>
  <td class = "text_info">\PWM:PWMUDB:prevCompare1\/q</td>
  <td class = "text_info">\PWM:PWMUDB:status_0\/main_0</td>
- <td class = "number">2.312</td>
+ <td class = "number">2.291</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell4</td>
+ <td class = "text_info">macrocell5</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">\PWM:PWMUDB:status_0\</td>
@@ -1959,8 +2681,69 @@ Destination Clock : Clock_1 : Positive edge</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\/q</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\/main_0</td>
+ <td class = "number">3.542</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell4</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\/clock_0</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare2\/q</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\/main_0</td>
+ <td class = "number">2.292</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\PWM:PWMUDB:status_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\/main_1</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
  <td class = "number">4.212</td>
  <td class = "text_info"></td>
 </tr>
@@ -2012,87 +2795,8 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "number">1</td>
  <td class = "text_info">\PWM:PWMUDB:cmp1_less\</td>
  <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\/main_1</td>
+ <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
  <td class = "number">2.592</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">4.221</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/clock</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "number">0.430</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0.cl0__sig\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0i</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0i</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "number">1.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:cmp1_less\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">2.601</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell3</td>
@@ -2116,10 +2820,38 @@ Destination Clock : Clock_1 : Positive edge</span>
  </table> 
 </td>
 </tr>
+</tbody>
+ </table> 
+</div>
+</div>
+</div>
+</div>
+<div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Source Clock : CyILO : Positive edge</span>
+</a>
+</div><div class="sta_secbody"><div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+Destination Clock : CyILO : Positive edge</span>
+</a>
+</div><div class="sta_secbody"><table class="sta_tscs">
+ <thead> 
 <tr> 
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "text_info">Net_41/main_1</td>
- <td class = "number">4.221</td>
+<th>Source</th>
+<th>Destination</th>
+<th>Slack (ns)</th>
+<th>Violation</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:not_last_reset\/clk_en</td>
+ <td class = "number">3.017</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2138,46 +2870,577 @@ Destination Clock : Clock_1 : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,4)</td>
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/clock</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "number">0.430</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0.cl0__sig\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cl0</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0i</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:not_last_reset\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:not_last_reset\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,4)</td>
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">Net_489/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0i</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "number">1.190</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:cmp1_less\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/cl0_comb</td>
- <td class = "text_info">Net_41/main_1</td>
- <td class = "number">2.601</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">Net_489/clk_en</td>
+ <td class = "number">2.325</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(0,4)</td>
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(1,3)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_41</td>
+ <td class = "text_info">Net_489</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_5\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_5\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_4\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_4\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell13</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_4\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_3\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_3\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell14</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_3\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_2\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_2\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell15</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_2\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_1\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_1\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell16</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_0\/clk_en</td>
+ <td class = "number">3.017</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/clock_0</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_590</td>
+ <td class = "text_info">Net_590/q</td>
+ <td class = "text_info">\FreqDiv_1:count_0\/clk_en</td>
+ <td class = "number">2.325</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell17</td>
+ <td class = "text_info">U(1,3)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_1:count_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">-0.558</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_496/q</td>
+ <td class = "text_info">Net_496/main_1</td>
+ <td class = "number">3.535</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_496</td>
+ <td class = "text_info">Net_496/clock_0</td>
+ <td class = "text_info">Net_496/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_496</td>
+ <td class = "text_info">Net_496/q</td>
+ <td class = "text_info">Net_496/main_1</td>
+ <td class = "number">2.285</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_496</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\FreqDiv_3:count_2\/q</td>
+ <td class = "text_info">Net_496/main_3</td>
+ <td class = "number">3.537</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell29</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_2\</td>
+ <td class = "text_info">\FreqDiv_3:count_2\/clock_0</td>
+ <td class = "text_info">\FreqDiv_3:count_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\FreqDiv_3:count_2\</td>
+ <td class = "text_info">\FreqDiv_3:count_2\/q</td>
+ <td class = "text_info">Net_496/main_3</td>
+ <td class = "number">2.287</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell27</td>
+ <td class = "text_info">U(0,2)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_496</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -2228,8 +3491,8 @@ Clock_1</span>
 <tbody>
 <tr> 
  <td class = "text_info">Net_41/q</td>
- <td class = "text_info">Pin_2(0)_PAD</td>
- <td class = "number">23.508</td>
+ <td class = "text_info">Pin_min1(0)_PAD</td>
+ <td class = "number">23.532</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2247,7 +3510,7 @@ Clock_1</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(0,4)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_41</td>
@@ -2261,25 +3524,94 @@ Clock_1</span>
  <td class = "number">1</td>
  <td class = "text_info">Net_41</td>
  <td class = "text_info">Net_41/q</td>
- <td class = "text_info">Pin_2(0)/pin_input</td>
- <td class = "number">6.367</td>
+ <td class = "text_info">Pin_min1(0)/pin_input</td>
+ <td class = "number">6.391</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell1</td>
  <td class = "text_info">P2[1]</td>
  <td class = "number">1</td>
- <td class = "text_info">Pin_2(0)</td>
- <td class = "text_info">Pin_2(0)/pin_input</td>
- <td class = "text_info">Pin_2(0)/pad_out</td>
+ <td class = "text_info">Pin_min1(0)</td>
+ <td class = "text_info">Pin_min1(0)/pin_input</td>
+ <td class = "text_info">Pin_min1(0)/pad_out</td>
  <td class = "number">15.891</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Pin_2(0)_PAD</td>
- <td class = "text_info">Pin_2(0)/pad_out</td>
- <td class = "text_info">Pin_2(0)_PAD</td>
+ <td class = "text_info">Pin_min1(0)_PAD</td>
+ <td class = "text_info">Pin_min1(0)/pad_out</td>
+ <td class = "text_info">Pin_min1(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">Net_610/q</td>
+ <td class = "text_info">Pin_min2(0)_PAD</td>
+ <td class = "number">23.252</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(0,4)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_610</td>
+ <td class = "text_info">Net_610/clock_0</td>
+ <td class = "text_info">Net_610/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_610</td>
+ <td class = "text_info">Net_610/q</td>
+ <td class = "text_info">Pin_min2(0)/pin_input</td>
+ <td class = "number">6.335</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell9</td>
+ <td class = "text_info">P2[0]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_min2(0)</td>
+ <td class = "text_info">Pin_min2(0)/pin_input</td>
+ <td class = "text_info">Pin_min2(0)/pad_out</td>
+ <td class = "number">15.667</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_min2(0)_PAD</td>
+ <td class = "text_info">Pin_min2(0)/pad_out</td>
+ <td class = "text_info">Pin_min2(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 

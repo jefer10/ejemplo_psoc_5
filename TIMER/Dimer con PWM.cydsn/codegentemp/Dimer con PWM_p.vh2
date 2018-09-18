@@ -1,17 +1,18 @@
 -- Project:   Dimer con PWM
--- Generated: 09/15/2018 20:35:26
+-- Generated: 09/17/2018 20:06:03
 -- PSoC Creator  4.2
 
 ENTITY \Dimer con PWM\ IS
     PORT(
-        Pin_2(0)_PAD : OUT std_ulogic;
+        Pin_min1(0)_PAD : OUT std_ulogic;
         \LCD:LCDPort(0)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(1)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(2)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(3)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(4)_PAD\ : OUT std_ulogic;
         \LCD:LCDPort(5)_PAD\ : OUT std_ulogic;
-        \LCD:LCDPort(6)_PAD\ : OUT std_ulogic);
+        \LCD:LCDPort(6)_PAD\ : OUT std_ulogic;
+        Pin_min2(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
@@ -40,7 +41,34 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     ATTRIBUTE global_signal OF Net_31 : SIGNAL IS true;
     SIGNAL Net_31_local : bit;
     SIGNAL Net_41 : bit;
-    SIGNAL Pin_2(0)__PA : bit;
+    SIGNAL Net_489 : bit;
+    SIGNAL Net_496 : bit;
+    SIGNAL Net_498 : bit;
+    SIGNAL Net_590 : bit;
+    SIGNAL Net_610 : bit;
+    SIGNAL Pin_min1(0)__PA : bit;
+    SIGNAL Pin_min2(0)__PA : bit;
+    SIGNAL \FreqDiv_1:count_0\ : bit;
+    SIGNAL \FreqDiv_1:count_1\ : bit;
+    SIGNAL \FreqDiv_1:count_2\ : bit;
+    SIGNAL \FreqDiv_1:count_3\ : bit;
+    SIGNAL \FreqDiv_1:count_4\ : bit;
+    SIGNAL \FreqDiv_1:count_5\ : bit;
+    SIGNAL \FreqDiv_1:not_last_reset\ : bit;
+    SIGNAL \FreqDiv_2:count_0\ : bit;
+    SIGNAL \FreqDiv_2:count_1\ : bit;
+    SIGNAL \FreqDiv_2:count_2\ : bit;
+    SIGNAL \FreqDiv_2:count_3\ : bit;
+    SIGNAL \FreqDiv_2:count_4\ : bit;
+    SIGNAL \FreqDiv_2:count_5\ : bit;
+    SIGNAL \FreqDiv_2:not_last_reset\ : bit;
+    SIGNAL \FreqDiv_3:count_0\ : bit;
+    SIGNAL \FreqDiv_3:count_1\ : bit;
+    SIGNAL \FreqDiv_3:count_2\ : bit;
+    SIGNAL \FreqDiv_3:count_3\ : bit;
+    SIGNAL \FreqDiv_3:not_last_reset\ : bit;
+    SIGNAL \FreqDiv_4:count_0\ : bit;
+    SIGNAL \FreqDiv_4:not_last_reset\ : bit;
     SIGNAL \\\LCD:LCDPort(0)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(1)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(2)\\__PA\ : bit;
@@ -49,6 +77,7 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     SIGNAL \\\LCD:LCDPort(5)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(6)\\__PA\ : bit;
     SIGNAL \PWM:PWMUDB:cmp1_less\ : bit;
+    SIGNAL \PWM:PWMUDB:cmp2_less\ : bit;
     SIGNAL \PWM:PWMUDB:control_0\ : bit;
     SIGNAL \PWM:PWMUDB:control_1\ : bit;
     SIGNAL \PWM:PWMUDB:control_2\ : bit;
@@ -58,8 +87,10 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     SIGNAL \PWM:PWMUDB:control_6\ : bit;
     SIGNAL \PWM:PWMUDB:control_7\ : bit;
     SIGNAL \PWM:PWMUDB:prevCompare1\ : bit;
+    SIGNAL \PWM:PWMUDB:prevCompare2\ : bit;
     SIGNAL \PWM:PWMUDB:runmode_enable\ : bit;
     SIGNAL \PWM:PWMUDB:status_0\ : bit;
+    SIGNAL \PWM:PWMUDB:status_1\ : bit;
     SIGNAL \PWM:PWMUDB:status_2\ : bit;
     SIGNAL \PWM:PWMUDB:status_3\ : bit;
     SIGNAL \PWM:PWMUDB:tc_i\ : bit;
@@ -84,8 +115,8 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     SIGNAL \PWM:PWMUDB:sP16:pwmdp:u0.cfbo__sig\ : bit;
     SIGNAL \PWM:PWMUDB:sP16:pwmdp:u1.sor__sig\ : bit;
     SIGNAL \PWM:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\ : bit;
-    ATTRIBUTE lib_model OF Pin_2(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF Pin_2(0) : LABEL IS "P2[1]";
+    ATTRIBUTE lib_model OF Pin_min1(0) : LABEL IS "iocell1";
+    ATTRIBUTE Location OF Pin_min1(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF \LCD:LCDPort(0)\ : LABEL IS "iocell2";
     ATTRIBUTE Location OF \LCD:LCDPort(0)\ : LABEL IS "P12[0]";
     ATTRIBUTE lib_model OF \LCD:LCDPort(1)\ : LABEL IS "iocell3";
@@ -100,6 +131,8 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     ATTRIBUTE Location OF \LCD:LCDPort(5)\ : LABEL IS "P12[5]";
     ATTRIBUTE lib_model OF \LCD:LCDPort(6)\ : LABEL IS "iocell8";
     ATTRIBUTE Location OF \LCD:LCDPort(6)\ : LABEL IS "P12[6]";
+    ATTRIBUTE lib_model OF Pin_min2(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF Pin_min2(0) : LABEL IS "P2[0]";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:status_2\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
@@ -107,8 +140,36 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell4";
-    ATTRIBUTE lib_model OF Net_41 : LABEL IS "macrocell5";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare2\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell5";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_1\ : LABEL IS "macrocell6";
+    ATTRIBUTE lib_model OF Net_41 : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF Net_610 : LABEL IS "macrocell8";
+    ATTRIBUTE lib_model OF Net_590 : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \FreqDiv_1:not_last_reset\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF Net_489 : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_5\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_4\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_3\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_2\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_1\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_0\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF \FreqDiv_2:not_last_reset\ : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF Net_498 : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_5\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_4\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_3\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_2\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_1\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \FreqDiv_2:count_0\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \FreqDiv_3:not_last_reset\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF Net_496 : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \FreqDiv_3:count_3\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \FreqDiv_3:count_2\ : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \FreqDiv_3:count_1\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \FreqDiv_3:count_0\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \FreqDiv_4:not_last_reset\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \FreqDiv_4:count_0\ : LABEL IS "macrocell33";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -307,6 +368,11 @@ ARCHITECTURE __DEFAULT__ OF \Dimer con PWM\ IS
     ATTRIBUTE udb_chain OF datapathcell : COMPONENT IS "ce0i,ce0,cl0i,cl0,z0i,z0,ff0i,ff0,ce1i,ce1,cl1i,cl1,z1i,z1,ff1i,ff1,cap0i,cap0,cap1i,cap1,ci,co_msb,sir,sol_msb,cfbi,cfbo,sil,sor,cmsbi,cmsbo";
     ATTRIBUTE chain_lsb OF datapathcell : COMPONENT IS "ce0i,cl0i,z0i,ff0i,ce1i,cl1i,z1i,ff1i,cap0i,cap1i,ci,sir,cfbi,sor,cmsbo";
     ATTRIBUTE chain_msb OF datapathcell : COMPONENT IS "ce0,cl0,z0,ff0,ce1,cl1,z1,ff1,cap0,cap1,co_msb,sol_msb,cfbo,sil,cmsbi";
+    COMPONENT interrupt
+        PORT (
+            interrupt : IN std_ulogic;
+            clock : IN std_ulogic);
+    END COMPONENT;
     COMPONENT iocell
         PORT (
             oe : IN std_ulogic;
@@ -426,7 +492,7 @@ BEGIN
             dclk_glb_0 => Net_31,
             dclk_0 => Net_31_local);
 
-    Pin_2:logicalport
+    Pin_min1:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "1",
@@ -497,20 +563,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Pin_2(0):iocell
+    Pin_min1(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Pin_2",
+            logicalport => "Pin_min1",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
-            pa_out => Pin_2(0)__PA,
+            pa_out => Pin_min1(0)__PA,
             oe => open,
             pin_input => Net_41,
-            pad_out => Pin_2(0)_PAD,
-            pad_in => Pin_2(0)_PAD,
+            pad_out => Pin_min1(0)_PAD,
+            pad_in => Pin_min1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -722,6 +788,98 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
+    Pin_min2:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "c3020af1-6f33-4c27-b4ed-d3829b1ae340",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Pin_min2(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Pin_min2",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Pin_min2(0)__PA,
+            oe => open,
+            pin_input => Net_610,
+            pad_out => Pin_min2(0)_PAD,
+            pad_in => Pin_min2(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
     \PWM:PWMUDB:status_2\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -767,7 +925,7 @@ BEGIN
             status_4 => open,
             status_3 => \PWM:PWMUDB:status_3\,
             status_2 => \PWM:PWMUDB:status_2\,
-            status_1 => open,
+            status_1 => \PWM:PWMUDB:status_1\,
             status_0 => \PWM:PWMUDB:status_0\);
 
     \PWM:PWMUDB:sP16:pwmdp:u0\:datapathcell
@@ -849,6 +1007,7 @@ BEGIN
             cs_addr_1 => \PWM:PWMUDB:runmode_enable\,
             cl0_comb => \PWM:PWMUDB:cmp1_less\,
             z0_comb => \PWM:PWMUDB:tc_i\,
+            cl1_comb => \PWM:PWMUDB:cmp2_less\,
             f1_blk_stat_comb => \PWM:PWMUDB:status_3\,
             busclk => ClockBlock_BUS_CLK,
             ce0i => \PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
@@ -864,6 +1023,38 @@ BEGIN
             cfbi => \PWM:PWMUDB:sP16:pwmdp:u0.cfbo__sig\,
             sor => \PWM:PWMUDB:sP16:pwmdp:u1.sor__sig\,
             cmsbo => \PWM:PWMUDB:sP16:pwmdp:u1.cmsbo__sig\);
+
+    ISR_MI:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_489,
+            clock => ClockBlock_BUS_CLK);
+
+    ISR_HO:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_498,
+            clock => ClockBlock_BUS_CLK);
+
+    ISR_DI:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_496,
+            clock => ClockBlock_BUS_CLK);
+
+    ISR_SE:interrupt
+        GENERIC MAP(
+            int_type => "00",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_590,
+            clock => ClockBlock_BUS_CLK);
 
     \PWM:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
@@ -887,6 +1078,17 @@ BEGIN
             clock_0 => Net_31,
             main_0 => \PWM:PWMUDB:cmp1_less\);
 
+    \PWM:PWMUDB:prevCompare2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \PWM:PWMUDB:prevCompare2\,
+            clock_0 => Net_31,
+            main_0 => \PWM:PWMUDB:cmp2_less\);
+
     \PWM:PWMUDB:status_0\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1)",
@@ -899,6 +1101,18 @@ BEGIN
             main_0 => \PWM:PWMUDB:prevCompare1\,
             main_1 => \PWM:PWMUDB:cmp1_less\);
 
+    \PWM:PWMUDB:status_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \PWM:PWMUDB:status_1\,
+            clock_0 => Net_31,
+            main_0 => \PWM:PWMUDB:prevCompare2\,
+            main_1 => \PWM:PWMUDB:cmp2_less\);
+
     Net_41:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -910,5 +1124,414 @@ BEGIN
             clock_0 => Net_31,
             main_0 => \PWM:PWMUDB:runmode_enable\,
             main_1 => \PWM:PWMUDB:cmp1_less\);
+
+    Net_610:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_610,
+            clock_0 => Net_31,
+            main_0 => \PWM:PWMUDB:runmode_enable\,
+            main_1 => \PWM:PWMUDB:cmp2_less\);
+
+    Net_590:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_590,
+            clk_en => open,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_4:not_last_reset\,
+            main_1 => \FreqDiv_4:count_0\);
+
+    \FreqDiv_1:not_last_reset\:macrocell
+        GENERIC MAP(
+            eqn_main => "1'b0",
+            regmode => 1,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:not_last_reset\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k);
+
+    Net_489:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6 * main_7) + (!main_1 * main_2 * main_3 * main_4 * !main_5 * main_6 * main_7)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => Net_489,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => Net_489,
+            main_2 => \FreqDiv_1:count_5\,
+            main_3 => \FreqDiv_1:count_4\,
+            main_4 => \FreqDiv_1:count_3\,
+            main_5 => \FreqDiv_1:count_2\,
+            main_6 => \FreqDiv_1:count_1\,
+            main_7 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_5\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_5\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_5\,
+            main_2 => \FreqDiv_1:count_4\,
+            main_3 => \FreqDiv_1:count_3\,
+            main_4 => \FreqDiv_1:count_2\,
+            main_5 => \FreqDiv_1:count_1\,
+            main_6 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_4\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_4\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_5\,
+            main_2 => \FreqDiv_1:count_4\,
+            main_3 => \FreqDiv_1:count_3\,
+            main_4 => \FreqDiv_1:count_2\,
+            main_5 => \FreqDiv_1:count_1\,
+            main_6 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_3\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_3\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_5\,
+            main_2 => \FreqDiv_1:count_4\,
+            main_3 => \FreqDiv_1:count_3\,
+            main_4 => \FreqDiv_1:count_2\,
+            main_5 => \FreqDiv_1:count_1\,
+            main_6 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_5 * main_6) + (main_0 * !main_2 * main_5 * main_6) + (main_0 * !main_3 * main_5 * main_6) + (main_0 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_2\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_5\,
+            main_2 => \FreqDiv_1:count_4\,
+            main_3 => \FreqDiv_1:count_3\,
+            main_4 => \FreqDiv_1:count_2\,
+            main_5 => \FreqDiv_1:count_1\,
+            main_6 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_1\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_0\);
+
+    \FreqDiv_1:count_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_1:count_0\,
+            clk_en => Net_590,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_1:not_last_reset\);
+
+    \FreqDiv_2:not_last_reset\:macrocell
+        GENERIC MAP(
+            eqn_main => "1'b0",
+            regmode => 1,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:not_last_reset\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k);
+
+    Net_498:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (main_0 * main_1 * !main_2 * main_3 * main_4 * main_5 * !main_6 * main_7) + (!main_1 * main_2 * main_3 * main_4 * !main_5 * main_6 * main_7)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => Net_498,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => Net_498,
+            main_2 => \FreqDiv_2:count_5\,
+            main_3 => \FreqDiv_2:count_4\,
+            main_4 => \FreqDiv_2:count_3\,
+            main_5 => \FreqDiv_2:count_2\,
+            main_6 => \FreqDiv_2:count_1\,
+            main_7 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_5\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_2 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_5\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => \FreqDiv_2:count_5\,
+            main_2 => \FreqDiv_2:count_4\,
+            main_3 => \FreqDiv_2:count_3\,
+            main_4 => \FreqDiv_2:count_2\,
+            main_5 => \FreqDiv_2:count_1\,
+            main_6 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_4\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_3 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_4\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => \FreqDiv_2:count_5\,
+            main_2 => \FreqDiv_2:count_4\,
+            main_3 => \FreqDiv_2:count_3\,
+            main_4 => \FreqDiv_2:count_2\,
+            main_5 => \FreqDiv_2:count_1\,
+            main_6 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_3\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_5 * main_6) + (main_0 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_3\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => \FreqDiv_2:count_5\,
+            main_2 => \FreqDiv_2:count_4\,
+            main_3 => \FreqDiv_2:count_3\,
+            main_4 => \FreqDiv_2:count_2\,
+            main_5 => \FreqDiv_2:count_1\,
+            main_6 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_5 * main_6) + (main_0 * !main_2 * main_5 * main_6) + (main_0 * !main_3 * main_5 * main_6) + (main_0 * main_4 * main_5 * main_6)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_2\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => \FreqDiv_2:count_5\,
+            main_2 => \FreqDiv_2:count_4\,
+            main_3 => \FreqDiv_2:count_3\,
+            main_4 => \FreqDiv_2:count_2\,
+            main_5 => \FreqDiv_2:count_1\,
+            main_6 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_1\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\,
+            main_1 => \FreqDiv_2:count_0\);
+
+    \FreqDiv_2:count_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_2:count_0\,
+            clk_en => Net_489,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_2:not_last_reset\);
+
+    \FreqDiv_3:not_last_reset\:macrocell
+        GENERIC MAP(
+            eqn_main => "1'b0",
+            regmode => 1,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_3:not_last_reset\,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k);
+
+    Net_496:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (main_0 * main_1 * !main_2 * main_3 * !main_4 * main_5) + (!main_1 * main_2 * !main_3 * main_4 * main_5)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => Net_496,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_3:not_last_reset\,
+            main_1 => Net_496,
+            main_2 => \FreqDiv_3:count_3\,
+            main_3 => \FreqDiv_3:count_2\,
+            main_4 => \FreqDiv_3:count_1\,
+            main_5 => \FreqDiv_3:count_0\);
+
+    \FreqDiv_3:count_3\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * main_3 * main_4) + (main_0 * main_2 * main_3 * main_4)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_3:count_3\,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_3:not_last_reset\,
+            main_1 => \FreqDiv_3:count_3\,
+            main_2 => \FreqDiv_3:count_2\,
+            main_3 => \FreqDiv_3:count_1\,
+            main_4 => \FreqDiv_3:count_0\);
+
+    \FreqDiv_3:count_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_3 * main_4) + (main_0 * main_2 * main_3 * main_4)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_3:count_2\,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_3:not_last_reset\,
+            main_1 => \FreqDiv_3:count_3\,
+            main_2 => \FreqDiv_3:count_2\,
+            main_3 => \FreqDiv_3:count_1\,
+            main_4 => \FreqDiv_3:count_0\);
+
+    \FreqDiv_3:count_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_3:count_1\,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_3:not_last_reset\,
+            main_1 => \FreqDiv_3:count_0\);
+
+    \FreqDiv_3:count_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_inv => '0',
+            clken_mode => 2)
+        PORT MAP(
+            q => \FreqDiv_3:count_0\,
+            clk_en => Net_498,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_3:not_last_reset\);
+
+    \FreqDiv_4:not_last_reset\:macrocell
+        GENERIC MAP(
+            eqn_main => "1'b0",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \FreqDiv_4:not_last_reset\,
+            clk_en => open,
+            clock_0 => ClockBlock_1k);
+
+    \FreqDiv_4:count_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \FreqDiv_4:count_0\,
+            clk_en => open,
+            clock_0 => ClockBlock_1k,
+            main_0 => \FreqDiv_4:not_last_reset\);
 
 END __DEFAULT__;

@@ -33,7 +33,7 @@ extern uint8 PWM_initVar;
 #define PWM_DeadBandMode                   (0u)
 #define PWM_KillModeMinTime                (0u)
 #define PWM_KillMode                       (0u)
-#define PWM_PWMMode                        (0u)
+#define PWM_PWMMode                        (1u)
 #define PWM_PWMModeIsCenterAligned         (0u)
 #define PWM_DeadBandUsed                   (0u)
 #define PWM_DeadBand2_4                    (0u)
@@ -50,7 +50,7 @@ extern uint8 PWM_initVar;
     #define PWM_UseControl                 (0u)
 #endif /* !defined(PWM_PWMUDB_genblk1_ctrlreg__REMOVED) */
 
-#define PWM_UseOneCompareMode              (1u)
+#define PWM_UseOneCompareMode              (0u)
 #define PWM_MinimumKillTime                (1u)
 #define PWM_EnableMode                     (0u)
 
@@ -228,7 +228,7 @@ void PWM_RestoreConfig(void) ;
 **************************************/
 #define PWM_INIT_PERIOD_VALUE          (48000u)
 #define PWM_INIT_COMPARE_VALUE1        (3600u)
-#define PWM_INIT_COMPARE_VALUE2        (63u)
+#define PWM_INIT_COMPARE_VALUE2        (3600u)
 #define PWM_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
                                                     PWM_STATUS_TC_INT_EN_MASK_SHIFT)) | \
                                                     (uint8)((uint8)(0u <<  \

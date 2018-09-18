@@ -1,3 +1,3 @@
-# Component constraints for C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj
-# Date: Sun, 16 Sep 2018 01:35:23 GMT
+# Component constraints for C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj
+# Date: Tue, 18 Sep 2018 01:05:59 GMT

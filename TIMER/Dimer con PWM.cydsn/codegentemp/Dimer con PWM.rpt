@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.228ms
+Loading plugins phase: Elapsed time ==> 0s.343ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.916ms
+Elaboration phase: Elapsed time ==> 3s.500ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.047ms
+HDL generation phase: Elapsed time ==> 0s.125ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.047ms
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 Dimer con PWM.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sat Sep 15 20:35:23 2018
+Mon Sep 17 20:05:59 2018
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 Dimer con PWM.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sat Sep 15 20:35:23 2018
+Mon Sep 17 20:05:59 2018
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
@@ -60,6 +60,8 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\ps
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
 
 vpp:  No errors.
 
@@ -78,6 +80,8 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Using control file 'Dimer con PWM.ctl'.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v (line 947, col 46):  Note: Substituting module 'sub_vi_vv' for '-'.
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v (line 977, col 46):  Note: Substituting module 'add_vi_vv' for '+'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v (line 79, col 40):  Note: Substituting module 'add_vi_vv' for '+'.
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v (line 88, col 40):  Note: Substituting module 'add_vi_vv' for '+'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 
@@ -87,11 +91,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sat Sep 15 20:35:24 2018
+Mon Sep 17 20:05:59 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -102,15 +106,16 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
+Linking 'C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
+Linking 'C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -121,11 +126,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  Dimer con PWM.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -dcpsoc3 -verilog Dimer con PWM.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sat Sep 15 20:35:24 2018
+Mon Sep 17 20:06:00 2018
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -136,15 +141,16 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
+Linking 'C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
+Linking 'C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Dimer con PWM.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\FreqDiv_v1_0\FreqDiv_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -170,10 +176,8 @@ Detecting unused logic.
 	\PWM:PWMUDB:km_tc\
 	\PWM:PWMUDB:db_tc\
 	\PWM:PWMUDB:dith_sel\
-	\PWM:PWMUDB:compare2\
 	\PWM:Net_101\
-	Net_449
-	Net_450
+	\PWM:Net_96\
 	\PWM:PWMUDB:MODULE_1:b_31\
 	\PWM:PWMUDB:MODULE_1:b_30\
 	\PWM:PWMUDB:MODULE_1:b_29\
@@ -283,11 +287,439 @@ Detecting unused logic.
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\
+	Net_614
 	Net_451
 	Net_448
 	\PWM:Net_113\
 	\PWM:Net_107\
 	\PWM:Net_114\
+	\FreqDiv_1:MODULE_2:b_31\
+	\FreqDiv_1:MODULE_2:b_30\
+	\FreqDiv_1:MODULE_2:b_29\
+	\FreqDiv_1:MODULE_2:b_28\
+	\FreqDiv_1:MODULE_2:b_27\
+	\FreqDiv_1:MODULE_2:b_26\
+	\FreqDiv_1:MODULE_2:b_25\
+	\FreqDiv_1:MODULE_2:b_24\
+	\FreqDiv_1:MODULE_2:b_23\
+	\FreqDiv_1:MODULE_2:b_22\
+	\FreqDiv_1:MODULE_2:b_21\
+	\FreqDiv_1:MODULE_2:b_20\
+	\FreqDiv_1:MODULE_2:b_19\
+	\FreqDiv_1:MODULE_2:b_18\
+	\FreqDiv_1:MODULE_2:b_17\
+	\FreqDiv_1:MODULE_2:b_16\
+	\FreqDiv_1:MODULE_2:b_15\
+	\FreqDiv_1:MODULE_2:b_14\
+	\FreqDiv_1:MODULE_2:b_13\
+	\FreqDiv_1:MODULE_2:b_12\
+	\FreqDiv_1:MODULE_2:b_11\
+	\FreqDiv_1:MODULE_2:b_10\
+	\FreqDiv_1:MODULE_2:b_9\
+	\FreqDiv_1:MODULE_2:b_8\
+	\FreqDiv_1:MODULE_2:b_7\
+	\FreqDiv_1:MODULE_2:b_6\
+	\FreqDiv_1:MODULE_2:b_5\
+	\FreqDiv_1:MODULE_2:b_4\
+	\FreqDiv_1:MODULE_2:b_3\
+	\FreqDiv_1:MODULE_2:b_2\
+	\FreqDiv_1:MODULE_2:b_1\
+	\FreqDiv_1:MODULE_2:b_0\
+	\FreqDiv_1:MODULE_2:g2:a0:a_31\
+	\FreqDiv_1:MODULE_2:g2:a0:a_30\
+	\FreqDiv_1:MODULE_2:g2:a0:a_29\
+	\FreqDiv_1:MODULE_2:g2:a0:a_28\
+	\FreqDiv_1:MODULE_2:g2:a0:a_27\
+	\FreqDiv_1:MODULE_2:g2:a0:a_26\
+	\FreqDiv_1:MODULE_2:g2:a0:a_25\
+	\FreqDiv_1:MODULE_2:g2:a0:a_24\
+	\FreqDiv_1:MODULE_2:g2:a0:b_31\
+	\FreqDiv_1:MODULE_2:g2:a0:b_30\
+	\FreqDiv_1:MODULE_2:g2:a0:b_29\
+	\FreqDiv_1:MODULE_2:g2:a0:b_28\
+	\FreqDiv_1:MODULE_2:g2:a0:b_27\
+	\FreqDiv_1:MODULE_2:g2:a0:b_26\
+	\FreqDiv_1:MODULE_2:g2:a0:b_25\
+	\FreqDiv_1:MODULE_2:g2:a0:b_24\
+	\FreqDiv_1:MODULE_2:g2:a0:b_23\
+	\FreqDiv_1:MODULE_2:g2:a0:b_22\
+	\FreqDiv_1:MODULE_2:g2:a0:b_21\
+	\FreqDiv_1:MODULE_2:g2:a0:b_20\
+	\FreqDiv_1:MODULE_2:g2:a0:b_19\
+	\FreqDiv_1:MODULE_2:g2:a0:b_18\
+	\FreqDiv_1:MODULE_2:g2:a0:b_17\
+	\FreqDiv_1:MODULE_2:g2:a0:b_16\
+	\FreqDiv_1:MODULE_2:g2:a0:b_15\
+	\FreqDiv_1:MODULE_2:g2:a0:b_14\
+	\FreqDiv_1:MODULE_2:g2:a0:b_13\
+	\FreqDiv_1:MODULE_2:g2:a0:b_12\
+	\FreqDiv_1:MODULE_2:g2:a0:b_11\
+	\FreqDiv_1:MODULE_2:g2:a0:b_10\
+	\FreqDiv_1:MODULE_2:g2:a0:b_9\
+	\FreqDiv_1:MODULE_2:g2:a0:b_8\
+	\FreqDiv_1:MODULE_2:g2:a0:b_7\
+	\FreqDiv_1:MODULE_2:g2:a0:b_6\
+	\FreqDiv_1:MODULE_2:g2:a0:b_5\
+	\FreqDiv_1:MODULE_2:g2:a0:b_4\
+	\FreqDiv_1:MODULE_2:g2:a0:b_3\
+	\FreqDiv_1:MODULE_2:g2:a0:b_2\
+	\FreqDiv_1:MODULE_2:g2:a0:b_1\
+	\FreqDiv_1:MODULE_2:g2:a0:b_0\
+	\FreqDiv_1:MODULE_2:g2:a0:s_31\
+	\FreqDiv_1:MODULE_2:g2:a0:s_30\
+	\FreqDiv_1:MODULE_2:g2:a0:s_29\
+	\FreqDiv_1:MODULE_2:g2:a0:s_28\
+	\FreqDiv_1:MODULE_2:g2:a0:s_27\
+	\FreqDiv_1:MODULE_2:g2:a0:s_26\
+	\FreqDiv_1:MODULE_2:g2:a0:s_25\
+	\FreqDiv_1:MODULE_2:g2:a0:s_24\
+	\FreqDiv_1:MODULE_2:g2:a0:s_23\
+	\FreqDiv_1:MODULE_2:g2:a0:s_22\
+	\FreqDiv_1:MODULE_2:g2:a0:s_21\
+	\FreqDiv_1:MODULE_2:g2:a0:s_20\
+	\FreqDiv_1:MODULE_2:g2:a0:s_19\
+	\FreqDiv_1:MODULE_2:g2:a0:s_18\
+	\FreqDiv_1:MODULE_2:g2:a0:s_17\
+	\FreqDiv_1:MODULE_2:g2:a0:s_16\
+	\FreqDiv_1:MODULE_2:g2:a0:s_15\
+	\FreqDiv_1:MODULE_2:g2:a0:s_14\
+	\FreqDiv_1:MODULE_2:g2:a0:s_13\
+	\FreqDiv_1:MODULE_2:g2:a0:s_12\
+	\FreqDiv_1:MODULE_2:g2:a0:s_11\
+	\FreqDiv_1:MODULE_2:g2:a0:s_10\
+	\FreqDiv_1:MODULE_2:g2:a0:s_9\
+	\FreqDiv_1:MODULE_2:g2:a0:s_8\
+	\FreqDiv_1:MODULE_2:g2:a0:s_7\
+	\FreqDiv_1:MODULE_2:g2:a0:s_6\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_25\
+	\FreqDiv_2:MODULE_3:b_31\
+	\FreqDiv_2:MODULE_3:b_30\
+	\FreqDiv_2:MODULE_3:b_29\
+	\FreqDiv_2:MODULE_3:b_28\
+	\FreqDiv_2:MODULE_3:b_27\
+	\FreqDiv_2:MODULE_3:b_26\
+	\FreqDiv_2:MODULE_3:b_25\
+	\FreqDiv_2:MODULE_3:b_24\
+	\FreqDiv_2:MODULE_3:b_23\
+	\FreqDiv_2:MODULE_3:b_22\
+	\FreqDiv_2:MODULE_3:b_21\
+	\FreqDiv_2:MODULE_3:b_20\
+	\FreqDiv_2:MODULE_3:b_19\
+	\FreqDiv_2:MODULE_3:b_18\
+	\FreqDiv_2:MODULE_3:b_17\
+	\FreqDiv_2:MODULE_3:b_16\
+	\FreqDiv_2:MODULE_3:b_15\
+	\FreqDiv_2:MODULE_3:b_14\
+	\FreqDiv_2:MODULE_3:b_13\
+	\FreqDiv_2:MODULE_3:b_12\
+	\FreqDiv_2:MODULE_3:b_11\
+	\FreqDiv_2:MODULE_3:b_10\
+	\FreqDiv_2:MODULE_3:b_9\
+	\FreqDiv_2:MODULE_3:b_8\
+	\FreqDiv_2:MODULE_3:b_7\
+	\FreqDiv_2:MODULE_3:b_6\
+	\FreqDiv_2:MODULE_3:b_5\
+	\FreqDiv_2:MODULE_3:b_4\
+	\FreqDiv_2:MODULE_3:b_3\
+	\FreqDiv_2:MODULE_3:b_2\
+	\FreqDiv_2:MODULE_3:b_1\
+	\FreqDiv_2:MODULE_3:b_0\
+	\FreqDiv_2:MODULE_3:g2:a0:a_31\
+	\FreqDiv_2:MODULE_3:g2:a0:a_30\
+	\FreqDiv_2:MODULE_3:g2:a0:a_29\
+	\FreqDiv_2:MODULE_3:g2:a0:a_28\
+	\FreqDiv_2:MODULE_3:g2:a0:a_27\
+	\FreqDiv_2:MODULE_3:g2:a0:a_26\
+	\FreqDiv_2:MODULE_3:g2:a0:a_25\
+	\FreqDiv_2:MODULE_3:g2:a0:a_24\
+	\FreqDiv_2:MODULE_3:g2:a0:b_31\
+	\FreqDiv_2:MODULE_3:g2:a0:b_30\
+	\FreqDiv_2:MODULE_3:g2:a0:b_29\
+	\FreqDiv_2:MODULE_3:g2:a0:b_28\
+	\FreqDiv_2:MODULE_3:g2:a0:b_27\
+	\FreqDiv_2:MODULE_3:g2:a0:b_26\
+	\FreqDiv_2:MODULE_3:g2:a0:b_25\
+	\FreqDiv_2:MODULE_3:g2:a0:b_24\
+	\FreqDiv_2:MODULE_3:g2:a0:b_23\
+	\FreqDiv_2:MODULE_3:g2:a0:b_22\
+	\FreqDiv_2:MODULE_3:g2:a0:b_21\
+	\FreqDiv_2:MODULE_3:g2:a0:b_20\
+	\FreqDiv_2:MODULE_3:g2:a0:b_19\
+	\FreqDiv_2:MODULE_3:g2:a0:b_18\
+	\FreqDiv_2:MODULE_3:g2:a0:b_17\
+	\FreqDiv_2:MODULE_3:g2:a0:b_16\
+	\FreqDiv_2:MODULE_3:g2:a0:b_15\
+	\FreqDiv_2:MODULE_3:g2:a0:b_14\
+	\FreqDiv_2:MODULE_3:g2:a0:b_13\
+	\FreqDiv_2:MODULE_3:g2:a0:b_12\
+	\FreqDiv_2:MODULE_3:g2:a0:b_11\
+	\FreqDiv_2:MODULE_3:g2:a0:b_10\
+	\FreqDiv_2:MODULE_3:g2:a0:b_9\
+	\FreqDiv_2:MODULE_3:g2:a0:b_8\
+	\FreqDiv_2:MODULE_3:g2:a0:b_7\
+	\FreqDiv_2:MODULE_3:g2:a0:b_6\
+	\FreqDiv_2:MODULE_3:g2:a0:b_5\
+	\FreqDiv_2:MODULE_3:g2:a0:b_4\
+	\FreqDiv_2:MODULE_3:g2:a0:b_3\
+	\FreqDiv_2:MODULE_3:g2:a0:b_2\
+	\FreqDiv_2:MODULE_3:g2:a0:b_1\
+	\FreqDiv_2:MODULE_3:g2:a0:b_0\
+	\FreqDiv_2:MODULE_3:g2:a0:s_31\
+	\FreqDiv_2:MODULE_3:g2:a0:s_30\
+	\FreqDiv_2:MODULE_3:g2:a0:s_29\
+	\FreqDiv_2:MODULE_3:g2:a0:s_28\
+	\FreqDiv_2:MODULE_3:g2:a0:s_27\
+	\FreqDiv_2:MODULE_3:g2:a0:s_26\
+	\FreqDiv_2:MODULE_3:g2:a0:s_25\
+	\FreqDiv_2:MODULE_3:g2:a0:s_24\
+	\FreqDiv_2:MODULE_3:g2:a0:s_23\
+	\FreqDiv_2:MODULE_3:g2:a0:s_22\
+	\FreqDiv_2:MODULE_3:g2:a0:s_21\
+	\FreqDiv_2:MODULE_3:g2:a0:s_20\
+	\FreqDiv_2:MODULE_3:g2:a0:s_19\
+	\FreqDiv_2:MODULE_3:g2:a0:s_18\
+	\FreqDiv_2:MODULE_3:g2:a0:s_17\
+	\FreqDiv_2:MODULE_3:g2:a0:s_16\
+	\FreqDiv_2:MODULE_3:g2:a0:s_15\
+	\FreqDiv_2:MODULE_3:g2:a0:s_14\
+	\FreqDiv_2:MODULE_3:g2:a0:s_13\
+	\FreqDiv_2:MODULE_3:g2:a0:s_12\
+	\FreqDiv_2:MODULE_3:g2:a0:s_11\
+	\FreqDiv_2:MODULE_3:g2:a0:s_10\
+	\FreqDiv_2:MODULE_3:g2:a0:s_9\
+	\FreqDiv_2:MODULE_3:g2:a0:s_8\
+	\FreqDiv_2:MODULE_3:g2:a0:s_7\
+	\FreqDiv_2:MODULE_3:g2:a0:s_6\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_25\
+	\FreqDiv_3:MODULE_4:b_31\
+	\FreqDiv_3:MODULE_4:b_30\
+	\FreqDiv_3:MODULE_4:b_29\
+	\FreqDiv_3:MODULE_4:b_28\
+	\FreqDiv_3:MODULE_4:b_27\
+	\FreqDiv_3:MODULE_4:b_26\
+	\FreqDiv_3:MODULE_4:b_25\
+	\FreqDiv_3:MODULE_4:b_24\
+	\FreqDiv_3:MODULE_4:b_23\
+	\FreqDiv_3:MODULE_4:b_22\
+	\FreqDiv_3:MODULE_4:b_21\
+	\FreqDiv_3:MODULE_4:b_20\
+	\FreqDiv_3:MODULE_4:b_19\
+	\FreqDiv_3:MODULE_4:b_18\
+	\FreqDiv_3:MODULE_4:b_17\
+	\FreqDiv_3:MODULE_4:b_16\
+	\FreqDiv_3:MODULE_4:b_15\
+	\FreqDiv_3:MODULE_4:b_14\
+	\FreqDiv_3:MODULE_4:b_13\
+	\FreqDiv_3:MODULE_4:b_12\
+	\FreqDiv_3:MODULE_4:b_11\
+	\FreqDiv_3:MODULE_4:b_10\
+	\FreqDiv_3:MODULE_4:b_9\
+	\FreqDiv_3:MODULE_4:b_8\
+	\FreqDiv_3:MODULE_4:b_7\
+	\FreqDiv_3:MODULE_4:b_6\
+	\FreqDiv_3:MODULE_4:b_5\
+	\FreqDiv_3:MODULE_4:b_4\
+	\FreqDiv_3:MODULE_4:b_3\
+	\FreqDiv_3:MODULE_4:b_2\
+	\FreqDiv_3:MODULE_4:b_1\
+	\FreqDiv_3:MODULE_4:b_0\
+	\FreqDiv_3:MODULE_4:g2:a0:a_31\
+	\FreqDiv_3:MODULE_4:g2:a0:a_30\
+	\FreqDiv_3:MODULE_4:g2:a0:a_29\
+	\FreqDiv_3:MODULE_4:g2:a0:a_28\
+	\FreqDiv_3:MODULE_4:g2:a0:a_27\
+	\FreqDiv_3:MODULE_4:g2:a0:a_26\
+	\FreqDiv_3:MODULE_4:g2:a0:a_25\
+	\FreqDiv_3:MODULE_4:g2:a0:a_24\
+	\FreqDiv_3:MODULE_4:g2:a0:b_31\
+	\FreqDiv_3:MODULE_4:g2:a0:b_30\
+	\FreqDiv_3:MODULE_4:g2:a0:b_29\
+	\FreqDiv_3:MODULE_4:g2:a0:b_28\
+	\FreqDiv_3:MODULE_4:g2:a0:b_27\
+	\FreqDiv_3:MODULE_4:g2:a0:b_26\
+	\FreqDiv_3:MODULE_4:g2:a0:b_25\
+	\FreqDiv_3:MODULE_4:g2:a0:b_24\
+	\FreqDiv_3:MODULE_4:g2:a0:b_23\
+	\FreqDiv_3:MODULE_4:g2:a0:b_22\
+	\FreqDiv_3:MODULE_4:g2:a0:b_21\
+	\FreqDiv_3:MODULE_4:g2:a0:b_20\
+	\FreqDiv_3:MODULE_4:g2:a0:b_19\
+	\FreqDiv_3:MODULE_4:g2:a0:b_18\
+	\FreqDiv_3:MODULE_4:g2:a0:b_17\
+	\FreqDiv_3:MODULE_4:g2:a0:b_16\
+	\FreqDiv_3:MODULE_4:g2:a0:b_15\
+	\FreqDiv_3:MODULE_4:g2:a0:b_14\
+	\FreqDiv_3:MODULE_4:g2:a0:b_13\
+	\FreqDiv_3:MODULE_4:g2:a0:b_12\
+	\FreqDiv_3:MODULE_4:g2:a0:b_11\
+	\FreqDiv_3:MODULE_4:g2:a0:b_10\
+	\FreqDiv_3:MODULE_4:g2:a0:b_9\
+	\FreqDiv_3:MODULE_4:g2:a0:b_8\
+	\FreqDiv_3:MODULE_4:g2:a0:b_7\
+	\FreqDiv_3:MODULE_4:g2:a0:b_6\
+	\FreqDiv_3:MODULE_4:g2:a0:b_5\
+	\FreqDiv_3:MODULE_4:g2:a0:b_4\
+	\FreqDiv_3:MODULE_4:g2:a0:b_3\
+	\FreqDiv_3:MODULE_4:g2:a0:b_2\
+	\FreqDiv_3:MODULE_4:g2:a0:b_1\
+	\FreqDiv_3:MODULE_4:g2:a0:b_0\
+	\FreqDiv_3:MODULE_4:g2:a0:s_31\
+	\FreqDiv_3:MODULE_4:g2:a0:s_30\
+	\FreqDiv_3:MODULE_4:g2:a0:s_29\
+	\FreqDiv_3:MODULE_4:g2:a0:s_28\
+	\FreqDiv_3:MODULE_4:g2:a0:s_27\
+	\FreqDiv_3:MODULE_4:g2:a0:s_26\
+	\FreqDiv_3:MODULE_4:g2:a0:s_25\
+	\FreqDiv_3:MODULE_4:g2:a0:s_24\
+	\FreqDiv_3:MODULE_4:g2:a0:s_23\
+	\FreqDiv_3:MODULE_4:g2:a0:s_22\
+	\FreqDiv_3:MODULE_4:g2:a0:s_21\
+	\FreqDiv_3:MODULE_4:g2:a0:s_20\
+	\FreqDiv_3:MODULE_4:g2:a0:s_19\
+	\FreqDiv_3:MODULE_4:g2:a0:s_18\
+	\FreqDiv_3:MODULE_4:g2:a0:s_17\
+	\FreqDiv_3:MODULE_4:g2:a0:s_16\
+	\FreqDiv_3:MODULE_4:g2:a0:s_15\
+	\FreqDiv_3:MODULE_4:g2:a0:s_14\
+	\FreqDiv_3:MODULE_4:g2:a0:s_13\
+	\FreqDiv_3:MODULE_4:g2:a0:s_12\
+	\FreqDiv_3:MODULE_4:g2:a0:s_11\
+	\FreqDiv_3:MODULE_4:g2:a0:s_10\
+	\FreqDiv_3:MODULE_4:g2:a0:s_9\
+	\FreqDiv_3:MODULE_4:g2:a0:s_8\
+	\FreqDiv_3:MODULE_4:g2:a0:s_7\
+	\FreqDiv_3:MODULE_4:g2:a0:s_6\
+	\FreqDiv_3:MODULE_4:g2:a0:s_5\
+	\FreqDiv_3:MODULE_4:g2:a0:s_4\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_25\
+	\FreqDiv_4:MODULE_5:b_31\
+	\FreqDiv_4:MODULE_5:b_30\
+	\FreqDiv_4:MODULE_5:b_29\
+	\FreqDiv_4:MODULE_5:b_28\
+	\FreqDiv_4:MODULE_5:b_27\
+	\FreqDiv_4:MODULE_5:b_26\
+	\FreqDiv_4:MODULE_5:b_25\
+	\FreqDiv_4:MODULE_5:b_24\
+	\FreqDiv_4:MODULE_5:b_23\
+	\FreqDiv_4:MODULE_5:b_22\
+	\FreqDiv_4:MODULE_5:b_21\
+	\FreqDiv_4:MODULE_5:b_20\
+	\FreqDiv_4:MODULE_5:b_19\
+	\FreqDiv_4:MODULE_5:b_18\
+	\FreqDiv_4:MODULE_5:b_17\
+	\FreqDiv_4:MODULE_5:b_16\
+	\FreqDiv_4:MODULE_5:b_15\
+	\FreqDiv_4:MODULE_5:b_14\
+	\FreqDiv_4:MODULE_5:b_13\
+	\FreqDiv_4:MODULE_5:b_12\
+	\FreqDiv_4:MODULE_5:b_11\
+	\FreqDiv_4:MODULE_5:b_10\
+	\FreqDiv_4:MODULE_5:b_9\
+	\FreqDiv_4:MODULE_5:b_8\
+	\FreqDiv_4:MODULE_5:b_7\
+	\FreqDiv_4:MODULE_5:b_6\
+	\FreqDiv_4:MODULE_5:b_5\
+	\FreqDiv_4:MODULE_5:b_4\
+	\FreqDiv_4:MODULE_5:b_3\
+	\FreqDiv_4:MODULE_5:b_2\
+	\FreqDiv_4:MODULE_5:b_1\
+	\FreqDiv_4:MODULE_5:b_0\
+	\FreqDiv_4:MODULE_5:g2:a0:a_31\
+	\FreqDiv_4:MODULE_5:g2:a0:a_30\
+	\FreqDiv_4:MODULE_5:g2:a0:a_29\
+	\FreqDiv_4:MODULE_5:g2:a0:a_28\
+	\FreqDiv_4:MODULE_5:g2:a0:a_27\
+	\FreqDiv_4:MODULE_5:g2:a0:a_26\
+	\FreqDiv_4:MODULE_5:g2:a0:a_25\
+	\FreqDiv_4:MODULE_5:g2:a0:a_24\
+	\FreqDiv_4:MODULE_5:g2:a0:b_31\
+	\FreqDiv_4:MODULE_5:g2:a0:b_30\
+	\FreqDiv_4:MODULE_5:g2:a0:b_29\
+	\FreqDiv_4:MODULE_5:g2:a0:b_28\
+	\FreqDiv_4:MODULE_5:g2:a0:b_27\
+	\FreqDiv_4:MODULE_5:g2:a0:b_26\
+	\FreqDiv_4:MODULE_5:g2:a0:b_25\
+	\FreqDiv_4:MODULE_5:g2:a0:b_24\
+	\FreqDiv_4:MODULE_5:g2:a0:b_23\
+	\FreqDiv_4:MODULE_5:g2:a0:b_22\
+	\FreqDiv_4:MODULE_5:g2:a0:b_21\
+	\FreqDiv_4:MODULE_5:g2:a0:b_20\
+	\FreqDiv_4:MODULE_5:g2:a0:b_19\
+	\FreqDiv_4:MODULE_5:g2:a0:b_18\
+	\FreqDiv_4:MODULE_5:g2:a0:b_17\
+	\FreqDiv_4:MODULE_5:g2:a0:b_16\
+	\FreqDiv_4:MODULE_5:g2:a0:b_15\
+	\FreqDiv_4:MODULE_5:g2:a0:b_14\
+	\FreqDiv_4:MODULE_5:g2:a0:b_13\
+	\FreqDiv_4:MODULE_5:g2:a0:b_12\
+	\FreqDiv_4:MODULE_5:g2:a0:b_11\
+	\FreqDiv_4:MODULE_5:g2:a0:b_10\
+	\FreqDiv_4:MODULE_5:g2:a0:b_9\
+	\FreqDiv_4:MODULE_5:g2:a0:b_8\
+	\FreqDiv_4:MODULE_5:g2:a0:b_7\
+	\FreqDiv_4:MODULE_5:g2:a0:b_6\
+	\FreqDiv_4:MODULE_5:g2:a0:b_5\
+	\FreqDiv_4:MODULE_5:g2:a0:b_4\
+	\FreqDiv_4:MODULE_5:g2:a0:b_3\
+	\FreqDiv_4:MODULE_5:g2:a0:b_2\
+	\FreqDiv_4:MODULE_5:g2:a0:b_1\
+	\FreqDiv_4:MODULE_5:g2:a0:b_0\
+	\FreqDiv_4:MODULE_5:g2:a0:s_31\
+	\FreqDiv_4:MODULE_5:g2:a0:s_30\
+	\FreqDiv_4:MODULE_5:g2:a0:s_29\
+	\FreqDiv_4:MODULE_5:g2:a0:s_28\
+	\FreqDiv_4:MODULE_5:g2:a0:s_27\
+	\FreqDiv_4:MODULE_5:g2:a0:s_26\
+	\FreqDiv_4:MODULE_5:g2:a0:s_25\
+	\FreqDiv_4:MODULE_5:g2:a0:s_24\
+	\FreqDiv_4:MODULE_5:g2:a0:s_23\
+	\FreqDiv_4:MODULE_5:g2:a0:s_22\
+	\FreqDiv_4:MODULE_5:g2:a0:s_21\
+	\FreqDiv_4:MODULE_5:g2:a0:s_20\
+	\FreqDiv_4:MODULE_5:g2:a0:s_19\
+	\FreqDiv_4:MODULE_5:g2:a0:s_18\
+	\FreqDiv_4:MODULE_5:g2:a0:s_17\
+	\FreqDiv_4:MODULE_5:g2:a0:s_16\
+	\FreqDiv_4:MODULE_5:g2:a0:s_15\
+	\FreqDiv_4:MODULE_5:g2:a0:s_14\
+	\FreqDiv_4:MODULE_5:g2:a0:s_13\
+	\FreqDiv_4:MODULE_5:g2:a0:s_12\
+	\FreqDiv_4:MODULE_5:g2:a0:s_11\
+	\FreqDiv_4:MODULE_5:g2:a0:s_10\
+	\FreqDiv_4:MODULE_5:g2:a0:s_9\
+	\FreqDiv_4:MODULE_5:g2:a0:s_8\
+	\FreqDiv_4:MODULE_5:g2:a0:s_7\
+	\FreqDiv_4:MODULE_5:g2:a0:s_6\
+	\FreqDiv_4:MODULE_5:g2:a0:s_5\
+	\FreqDiv_4:MODULE_5:g2:a0:s_4\
+	\FreqDiv_4:MODULE_5:g2:a0:s_3\
+	\FreqDiv_4:MODULE_5:g2:a0:s_2\
+	\FreqDiv_4:MODULE_5:g2:a0:s_1\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_25\
 
     Synthesized names
 	\PWM:PWMUDB:add_vi_vv_MODGEN_1_31\
@@ -320,9 +752,120 @@ Detecting unused logic.
 	\PWM:PWMUDB:add_vi_vv_MODGEN_1_4\
 	\PWM:PWMUDB:add_vi_vv_MODGEN_1_3\
 	\PWM:PWMUDB:add_vi_vv_MODGEN_1_2\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_31\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_30\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_29\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_28\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_27\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_26\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_25\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_24\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_23\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_22\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_21\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_20\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_19\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_18\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_17\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_16\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_15\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_14\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_13\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_12\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_11\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_10\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_9\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_8\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_7\
+	\FreqDiv_1:add_vi_vv_MODGEN_2_6\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_31\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_30\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_29\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_28\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_27\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_26\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_25\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_24\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_23\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_22\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_21\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_20\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_19\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_18\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_17\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_16\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_15\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_14\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_13\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_12\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_11\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_10\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_9\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_8\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_7\
+	\FreqDiv_2:add_vi_vv_MODGEN_3_6\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_31\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_30\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_29\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_28\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_27\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_26\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_25\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_24\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_23\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_22\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_21\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_20\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_19\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_18\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_17\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_16\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_15\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_14\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_13\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_12\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_11\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_10\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_9\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_8\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_7\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_6\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_5\
+	\FreqDiv_3:add_vi_vv_MODGEN_4_4\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_31\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_30\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_29\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_28\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_27\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_26\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_25\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_24\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_23\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_22\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_21\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_20\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_19\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_18\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_17\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_16\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_15\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_14\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_13\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_12\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_11\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_10\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_9\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_8\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_7\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_6\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_5\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_4\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_3\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_2\
+	\FreqDiv_4:add_vi_vv_MODGEN_5_1\
 
-Deleted 134 User equations/components.
-Deleted 30 Synthesized equations/components.
+Deleted 560 User equations/components.
+Deleted 141 Synthesized equations/components.
 
 ------------------------------------------------------
 Alias Detection
@@ -342,7 +885,6 @@ Aliasing \PWM:PWMUDB:dith_count_0\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:dith_count_0\\S\ to zero
 Aliasing \PWM:PWMUDB:status_6\ to zero
 Aliasing \PWM:PWMUDB:status_4\ to zero
-Aliasing \PWM:PWMUDB:cmp2\ to zero
 Aliasing \PWM:PWMUDB:cmp1_status_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:cmp1_status_reg\\S\ to zero
 Aliasing \PWM:PWMUDB:cmp2_status_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
@@ -350,8 +892,7 @@ Aliasing \PWM:PWMUDB:cmp2_status_reg\\S\ to zero
 Aliasing \PWM:PWMUDB:final_kill_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:final_kill_reg\\S\ to zero
 Aliasing \PWM:PWMUDB:cs_addr_0\ to \PWM:PWMUDB:runmode_enable\\R\
-Aliasing \PWM:PWMUDB:pwm1_i\ to zero
-Aliasing \PWM:PWMUDB:pwm2_i\ to zero
+Aliasing \PWM:PWMUDB:pwm_temp\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_23\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_22\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_21\ to zero
@@ -375,7 +916,7 @@ Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_4\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_3\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_2\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to one
-Aliasing tmpOE__Pin_2_net_0 to one
+Aliasing tmpOE__Pin_min1_net_0 to one
 Aliasing \LCD:tmpOE__LCDPort_net_6\ to one
 Aliasing \LCD:tmpOE__LCDPort_net_5\ to one
 Aliasing \LCD:tmpOE__LCDPort_net_4\ to one
@@ -383,11 +924,98 @@ Aliasing \LCD:tmpOE__LCDPort_net_3\ to one
 Aliasing \LCD:tmpOE__LCDPort_net_2\ to one
 Aliasing \LCD:tmpOE__LCDPort_net_1\ to one
 Aliasing \LCD:tmpOE__LCDPort_net_0\ to one
+Aliasing Net_478 to one
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_23\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_22\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_21\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_20\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_19\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_18\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_17\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_16\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_15\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_14\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_13\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_12\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_11\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_10\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_9\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_8\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_7\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:a_6\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\ to one
+Aliasing Net_486 to one
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_23\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_22\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_21\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_20\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_19\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_18\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_17\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_16\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_15\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_14\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_13\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_12\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_11\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_10\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_9\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_8\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_7\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:a_6\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_0\ to one
+Aliasing Net_495 to one
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_23\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_22\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_21\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_20\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_19\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_18\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_17\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_16\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_15\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_14\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_13\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_12\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_11\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_10\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_9\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_8\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_7\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_6\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_5\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:a_4\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_0\ to one
+Aliasing Net_565 to one
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_23\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_22\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_21\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_20\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_19\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_18\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_17\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_16\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_15\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_14\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_13\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_12\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_11\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_10\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_9\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_8\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_7\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_6\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_5\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_4\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_3\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_2\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:a_1\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_0\ to one
+Aliasing tmpOE__Pin_min2_net_0 to one
 Aliasing \PWM:PWMUDB:min_kill_reg\\D\ to one
 Aliasing \PWM:PWMUDB:prevCapture\\D\ to zero
 Aliasing \PWM:PWMUDB:trig_last\\D\ to zero
 Aliasing \PWM:PWMUDB:ltch_kill_reg\\D\ to one
-Aliasing \PWM:PWMUDB:prevCompare1\\D\ to \PWM:PWMUDB:pwm_temp\
 Aliasing \PWM:PWMUDB:tc_i_reg\\D\ to \PWM:PWMUDB:status_2\
 Removing Lhs of wire \PWM:PWMUDB:ctrl_enable\[16] = \PWM:PWMUDB:control_7\[8]
 Removing Lhs of wire \PWM:PWMUDB:hwCapture\[26] = zero[7]
@@ -402,85 +1030,226 @@ Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\S\[41] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\R\[42] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\S\[43] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:final_kill\[46] = one[4]
-Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[50] = \PWM:PWMUDB:MODULE_1:g2:a0:s_1\[337]
-Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[52] = \PWM:PWMUDB:MODULE_1:g2:a0:s_0\[338]
+Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[50] = \PWM:PWMUDB:MODULE_1:g2:a0:s_1\[338]
+Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[52] = \PWM:PWMUDB:MODULE_1:g2:a0:s_0\[339]
 Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\R\[53] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\S\[54] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\R\[55] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\S\[56] = zero[7]
 Removing Lhs of wire \PWM:PWMUDB:status_6\[59] = zero[7]
-Removing Rhs of wire \PWM:PWMUDB:status_5\[60] = \PWM:PWMUDB:final_kill_reg\[74]
+Removing Rhs of wire \PWM:PWMUDB:status_5\[60] = \PWM:PWMUDB:final_kill_reg\[75]
 Removing Lhs of wire \PWM:PWMUDB:status_4\[61] = zero[7]
-Removing Rhs of wire \PWM:PWMUDB:status_3\[62] = \PWM:PWMUDB:fifo_full\[81]
-Removing Rhs of wire \PWM:PWMUDB:status_1\[64] = \PWM:PWMUDB:cmp2_status_reg\[73]
-Removing Rhs of wire \PWM:PWMUDB:status_0\[65] = \PWM:PWMUDB:cmp1_status_reg\[72]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status\[70] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cmp2\[71] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\R\[75] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\S\[76] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\R\[77] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\S\[78] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\R\[79] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\S\[80] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:cs_addr_2\[82] = \PWM:PWMUDB:tc_i\[38]
-Removing Lhs of wire \PWM:PWMUDB:cs_addr_1\[83] = \PWM:PWMUDB:runmode_enable\[32]
-Removing Lhs of wire \PWM:PWMUDB:cs_addr_0\[84] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:compare1\[165] = \PWM:PWMUDB:cmp1_less\[136]
-Removing Lhs of wire \PWM:PWMUDB:pwm1_i\[170] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:pwm2_i\[172] = zero[7]
-Removing Rhs of wire \PWM:Net_96\[175] = \PWM:PWMUDB:pwm_i_reg\[167]
-Removing Lhs of wire \PWM:PWMUDB:pwm_temp\[178] = \PWM:PWMUDB:cmp1\[68]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_23\[219] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_22\[220] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_21\[221] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_20\[222] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_19\[223] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_18\[224] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_17\[225] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_16\[226] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_15\[227] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_14\[228] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_13\[229] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_12\[230] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_11\[231] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_10\[232] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_9\[233] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_8\[234] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_7\[235] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_6\[236] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_5\[237] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_4\[238] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_3\[239] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_2\[240] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_1\[241] = \PWM:PWMUDB:MODIN1_1\[242]
-Removing Lhs of wire \PWM:PWMUDB:MODIN1_1\[242] = \PWM:PWMUDB:dith_count_1\[49]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_0\[243] = \PWM:PWMUDB:MODIN1_0\[244]
-Removing Lhs of wire \PWM:PWMUDB:MODIN1_0\[244] = \PWM:PWMUDB:dith_count_0\[51]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[376] = one[4]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[377] = one[4]
-Removing Rhs of wire Net_41[378] = \PWM:Net_96\[175]
-Removing Lhs of wire tmpOE__Pin_2_net_0[385] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_6\[392] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_5\[393] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_4\[394] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_3\[395] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_2\[396] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_1\[397] = one[4]
-Removing Lhs of wire \LCD:tmpOE__LCDPort_net_0\[398] = one[4]
-Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\D\[415] = one[4]
-Removing Lhs of wire \PWM:PWMUDB:prevCapture\\D\[416] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:trig_last\\D\[417] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\D\[420] = one[4]
-Removing Lhs of wire \PWM:PWMUDB:prevCompare1\\D\[423] = \PWM:PWMUDB:cmp1\[68]
-Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\D\[424] = \PWM:PWMUDB:cmp1_status\[69]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\D\[425] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:pwm_i_reg\\D\[427] = \PWM:PWMUDB:pwm_i\[168]
-Removing Lhs of wire \PWM:PWMUDB:pwm1_i_reg\\D\[428] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:pwm2_i_reg\\D\[429] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:tc_i_reg\\D\[430] = \PWM:PWMUDB:status_2\[63]
+Removing Rhs of wire \PWM:PWMUDB:status_3\[62] = \PWM:PWMUDB:fifo_full\[82]
+Removing Rhs of wire \PWM:PWMUDB:status_1\[64] = \PWM:PWMUDB:cmp2_status_reg\[74]
+Removing Rhs of wire \PWM:PWMUDB:status_0\[65] = \PWM:PWMUDB:cmp1_status_reg\[73]
+Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\R\[76] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\S\[77] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\R\[78] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\S\[79] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\R\[80] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\S\[81] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:cs_addr_2\[83] = \PWM:PWMUDB:tc_i\[38]
+Removing Lhs of wire \PWM:PWMUDB:cs_addr_1\[84] = \PWM:PWMUDB:runmode_enable\[32]
+Removing Lhs of wire \PWM:PWMUDB:cs_addr_0\[85] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:compare1\[166] = \PWM:PWMUDB:cmp1_less\[137]
+Removing Lhs of wire \PWM:PWMUDB:compare2\[167] = \PWM:PWMUDB:cmp2_less\[140]
+Removing Rhs of wire Net_41[177] = \PWM:PWMUDB:pwm1_i_reg\[170]
+Removing Rhs of wire Net_610[178] = \PWM:PWMUDB:pwm2_i_reg\[172]
+Removing Lhs of wire \PWM:PWMUDB:pwm_temp\[179] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_23\[220] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_22\[221] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_21\[222] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_20\[223] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_19\[224] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_18\[225] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_17\[226] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_16\[227] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_15\[228] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_14\[229] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_13\[230] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_12\[231] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_11\[232] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_10\[233] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_9\[234] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_8\[235] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_7\[236] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_6\[237] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_5\[238] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_4\[239] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_3\[240] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_2\[241] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_1\[242] = \PWM:PWMUDB:MODIN1_1\[243]
+Removing Lhs of wire \PWM:PWMUDB:MODIN1_1\[243] = \PWM:PWMUDB:dith_count_1\[49]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_0\[244] = \PWM:PWMUDB:MODIN1_0\[245]
+Removing Lhs of wire \PWM:PWMUDB:MODIN1_0\[245] = \PWM:PWMUDB:dith_count_0\[51]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[377] = one[4]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[378] = one[4]
+Removing Lhs of wire tmpOE__Pin_min1_net_0[386] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_6\[393] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_5\[394] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_4\[395] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_3\[396] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_2\[397] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_1\[398] = one[4]
+Removing Lhs of wire \LCD:tmpOE__LCDPort_net_0\[399] = one[4]
+Removing Lhs of wire Net_478[420] = one[4]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_5\[428] = \FreqDiv_1:MODULE_2:g2:a0:s_5\[588]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_4\[429] = \FreqDiv_1:MODULE_2:g2:a0:s_4\[589]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_3\[430] = \FreqDiv_1:MODULE_2:g2:a0:s_3\[590]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_2\[431] = \FreqDiv_1:MODULE_2:g2:a0:s_2\[591]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_1\[432] = \FreqDiv_1:MODULE_2:g2:a0:s_1\[592]
+Removing Lhs of wire \FreqDiv_1:add_vi_vv_MODGEN_2_0\[433] = \FreqDiv_1:MODULE_2:g2:a0:s_0\[593]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_23\[474] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_22\[475] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_21\[476] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_20\[477] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_19\[478] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_18\[479] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_17\[480] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_16\[481] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_15\[482] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_14\[483] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_13\[484] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_12\[485] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_11\[486] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_10\[487] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_9\[488] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_8\[489] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_7\[490] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_6\[491] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_5\[492] = \FreqDiv_1:MODIN2_5\[493]
+Removing Lhs of wire \FreqDiv_1:MODIN2_5\[493] = \FreqDiv_1:count_5\[422]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_4\[494] = \FreqDiv_1:MODIN2_4\[495]
+Removing Lhs of wire \FreqDiv_1:MODIN2_4\[495] = \FreqDiv_1:count_4\[423]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_3\[496] = \FreqDiv_1:MODIN2_3\[497]
+Removing Lhs of wire \FreqDiv_1:MODIN2_3\[497] = \FreqDiv_1:count_3\[424]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_2\[498] = \FreqDiv_1:MODIN2_2\[499]
+Removing Lhs of wire \FreqDiv_1:MODIN2_2\[499] = \FreqDiv_1:count_2\[425]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_1\[500] = \FreqDiv_1:MODIN2_1\[501]
+Removing Lhs of wire \FreqDiv_1:MODIN2_1\[501] = \FreqDiv_1:count_1\[426]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:a_0\[502] = \FreqDiv_1:MODIN2_0\[503]
+Removing Lhs of wire \FreqDiv_1:MODIN2_0\[503] = \FreqDiv_1:count_0\[427]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\[631] = one[4]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\[632] = one[4]
+Removing Lhs of wire Net_486[634] = one[4]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_5\[642] = \FreqDiv_2:MODULE_3:g2:a0:s_5\[802]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_4\[643] = \FreqDiv_2:MODULE_3:g2:a0:s_4\[803]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_3\[644] = \FreqDiv_2:MODULE_3:g2:a0:s_3\[804]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_2\[645] = \FreqDiv_2:MODULE_3:g2:a0:s_2\[805]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_1\[646] = \FreqDiv_2:MODULE_3:g2:a0:s_1\[806]
+Removing Lhs of wire \FreqDiv_2:add_vi_vv_MODGEN_3_0\[647] = \FreqDiv_2:MODULE_3:g2:a0:s_0\[807]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_23\[688] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_22\[689] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_21\[690] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_20\[691] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_19\[692] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_18\[693] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_17\[694] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_16\[695] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_15\[696] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_14\[697] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_13\[698] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_12\[699] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_11\[700] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_10\[701] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_9\[702] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_8\[703] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_7\[704] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_6\[705] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_5\[706] = \FreqDiv_2:MODIN3_5\[707]
+Removing Lhs of wire \FreqDiv_2:MODIN3_5\[707] = \FreqDiv_2:count_5\[636]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_4\[708] = \FreqDiv_2:MODIN3_4\[709]
+Removing Lhs of wire \FreqDiv_2:MODIN3_4\[709] = \FreqDiv_2:count_4\[637]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_3\[710] = \FreqDiv_2:MODIN3_3\[711]
+Removing Lhs of wire \FreqDiv_2:MODIN3_3\[711] = \FreqDiv_2:count_3\[638]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_2\[712] = \FreqDiv_2:MODIN3_2\[713]
+Removing Lhs of wire \FreqDiv_2:MODIN3_2\[713] = \FreqDiv_2:count_2\[639]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_1\[714] = \FreqDiv_2:MODIN3_1\[715]
+Removing Lhs of wire \FreqDiv_2:MODIN3_1\[715] = \FreqDiv_2:count_1\[640]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:a_0\[716] = \FreqDiv_2:MODIN3_0\[717]
+Removing Lhs of wire \FreqDiv_2:MODIN3_0\[717] = \FreqDiv_2:count_0\[641]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_0\[845] = one[4]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_0\[846] = one[4]
+Removing Lhs of wire Net_495[848] = one[4]
+Removing Lhs of wire \FreqDiv_3:add_vi_vv_MODGEN_4_3\[854] = \FreqDiv_3:MODULE_4:g2:a0:s_3\[1014]
+Removing Lhs of wire \FreqDiv_3:add_vi_vv_MODGEN_4_2\[855] = \FreqDiv_3:MODULE_4:g2:a0:s_2\[1015]
+Removing Lhs of wire \FreqDiv_3:add_vi_vv_MODGEN_4_1\[856] = \FreqDiv_3:MODULE_4:g2:a0:s_1\[1016]
+Removing Lhs of wire \FreqDiv_3:add_vi_vv_MODGEN_4_0\[857] = \FreqDiv_3:MODULE_4:g2:a0:s_0\[1017]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_23\[898] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_22\[899] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_21\[900] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_20\[901] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_19\[902] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_18\[903] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_17\[904] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_16\[905] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_15\[906] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_14\[907] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_13\[908] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_12\[909] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_11\[910] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_10\[911] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_9\[912] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_8\[913] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_7\[914] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_6\[915] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_5\[916] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_4\[917] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_3\[918] = \FreqDiv_3:MODIN4_3\[919]
+Removing Lhs of wire \FreqDiv_3:MODIN4_3\[919] = \FreqDiv_3:count_3\[850]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_2\[920] = \FreqDiv_3:MODIN4_2\[921]
+Removing Lhs of wire \FreqDiv_3:MODIN4_2\[921] = \FreqDiv_3:count_2\[851]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_1\[922] = \FreqDiv_3:MODIN4_1\[923]
+Removing Lhs of wire \FreqDiv_3:MODIN4_1\[923] = \FreqDiv_3:count_1\[852]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:a_0\[924] = \FreqDiv_3:MODIN4_0\[925]
+Removing Lhs of wire \FreqDiv_3:MODIN4_0\[925] = \FreqDiv_3:count_0\[853]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_0\[1055] = one[4]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_0\[1056] = one[4]
+Removing Lhs of wire Net_565[1062] = one[4]
+Removing Lhs of wire \FreqDiv_4:add_vi_vv_MODGEN_5_0\[1064] = \FreqDiv_4:MODULE_5:g2:a0:s_0\[1224]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_23\[1105] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_22\[1106] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_21\[1107] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_20\[1108] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_19\[1109] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_18\[1110] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_17\[1111] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_16\[1112] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_15\[1113] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_14\[1114] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_13\[1115] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_12\[1116] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_11\[1117] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_10\[1118] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_9\[1119] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_8\[1120] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_7\[1121] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_6\[1122] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_5\[1123] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_4\[1124] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_3\[1125] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_2\[1126] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_1\[1127] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:a_0\[1128] = \FreqDiv_4:MODIN5_0\[1129]
+Removing Lhs of wire \FreqDiv_4:MODIN5_0\[1129] = \FreqDiv_4:count_0\[1063]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_0\[1262] = one[4]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_0\[1263] = one[4]
+Removing Lhs of wire tmpOE__Pin_min2_net_0[1265] = one[4]
+Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\D\[1270] = one[4]
+Removing Lhs of wire \PWM:PWMUDB:prevCapture\\D\[1271] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:trig_last\\D\[1272] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\D\[1275] = one[4]
+Removing Lhs of wire \PWM:PWMUDB:prevCompare1\\D\[1278] = \PWM:PWMUDB:cmp1\[68]
+Removing Lhs of wire \PWM:PWMUDB:prevCompare2\\D\[1279] = \PWM:PWMUDB:cmp2\[71]
+Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\D\[1280] = \PWM:PWMUDB:cmp1_status\[69]
+Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\D\[1281] = \PWM:PWMUDB:cmp2_status\[72]
+Removing Lhs of wire \PWM:PWMUDB:pwm_i_reg\\D\[1283] = \PWM:PWMUDB:pwm_i\[169]
+Removing Lhs of wire \PWM:PWMUDB:pwm1_i_reg\\D\[1284] = \PWM:PWMUDB:pwm1_i\[171]
+Removing Lhs of wire \PWM:PWMUDB:pwm2_i_reg\\D\[1285] = \PWM:PWMUDB:pwm2_i\[173]
+Removing Lhs of wire \PWM:PWMUDB:tc_i_reg\\D\[1286] = \PWM:PWMUDB:status_2\[63]
 
 ------------------------------------------------------
-Aliased 0 equations, 89 wires.
+Aliased 0 equations, 230 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -498,6 +1267,9 @@ zero <=  ('0') ;
 Note:  Expanding virtual equation for '\PWM:PWMUDB:cmp1\' (cost = 0):
 \PWM:PWMUDB:cmp1\ <= (\PWM:PWMUDB:cmp1_less\);
 
+Note:  Expanding virtual equation for '\PWM:PWMUDB:cmp2\' (cost = 0):
+\PWM:PWMUDB:cmp2\ <= (\PWM:PWMUDB:cmp2_less\);
+
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\PWM:PWMUDB:dith_count_0\);
 
@@ -512,6 +1284,54 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\PWM:PWMUDB:dith_count_1\ and \PWM:PWMUDB:dith_count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\FreqDiv_1:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_0\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:s_0\ <= (not \FreqDiv_1:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\FreqDiv_2:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_0\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:s_0\ <= (not \FreqDiv_2:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\FreqDiv_3:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:s_0\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:s_0\ <= (not \FreqDiv_3:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:s_0\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:s_0\ <= (not \FreqDiv_4:count_0\);
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\FreqDiv_4:count_0\);
 
 
 Substituting virtuals - pass 2:
@@ -529,6 +1349,54 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_3\ <=  ('0') ;
 
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 4):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_1\' (cost = 12):
+\FreqDiv_1:MODULE_2:g2:a0:s_1\ <= ((not \FreqDiv_1:count_0\ and \FreqDiv_1:count_1\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 4):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_1\' (cost = 12):
+\FreqDiv_2:MODULE_3:g2:a0:s_1\ <= ((not \FreqDiv_2:count_0\ and \FreqDiv_2:count_1\)
+	OR (not \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 4):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:s_1\' (cost = 8):
+\FreqDiv_3:MODULE_4:g2:a0:s_1\ <= ((not \FreqDiv_3:count_0\ and \FreqDiv_3:count_1\)
+	OR (not \FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_2\ <=  ('0') ;
+
 
 Substituting virtuals - pass 3:
 
@@ -540,6 +1408,60 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_4\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 5):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\ <= ((\FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_2\' (cost = 18):
+\FreqDiv_1:MODULE_2:g2:a0:s_2\ <= ((not \FreqDiv_1:count_1\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 5):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_3\ <= ((\FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_2\' (cost = 18):
+\FreqDiv_2:MODULE_3:g2:a0:s_2\ <= ((not \FreqDiv_2:count_1\ and \FreqDiv_2:count_2\)
+	OR (not \FreqDiv_2:count_0\ and \FreqDiv_2:count_2\)
+	OR (not \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 5):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_3\ <= ((\FreqDiv_3:count_2\ and \FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:s_2\' (cost = 12):
+\FreqDiv_3:MODULE_4:g2:a0:s_2\ <= ((not \FreqDiv_3:count_1\ and \FreqDiv_3:count_2\)
+	OR (not \FreqDiv_3:count_0\ and \FreqDiv_3:count_2\)
+	OR (not \FreqDiv_3:count_2\ and \FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_4\ <= ((\FreqDiv_3:count_3\ and \FreqDiv_3:count_2\ and \FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_3\ <=  ('0') ;
 
 
 Substituting virtuals - pass 4:
@@ -553,6 +1475,60 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_5\ <=  ('0') ;
 
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 6):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\ <= ((\FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_3\' (cost = 24):
+\FreqDiv_1:MODULE_2:g2:a0:s_3\ <= ((not \FreqDiv_1:count_2\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 6):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_4\ <= ((\FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_3\' (cost = 24):
+\FreqDiv_2:MODULE_3:g2:a0:s_3\ <= ((not \FreqDiv_2:count_2\ and \FreqDiv_2:count_3\)
+	OR (not \FreqDiv_2:count_1\ and \FreqDiv_2:count_3\)
+	OR (not \FreqDiv_2:count_0\ and \FreqDiv_2:count_3\)
+	OR (not \FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:s_3\' (cost = 16):
+\FreqDiv_3:MODULE_4:g2:a0:s_3\ <= ((not \FreqDiv_3:count_2\ and \FreqDiv_3:count_3\)
+	OR (not \FreqDiv_3:count_1\ and \FreqDiv_3:count_3\)
+	OR (not \FreqDiv_3:count_0\ and \FreqDiv_3:count_3\)
+	OR (not \FreqDiv_3:count_3\ and \FreqDiv_3:count_2\ and \FreqDiv_3:count_1\ and \FreqDiv_3:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_5\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_4\ <=  ('0') ;
+
 
 Substituting virtuals - pass 5:
 
@@ -564,6 +1540,62 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 7):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\ <= ((\FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_4\' (cost = 30):
+\FreqDiv_1:MODULE_2:g2:a0:s_4\ <= ((not \FreqDiv_1:count_3\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\ <= ((\FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 7):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_5\ <= ((\FreqDiv_2:count_4\ and \FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_4\' (cost = 30):
+\FreqDiv_2:MODULE_3:g2:a0:s_4\ <= ((not \FreqDiv_2:count_3\ and \FreqDiv_2:count_4\)
+	OR (not \FreqDiv_2:count_2\ and \FreqDiv_2:count_4\)
+	OR (not \FreqDiv_2:count_1\ and \FreqDiv_2:count_4\)
+	OR (not \FreqDiv_2:count_0\ and \FreqDiv_2:count_4\)
+	OR (not \FreqDiv_2:count_4\ and \FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_6\ <= ((\FreqDiv_2:count_5\ and \FreqDiv_2:count_4\ and \FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_6\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_5\ <=  ('0') ;
 
 
 Substituting virtuals - pass 6:
@@ -577,6 +1609,58 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
 
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:s_5\' (cost = 36):
+\FreqDiv_1:MODULE_2:g2:a0:s_5\ <= ((not \FreqDiv_1:count_4\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:s_5\' (cost = 36):
+\FreqDiv_2:MODULE_3:g2:a0:s_5\ <= ((not \FreqDiv_2:count_4\ and \FreqDiv_2:count_5\)
+	OR (not \FreqDiv_2:count_3\ and \FreqDiv_2:count_5\)
+	OR (not \FreqDiv_2:count_2\ and \FreqDiv_2:count_5\)
+	OR (not \FreqDiv_2:count_1\ and \FreqDiv_2:count_5\)
+	OR (not \FreqDiv_2:count_0\ and \FreqDiv_2:count_5\)
+	OR (not \FreqDiv_2:count_5\ and \FreqDiv_2:count_4\ and \FreqDiv_2:count_3\ and \FreqDiv_2:count_2\ and \FreqDiv_2:count_1\ and \FreqDiv_2:count_0\));
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_6\ <=  ('0') ;
+
 
 Substituting virtuals - pass 7:
 
@@ -586,6 +1670,33 @@ Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0
 Note:  Expanding virtual equation for '\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
 \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
 
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
 
 Substituting virtuals - pass 8:
 
@@ -593,7 +1704,7 @@ Substituting virtuals - pass 8:
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 26 signals.
+	Expanded 128 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -602,19 +1713,53 @@ Circuit simplification results:
 Alias Detection
 ------------------------------------------------------
 Aliasing \PWM:PWMUDB:final_capture\ to zero
+Aliasing \PWM:PWMUDB:pwm_i\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
 Aliasing \PWM:PWMUDB:final_kill_reg\\D\ to zero
-Removing Lhs of wire \PWM:PWMUDB:final_capture\[86] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[347] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[357] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[367] = zero[7]
-Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\D\[418] = \PWM:PWMUDB:control_7\[8]
-Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\D\[426] = zero[7]
+Aliasing \FreqDiv_1:not_last_reset\\D\ to one
+Aliasing \FreqDiv_2:not_last_reset\\D\ to one
+Aliasing \FreqDiv_3:not_last_reset\\D\ to one
+Aliasing \FreqDiv_4:not_last_reset\\D\ to one
+Removing Lhs of wire \PWM:PWMUDB:final_capture\[87] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:pwm_i\[169] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[348] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[358] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[368] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\[602] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\[612] = zero[7]
+Removing Lhs of wire \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\[622] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_24\[816] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_16\[826] = zero[7]
+Removing Lhs of wire \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:b_8\[836] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_24\[1026] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_16\[1036] = zero[7]
+Removing Lhs of wire \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:b_8\[1046] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_24\[1233] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_16\[1243] = zero[7]
+Removing Lhs of wire \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:b_8\[1253] = zero[7]
+Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\D\[1273] = \PWM:PWMUDB:control_7\[8]
+Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\D\[1282] = zero[7]
+Removing Lhs of wire \FreqDiv_1:not_last_reset\\D\[1288] = one[4]
+Removing Lhs of wire \FreqDiv_2:not_last_reset\\D\[1296] = one[4]
+Removing Lhs of wire \FreqDiv_3:not_last_reset\\D\[1304] = one[4]
+Removing Lhs of wire \FreqDiv_4:not_last_reset\\D\[1310] = one[4]
 
 ------------------------------------------------------
-Aliased 0 equations, 6 wires.
+Aliased 0 equations, 23 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -642,28 +1787,39 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj" -dcpsoc3 "Dimer con PWM.v" -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj" -dcpsoc3 "Dimer con PWM.v" -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.459ms
+Warp synthesis phase: Elapsed time ==> 2s.781ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Saturday, 15 September 2018 20:35:25
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Dell\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 Dimer con PWM.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 17 September 2018 20:06:01
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cyprj -d CY8C5888LTI-LP097 Dimer con PWM.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.014ms
+Design parsing phase: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
     Removed wire end \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
     Removed wire end \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
     Removed wire end \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
+    Removed wire end \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \FreqDiv_1:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
+    Removed wire end \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \FreqDiv_2:MODULE_3:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
+    Removed wire end \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \FreqDiv_3:MODULE_4:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
+    Removed wire end \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \FreqDiv_4:MODULE_5:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
     Converted constant MacroCell: \PWM:PWMUDB:prevCapture\ from registered to combinatorial
     Converted constant MacroCell: \PWM:PWMUDB:trig_last\ from registered to combinatorial
-    Converted constant MacroCell: \PWM:PWMUDB:status_1\ from registered to combinatorial
     Converted constant MacroCell: \PWM:PWMUDB:status_5\ from registered to combinatorial
-    Converted constant MacroCell: \PWM:PWMUDB:pwm1_i_reg\ from registered to combinatorial
-    Converted constant MacroCell: \PWM:PWMUDB:pwm2_i_reg\ from registered to combinatorial
+    Converted constant MacroCell: \PWM:PWMUDB:pwm_i_reg\ from registered to combinatorial
+Assigning clock timer_clock to clock ILO because it is a pass-through
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'Clock_1'. Fanout=1, Signal=Net_31
 </CYPRESSTAG>
@@ -675,6 +1831,20 @@ Done removing unused cells.
         ClockIn: Clock_1 was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: Clock_1, EnableOut: Constant 1
+</CYPRESSTAG>
+<CYPRESSTAG name="UDB Routed Clock Assignment">
+    Routed Clock: ILO
+        Effective Clock: ILO
+        Enable Signal: True
+    Routed Clock: Net_590:macrocell.q
+        Effective Clock: ILO
+        Enable Signal: Net_590:macrocell.q
+    Routed Clock: Net_489:macrocell.q
+        Effective Clock: ILO
+        Enable Signal: Net_489:macrocell.q
+    Routed Clock: Net_498:macrocell.q
+        Effective Clock: ILO
+        Enable Signal: Net_498:macrocell.q
 </CYPRESSTAG>
 
 Removing unused cells resulting from optimization
@@ -698,7 +1868,7 @@ Design Equations
     Pin listing
     ------------------------------------------------------------
 
-    Pin : Name = Pin_2(0)
+    Pin : Name = Pin_min1(0)
         Attributes:
             In Group/Port: True
             In Sync Option: AUTO
@@ -731,9 +1901,9 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => Pin_2(0)__PA ,
+            pa_out => Pin_min1(0)__PA ,
             pin_input => Net_41 ,
-            pad => Pin_2(0)_PAD );
+            pad => Pin_min1(0)_PAD );
         Properties:
         {
         }
@@ -1010,6 +2180,46 @@ Design Equations
         Properties:
         {
         }
+
+    Pin : Name = Pin_min2(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => Pin_min2(0)__PA ,
+            pin_input => Net_610 ,
+            pad => Pin_min2(0)_PAD );
+        Properties:
+        {
+        }
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -1037,7 +2247,7 @@ Design Equations
         (
               \PWM:PWMUDB:control_7\
         );
-        Output = \PWM:PWMUDB:runmode_enable\ (fanout=4)
+        Output = \PWM:PWMUDB:runmode_enable\ (fanout=5)
 
     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register)
         Total # of inputs        : 1
@@ -1051,6 +2261,18 @@ Design Equations
         );
         Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
 
+    MacroCell: Name=\PWM:PWMUDB:prevCompare2\, Mode=(D-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:cmp2_less\
+        );
+        Output = \PWM:PWMUDB:prevCompare2\ (fanout=1)
+
     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
@@ -1063,6 +2285,18 @@ Design Equations
         );
         Output = \PWM:PWMUDB:status_0\ (fanout=1)
 
+    MacroCell: Name=\PWM:PWMUDB:status_1\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\PWM:PWMUDB:prevCompare2\ * \PWM:PWMUDB:cmp2_less\
+        );
+        Output = \PWM:PWMUDB:status_1\ (fanout=1)
+
     MacroCell: Name=Net_41, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
@@ -1074,6 +2308,381 @@ Design Equations
               \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_less\
         );
         Output = Net_41 (fanout=1)
+
+    MacroCell: Name=Net_610, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp2_less\
+        );
+        Output = Net_610 (fanout=1)
+
+    MacroCell: Name=Net_590, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              \FreqDiv_4:not_last_reset\ * !\FreqDiv_4:count_0\
+        );
+        Output = Net_590 (fanout=9)
+
+    MacroCell: Name=\FreqDiv_1:not_last_reset\, Mode=(D-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_1:not_last_reset\ (fanout=7)
+
+    MacroCell: Name=Net_489, Mode=(T-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_1:not_last_reset\ * !Net_489
+            + \FreqDiv_1:not_last_reset\ * Net_489 * !\FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_2\ * 
+              !\FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + !Net_489 * \FreqDiv_1:count_5\ * \FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_3\ * !\FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = Net_489 (fanout=10)
+
+    MacroCell: Name=\FreqDiv_1:count_5\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_3\ * \FreqDiv_1:count_2\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_5\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_1:count_4\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_3\ * 
+              \FreqDiv_1:count_2\ * \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_4\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_1:count_3\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_3\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_1:count_2\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 4 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_3\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_2\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_1:count_1\, Mode=(T-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_1\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_1:count_0\, Mode=(T-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_1:not_last_reset\
+        );
+        Output = \FreqDiv_1:count_0\ (fanout=6)
+
+    MacroCell: Name=\FreqDiv_2:not_last_reset\, Mode=(D-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_2:not_last_reset\ (fanout=7)
+
+    MacroCell: Name=Net_498, Mode=(T-Register)
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_2:not_last_reset\ * !Net_498
+            + \FreqDiv_2:not_last_reset\ * Net_498 * !\FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_2\ * 
+              !\FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + !Net_498 * \FreqDiv_2:count_5\ * \FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_3\ * !\FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = Net_498 (fanout=8)
+
+    MacroCell: Name=\FreqDiv_2:count_5\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_3\ * \FreqDiv_2:count_2\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_5\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_2:count_4\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_3\ * 
+              \FreqDiv_2:count_2\ * \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_4\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_2:count_3\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_3\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_2:count_2\, Mode=(T-Register)
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 4 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_3\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_2\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_2:count_1\, Mode=(T-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_1\ (fanout=5)
+
+    MacroCell: Name=\FreqDiv_2:count_0\, Mode=(T-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_2:not_last_reset\
+        );
+        Output = \FreqDiv_2:count_0\ (fanout=6)
+
+    MacroCell: Name=\FreqDiv_3:not_last_reset\, Mode=(D-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_3:not_last_reset\ (fanout=5)
+
+    MacroCell: Name=Net_496, Mode=(T-Register)
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_3:not_last_reset\ * !Net_496
+            + \FreqDiv_3:not_last_reset\ * Net_496 * !\FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_2\ * !\FreqDiv_3:count_1\ * 
+              \FreqDiv_3:count_0\
+            + !Net_496 * \FreqDiv_3:count_3\ * !\FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = Net_496 (fanout=2)
+
+    MacroCell: Name=\FreqDiv_3:count_3\, Mode=(T-Register)
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+            + \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_3\ (fanout=3)
+
+    MacroCell: Name=\FreqDiv_3:count_2\, Mode=(T-Register)
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_3:not_last_reset\ * !\FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+            + \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_2\ (fanout=3)
+
+    MacroCell: Name=\FreqDiv_3:count_1\, Mode=(T-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_1\ (fanout=3)
+
+    MacroCell: Name=\FreqDiv_3:count_0\, Mode=(T-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_3:not_last_reset\
+        );
+        Output = \FreqDiv_3:count_0\ (fanout=4)
+
+    MacroCell: Name=\FreqDiv_4:not_last_reset\, Mode=(D-Register)
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_4:not_last_reset\ (fanout=2)
+
+    MacroCell: Name=\FreqDiv_4:count_0\, Mode=(T-Register)
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_4:not_last_reset\
+        );
+        Output = \FreqDiv_4:count_0\ (fanout=1)
     </CYPRESSTAG>
     <CYPRESSTAG name="Datapath listing">
 
@@ -1122,6 +2731,7 @@ Design Equations
             cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
             cl0_comb => \PWM:PWMUDB:cmp1_less\ ,
             z0_comb => \PWM:PWMUDB:tc_i\ ,
+            cl1_comb => \PWM:PWMUDB:cmp2_less\ ,
             f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
             chain_in => \PWM:PWMUDB:sP16:pwmdp:carry\ );
         Properties:
@@ -1165,6 +2775,7 @@ Design Equations
             clock => Net_31 ,
             status_3 => \PWM:PWMUDB:status_3\ ,
             status_2 => \PWM:PWMUDB:status_2\ ,
+            status_1 => \PWM:PWMUDB:status_1\ ,
             status_0 => \PWM:PWMUDB:status_0\ );
         Properties:
         {
@@ -1210,6 +2821,46 @@ Design Equations
     <CYPRESSTAG name="DRQ listing">
     </CYPRESSTAG>
     <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =ISR_MI
+        PORT MAP (
+            interrupt => Net_489 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+
+    interrupt: Name =ISR_HO
+        PORT MAP (
+            interrupt => Net_498 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+
+    interrupt: Name =ISR_DI
+        PORT MAP (
+            interrupt => Net_496 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+
+    interrupt: Name =ISR_SE
+        PORT MAP (
+            interrupt => Net_590 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
     </CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Technology mapping summary" expanded>
@@ -1224,8 +2875,8 @@ Digital Clocks                :    1 :    7 :    8 : 12.50 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :    0 :   32 :   32 :  0.00 %
-IO                            :   11 :   37 :   48 : 22.92 %
+Interrupts                    :    4 :   28 :   32 : 12.50 %
+IO                            :   12 :   36 :   48 : 25.00 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -1233,9 +2884,9 @@ USB                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    0 :    4 :    4 :  0.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    5 :  187 :  192 :  2.60 %
-  Unique P-terms              :    5 :  379 :  384 :  1.30 %
-  Total P-terms               :    5 :      :      :        
+  Macrocells                  :   33 :  159 :  192 : 17.19 %
+  Unique P-terms              :   42 :  342 :  384 : 10.94 %
+  Total P-terms               :   49 :      :      :        
   Datapath Cells              :    2 :   22 :   24 :  8.33 %
   Status Cells                :    1 :   23 :   24 :  4.17 %
     StatusI Registers         :    1 :      :      :        
@@ -1250,12 +2901,13 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.228ms
-Tech Mapping phase: Elapsed time ==> 0s.309ms
+Technology Mapping: Elapsed time ==> 0s.265ms
+Tech Mapping phase: Elapsed time ==> 0s.437ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
-IO_1@[IOP=(2)][IoId=(1)] : Pin_2(0) (fixed)
+IO_1@[IOP=(2)][IoId=(1)] : Pin_min1(0) (fixed)
+IO_0@[IOP=(2)][IoId=(0)] : Pin_min2(0) (fixed)
 IO_0@[IOP=(12)][IoId=(0)] : \LCD:LCDPort(0)\ (fixed)
 IO_1@[IOP=(12)][IoId=(1)] : \LCD:LCDPort(1)\ (fixed)
 IO_2@[IOP=(12)][IoId=(2)] : \LCD:LCDPort(2)\ (fixed)
@@ -1263,7 +2915,7 @@ IO_3@[IOP=(12)][IoId=(3)] : \LCD:LCDPort(3)\ (fixed)
 IO_4@[IOP=(12)][IoId=(4)] : \LCD:LCDPort(4)\ (fixed)
 IO_5@[IOP=(12)][IoId=(5)] : \LCD:LCDPort(5)\ (fixed)
 IO_6@[IOP=(12)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
-Analog Placement phase: Elapsed time ==> 0s.030ms
+Analog Placement phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -1281,11 +2933,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.343ms
+Analog Code Generation phase: Elapsed time ==> 0s.703ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 0.7 sec.
+I2076: Total run-time: 1.8 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1296,27 +2948,27 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    2 :   46 :   48 :   4.17%
+                     PLDs :    9 :   39 :   48 :  18.75%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            3.00
-                   Pterms :            2.50
-               Macrocells :            2.50
+                   Inputs :            5.33
+                   Pterms :            4.89
+               Macrocells :            3.67
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.017ms
+Partitioning: Elapsed time ==> 0s.046ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1326,7 +2978,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          2 :       2.50 :       2.50
+                 UDB :          6 :       5.17 :       5.50
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1335,10 +2987,170 @@ Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] is empty.
 UDB [UDB=(0,1)] is empty.
-UDB [UDB=(0,2)] is empty.
-UDB [UDB=(0,3)] is empty.
+UDB [UDB=(0,2)] contents:
+LAB@[UDB=(0,2)][LB=0] #macrocells=4, #inputs=6, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=Net_496, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_3:not_last_reset\ * !Net_496
+            + \FreqDiv_3:not_last_reset\ * Net_496 * !\FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_2\ * !\FreqDiv_3:count_1\ * 
+              \FreqDiv_3:count_0\
+            + !Net_496 * \FreqDiv_3:count_3\ * !\FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = Net_496 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_3:count_2\, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_3:not_last_reset\ * !\FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+            + \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_2\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_3:count_3\, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=2]
+        Total # of inputs        : 5
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_3\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+            + \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_2\ * 
+              \FreqDiv_3:count_1\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_3\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FreqDiv_3:count_1\, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_3:not_last_reset\ * \FreqDiv_3:count_0\
+        );
+        Output = \FreqDiv_3:count_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,2)][LB=1] #macrocells=2, #inputs=1, #pterms=1
+{
+    [McSlotId=0]:     MacroCell: Name=\FreqDiv_3:count_0\, Mode=(T-Register) @ [UDB=(0,2)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_3:not_last_reset\
+        );
+        Output = \FreqDiv_3:count_0\ (fanout=4)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_3:not_last_reset\, Mode=(D-Register) @ [UDB=(0,2)][LB=1][MC=1]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_498)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_3:not_last_reset\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+UDB [UDB=(0,3)] contents:
+LAB@[UDB=(0,3)][LB=0] #macrocells=3, #inputs=2, #pterms=2
+{
+    [McSlotId=0]:     MacroCell: Name=Net_590, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        !(
+              \FreqDiv_4:not_last_reset\ * !\FreqDiv_4:count_0\
+        );
+        Output = Net_590 (fanout=9)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_4:count_0\, Mode=(T-Register) @ [UDB=(0,3)][LB=0][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_4:not_last_reset\
+        );
+        Output = \FreqDiv_4:count_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_4:not_last_reset\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=2]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: True
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_4:not_last_reset\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
 UDB [UDB=(0,4)] contents:
-LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
+LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=5, #pterms=4
 {
     [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:runmode_enable\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=0]
         Total # of inputs        : 1
@@ -1350,7 +3162,7 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
         (
               \PWM:PWMUDB:control_7\
         );
-        Output = \PWM:PWMUDB:runmode_enable\ (fanout=4)
+        Output = \PWM:PWMUDB:runmode_enable\ (fanout=5)
         Properties               : 
         {
         }
@@ -1383,7 +3195,25 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
         {
         }
 
-    [McSlotId=3]:     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=3]
+    [McSlotId=3]:     MacroCell: Name=Net_610, Mode=(D-Register) @ [UDB=(0,4)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp2_less\
+        );
+        Output = Net_610 (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,4)][LB=1] #macrocells=4, #inputs=4, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=0]
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
@@ -1397,11 +3227,8 @@ LAB@[UDB=(0,4)][LB=0] #macrocells=4, #inputs=4, #pterms=4
         Properties               : 
         {
         }
-}
 
-LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=2, #pterms=1
-{
-    [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=0]
+    [McSlotId=1]:     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=1]
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1416,9 +3243,35 @@ LAB@[UDB=(0,4)][LB=1] #macrocells=1, #inputs=2, #pterms=1
         {
         }
 
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\PWM:PWMUDB:prevCompare2\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=2]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:cmp2_less\
+        );
+        Output = \PWM:PWMUDB:prevCompare2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PWM:PWMUDB:status_1\, Mode=(D-Register) @ [UDB=(0,4)][LB=1][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_31) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\PWM:PWMUDB:prevCompare2\ * \PWM:PWMUDB:cmp2_less\
+        );
+        Output = \PWM:PWMUDB:status_1\ (fanout=1)
+        Properties               : 
+        {
+        }
 }
 
 datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u1\
@@ -1428,6 +3281,7 @@ datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u1\
         cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
         cl0_comb => \PWM:PWMUDB:cmp1_less\ ,
         z0_comb => \PWM:PWMUDB:tc_i\ ,
+        cl1_comb => \PWM:PWMUDB:cmp2_less\ ,
         f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
         chain_in => \PWM:PWMUDB:sP16:pwmdp:carry\ );
     Properties:
@@ -1463,6 +3317,7 @@ statusicell: Name =\PWM:PWMUDB:genblk8:stsreg\
         clock => Net_31 ,
         status_3 => \PWM:PWMUDB:status_3\ ,
         status_2 => \PWM:PWMUDB:status_2\ ,
+        status_1 => \PWM:PWMUDB:status_1\ ,
         status_0 => \PWM:PWMUDB:status_0\ );
     Properties:
     {
@@ -1498,8 +3353,312 @@ controlcell: Name =\PWM:PWMUDB:genblk1:ctrlreg\
 UDB [UDB=(0,5)] is empty.
 UDB [UDB=(1,0)] is empty.
 UDB [UDB=(1,1)] is empty.
-UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=0] #macrocells=4, #inputs=8, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=Net_498, Mode=(T-Register) @ [UDB=(1,2)][LB=0][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_2:not_last_reset\ * !Net_498
+            + \FreqDiv_2:not_last_reset\ * Net_498 * !\FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_2\ * 
+              !\FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + !Net_498 * \FreqDiv_2:count_5\ * \FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_3\ * !\FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = Net_498 (fanout=8)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_2:count_2\, Mode=(T-Register) @ [UDB=(1,2)][LB=0][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 4 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * !\FreqDiv_2:count_3\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_2\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_2:count_3\, Mode=(T-Register) @ [UDB=(1,2)][LB=0][MC=2]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_2\ * 
+              \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_3\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FreqDiv_2:not_last_reset\, Mode=(D-Register) @ [UDB=(1,2)][LB=0][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_2:not_last_reset\ (fanout=7)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,2)][LB=1] #macrocells=4, #inputs=7, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FreqDiv_2:count_4\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_3\ * 
+              \FreqDiv_2:count_2\ * \FreqDiv_2:count_1\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_4\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_2:count_5\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_5\ * 
+              \FreqDiv_2:count_4\ * \FreqDiv_2:count_3\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+            + \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_4\ * 
+              \FreqDiv_2:count_3\ * \FreqDiv_2:count_2\ * \FreqDiv_2:count_1\ * 
+              \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_5\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_2:count_1\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_2:not_last_reset\ * \FreqDiv_2:count_0\
+        );
+        Output = \FreqDiv_2:count_1\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FreqDiv_2:count_0\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_489)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_2:not_last_reset\
+        );
+        Output = \FreqDiv_2:count_0\ (fanout=6)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=4, #inputs=8, #pterms=8
+{
+    [McSlotId=0]:     MacroCell: Name=Net_489, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 8
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 3 pterms
+        (
+              !\FreqDiv_1:not_last_reset\ * !Net_489
+            + \FreqDiv_1:not_last_reset\ * Net_489 * !\FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_2\ * 
+              !\FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + !Net_489 * \FreqDiv_1:count_5\ * \FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_3\ * !\FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = Net_489 (fanout=10)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_1:count_2\, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 4 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * !\FreqDiv_1:count_3\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_2\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_1:count_3\, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=2]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_2\ * 
+              \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_3\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FreqDiv_1:not_last_reset\, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=3]
+        Total # of inputs        : 0
+        Total # of product terms : 0
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 0 pterms
+        !(
+            0
+        );
+        Output = \FreqDiv_1:not_last_reset\ (fanout=7)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(1,3)][LB=1] #macrocells=4, #inputs=7, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\FreqDiv_1:count_4\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=0]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_3\ * 
+              \FreqDiv_1:count_2\ * \FreqDiv_1:count_1\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_4\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\FreqDiv_1:count_5\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=1]
+        Total # of inputs        : 7
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 2 pterms
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_5\ * 
+              \FreqDiv_1:count_4\ * \FreqDiv_1:count_3\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+            + \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_4\ * 
+              \FreqDiv_1:count_3\ * \FreqDiv_1:count_2\ * \FreqDiv_1:count_1\ * 
+              \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_5\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\FreqDiv_1:count_1\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_1:not_last_reset\ * \FreqDiv_1:count_0\
+        );
+        Output = \FreqDiv_1:count_1\ (fanout=5)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\FreqDiv_1:count_0\, Mode=(T-Register) @ [UDB=(1,3)][LB=1][MC=3]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (ClockBlock_1k)
+            Clock Enable: PosEdge(Net_590)
+        Main Equation            : 1 pterm
+        (
+              \FreqDiv_1:not_last_reset\
+        );
+        Output = \FreqDiv_1:count_0\ (fanout=6)
+        Properties               : 
+        {
+        }
+}
+
 UDB [UDB=(1,4)] contents:
 datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u0\
     PORT MAP (
@@ -1548,13 +3707,49 @@ UDB [UDB=(3,2)] is empty.
 UDB [UDB=(3,3)] is empty.
 UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
-Intr container @ [IntrContainer=(0)]: empty
+Intr container @ [IntrContainer=(0)]: 
+  Intr@ [IntrContainer=(0)][IntrId=(0)] 
+    interrupt: Name =ISR_DI
+        PORT MAP (
+            interrupt => Net_496 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(1)] 
+    interrupt: Name =ISR_HO
+        PORT MAP (
+            interrupt => Net_498 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
+    interrupt: Name =ISR_MI
+        PORT MAP (
+            interrupt => Net_489 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(3)] 
+    interrupt: Name =ISR_SE
+        PORT MAP (
+            interrupt => Net_590 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
 Drq container @ [DrqContainer=(0)]: empty
 Port 0 contains the following IO cells:
 Port 1 contains the following IO cells:
 Port 2 contains the following IO cells:
-[IoId=1]: 
-Pin : Name = Pin_2(0)
+[IoId=0]: 
+Pin : Name = Pin_min2(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -1587,9 +3782,50 @@ Pin : Name = Pin_2(0)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Pin_2(0)__PA ,
+        pa_out => Pin_min2(0)__PA ,
+        pin_input => Net_610 ,
+        pad => Pin_min2(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = Pin_min1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Pin_min1(0)__PA ,
         pin_input => Net_41 ,
-        pad => Pin_2(0)_PAD );
+        pad => Pin_min1(0)_PAD );
     Properties:
     {
     }
@@ -1932,7 +4168,8 @@ Port Configuration report
      |     |       | Interrupt |                  |                  | 
 Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connections
 -----+-----+-------+-----------+------------------+------------------+------------
-   2 |   1 |     * |      NONE |         CMOS_OUT |         Pin_2(0) | In(Net_41)
+   2 |   0 |     * |      NONE |         CMOS_OUT |      Pin_min2(0) | In(Net_610)
+     |   1 |     * |      NONE |         CMOS_OUT |      Pin_min1(0) | In(Net_41)
 -----+-----+-------+-----------+------------------+------------------+------------
   12 |   0 |     * |      NONE |         CMOS_OUT | \LCD:LCDPort(0)\ | 
      |   1 |     * |      NONE |         CMOS_OUT | \LCD:LCDPort(1)\ | 
@@ -1945,33 +4182,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |             Name | Connectio
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.037ms
-Digital Placement phase: Elapsed time ==> 1s.006ms
+Digital component placer commit/Report: Elapsed time ==> 0s.124ms
+Digital Placement phase: Elapsed time ==> 2s.703ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "Dimer con PWM_r.vh2" --pcf-path "Dimer con PWM.pco" --des-name "Dimer con PWM" --dsf-path "Dimer con PWM.dsf" --sdc-path "Dimer con PWM.sdc" --lib-path "Dimer con PWM_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.600ms
+Digital Routing phase: Elapsed time ==> 4s.203ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.302ms
+Bitstream Generation phase: Elapsed time ==> 0s.640ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.061ms
+Bitstream Verification phase: Elapsed time ==> 0s.156ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in Dimer con PWM_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.245ms
+Static timing analysis phase: Elapsed time ==> 0s.859ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.001ms
+Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.227ms
+Design database save phase: Elapsed time ==> 0s.517ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.159ms
+cydsfit: Elapsed time ==> 10s.548ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.161ms
-API generation phase: Elapsed time ==> 1s.207ms
-Dependency generation phase: Elapsed time ==> 0s.011ms
-Cleanup phase: Elapsed time ==> 0s.001ms
+Fitter phase: Elapsed time ==> 10s.548ms
+API generation phase: Elapsed time ==> 2s.859ms
+Dependency generation phase: Elapsed time ==> 0s.062ms
+Cleanup phase: Elapsed time ==> 0s.000ms
