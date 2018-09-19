@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 1
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 1
 
 
    1              		.syntax unified
@@ -48,19 +48,23 @@ ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 1
   18:main.c        **** 
   19:main.c        **** uint16 count;
   20:main.c        **** uint8 de=1;
-  21:main.c        **** uint8 aux=0;
+  21:main.c        **** uint8 aux;
   22:main.c        **** uint8 Inferior[]={12,9,11,10,9,10,0,9,0,9};
   23:main.c        **** uint8 Superior[]={8,7,6,6,4,5,5,6,8,8};
-  24:main.c        **** //                0     1    2   3     4   5    6    7     8*    9*   10   11   12
-  25:main.c        **** uint16 PasosS[]={5700,5380,5140,4810,4500,4200,4000,3990,3260,2800,2400,2070,1740};
-  26:main.c        **** 
-  27:main.c        **** void visualLCD(){
-  28              		.loc 1 27 0
+  24:main.c        **** //                0     1    2   3     4   5    6*    7*     8*    9*   10   11   12
+  25:main.c        **** uint16 PasosSM1[]={5700/* 0*/,5380/* 1*/,5140/* 2*/,4810/* 3*/,4500/* 4*/,3900/* 5*/,3680/* 6*/,350
+  26:main.c        **** uint16 PasosSM2[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};   
+  27:main.c        **** uint16 PasosSM3[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};
+  28:main.c        **** uint16 PasosSM4[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};
+  29:main.c        **** 
+  30:main.c        **** 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 2
+
+
+  31:main.c        **** void visualLCD(){
+  28              		.loc 1 31 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 2
-
-
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32 0000 38B5     		push	{r3, r4, r5, lr}
   33              		.cfi_def_cfa_offset 16
@@ -68,64 +72,64 @@ ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 1
   35              		.cfi_offset 4, -12
   36              		.cfi_offset 5, -8
   37              		.cfi_offset 14, -4
-  28:main.c        **** 
-  29:main.c        ****      LCD_Position(0,0);
-  38              		.loc 1 29 0
+  32:main.c        **** 
+  33:main.c        ****      LCD_Position(0,0);
+  38              		.loc 1 33 0
   39 0002 0021     		movs	r1, #0
   40 0004 0846     		mov	r0, r1
   41 0006 FFF7FEFF 		bl	LCD_Position
   42              	.LVL0:
-  30:main.c        ****      LCD_PrintString("             ");//Se Borra
-  43              		.loc 1 30 0
+  34:main.c        ****      LCD_PrintString("             ");//Se Borra
+  43              		.loc 1 34 0
   44 000a 1A48     		ldr	r0, .L3
   45 000c FFF7FEFF 		bl	LCD_PrintString
   46              	.LVL1:
-  31:main.c        ****      LCD_Position(0,0);
-  47              		.loc 1 31 0
+  35:main.c        ****      LCD_Position(0,0);
+  47              		.loc 1 35 0
   48 0010 0021     		movs	r1, #0
   49 0012 0846     		mov	r0, r1
   50 0014 FFF7FEFF 		bl	LCD_Position
   51              	.LVL2:
-  32:main.c        ****      LCD_PrintNumber(d_hora);
-  52              		.loc 1 32 0
+  36:main.c        ****      LCD_PrintNumber(d_hora);
+  52              		.loc 1 36 0
   53 0018 174B     		ldr	r3, .L3+4
   54 001a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
   55 001c FFF7FEFF 		bl	LCD_PrintU32Number
   56              	.LVL3:
-  33:main.c        ****      LCD_PrintNumber(u_hora);
-  57              		.loc 1 33 0
+  37:main.c        ****      LCD_PrintNumber(u_hora);
+  57              		.loc 1 37 0
   58 0020 164B     		ldr	r3, .L3+8
   59 0022 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
   60 0024 FFF7FEFF 		bl	LCD_PrintU32Number
   61              	.LVL4:
-  34:main.c        ****      LCD_PrintString(":");
-  62              		.loc 1 34 0
+  38:main.c        ****      LCD_PrintString(":");
+  62              		.loc 1 38 0
   63 0028 154C     		ldr	r4, .L3+12
   64 002a 2046     		mov	r0, r4
   65 002c FFF7FEFF 		bl	LCD_PrintString
   66              	.LVL5:
-  35:main.c        ****      LCD_PrintNumber(d_min);
-  67              		.loc 1 35 0
+  39:main.c        ****      LCD_PrintNumber(d_min);
+  67              		.loc 1 39 0
   68 0030 144B     		ldr	r3, .L3+16
   69 0032 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
   70 0034 FFF7FEFF 		bl	LCD_PrintU32Number
   71              	.LVL6:
-  36:main.c        ****      LCD_PrintNumber(u_min);
-  72              		.loc 1 36 0
+  40:main.c        ****      LCD_PrintNumber(u_min);
+  72              		.loc 1 40 0
   73 0038 134B     		ldr	r3, .L3+20
   74 003a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 3
+
+
   75 003c FFF7FEFF 		bl	LCD_PrintU32Number
   76              	.LVL7:
-  37:main.c        ****      LCD_PrintString(":");
-  77              		.loc 1 37 0
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 3
-
-
+  41:main.c        ****      LCD_PrintString(":");
+  77              		.loc 1 41 0
   78 0040 2046     		mov	r0, r4
   79 0042 FFF7FEFF 		bl	LCD_PrintString
   80              	.LVL8:
-  38:main.c        ****      LCD_PrintNumber(seg/10);
-  81              		.loc 1 38 0
+  42:main.c        ****      LCD_PrintNumber(seg/10);
+  81              		.loc 1 42 0
   82 0046 114D     		ldr	r5, .L3+24
   83 0048 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
   84 004a C0B2     		uxtb	r0, r0
@@ -134,8 +138,8 @@ ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 1
   87 0052 C008     		lsrs	r0, r0, #3
   88 0054 FFF7FEFF 		bl	LCD_PrintU32Number
   89              	.LVL9:
-  39:main.c        ****     LCD_PrintNumber(seg%10);
-  90              		.loc 1 39 0
+  43:main.c        ****     LCD_PrintNumber(seg%10);
+  90              		.loc 1 43 0
   91 0058 2B78     		ldrb	r3, [r5]	@ zero_extendqisi2
   92 005a DBB2     		uxtb	r3, r3
   93 005c A4FB0324 		umull	r2, r4, r4, r3
@@ -161,2206 +165,3205 @@ ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 1
  113              		.cfi_endproc
  114              	.LFE63:
  115              		.size	visualLCD, .-visualLCD
- 116              		.section	.text.tiempo,"ax",%progbits
+ 116              		.section	.text.Numero,"ax",%progbits
  117              		.align	2
- 118              		.global	tiempo
+ 118              		.global	Numero
  119              		.thumb
  120              		.thumb_func
- 121              		.type	tiempo, %function
- 122              	tiempo:
+ 121              		.type	Numero, %function
+ 122              	Numero:
  123              	.LFB64:
-  40:main.c        **** 
-  41:main.c        **** }
-  42:main.c        **** 
-  43:main.c        **** void tiempo(uint8 aumento){
- 124              		.loc 1 43 0
+  44:main.c        **** 
+  45:main.c        **** }
+  46:main.c        **** 
+  47:main.c        **** 
+  48:main.c        **** void Numero(uint8 numero,uint8 motor)
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 4
+
+
+  49:main.c        **** {
+ 124              		.loc 1 49 0
  125              		.cfi_startproc
  126              		@ args = 0, pretend = 0, frame = 0
  127              		@ frame_needed = 0, uses_anonymous_args = 0
- 128              		@ link register save eliminated.
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 4
+ 128              	.LVL11:
+ 129 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 130              		.cfi_def_cfa_offset 24
+ 131              		.cfi_offset 4, -24
+ 132              		.cfi_offset 5, -20
+ 133              		.cfi_offset 6, -16
+ 134              		.cfi_offset 7, -12
+ 135              		.cfi_offset 8, -8
+ 136              		.cfi_offset 14, -4
+ 137 0004 0646     		mov	r6, r0
+ 138 0006 0D46     		mov	r5, r1
+ 139              	.LVL12:
+ 140              	.LBB2:
+  50:main.c        ****     
+  51:main.c        ****     for(uint16 i=3200;i<=5700;i=i+300){
+ 141              		.loc 1 51 0
+ 142 0008 4FF44864 		mov	r4, #3200
+ 143 000c 1BE0     		b	.L6
+ 144              	.LVL13:
+ 145              	.L13:
+  52:main.c        ****      switch (motor){
+ 146              		.loc 1 52 0
+ 147 000e 6B1E     		subs	r3, r5, #1
+ 148 0010 032B     		cmp	r3, #3
+ 149 0012 12D8     		bhi	.L7
+ 150 0014 DFE803F0 		tbb	[pc, r3]
+ 151              	.L9:
+ 152 0018 02       		.byte	(.L8-.L9)/2
+ 153 0019 06       		.byte	(.L10-.L9)/2
+ 154 001a 0A       		.byte	(.L11-.L9)/2
+ 155 001b 0E       		.byte	(.L12-.L9)/2
+ 156              		.p2align 1
+ 157              	.L8:
+  53:main.c        ****                 case 1:
+  54:main.c        ****                 PWM_WriteCompare1(i);  
+ 158              		.loc 1 54 0
+ 159 001c 2046     		mov	r0, r4
+ 160 001e FFF7FEFF 		bl	PWM_WriteCompare1
+ 161              	.LVL14:
+  55:main.c        ****                 break;
+ 162              		.loc 1 55 0
+ 163 0022 0AE0     		b	.L7
+ 164              	.L10:
+  56:main.c        ****                 case 2:
+  57:main.c        ****                 PWM_WriteCompare2(i);
+ 165              		.loc 1 57 0
+ 166 0024 2046     		mov	r0, r4
+ 167 0026 FFF7FEFF 		bl	PWM_WriteCompare2
+ 168              	.LVL15:
+  58:main.c        ****                 break;
+ 169              		.loc 1 58 0
+ 170 002a 06E0     		b	.L7
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 5
 
 
- 129              	.LVL11:
-  44:main.c        **** seg=seg+aumento;
- 130              		.loc 1 44 0
- 131 0000 244A     		ldr	r2, .L8
- 132 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 133 0004 1844     		add	r0, r0, r3
- 134              	.LVL12:
- 135 0006 C0B2     		uxtb	r0, r0
- 136 0008 1070     		strb	r0, [r2]
-  45:main.c        ****  if(seg>=60){    
- 137              		.loc 1 45 0
- 138 000a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 139 000c DBB2     		uxtb	r3, r3
- 140 000e 3B2B     		cmp	r3, #59
- 141 0010 3FD9     		bls	.L5
-  46:main.c        **** 		seg=0;
- 142              		.loc 1 46 0
- 143 0012 0022     		movs	r2, #0
- 144 0014 1F4B     		ldr	r3, .L8
- 145 0016 1A70     		strb	r2, [r3]
-  47:main.c        **** 		u_min++;
- 146              		.loc 1 47 0
- 147 0018 1F4A     		ldr	r2, .L8+4
- 148 001a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 149 001c 0133     		adds	r3, r3, #1
- 150 001e DBB2     		uxtb	r3, r3
- 151 0020 1370     		strb	r3, [r2]
-  48:main.c        **** 		if(u_min == 10){
- 152              		.loc 1 48 0
- 153 0022 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 154 0024 DBB2     		uxtb	r3, r3
- 155 0026 0A2B     		cmp	r3, #10
- 156 0028 33D1     		bne	.L5
-  49:main.c        **** 			u_min=0;
- 157              		.loc 1 49 0
- 158 002a 0022     		movs	r2, #0
- 159 002c 1A4B     		ldr	r3, .L8+4
- 160 002e 1A70     		strb	r2, [r3]
-  50:main.c        **** 			d_min++;
- 161              		.loc 1 50 0
- 162 0030 1A4A     		ldr	r2, .L8+8
- 163 0032 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 164 0034 0133     		adds	r3, r3, #1
- 165 0036 DBB2     		uxtb	r3, r3
- 166 0038 1370     		strb	r3, [r2]
-  51:main.c        **** 			if(d_min==6){
- 167              		.loc 1 51 0
- 168 003a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 169 003c DBB2     		uxtb	r3, r3
- 170 003e 062B     		cmp	r3, #6
- 171 0040 27D1     		bne	.L5
-  52:main.c        **** 				d_min=0;
- 172              		.loc 1 52 0
- 173 0042 0022     		movs	r2, #0
- 174 0044 154B     		ldr	r3, .L8+8
- 175 0046 1A70     		strb	r2, [r3]
-  53:main.c        **** 				u_hora++;
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 5
+ 171              	.L11:
+  59:main.c        ****                 case 3:
+  60:main.c        ****                 PWM_1_WriteCompare1(i);  
+ 172              		.loc 1 60 0
+ 173 002c 2046     		mov	r0, r4
+ 174 002e FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 175              	.LVL16:
+  61:main.c        ****                 break;
+ 176              		.loc 1 61 0
+ 177 0032 02E0     		b	.L7
+ 178              	.L12:
+  62:main.c        ****                 case 4:
+  63:main.c        ****                 PWM_1_WriteCompare2(i);
+ 179              		.loc 1 63 0
+ 180 0034 2046     		mov	r0, r4
+ 181 0036 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 182              	.LVL17:
+ 183              	.L7:
+  64:main.c        ****                 break;
+  65:main.c        ****                 default:
+  66:main.c        ****                 break;
+  67:main.c        ****             }
+  68:main.c        ****     CyDelay(200);
+ 184              		.loc 1 68 0 discriminator 2
+ 185 003a C820     		movs	r0, #200
+ 186 003c FFF7FEFF 		bl	CyDelay
+ 187              	.LVL18:
+  51:main.c        ****      switch (motor){
+ 188              		.loc 1 51 0 discriminator 2
+ 189 0040 04F59674 		add	r4, r4, #300
+ 190              	.LVL19:
+ 191 0044 A4B2     		uxth	r4, r4
+ 192              	.LVL20:
+ 193              	.L6:
+  51:main.c        ****      switch (motor){
+ 194              		.loc 1 51 0 is_stmt 0 discriminator 1
+ 195 0046 41F24463 		movw	r3, #5700
+ 196 004a 9C42     		cmp	r4, r3
+ 197 004c DFD9     		bls	.L13
+ 198 004e 0124     		movs	r4, #1
+ 199              	.LVL21:
+ 200 0050 3AE0     		b	.L14
+ 201              	.LVL22:
+ 202              	.L21:
+ 203              	.LBE2:
+ 204              	.LBB3:
+  69:main.c        ****     }
+  70:main.c        ****      for(uint8 i=1;i<=Inferior[numero];i++){
+  71:main.c        ****      switch (motor){
+ 205              		.loc 1 71 0 is_stmt 1
+ 206 0052 6B1E     		subs	r3, r5, #1
+ 207 0054 032B     		cmp	r3, #3
+ 208 0056 32D8     		bhi	.L15
+ 209 0058 DFE803F0 		tbb	[pc, r3]
+ 210              	.L17:
+ 211 005c 02       		.byte	(.L16-.L17)/2
+ 212 005d 0E       		.byte	(.L18-.L17)/2
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 6
 
 
- 176              		.loc 1 53 0
- 177 0048 154A     		ldr	r2, .L8+12
- 178 004a 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 179 004c 0133     		adds	r3, r3, #1
- 180 004e DBB2     		uxtb	r3, r3
- 181 0050 1370     		strb	r3, [r2]
-  54:main.c        **** 				if(u_hora==10){
- 182              		.loc 1 54 0
- 183 0052 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 184 0054 DBB2     		uxtb	r3, r3
- 185 0056 0A2B     		cmp	r3, #10
- 186 0058 08D1     		bne	.L7
-  55:main.c        **** 					u_hora=0;
- 187              		.loc 1 55 0
- 188 005a 0022     		movs	r2, #0
- 189 005c 104B     		ldr	r3, .L8+12
- 190 005e 1A70     		strb	r2, [r3]
-  56:main.c        **** 					d_hora++;
- 191              		.loc 1 56 0
- 192 0060 104A     		ldr	r2, .L8+16
- 193 0062 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
- 194 0064 0133     		adds	r3, r3, #1
- 195 0066 DBB2     		uxtb	r3, r3
- 196 0068 1370     		strb	r3, [r2]
- 197 006a 7047     		bx	lr
- 198              	.L7:
-  57:main.c        **** 				}else{
-  58:main.c        **** 					if(u_hora==1){
- 199              		.loc 1 58 0
- 200 006c 0C4B     		ldr	r3, .L8+12
- 201 006e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 202 0070 DBB2     		uxtb	r3, r3
- 203 0072 012B     		cmp	r3, #1
- 204 0074 0DD1     		bne	.L5
-  59:main.c        **** 						if(d_hora==2){
- 205              		.loc 1 59 0
- 206 0076 0B4B     		ldr	r3, .L8+16
- 207 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 208 007a DBB2     		uxtb	r3, r3
- 209 007c 022B     		cmp	r3, #2
- 210 007e 08D1     		bne	.L5
-  60:main.c        **** 						    //Reinicia Reloj
-  61:main.c        ****                             u_hora=0;
- 211              		.loc 1 61 0
- 212 0080 0023     		movs	r3, #0
- 213 0082 074A     		ldr	r2, .L8+12
- 214 0084 1370     		strb	r3, [r2]
-  62:main.c        **** 							d_hora=0;
- 215              		.loc 1 62 0
- 216 0086 074A     		ldr	r2, .L8+16
- 217 0088 1370     		strb	r3, [r2]
-  63:main.c        ****                             u_min=0;
- 218              		.loc 1 63 0
- 219 008a 034A     		ldr	r2, .L8+4
- 220 008c 1370     		strb	r3, [r2]
-  64:main.c        ****                             d_min=0;
- 221              		.loc 1 64 0
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 6
+ 213 005e 1A       		.byte	(.L19-.L17)/2
+ 214 005f 26       		.byte	(.L20-.L17)/2
+ 215              		.p2align 1
+ 216              	.L16:
+  72:main.c        ****                 case 1:
+  73:main.c        ****                 PWM_WriteCompare1(5700-330*i);  
+ 217              		.loc 1 73 0
+ 218 0060 04EB8403 		add	r3, r4, r4, lsl #2
+ 219 0064 03EB4313 		add	r3, r3, r3, lsl #5
+ 220 0068 5800     		lsls	r0, r3, #1
+ 221 006a C0F5B250 		rsb	r0, r0, #5696
+ 222 006e 0430     		adds	r0, r0, #4
+ 223 0070 80B2     		uxth	r0, r0
+ 224 0072 FFF7FEFF 		bl	PWM_WriteCompare1
+ 225              	.LVL23:
+  74:main.c        ****                 break;
+ 226              		.loc 1 74 0
+ 227 0076 22E0     		b	.L15
+ 228              	.L18:
+  75:main.c        ****                 case 2:
+  76:main.c        ****                 PWM_WriteCompare2(5700-330*i);
+ 229              		.loc 1 76 0
+ 230 0078 04EB8403 		add	r3, r4, r4, lsl #2
+ 231 007c 03EB4313 		add	r3, r3, r3, lsl #5
+ 232 0080 5800     		lsls	r0, r3, #1
+ 233 0082 C0F5B250 		rsb	r0, r0, #5696
+ 234 0086 0430     		adds	r0, r0, #4
+ 235 0088 80B2     		uxth	r0, r0
+ 236 008a FFF7FEFF 		bl	PWM_WriteCompare2
+ 237              	.LVL24:
+  77:main.c        ****                 break;
+ 238              		.loc 1 77 0
+ 239 008e 16E0     		b	.L15
+ 240              	.L19:
+  78:main.c        ****                 case 3:
+  79:main.c        ****                 PWM_1_WriteCompare1(5700-330*i);  
+ 241              		.loc 1 79 0
+ 242 0090 04EB8403 		add	r3, r4, r4, lsl #2
+ 243 0094 03EB4313 		add	r3, r3, r3, lsl #5
+ 244 0098 5800     		lsls	r0, r3, #1
+ 245 009a C0F5B250 		rsb	r0, r0, #5696
+ 246 009e 0430     		adds	r0, r0, #4
+ 247 00a0 80B2     		uxth	r0, r0
+ 248 00a2 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 249              	.LVL25:
+  80:main.c        ****                 break;
+ 250              		.loc 1 80 0
+ 251 00a6 0AE0     		b	.L15
+ 252              	.L20:
+  81:main.c        ****                 case 4:
+  82:main.c        ****                 PWM_1_WriteCompare2(5700-330*i);
+ 253              		.loc 1 82 0
+ 254 00a8 04EB8403 		add	r3, r4, r4, lsl #2
+ 255 00ac 03EB4313 		add	r3, r3, r3, lsl #5
+ 256 00b0 5800     		lsls	r0, r3, #1
+ 257 00b2 C0F5B250 		rsb	r0, r0, #5696
+ 258 00b6 0430     		adds	r0, r0, #4
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 7
 
 
- 222 008e 034A     		ldr	r2, .L8+8
- 223 0090 1370     		strb	r3, [r2]
- 224              	.L5:
- 225 0092 7047     		bx	lr
- 226              	.L9:
- 227              		.align	2
- 228              	.L8:
- 229 0094 00000000 		.word	seg
- 230 0098 00000000 		.word	u_min
- 231 009c 00000000 		.word	d_min
- 232 00a0 00000000 		.word	u_hora
- 233 00a4 00000000 		.word	d_hora
- 234              		.cfi_endproc
- 235              	.LFE64:
- 236              		.size	tiempo, .-tiempo
- 237              		.section	.text.INT_SE,"ax",%progbits
- 238              		.align	2
- 239              		.global	INT_SE
- 240              		.thumb
- 241              		.thumb_func
- 242              		.type	INT_SE, %function
- 243              	INT_SE:
- 244              	.LFB66:
-  65:main.c        **** 						}
-  66:main.c        **** 					}
-  67:main.c        **** 				}
-  68:main.c        **** 			}
-  69:main.c        **** 		}
-  70:main.c        **** 	}
-  71:main.c        **** 
-  72:main.c        **** }
-  73:main.c        **** 
-  74:main.c        **** 
-  75:main.c        **** 
-  76:main.c        **** 
-  77:main.c        **** 
-  78:main.c        **** void Numero(uint8 numero)
-  79:main.c        **** {
-  80:main.c        ****     
-  81:main.c        ****     for(uint16 i=3200;i<=5700;i=i+300){
-  82:main.c        ****     PWM_WriteCompare1(i);
-  83:main.c        ****     CyDelay(200);
-  84:main.c        ****     }
-  85:main.c        ****      for(uint8 i=1;i<=Inferior[numero];i++){
-  86:main.c        ****      PWM_WriteCompare1(5700-330*i);
+ 259 00b8 80B2     		uxth	r0, r0
+ 260 00ba FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 261              	.LVL26:
+ 262              	.L15:
+  83:main.c        ****                 break;
+  84:main.c        ****                 default:
+  85:main.c        ****                 break;
+  86:main.c        ****             }
   87:main.c        ****      CyDelay(200);
+ 263              		.loc 1 87 0 discriminator 2
+ 264 00be C820     		movs	r0, #200
+ 265 00c0 FFF7FEFF 		bl	CyDelay
+ 266              	.LVL27:
+  70:main.c        ****      switch (motor){
+ 267              		.loc 1 70 0 discriminator 2
+ 268 00c4 0134     		adds	r4, r4, #1
+ 269              	.LVL28:
+ 270 00c6 E4B2     		uxtb	r4, r4
+ 271              	.LVL29:
+ 272              	.L14:
+  70:main.c        ****      switch (motor){
+ 273              		.loc 1 70 0 is_stmt 0 discriminator 1
+ 274 00c8 B046     		mov	r8, r6
+ 275 00ca 6C4B     		ldr	r3, .L61
+ 276 00cc 9F5D     		ldrb	r7, [r3, r6]	@ zero_extendqisi2
+ 277 00ce BC42     		cmp	r4, r7
+ 278 00d0 BFD9     		bls	.L21
+ 279              	.LBE3:
   88:main.c        ****     }
   89:main.c        ****     
   90:main.c        ****     if(Inferior[numero]<Superior[numero]){
+ 280              		.loc 1 90 0 is_stmt 1
+ 281 00d2 3344     		add	r3, r3, r6
+ 282 00d4 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 283 00d6 9F42     		cmp	r7, r3
+ 284 00d8 2AD3     		bcc	.L58
+ 285 00da 31E0     		b	.L59
+ 286              	.LVL30:
+ 287              	.L30:
+ 288              	.LBB4:
   91:main.c        ****         for(uint8 i=0;i<=Superior[numero];i++){ 
-  92:main.c        ****         PWM_WriteCompare1(PasosS[i]);
-  93:main.c        ****         CyDelay(200);
-  94:main.c        ****         }
-  95:main.c        ****     }else{
-  96:main.c        ****         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
-  97:main.c        ****         PWM_WriteCompare1(PasosS[i]);
-  98:main.c        ****         CyDelay(200);
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 7
-
-
-  99:main.c        ****         }
- 100:main.c        ****     }
- 101:main.c        **** }
- 102:main.c        **** 
- 103:main.c        **** CY_ISR(INT_SE){
- 245              		.loc 1 103 0
- 246              		.cfi_startproc
- 247              		@ args = 0, pretend = 0, frame = 0
- 248              		@ frame_needed = 0, uses_anonymous_args = 0
- 249 0000 08B5     		push	{r3, lr}
- 250              		.cfi_def_cfa_offset 8
- 251              		.cfi_offset 3, -8
- 252              		.cfi_offset 14, -4
- 104:main.c        ****       tiempo(1); // Se llama tiempo cuando se llega al limite
- 253              		.loc 1 104 0
- 254 0002 0120     		movs	r0, #1
- 255 0004 FFF7FEFF 		bl	tiempo
- 256              	.LVL13:
- 105:main.c        ****       visualLCD();  
- 257              		.loc 1 105 0
- 258 0008 FFF7FEFF 		bl	visualLCD
- 259              	.LVL14:
- 260 000c 08BD     		pop	{r3, pc}
- 261              		.cfi_endproc
- 262              	.LFE66:
- 263              		.size	INT_SE, .-INT_SE
- 264 000e 00BF     		.section	.text.INT_SWI,"ax",%progbits
- 265              		.align	2
- 266              		.global	INT_SWI
- 267              		.thumb
- 268              		.thumb_func
- 269              		.type	INT_SWI, %function
- 270              	INT_SWI:
- 271              	.LFB67:
- 106:main.c        **** }
- 107:main.c        ****     
- 108:main.c        **** CY_ISR(INT_SWI){
- 272              		.loc 1 108 0
- 273              		.cfi_startproc
- 274              		@ args = 0, pretend = 0, frame = 0
- 275              		@ frame_needed = 0, uses_anonymous_args = 0
- 276 0000 08B5     		push	{r3, lr}
- 277              		.cfi_def_cfa_offset 8
- 278              		.cfi_offset 3, -8
- 279              		.cfi_offset 14, -4
- 109:main.c        ****     CyDelay(1);
- 280              		.loc 1 109 0
- 281 0002 0120     		movs	r0, #1
- 282 0004 FFF7FEFF 		bl	CyDelay
- 283              	.LVL15:
- 110:main.c        ****     switch(SWI_Read()){
- 284              		.loc 1 110 0
- 285 0008 FFF7FEFF 		bl	SWI_Read
- 286              	.LVL16:
- 287 000c 0128     		cmp	r0, #1
- 288 000e 02D0     		beq	.L14
- 289 0010 0228     		cmp	r0, #2
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 8
-
-
- 290 0012 1ED0     		beq	.L15
- 291 0014 28E0     		b	.L13
- 292              	.L14:
- 111:main.c        ****     case 0b00000001:
- 112:main.c        ****       if(aux==1){
- 293              		.loc 1 112 0
- 294 0016 164B     		ldr	r3, .L19
- 295 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 296 001a 012B     		cmp	r3, #1
- 297 001c 0CD1     		bne	.L16
- 113:main.c        ****         LCD_Position(1,0);
- 298              		.loc 1 113 0
- 299 001e 0021     		movs	r1, #0
- 300 0020 0120     		movs	r0, #1
- 301 0022 FFF7FEFF 		bl	LCD_Position
- 302              	.LVL17:
- 114:main.c        ****         LCD_PrintString("Configuracion");
- 303              		.loc 1 114 0
- 304 0026 1348     		ldr	r0, .L19+4
- 305 0028 FFF7FEFF 		bl	LCD_PrintString
- 306              	.LVL18:
- 115:main.c        ****         Timer_Stop();
- 307              		.loc 1 115 0
- 308 002c FFF7FEFF 		bl	Timer_Stop
- 309              	.LVL19:
- 116:main.c        ****         aux=0;
- 310              		.loc 1 116 0
- 311 0030 0022     		movs	r2, #0
- 312 0032 0F4B     		ldr	r3, .L19
- 313 0034 1A70     		strb	r2, [r3]
- 314 0036 17E0     		b	.L13
- 315              	.L16:
- 117:main.c        ****         }else{
- 118:main.c        ****         LCD_Position(1,0);
- 316              		.loc 1 118 0
- 317 0038 0021     		movs	r1, #0
- 318 003a 0120     		movs	r0, #1
- 319 003c FFF7FEFF 		bl	LCD_Position
- 320              	.LVL20:
- 119:main.c        ****         LCD_PrintString("             ");
- 321              		.loc 1 119 0
- 322 0040 0D48     		ldr	r0, .L19+8
- 323 0042 FFF7FEFF 		bl	LCD_PrintString
- 324              	.LVL21:
- 120:main.c        ****         Timer_Start();
- 325              		.loc 1 120 0
- 326 0046 FFF7FEFF 		bl	Timer_Start
- 327              	.LVL22:
- 121:main.c        ****         aux=1;
- 328              		.loc 1 121 0
- 329 004a 0122     		movs	r2, #1
- 330 004c 084B     		ldr	r3, .L19
- 331 004e 1A70     		strb	r2, [r3]
- 332 0050 0AE0     		b	.L13
- 333              	.L15:
- 122:main.c        ****       }
- 123:main.c        ****         break;
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 9
-
-
- 124:main.c        ****     case 0b00000010:
- 125:main.c        ****         if(aux==0){
- 334              		.loc 1 125 0
- 335 0052 074B     		ldr	r3, .L19
- 336 0054 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 337 0056 2BB9     		cbnz	r3, .L17
- 126:main.c        ****         tiempo(60);
- 338              		.loc 1 126 0
- 339 0058 3C20     		movs	r0, #60
- 340 005a FFF7FEFF 		bl	tiempo
- 341              	.LVL23:
- 127:main.c        ****         seg=0;//Segundos en Cero
- 342              		.loc 1 127 0
- 343 005e 0022     		movs	r2, #0
- 344 0060 064B     		ldr	r3, .L19+12
- 345 0062 1A70     		strb	r2, [r3]
- 346              	.L17:
- 128:main.c        ****         }
- 129:main.c        ****         visualLCD();
- 347              		.loc 1 129 0
- 348 0064 FFF7FEFF 		bl	visualLCD
- 349              	.LVL24:
- 350              	.L13:
- 130:main.c        ****         break;
- 131:main.c        ****      default:
- 132:main.c        ****         break;
- 133:main.c        ****     }
- 134:main.c        ****     SWI_ClearInterrupt();
- 351              		.loc 1 134 0
- 352 0068 FFF7FEFF 		bl	SWI_ClearInterrupt
- 353              	.LVL25:
- 354 006c 08BD     		pop	{r3, pc}
- 355              	.L20:
- 356 006e 00BF     		.align	2
- 357              	.L19:
- 358 0070 00000000 		.word	.LANCHOR0
- 359 0074 14000000 		.word	.LC2
- 360 0078 00000000 		.word	.LC0
- 361 007c 00000000 		.word	seg
- 362              		.cfi_endproc
- 363              	.LFE67:
- 364              		.size	INT_SWI, .-INT_SWI
- 365              		.section	.text.Numero,"ax",%progbits
- 366              		.align	2
- 367              		.global	Numero
- 368              		.thumb
- 369              		.thumb_func
- 370              		.type	Numero, %function
- 371              	Numero:
- 372              	.LFB65:
-  79:main.c        ****     
- 373              		.loc 1 79 0
- 374              		.cfi_startproc
- 375              		@ args = 0, pretend = 0, frame = 0
- 376              		@ frame_needed = 0, uses_anonymous_args = 0
- 377              	.LVL26:
- 378 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 10
-
-
- 379              		.cfi_def_cfa_offset 24
- 380              		.cfi_offset 3, -24
- 381              		.cfi_offset 4, -20
- 382              		.cfi_offset 5, -16
- 383              		.cfi_offset 6, -12
- 384              		.cfi_offset 7, -8
- 385              		.cfi_offset 14, -4
- 386 0002 0546     		mov	r5, r0
- 387              	.LVL27:
- 388              	.LBB2:
-  81:main.c        ****     PWM_WriteCompare1(i);
- 389              		.loc 1 81 0
- 390 0004 4FF44864 		mov	r4, #3200
- 391 0008 08E0     		b	.L22
- 392              	.LVL28:
- 393              	.L23:
-  82:main.c        ****     CyDelay(200);
- 394              		.loc 1 82 0 discriminator 3
- 395 000a 2046     		mov	r0, r4
- 396 000c FFF7FEFF 		bl	PWM_WriteCompare1
- 397              	.LVL29:
-  83:main.c        ****     }
- 398              		.loc 1 83 0 discriminator 3
- 399 0010 C820     		movs	r0, #200
- 400 0012 FFF7FEFF 		bl	CyDelay
- 401              	.LVL30:
-  81:main.c        ****     PWM_WriteCompare1(i);
- 402              		.loc 1 81 0 discriminator 3
- 403 0016 04F59674 		add	r4, r4, #300
- 404              	.LVL31:
- 405 001a A4B2     		uxth	r4, r4
- 406              	.LVL32:
- 407              	.L22:
-  81:main.c        ****     PWM_WriteCompare1(i);
- 408              		.loc 1 81 0 is_stmt 0 discriminator 1
- 409 001c 41F24463 		movw	r3, #5700
- 410 0020 9C42     		cmp	r4, r3
- 411 0022 F2D9     		bls	.L23
- 412 0024 0124     		movs	r4, #1
- 413              	.LVL33:
- 414 0026 0FE0     		b	.L24
- 415              	.LVL34:
- 416              	.L25:
- 417              	.LBE2:
- 418              	.LBB3:
-  86:main.c        ****      CyDelay(200);
- 419              		.loc 1 86 0 is_stmt 1 discriminator 3
- 420 0028 04EB8403 		add	r3, r4, r4, lsl #2
- 421 002c 03EB4313 		add	r3, r3, r3, lsl #5
- 422 0030 5800     		lsls	r0, r3, #1
- 423 0032 C0F5B250 		rsb	r0, r0, #5696
- 424 0036 0430     		adds	r0, r0, #4
- 425 0038 80B2     		uxth	r0, r0
- 426 003a FFF7FEFF 		bl	PWM_WriteCompare1
- 427              	.LVL35:
-  87:main.c        ****     }
- 428              		.loc 1 87 0 discriminator 3
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 11
-
-
- 429 003e C820     		movs	r0, #200
- 430 0040 FFF7FEFF 		bl	CyDelay
- 431              	.LVL36:
-  85:main.c        ****      PWM_WriteCompare1(5700-330*i);
- 432              		.loc 1 85 0 discriminator 3
- 433 0044 0134     		adds	r4, r4, #1
- 434              	.LVL37:
- 435 0046 E4B2     		uxtb	r4, r4
- 436              	.LVL38:
- 437              	.L24:
-  85:main.c        ****      PWM_WriteCompare1(5700-330*i);
- 438              		.loc 1 85 0 is_stmt 0 discriminator 1
- 439 0048 2F46     		mov	r7, r5
- 440 004a 164B     		ldr	r3, .L33
- 441 004c 5E5D     		ldrb	r6, [r3, r5]	@ zero_extendqisi2
- 442 004e B442     		cmp	r4, r6
- 443 0050 EAD9     		bls	.L25
- 444              	.LBE3:
-  90:main.c        ****         for(uint8 i=0;i<=Superior[numero];i++){ 
- 445              		.loc 1 90 0 is_stmt 1
- 446 0052 2B44     		add	r3, r3, r5
- 447 0054 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
- 448 0056 9E42     		cmp	r6, r3
- 449 0058 0CD3     		bcc	.L31
- 450 005a 1DE0     		b	.L27
- 451              	.LVL39:
- 452              	.L28:
- 453              	.LBB4:
-  92:main.c        ****         CyDelay(200);
- 454              		.loc 1 92 0 discriminator 3
- 455 005c 114B     		ldr	r3, .L33
- 456 005e 03EB4403 		add	r3, r3, r4, lsl #1
- 457 0062 188B     		ldrh	r0, [r3, #24]
- 458 0064 FFF7FEFF 		bl	PWM_WriteCompare1
- 459              	.LVL40:
-  93:main.c        ****         }
- 460              		.loc 1 93 0 discriminator 3
- 461 0068 C820     		movs	r0, #200
- 462 006a FFF7FEFF 		bl	CyDelay
- 463              	.LVL41:
-  91:main.c        ****         PWM_WriteCompare1(PasosS[i]);
- 464              		.loc 1 91 0 discriminator 3
- 465 006e 0134     		adds	r4, r4, #1
- 466              	.LVL42:
- 467 0070 E4B2     		uxtb	r4, r4
- 468              	.LVL43:
- 469 0072 00E0     		b	.L26
- 470              	.LVL44:
- 471              	.L31:
- 472              	.LBE4:
- 473 0074 0024     		movs	r4, #0
- 474              	.LVL45:
- 475              	.L26:
- 476              	.LBB5:
-  91:main.c        ****         PWM_WriteCompare1(PasosS[i]);
- 477              		.loc 1 91 0 is_stmt 0 discriminator 1
- 478 0076 0B4B     		ldr	r3, .L33
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 12
-
-
- 479 0078 3B44     		add	r3, r3, r7
- 480 007a 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
- 481 007c 9C42     		cmp	r4, r3
- 482 007e EDD9     		bls	.L28
- 483 0080 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 484              	.LVL46:
- 485              	.L30:
- 486              	.LBE5:
- 487              	.LBB6:
-  97:main.c        ****         CyDelay(200);
- 488              		.loc 1 97 0 is_stmt 1 discriminator 3
- 489 0082 084B     		ldr	r3, .L33
- 490 0084 03EB4603 		add	r3, r3, r6, lsl #1
- 491 0088 188B     		ldrh	r0, [r3, #24]
- 492 008a FFF7FEFF 		bl	PWM_WriteCompare1
- 493              	.LVL47:
-  98:main.c        ****         }
- 494              		.loc 1 98 0 discriminator 3
- 495 008e C820     		movs	r0, #200
- 496 0090 FFF7FEFF 		bl	CyDelay
- 497              	.LVL48:
-  96:main.c        ****         PWM_WriteCompare1(PasosS[i]);
- 498              		.loc 1 96 0 discriminator 3
- 499 0094 013E     		subs	r6, r6, #1
- 500              	.LVL49:
- 501 0096 F6B2     		uxtb	r6, r6
- 502              	.LVL50:
- 503              	.L27:
-  96:main.c        ****         PWM_WriteCompare1(PasosS[i]);
- 504              		.loc 1 96 0 is_stmt 0 discriminator 1
- 505 0098 024B     		ldr	r3, .L33
- 506 009a 3B44     		add	r3, r3, r7
- 507 009c 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
- 508 009e 9E42     		cmp	r6, r3
- 509 00a0 EFD8     		bhi	.L30
- 510 00a2 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 511              	.LVL51:
- 512              	.L34:
- 513              		.align	2
- 514              	.L33:
- 515 00a4 00000000 		.word	.LANCHOR1
- 516              	.LBE6:
- 517              		.cfi_endproc
- 518              	.LFE65:
- 519              		.size	Numero, .-Numero
- 520              		.section	.text.main,"ax",%progbits
- 521              		.align	2
- 522              		.global	main
- 523              		.thumb
- 524              		.thumb_func
- 525              		.type	main, %function
- 526              	main:
- 527              	.LFB68:
- 135:main.c        **** }
- 136:main.c        **** 
- 137:main.c        **** int main(){
- 528              		.loc 1 137 0 is_stmt 1
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 13
-
-
- 529              		.cfi_startproc
- 530              		@ Volatile: function does not return.
- 531              		@ args = 0, pretend = 0, frame = 0
- 532              		@ frame_needed = 0, uses_anonymous_args = 0
- 533 0000 08B5     		push	{r3, lr}
- 534              		.cfi_def_cfa_offset 8
- 535              		.cfi_offset 3, -8
- 536              		.cfi_offset 14, -4
- 138:main.c        **** 
- 139:main.c        ****     
- 140:main.c        ****     d_hora=0;
- 537              		.loc 1 140 0
- 538 0002 0022     		movs	r2, #0
- 539 0004 0D4B     		ldr	r3, .L38
- 540 0006 1A70     		strb	r2, [r3]
- 141:main.c        ****     u_hora=2;
- 541              		.loc 1 141 0
- 542 0008 0222     		movs	r2, #2
- 543 000a 0D4B     		ldr	r3, .L38+4
- 544 000c 1A70     		strb	r2, [r3]
- 142:main.c        ****     d_min=1;
- 545              		.loc 1 142 0
- 546 000e 0123     		movs	r3, #1
- 547 0010 0C4A     		ldr	r2, .L38+8
- 548 0012 1370     		strb	r3, [r2]
- 143:main.c        ****     u_min=1;
- 549              		.loc 1 143 0
- 550 0014 0C4A     		ldr	r2, .L38+12
- 551 0016 1370     		strb	r3, [r2]
- 144:main.c        ****     seg=9;
- 552              		.loc 1 144 0
- 553 0018 0922     		movs	r2, #9
- 554 001a 0C4B     		ldr	r3, .L38+16
- 555 001c 1A70     		strb	r2, [r3]
- 145:main.c        **** 
- 146:main.c        ****     
- 147:main.c        ****     
- 148:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
- 556              		.loc 1 148 0
- 557              		.syntax unified
- 558              	@ 148 "main.c" 1
- 559 001e 62B6     		CPSIE   i
- 560              	@ 0 "" 2
- 149:main.c        **** 
- 150:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
- 151:main.c        ****     ISR_SWI_StartEx(INT_SWI);
- 561              		.loc 1 151 0
- 562              		.thumb
- 563              		.syntax unified
- 564 0020 0B48     		ldr	r0, .L38+20
- 565 0022 FFF7FEFF 		bl	ISR_SWI_StartEx
- 566              	.LVL52:
- 152:main.c        ****     ISR_SE_StartEx(INT_SE);
- 567              		.loc 1 152 0
- 568 0026 0B48     		ldr	r0, .L38+24
- 569 0028 FFF7FEFF 		bl	ISR_SE_StartEx
- 570              	.LVL53:
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 14
-
-
- 153:main.c        ****     PWM_Start();
- 571              		.loc 1 153 0
- 572 002c FFF7FEFF 		bl	PWM_Start
- 573              	.LVL54:
- 154:main.c        ****     LCD_Start();
- 574              		.loc 1 154 0
- 575 0030 FFF7FEFF 		bl	LCD_Start
- 576              	.LVL55:
- 155:main.c        ****     Timer_Start();
- 577              		.loc 1 155 0
- 578 0034 FFF7FEFF 		bl	Timer_Start
- 579              	.LVL56:
- 580              	.L36:
- 581 0038 FEE7     		b	.L36
- 582              	.L39:
- 583 003a 00BF     		.align	2
- 584              	.L38:
- 585 003c 00000000 		.word	d_hora
- 586 0040 00000000 		.word	u_hora
- 587 0044 00000000 		.word	d_min
- 588 0048 00000000 		.word	u_min
- 589 004c 00000000 		.word	seg
- 590 0050 00000000 		.word	INT_SWI
- 591 0054 00000000 		.word	INT_SE
- 592              		.cfi_endproc
- 593              	.LFE68:
- 594              		.size	main, .-main
- 595              		.global	PasosS
- 596              		.global	Superior
- 597              		.global	Inferior
- 598              		.global	aux
- 599              		.global	de
- 600              		.comm	count,2,2
- 601              		.comm	d_hora,1,1
- 602              		.comm	u_hora,1,1
- 603              		.comm	d_min,1,1
- 604              		.comm	u_min,1,1
- 605              		.comm	seg,1,1
- 606              		.data
- 607              		.align	2
- 608              		.set	.LANCHOR1,. + 0
- 609              		.type	Inferior, %object
- 610              		.size	Inferior, 10
- 611              	Inferior:
- 612 0000 0C       		.byte	12
- 613 0001 09       		.byte	9
- 614 0002 0B       		.byte	11
- 615 0003 0A       		.byte	10
- 616 0004 09       		.byte	9
- 617 0005 0A       		.byte	10
- 618 0006 00       		.byte	0
- 619 0007 09       		.byte	9
- 620 0008 00       		.byte	0
- 621 0009 09       		.byte	9
- 622 000a 0000     		.space	2
- 623              		.type	Superior, %object
- 624              		.size	Superior, 10
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 15
-
-
- 625              	Superior:
- 626 000c 08       		.byte	8
- 627 000d 07       		.byte	7
- 628 000e 06       		.byte	6
- 629 000f 06       		.byte	6
- 630 0010 04       		.byte	4
- 631 0011 05       		.byte	5
- 632 0012 05       		.byte	5
- 633 0013 06       		.byte	6
- 634 0014 08       		.byte	8
- 635 0015 08       		.byte	8
- 636 0016 0000     		.space	2
- 637              		.type	PasosS, %object
- 638              		.size	PasosS, 26
- 639              	PasosS:
- 640 0018 4416     		.short	5700
- 641 001a 0415     		.short	5380
- 642 001c 1414     		.short	5140
- 643 001e CA12     		.short	4810
- 644 0020 9411     		.short	4500
- 645 0022 6810     		.short	4200
- 646 0024 A00F     		.short	4000
- 647 0026 960F     		.short	3990
- 648 0028 BC0C     		.short	3260
- 649 002a F00A     		.short	2800
- 650 002c 6009     		.short	2400
- 651 002e 1608     		.short	2070
- 652 0030 CC06     		.short	1740
- 653              		.type	de, %object
- 654              		.size	de, 1
- 655              	de:
- 656 0032 01       		.byte	1
- 657              		.section	.rodata.str1.4,"aMS",%progbits,1
- 658              		.align	2
- 659              	.LC0:
- 660 0000 20202020 		.ascii	"             \000"
- 660      20202020 
- 660      20202020 
- 660      2000
- 661 000e 0000     		.space	2
- 662              	.LC1:
- 663 0010 3A00     		.ascii	":\000"
- 664 0012 0000     		.space	2
- 665              	.LC2:
- 666 0014 436F6E66 		.ascii	"Configuracion\000"
- 666      69677572 
- 666      6163696F 
- 666      6E00
- 667              		.bss
- 668              		.set	.LANCHOR0,. + 0
- 669              		.type	aux, %object
- 670              		.size	aux, 1
- 671              	aux:
- 672 0000 00       		.space	1
- 673              		.text
- 674              	.Letext0:
- 675              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 16
-
-
- 676              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 677              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 678              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 679              		.file 6 "Generated_Source\\PSoC5/LCD.h"
- 680              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
- 681              		.file 8 "Generated_Source\\PSoC5/SWI.h"
- 682              		.file 9 "Generated_Source\\PSoC5/Timer.h"
- 683              		.file 10 "Generated_Source\\PSoC5/PWM.h"
- 684              		.file 11 "Generated_Source\\PSoC5/ISR_SWI.h"
- 685              		.file 12 "Generated_Source\\PSoC5/ISR_SE.h"
- 686              		.section	.debug_info,"",%progbits
- 687              	.Ldebug_info0:
- 688 0000 86050000 		.4byte	0x586
- 689 0004 0400     		.2byte	0x4
- 690 0006 00000000 		.4byte	.Ldebug_abbrev0
- 691 000a 04       		.byte	0x4
- 692 000b 01       		.uleb128 0x1
- 693 000c 7B000000 		.4byte	.LASF46
- 694 0010 0C       		.byte	0xc
- 695 0011 12020000 		.4byte	.LASF47
- 696 0015 19020000 		.4byte	.LASF48
- 697 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
- 698 001d 00000000 		.4byte	0
- 699 0021 00000000 		.4byte	.Ldebug_line0
- 700 0025 02       		.uleb128 0x2
- 701 0026 01       		.byte	0x1
- 702 0027 06       		.byte	0x6
- 703 0028 9E020000 		.4byte	.LASF0
- 704 002c 02       		.uleb128 0x2
- 705 002d 01       		.byte	0x1
- 706 002e 08       		.byte	0x8
- 707 002f 6D000000 		.4byte	.LASF1
- 708 0033 02       		.uleb128 0x2
- 709 0034 02       		.byte	0x2
- 710 0035 05       		.byte	0x5
- 711 0036 68020000 		.4byte	.LASF2
- 712 003a 02       		.uleb128 0x2
- 713 003b 02       		.byte	0x2
- 714 003c 07       		.byte	0x7
- 715 003d 29010000 		.4byte	.LASF3
- 716 0041 03       		.uleb128 0x3
- 717 0042 28000000 		.4byte	.LASF9
- 718 0046 02       		.byte	0x2
- 719 0047 3F       		.byte	0x3f
- 720 0048 4C000000 		.4byte	0x4c
- 721 004c 02       		.uleb128 0x2
- 722 004d 04       		.byte	0x4
- 723 004e 05       		.byte	0x5
- 724 004f 7C020000 		.4byte	.LASF4
- 725 0053 02       		.uleb128 0x2
- 726 0054 04       		.byte	0x4
- 727 0055 07       		.byte	0x7
- 728 0056 17010000 		.4byte	.LASF5
- 729 005a 02       		.uleb128 0x2
- 730 005b 08       		.byte	0x8
- 731 005c 05       		.byte	0x5
- 732 005d 04020000 		.4byte	.LASF6
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 17
-
-
- 733 0061 02       		.uleb128 0x2
- 734 0062 08       		.byte	0x8
- 735 0063 07       		.byte	0x7
- 736 0064 B0010000 		.4byte	.LASF7
- 737 0068 04       		.uleb128 0x4
- 738 0069 04       		.byte	0x4
- 739 006a 05       		.byte	0x5
- 740 006b 696E7400 		.ascii	"int\000"
- 741 006f 02       		.uleb128 0x2
- 742 0070 04       		.byte	0x4
- 743 0071 07       		.byte	0x7
- 744 0072 A3010000 		.4byte	.LASF8
- 745 0076 03       		.uleb128 0x3
- 746 0077 F3010000 		.4byte	.LASF10
- 747 007b 03       		.byte	0x3
- 748 007c 2C       		.byte	0x2c
- 749 007d 41000000 		.4byte	0x41
- 750 0081 05       		.uleb128 0x5
- 751 0082 67000000 		.4byte	.LASF11
- 752 0086 04       		.byte	0x4
- 753 0087 E401     		.2byte	0x1e4
- 754 0089 2C000000 		.4byte	0x2c
- 755 008d 05       		.uleb128 0x5
- 756 008e 49010000 		.4byte	.LASF12
- 757 0092 04       		.byte	0x4
- 758 0093 E501     		.2byte	0x1e5
- 759 0095 3A000000 		.4byte	0x3a
- 760 0099 02       		.uleb128 0x2
- 761 009a 04       		.byte	0x4
- 762 009b 04       		.byte	0x4
- 763 009c 57000000 		.4byte	.LASF13
- 764 00a0 02       		.uleb128 0x2
- 765 00a1 08       		.byte	0x8
- 766 00a2 04       		.byte	0x4
- 767 00a3 57010000 		.4byte	.LASF14
- 768 00a7 02       		.uleb128 0x2
- 769 00a8 01       		.byte	0x1
- 770 00a9 08       		.byte	0x8
- 771 00aa 85020000 		.4byte	.LASF15
- 772 00ae 06       		.uleb128 0x6
- 773 00af 81000000 		.4byte	0x81
- 774 00b3 02       		.uleb128 0x2
- 775 00b4 08       		.byte	0x8
- 776 00b5 04       		.byte	0x4
- 777 00b6 8A020000 		.4byte	.LASF16
- 778 00ba 02       		.uleb128 0x2
- 779 00bb 04       		.byte	0x4
- 780 00bc 07       		.byte	0x7
- 781 00bd FB010000 		.4byte	.LASF17
- 782 00c1 07       		.uleb128 0x7
- 783 00c2 80010000 		.4byte	.LASF49
- 784 00c6 01       		.byte	0x1
- 785 00c7 1B       		.byte	0x1b
- 786 00c8 00000000 		.4byte	.LFB63
- 787 00cc 94000000 		.4byte	.LFE63-.LFB63
- 788 00d0 01       		.uleb128 0x1
- 789 00d1 9C       		.byte	0x9c
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 18
-
-
- 790 00d2 7C010000 		.4byte	0x17c
- 791 00d6 08       		.uleb128 0x8
- 792 00d7 0A000000 		.4byte	.LVL0
- 793 00db FA040000 		.4byte	0x4fa
- 794 00df EE000000 		.4byte	0xee
- 795 00e3 09       		.uleb128 0x9
- 796 00e4 01       		.uleb128 0x1
- 797 00e5 50       		.byte	0x50
- 798 00e6 01       		.uleb128 0x1
- 799 00e7 30       		.byte	0x30
- 800 00e8 09       		.uleb128 0x9
- 801 00e9 01       		.uleb128 0x1
- 802 00ea 51       		.byte	0x51
- 803 00eb 01       		.uleb128 0x1
- 804 00ec 30       		.byte	0x30
- 805 00ed 00       		.byte	0
- 806 00ee 08       		.uleb128 0x8
- 807 00ef 10000000 		.4byte	.LVL1
- 808 00f3 05050000 		.4byte	0x505
- 809 00f7 05010000 		.4byte	0x105
- 810 00fb 09       		.uleb128 0x9
- 811 00fc 01       		.uleb128 0x1
- 812 00fd 50       		.byte	0x50
- 813 00fe 05       		.uleb128 0x5
- 814 00ff 03       		.byte	0x3
- 815 0100 00000000 		.4byte	.LC0
- 816 0104 00       		.byte	0
- 817 0105 08       		.uleb128 0x8
- 818 0106 18000000 		.4byte	.LVL2
- 819 010a FA040000 		.4byte	0x4fa
- 820 010e 1D010000 		.4byte	0x11d
- 821 0112 09       		.uleb128 0x9
- 822 0113 01       		.uleb128 0x1
- 823 0114 50       		.byte	0x50
- 824 0115 01       		.uleb128 0x1
- 825 0116 30       		.byte	0x30
- 826 0117 09       		.uleb128 0x9
- 827 0118 01       		.uleb128 0x1
- 828 0119 51       		.byte	0x51
- 829 011a 01       		.uleb128 0x1
- 830 011b 30       		.byte	0x30
- 831 011c 00       		.byte	0
- 832 011d 0A       		.uleb128 0xa
- 833 011e 20000000 		.4byte	.LVL3
- 834 0122 10050000 		.4byte	0x510
- 835 0126 0A       		.uleb128 0xa
- 836 0127 28000000 		.4byte	.LVL4
- 837 012b 10050000 		.4byte	0x510
- 838 012f 08       		.uleb128 0x8
- 839 0130 30000000 		.4byte	.LVL5
- 840 0134 05050000 		.4byte	0x505
- 841 0138 43010000 		.4byte	0x143
- 842 013c 09       		.uleb128 0x9
- 843 013d 01       		.uleb128 0x1
- 844 013e 50       		.byte	0x50
- 845 013f 02       		.uleb128 0x2
- 846 0140 74       		.byte	0x74
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 19
-
-
- 847 0141 00       		.sleb128 0
- 848 0142 00       		.byte	0
- 849 0143 0A       		.uleb128 0xa
- 850 0144 38000000 		.4byte	.LVL6
- 851 0148 10050000 		.4byte	0x510
- 852 014c 0A       		.uleb128 0xa
- 853 014d 40000000 		.4byte	.LVL7
- 854 0151 10050000 		.4byte	0x510
- 855 0155 08       		.uleb128 0x8
- 856 0156 46000000 		.4byte	.LVL8
- 857 015a 05050000 		.4byte	0x505
- 858 015e 69010000 		.4byte	0x169
- 859 0162 09       		.uleb128 0x9
- 860 0163 01       		.uleb128 0x1
- 861 0164 50       		.byte	0x50
- 862 0165 02       		.uleb128 0x2
- 863 0166 74       		.byte	0x74
- 864 0167 00       		.sleb128 0
- 865 0168 00       		.byte	0
- 866 0169 0A       		.uleb128 0xa
- 867 016a 58000000 		.4byte	.LVL9
- 868 016e 10050000 		.4byte	0x510
- 869 0172 0A       		.uleb128 0xa
- 870 0173 70000000 		.4byte	.LVL10
- 871 0177 10050000 		.4byte	0x510
- 872 017b 00       		.byte	0
- 873 017c 0B       		.uleb128 0xb
- 874 017d EC010000 		.4byte	.LASF18
- 875 0181 01       		.byte	0x1
- 876 0182 2B       		.byte	0x2b
- 877 0183 00000000 		.4byte	.LFB64
- 878 0187 A8000000 		.4byte	.LFE64-.LFB64
- 879 018b 01       		.uleb128 0x1
- 880 018c 9C       		.byte	0x9c
- 881 018d A1010000 		.4byte	0x1a1
- 882 0191 0C       		.uleb128 0xc
- 883 0192 96020000 		.4byte	.LASF22
- 884 0196 01       		.byte	0x1
- 885 0197 2B       		.byte	0x2b
- 886 0198 81000000 		.4byte	0x81
- 887 019c 00000000 		.4byte	.LLST0
- 888 01a0 00       		.byte	0
- 889 01a1 0B       		.uleb128 0xb
- 890 01a2 10010000 		.4byte	.LASF19
- 891 01a6 01       		.byte	0x1
- 892 01a7 67       		.byte	0x67
- 893 01a8 00000000 		.4byte	.LFB66
- 894 01ac 0E000000 		.4byte	.LFE66-.LFB66
- 895 01b0 01       		.uleb128 0x1
- 896 01b1 9C       		.byte	0x9c
- 897 01b2 D3010000 		.4byte	0x1d3
- 898 01b6 08       		.uleb128 0x8
- 899 01b7 08000000 		.4byte	.LVL13
- 900 01bb 7C010000 		.4byte	0x17c
- 901 01bf C9010000 		.4byte	0x1c9
- 902 01c3 09       		.uleb128 0x9
- 903 01c4 01       		.uleb128 0x1
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 20
-
-
- 904 01c5 50       		.byte	0x50
- 905 01c6 01       		.uleb128 0x1
- 906 01c7 31       		.byte	0x31
- 907 01c8 00       		.byte	0
- 908 01c9 0A       		.uleb128 0xa
- 909 01ca 0C000000 		.4byte	.LVL14
- 910 01ce C1000000 		.4byte	0xc1
- 911 01d2 00       		.byte	0
- 912 01d3 0B       		.uleb128 0xb
- 913 01d4 4F000000 		.4byte	.LASF20
- 914 01d8 01       		.byte	0x1
- 915 01d9 6C       		.byte	0x6c
- 916 01da 00000000 		.4byte	.LFB67
- 917 01de 80000000 		.4byte	.LFE67-.LFB67
- 918 01e2 01       		.uleb128 0x1
- 919 01e3 9C       		.byte	0x9c
- 920 01e4 9B020000 		.4byte	0x29b
- 921 01e8 08       		.uleb128 0x8
- 922 01e9 08000000 		.4byte	.LVL15
- 923 01ed 1B050000 		.4byte	0x51b
- 924 01f1 FB010000 		.4byte	0x1fb
- 925 01f5 09       		.uleb128 0x9
- 926 01f6 01       		.uleb128 0x1
- 927 01f7 50       		.byte	0x50
- 928 01f8 01       		.uleb128 0x1
- 929 01f9 31       		.byte	0x31
- 930 01fa 00       		.byte	0
- 931 01fb 0A       		.uleb128 0xa
- 932 01fc 0C000000 		.4byte	.LVL16
- 933 0200 26050000 		.4byte	0x526
- 934 0204 08       		.uleb128 0x8
- 935 0205 26000000 		.4byte	.LVL17
- 936 0209 FA040000 		.4byte	0x4fa
- 937 020d 1C020000 		.4byte	0x21c
- 938 0211 09       		.uleb128 0x9
- 939 0212 01       		.uleb128 0x1
- 940 0213 50       		.byte	0x50
- 941 0214 01       		.uleb128 0x1
- 942 0215 31       		.byte	0x31
- 943 0216 09       		.uleb128 0x9
- 944 0217 01       		.uleb128 0x1
- 945 0218 51       		.byte	0x51
- 946 0219 01       		.uleb128 0x1
- 947 021a 30       		.byte	0x30
- 948 021b 00       		.byte	0
- 949 021c 08       		.uleb128 0x8
- 950 021d 2C000000 		.4byte	.LVL18
- 951 0221 05050000 		.4byte	0x505
- 952 0225 33020000 		.4byte	0x233
- 953 0229 09       		.uleb128 0x9
- 954 022a 01       		.uleb128 0x1
- 955 022b 50       		.byte	0x50
- 956 022c 05       		.uleb128 0x5
- 957 022d 03       		.byte	0x3
- 958 022e 14000000 		.4byte	.LC2
- 959 0232 00       		.byte	0
- 960 0233 0A       		.uleb128 0xa
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 21
-
-
- 961 0234 30000000 		.4byte	.LVL19
- 962 0238 31050000 		.4byte	0x531
- 963 023c 08       		.uleb128 0x8
- 964 023d 40000000 		.4byte	.LVL20
- 965 0241 FA040000 		.4byte	0x4fa
- 966 0245 54020000 		.4byte	0x254
- 967 0249 09       		.uleb128 0x9
- 968 024a 01       		.uleb128 0x1
- 969 024b 50       		.byte	0x50
- 970 024c 01       		.uleb128 0x1
- 971 024d 31       		.byte	0x31
- 972 024e 09       		.uleb128 0x9
- 973 024f 01       		.uleb128 0x1
- 974 0250 51       		.byte	0x51
- 975 0251 01       		.uleb128 0x1
- 976 0252 30       		.byte	0x30
- 977 0253 00       		.byte	0
- 978 0254 08       		.uleb128 0x8
- 979 0255 46000000 		.4byte	.LVL21
- 980 0259 05050000 		.4byte	0x505
- 981 025d 6B020000 		.4byte	0x26b
- 982 0261 09       		.uleb128 0x9
- 983 0262 01       		.uleb128 0x1
- 984 0263 50       		.byte	0x50
- 985 0264 05       		.uleb128 0x5
- 986 0265 03       		.byte	0x3
- 987 0266 00000000 		.4byte	.LC0
- 988 026a 00       		.byte	0
- 989 026b 0A       		.uleb128 0xa
- 990 026c 4A000000 		.4byte	.LVL22
- 991 0270 3C050000 		.4byte	0x53c
- 992 0274 08       		.uleb128 0x8
- 993 0275 5E000000 		.4byte	.LVL23
- 994 0279 7C010000 		.4byte	0x17c
- 995 027d 88020000 		.4byte	0x288
- 996 0281 09       		.uleb128 0x9
- 997 0282 01       		.uleb128 0x1
- 998 0283 50       		.byte	0x50
- 999 0284 02       		.uleb128 0x2
- 1000 0285 08       		.byte	0x8
- 1001 0286 3C       		.byte	0x3c
- 1002 0287 00       		.byte	0
- 1003 0288 0A       		.uleb128 0xa
- 1004 0289 68000000 		.4byte	.LVL24
- 1005 028d C1000000 		.4byte	0xc1
- 1006 0291 0A       		.uleb128 0xa
- 1007 0292 6C000000 		.4byte	.LVL25
- 1008 0296 47050000 		.4byte	0x547
- 1009 029a 00       		.byte	0
- 1010 029b 0B       		.uleb128 0xb
- 1011 029c 5E010000 		.4byte	.LASF21
- 1012 02a0 01       		.byte	0x1
- 1013 02a1 4E       		.byte	0x4e
- 1014 02a2 00000000 		.4byte	.LFB65
- 1015 02a6 A8000000 		.4byte	.LFE65-.LFB65
- 1016 02aa 01       		.uleb128 0x1
- 1017 02ab 9C       		.byte	0x9c
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 22
-
-
- 1018 02ac AC030000 		.4byte	0x3ac
- 1019 02b0 0C       		.uleb128 0xc
- 1020 02b1 90010000 		.4byte	.LASF23
- 1021 02b5 01       		.byte	0x1
- 1022 02b6 4E       		.byte	0x4e
- 1023 02b7 81000000 		.4byte	0x81
- 1024 02bb 21000000 		.4byte	.LLST1
- 1025 02bf 0D       		.uleb128 0xd
- 1026 02c0 04000000 		.4byte	.LBB2
- 1027 02c4 24000000 		.4byte	.LBE2-.LBB2
- 1028 02c8 FE020000 		.4byte	0x2fe
- 1029 02cc 0E       		.uleb128 0xe
- 1030 02cd 6900     		.ascii	"i\000"
- 1031 02cf 01       		.byte	0x1
- 1032 02d0 51       		.byte	0x51
- 1033 02d1 8D000000 		.4byte	0x8d
- 1034 02d5 42000000 		.4byte	.LLST2
- 1035 02d9 08       		.uleb128 0x8
- 1036 02da 10000000 		.4byte	.LVL29
- 1037 02de 52050000 		.4byte	0x552
- 1038 02e2 ED020000 		.4byte	0x2ed
- 1039 02e6 09       		.uleb128 0x9
- 1040 02e7 01       		.uleb128 0x1
- 1041 02e8 50       		.byte	0x50
- 1042 02e9 02       		.uleb128 0x2
- 1043 02ea 74       		.byte	0x74
- 1044 02eb 00       		.sleb128 0
- 1045 02ec 00       		.byte	0
- 1046 02ed 0F       		.uleb128 0xf
- 1047 02ee 16000000 		.4byte	.LVL30
- 1048 02f2 1B050000 		.4byte	0x51b
- 1049 02f6 09       		.uleb128 0x9
- 1050 02f7 01       		.uleb128 0x1
- 1051 02f8 50       		.byte	0x50
- 1052 02f9 02       		.uleb128 0x2
- 1053 02fa 08       		.byte	0x8
- 1054 02fb C8       		.byte	0xc8
- 1055 02fc 00       		.byte	0
- 1056 02fd 00       		.byte	0
- 1057 02fe 0D       		.uleb128 0xd
- 1058 02ff 28000000 		.4byte	.LBB3
- 1059 0303 2A000000 		.4byte	.LBE3-.LBB3
- 1060 0307 4B030000 		.4byte	0x34b
- 1061 030b 0E       		.uleb128 0xe
- 1062 030c 6900     		.ascii	"i\000"
- 1063 030e 01       		.byte	0x1
- 1064 030f 55       		.byte	0x55
- 1065 0310 81000000 		.4byte	0x81
- 1066 0314 6E000000 		.4byte	.LLST3
- 1067 0318 08       		.uleb128 0x8
- 1068 0319 3E000000 		.4byte	.LVL35
- 1069 031d 52050000 		.4byte	0x552
- 1070 0321 3A030000 		.4byte	0x33a
- 1071 0325 09       		.uleb128 0x9
- 1072 0326 01       		.uleb128 0x1
- 1073 0327 50       		.byte	0x50
- 1074 0328 10       		.uleb128 0x10
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 23
-
-
- 1075 0329 0A       		.byte	0xa
- 1076 032a 4416     		.2byte	0x1644
- 1077 032c 74       		.byte	0x74
- 1078 032d 00       		.sleb128 0
- 1079 032e 32       		.byte	0x32
- 1080 032f 24       		.byte	0x24
- 1081 0330 74       		.byte	0x74
- 1082 0331 00       		.sleb128 0
- 1083 0332 22       		.byte	0x22
- 1084 0333 08       		.byte	0x8
- 1085 0334 21       		.byte	0x21
- 1086 0335 1E       		.byte	0x1e
- 1087 0336 31       		.byte	0x31
- 1088 0337 24       		.byte	0x24
- 1089 0338 1C       		.byte	0x1c
- 1090 0339 00       		.byte	0
- 1091 033a 0F       		.uleb128 0xf
- 1092 033b 44000000 		.4byte	.LVL36
- 1093 033f 1B050000 		.4byte	0x51b
- 1094 0343 09       		.uleb128 0x9
- 1095 0344 01       		.uleb128 0x1
- 1096 0345 50       		.byte	0x50
- 1097 0346 02       		.uleb128 0x2
- 1098 0347 08       		.byte	0x8
- 1099 0348 C8       		.byte	0xc8
- 1100 0349 00       		.byte	0
- 1101 034a 00       		.byte	0
- 1102 034b 10       		.uleb128 0x10
- 1103 034c 00000000 		.4byte	.Ldebug_ranges0+0
- 1104 0350 7B030000 		.4byte	0x37b
- 1105 0354 0E       		.uleb128 0xe
- 1106 0355 6900     		.ascii	"i\000"
- 1107 0357 01       		.byte	0x1
- 1108 0358 5B       		.byte	0x5b
- 1109 0359 81000000 		.4byte	0x81
- 1110 035d A2000000 		.4byte	.LLST4
- 1111 0361 0A       		.uleb128 0xa
- 1112 0362 68000000 		.4byte	.LVL40
- 1113 0366 52050000 		.4byte	0x552
- 1114 036a 0F       		.uleb128 0xf
- 1115 036b 6E000000 		.4byte	.LVL41
- 1116 036f 1B050000 		.4byte	0x51b
- 1117 0373 09       		.uleb128 0x9
- 1118 0374 01       		.uleb128 0x1
- 1119 0375 50       		.byte	0x50
- 1120 0376 02       		.uleb128 0x2
- 1121 0377 08       		.byte	0x8
- 1122 0378 C8       		.byte	0xc8
- 1123 0379 00       		.byte	0
- 1124 037a 00       		.byte	0
- 1125 037b 11       		.uleb128 0x11
- 1126 037c 82000000 		.4byte	.LBB6
- 1127 0380 26000000 		.4byte	.LBE6-.LBB6
- 1128 0384 0E       		.uleb128 0xe
- 1129 0385 6900     		.ascii	"i\000"
- 1130 0387 01       		.byte	0x1
- 1131 0388 60       		.byte	0x60
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 24
-
-
- 1132 0389 81000000 		.4byte	0x81
- 1133 038d CB000000 		.4byte	.LLST5
- 1134 0391 0A       		.uleb128 0xa
- 1135 0392 8E000000 		.4byte	.LVL47
- 1136 0396 52050000 		.4byte	0x552
- 1137 039a 0F       		.uleb128 0xf
- 1138 039b 94000000 		.4byte	.LVL48
- 1139 039f 1B050000 		.4byte	0x51b
- 1140 03a3 09       		.uleb128 0x9
- 1141 03a4 01       		.uleb128 0x1
- 1142 03a5 50       		.byte	0x50
- 1143 03a6 02       		.uleb128 0x2
- 1144 03a7 08       		.byte	0x8
- 1145 03a8 C8       		.byte	0xc8
- 1146 03a9 00       		.byte	0
- 1147 03aa 00       		.byte	0
- 1148 03ab 00       		.byte	0
- 1149 03ac 12       		.uleb128 0x12
- 1150 03ad 65010000 		.4byte	.LASF50
- 1151 03b1 01       		.byte	0x1
- 1152 03b2 89       		.byte	0x89
- 1153 03b3 68000000 		.4byte	0x68
- 1154 03b7 00000000 		.4byte	.LFB68
- 1155 03bb 58000000 		.4byte	.LFE68-.LFB68
- 1156 03bf 01       		.uleb128 0x1
- 1157 03c0 9C       		.byte	0x9c
- 1158 03c1 0F040000 		.4byte	0x40f
- 1159 03c5 08       		.uleb128 0x8
- 1160 03c6 26000000 		.4byte	.LVL52
- 1161 03ca 5D050000 		.4byte	0x55d
- 1162 03ce DC030000 		.4byte	0x3dc
- 1163 03d2 09       		.uleb128 0x9
- 1164 03d3 01       		.uleb128 0x1
- 1165 03d4 50       		.byte	0x50
- 1166 03d5 05       		.uleb128 0x5
- 1167 03d6 03       		.byte	0x3
- 1168 03d7 00000000 		.4byte	INT_SWI
- 1169 03db 00       		.byte	0
- 1170 03dc 08       		.uleb128 0x8
- 1171 03dd 2C000000 		.4byte	.LVL53
- 1172 03e1 68050000 		.4byte	0x568
- 1173 03e5 F3030000 		.4byte	0x3f3
- 1174 03e9 09       		.uleb128 0x9
- 1175 03ea 01       		.uleb128 0x1
- 1176 03eb 50       		.byte	0x50
- 1177 03ec 05       		.uleb128 0x5
- 1178 03ed 03       		.byte	0x3
- 1179 03ee 00000000 		.4byte	INT_SE
- 1180 03f2 00       		.byte	0
- 1181 03f3 0A       		.uleb128 0xa
- 1182 03f4 30000000 		.4byte	.LVL54
- 1183 03f8 73050000 		.4byte	0x573
- 1184 03fc 0A       		.uleb128 0xa
- 1185 03fd 34000000 		.4byte	.LVL55
- 1186 0401 7E050000 		.4byte	0x57e
- 1187 0405 0A       		.uleb128 0xa
- 1188 0406 38000000 		.4byte	.LVL56
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 25
-
-
- 1189 040a 3C050000 		.4byte	0x53c
- 1190 040e 00       		.byte	0
- 1191 040f 13       		.uleb128 0x13
- 1192 0410 3C010000 		.4byte	.LASF24
- 1193 0414 05       		.byte	0x5
- 1194 0415 1207     		.2byte	0x712
- 1195 0417 1B040000 		.4byte	0x41b
- 1196 041b 06       		.uleb128 0x6
- 1197 041c 76000000 		.4byte	0x76
- 1198 0420 14       		.uleb128 0x14
- 1199 0421 73656700 		.ascii	"seg\000"
- 1200 0425 01       		.byte	0x1
- 1201 0426 0D       		.byte	0xd
- 1202 0427 AE000000 		.4byte	0xae
- 1203 042b 05       		.uleb128 0x5
- 1204 042c 03       		.byte	0x3
- 1205 042d 00000000 		.4byte	seg
- 1206 0431 15       		.uleb128 0x15
- 1207 0432 8A010000 		.4byte	.LASF25
- 1208 0436 01       		.byte	0x1
- 1209 0437 0E       		.byte	0xe
- 1210 0438 AE000000 		.4byte	0xae
- 1211 043c 05       		.uleb128 0x5
- 1212 043d 03       		.byte	0x3
- 1213 043e 00000000 		.4byte	u_min
- 1214 0442 15       		.uleb128 0x15
- 1215 0443 6A010000 		.4byte	.LASF26
- 1216 0447 01       		.byte	0x1
- 1217 0448 0F       		.byte	0xf
- 1218 0449 AE000000 		.4byte	0xae
- 1219 044d 05       		.uleb128 0x5
- 1220 044e 03       		.byte	0x3
- 1221 044f 00000000 		.4byte	d_min
- 1222 0453 15       		.uleb128 0x15
- 1223 0454 D2020000 		.4byte	.LASF27
- 1224 0458 01       		.byte	0x1
- 1225 0459 10       		.byte	0x10
- 1226 045a AE000000 		.4byte	0xae
- 1227 045e 05       		.uleb128 0x5
- 1228 045f 03       		.byte	0x3
- 1229 0460 00000000 		.4byte	u_hora
- 1230 0464 15       		.uleb128 0x15
- 1231 0465 50010000 		.4byte	.LASF28
- 1232 0469 01       		.byte	0x1
- 1233 046a 11       		.byte	0x11
- 1234 046b AE000000 		.4byte	0xae
- 1235 046f 05       		.uleb128 0x5
- 1236 0470 03       		.byte	0x3
- 1237 0471 00000000 		.4byte	d_hora
- 1238 0475 15       		.uleb128 0x15
- 1239 0476 62020000 		.4byte	.LASF29
- 1240 047a 01       		.byte	0x1
- 1241 047b 13       		.byte	0x13
- 1242 047c 8D000000 		.4byte	0x8d
- 1243 0480 05       		.uleb128 0x5
- 1244 0481 03       		.byte	0x3
- 1245 0482 00000000 		.4byte	count
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 26
-
-
- 1246 0486 14       		.uleb128 0x14
- 1247 0487 646500   		.ascii	"de\000"
- 1248 048a 01       		.byte	0x1
- 1249 048b 14       		.byte	0x14
- 1250 048c 81000000 		.4byte	0x81
- 1251 0490 05       		.uleb128 0x5
- 1252 0491 03       		.byte	0x3
- 1253 0492 00000000 		.4byte	de
- 1254 0496 14       		.uleb128 0x14
- 1255 0497 61757800 		.ascii	"aux\000"
- 1256 049b 01       		.byte	0x1
- 1257 049c 15       		.byte	0x15
- 1258 049d 81000000 		.4byte	0x81
- 1259 04a1 05       		.uleb128 0x5
- 1260 04a2 03       		.byte	0x3
- 1261 04a3 00000000 		.4byte	aux
- 1262 04a7 16       		.uleb128 0x16
- 1263 04a8 81000000 		.4byte	0x81
- 1264 04ac B7040000 		.4byte	0x4b7
- 1265 04b0 17       		.uleb128 0x17
- 1266 04b1 BA000000 		.4byte	0xba
- 1267 04b5 09       		.byte	0x9
- 1268 04b6 00       		.byte	0
- 1269 04b7 15       		.uleb128 0x15
- 1270 04b8 10000000 		.4byte	.LASF30
- 1271 04bc 01       		.byte	0x1
- 1272 04bd 16       		.byte	0x16
- 1273 04be A7040000 		.4byte	0x4a7
- 1274 04c2 05       		.uleb128 0x5
- 1275 04c3 03       		.byte	0x3
- 1276 04c4 00000000 		.4byte	Inferior
- 1277 04c8 15       		.uleb128 0x15
- 1278 04c9 3B000000 		.4byte	.LASF31
- 1279 04cd 01       		.byte	0x1
- 1280 04ce 17       		.byte	0x17
- 1281 04cf A7040000 		.4byte	0x4a7
- 1282 04d3 05       		.uleb128 0x5
- 1283 04d4 03       		.byte	0x3
- 1284 04d5 00000000 		.4byte	Superior
- 1285 04d9 16       		.uleb128 0x16
- 1286 04da 8D000000 		.4byte	0x8d
- 1287 04de E9040000 		.4byte	0x4e9
- 1288 04e2 17       		.uleb128 0x17
- 1289 04e3 BA000000 		.4byte	0xba
- 1290 04e7 0C       		.byte	0xc
- 1291 04e8 00       		.byte	0
- 1292 04e9 15       		.uleb128 0x15
- 1293 04ea 09010000 		.4byte	.LASF32
- 1294 04ee 01       		.byte	0x1
- 1295 04ef 19       		.byte	0x19
- 1296 04f0 D9040000 		.4byte	0x4d9
- 1297 04f4 05       		.uleb128 0x5
- 1298 04f5 03       		.byte	0x3
- 1299 04f6 00000000 		.4byte	PasosS
- 1300 04fa 18       		.uleb128 0x18
- 1301 04fb AA020000 		.4byte	.LASF33
- 1302 04ff AA020000 		.4byte	.LASF33
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 27
-
-
- 1303 0503 06       		.byte	0x6
- 1304 0504 3D       		.byte	0x3d
- 1305 0505 18       		.uleb128 0x18
- 1306 0506 70010000 		.4byte	.LASF34
- 1307 050a 70010000 		.4byte	.LASF34
- 1308 050e 06       		.byte	0x6
- 1309 050f 3C       		.byte	0x3c
- 1310 0510 18       		.uleb128 0x18
- 1311 0511 D9010000 		.4byte	.LASF35
- 1312 0515 D9010000 		.4byte	.LASF35
- 1313 0519 06       		.byte	0x6
- 1314 051a 61       		.byte	0x61
- 1315 051b 18       		.uleb128 0x18
- 1316 051c CA020000 		.4byte	.LASF36
- 1317 0520 CA020000 		.4byte	.LASF36
- 1318 0524 07       		.byte	0x7
- 1319 0525 76       		.byte	0x76
- 1320 0526 18       		.uleb128 0x18
- 1321 0527 32000000 		.4byte	.LASF37
- 1322 052b 32000000 		.4byte	.LASF37
- 1323 052f 08       		.byte	0x8
- 1324 0530 29       		.byte	0x29
- 1325 0531 18       		.uleb128 0x18
- 1326 0532 44000000 		.4byte	.LASF38
- 1327 0536 44000000 		.4byte	.LASF38
- 1328 053a 09       		.byte	0x9
- 1329 053b 5B       		.byte	0x5b
- 1330 053c 18       		.uleb128 0x18
- 1331 053d 97010000 		.4byte	.LASF39
- 1332 0541 97010000 		.4byte	.LASF39
- 1333 0545 09       		.byte	0x9
- 1334 0546 5A       		.byte	0x5a
- 1335 0547 18       		.uleb128 0x18
- 1336 0548 B7020000 		.4byte	.LASF40
- 1337 054c B7020000 		.4byte	.LASF40
- 1338 0550 08       		.byte	0x8
- 1339 0551 2B       		.byte	0x2b
- 1340 0552 18       		.uleb128 0x18
- 1341 0553 C7010000 		.4byte	.LASF41
- 1342 0557 C7010000 		.4byte	.LASF41
- 1343 055b 0A       		.byte	0xa
- 1344 055c C7       		.byte	0xc7
- 1345 055d 18       		.uleb128 0x18
- 1346 055e 00000000 		.4byte	.LASF42
- 1347 0562 00000000 		.4byte	.LASF42
- 1348 0566 0B       		.byte	0xb
- 1349 0567 18       		.byte	0x18
- 1350 0568 18       		.uleb128 0x18
- 1351 0569 19000000 		.4byte	.LASF43
- 1352 056d 19000000 		.4byte	.LASF43
- 1353 0571 0C       		.byte	0xc
- 1354 0572 18       		.byte	0x18
- 1355 0573 18       		.uleb128 0x18
- 1356 0574 72020000 		.4byte	.LASF44
- 1357 0578 72020000 		.4byte	.LASF44
- 1358 057c 0A       		.byte	0xa
- 1359 057d 92       		.byte	0x92
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 28
-
-
- 1360 057e 18       		.uleb128 0x18
- 1361 057f 5D000000 		.4byte	.LASF45
- 1362 0583 5D000000 		.4byte	.LASF45
- 1363 0587 06       		.byte	0x6
- 1364 0588 38       		.byte	0x38
- 1365 0589 00       		.byte	0
- 1366              		.section	.debug_abbrev,"",%progbits
- 1367              	.Ldebug_abbrev0:
- 1368 0000 01       		.uleb128 0x1
- 1369 0001 11       		.uleb128 0x11
- 1370 0002 01       		.byte	0x1
- 1371 0003 25       		.uleb128 0x25
- 1372 0004 0E       		.uleb128 0xe
- 1373 0005 13       		.uleb128 0x13
- 1374 0006 0B       		.uleb128 0xb
- 1375 0007 03       		.uleb128 0x3
- 1376 0008 0E       		.uleb128 0xe
- 1377 0009 1B       		.uleb128 0x1b
- 1378 000a 0E       		.uleb128 0xe
- 1379 000b 55       		.uleb128 0x55
- 1380 000c 17       		.uleb128 0x17
- 1381 000d 11       		.uleb128 0x11
- 1382 000e 01       		.uleb128 0x1
- 1383 000f 10       		.uleb128 0x10
- 1384 0010 17       		.uleb128 0x17
- 1385 0011 00       		.byte	0
- 1386 0012 00       		.byte	0
- 1387 0013 02       		.uleb128 0x2
- 1388 0014 24       		.uleb128 0x24
- 1389 0015 00       		.byte	0
- 1390 0016 0B       		.uleb128 0xb
- 1391 0017 0B       		.uleb128 0xb
- 1392 0018 3E       		.uleb128 0x3e
- 1393 0019 0B       		.uleb128 0xb
- 1394 001a 03       		.uleb128 0x3
- 1395 001b 0E       		.uleb128 0xe
- 1396 001c 00       		.byte	0
- 1397 001d 00       		.byte	0
- 1398 001e 03       		.uleb128 0x3
- 1399 001f 16       		.uleb128 0x16
- 1400 0020 00       		.byte	0
- 1401 0021 03       		.uleb128 0x3
- 1402 0022 0E       		.uleb128 0xe
- 1403 0023 3A       		.uleb128 0x3a
- 1404 0024 0B       		.uleb128 0xb
- 1405 0025 3B       		.uleb128 0x3b
- 1406 0026 0B       		.uleb128 0xb
- 1407 0027 49       		.uleb128 0x49
- 1408 0028 13       		.uleb128 0x13
- 1409 0029 00       		.byte	0
- 1410 002a 00       		.byte	0
- 1411 002b 04       		.uleb128 0x4
- 1412 002c 24       		.uleb128 0x24
- 1413 002d 00       		.byte	0
- 1414 002e 0B       		.uleb128 0xb
- 1415 002f 0B       		.uleb128 0xb
- 1416 0030 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 29
-
-
- 1417 0031 0B       		.uleb128 0xb
- 1418 0032 03       		.uleb128 0x3
- 1419 0033 08       		.uleb128 0x8
- 1420 0034 00       		.byte	0
- 1421 0035 00       		.byte	0
- 1422 0036 05       		.uleb128 0x5
- 1423 0037 16       		.uleb128 0x16
- 1424 0038 00       		.byte	0
- 1425 0039 03       		.uleb128 0x3
- 1426 003a 0E       		.uleb128 0xe
- 1427 003b 3A       		.uleb128 0x3a
- 1428 003c 0B       		.uleb128 0xb
- 1429 003d 3B       		.uleb128 0x3b
- 1430 003e 05       		.uleb128 0x5
- 1431 003f 49       		.uleb128 0x49
- 1432 0040 13       		.uleb128 0x13
- 1433 0041 00       		.byte	0
- 1434 0042 00       		.byte	0
- 1435 0043 06       		.uleb128 0x6
- 1436 0044 35       		.uleb128 0x35
- 1437 0045 00       		.byte	0
- 1438 0046 49       		.uleb128 0x49
- 1439 0047 13       		.uleb128 0x13
- 1440 0048 00       		.byte	0
- 1441 0049 00       		.byte	0
- 1442 004a 07       		.uleb128 0x7
- 1443 004b 2E       		.uleb128 0x2e
- 1444 004c 01       		.byte	0x1
- 1445 004d 3F       		.uleb128 0x3f
- 1446 004e 19       		.uleb128 0x19
- 1447 004f 03       		.uleb128 0x3
- 1448 0050 0E       		.uleb128 0xe
- 1449 0051 3A       		.uleb128 0x3a
- 1450 0052 0B       		.uleb128 0xb
- 1451 0053 3B       		.uleb128 0x3b
- 1452 0054 0B       		.uleb128 0xb
- 1453 0055 11       		.uleb128 0x11
- 1454 0056 01       		.uleb128 0x1
- 1455 0057 12       		.uleb128 0x12
- 1456 0058 06       		.uleb128 0x6
- 1457 0059 40       		.uleb128 0x40
- 1458 005a 18       		.uleb128 0x18
- 1459 005b 9742     		.uleb128 0x2117
- 1460 005d 19       		.uleb128 0x19
- 1461 005e 01       		.uleb128 0x1
- 1462 005f 13       		.uleb128 0x13
- 1463 0060 00       		.byte	0
- 1464 0061 00       		.byte	0
- 1465 0062 08       		.uleb128 0x8
- 1466 0063 898201   		.uleb128 0x4109
- 1467 0066 01       		.byte	0x1
- 1468 0067 11       		.uleb128 0x11
- 1469 0068 01       		.uleb128 0x1
- 1470 0069 31       		.uleb128 0x31
- 1471 006a 13       		.uleb128 0x13
- 1472 006b 01       		.uleb128 0x1
- 1473 006c 13       		.uleb128 0x13
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 30
-
-
- 1474 006d 00       		.byte	0
- 1475 006e 00       		.byte	0
- 1476 006f 09       		.uleb128 0x9
- 1477 0070 8A8201   		.uleb128 0x410a
- 1478 0073 00       		.byte	0
- 1479 0074 02       		.uleb128 0x2
- 1480 0075 18       		.uleb128 0x18
- 1481 0076 9142     		.uleb128 0x2111
- 1482 0078 18       		.uleb128 0x18
- 1483 0079 00       		.byte	0
- 1484 007a 00       		.byte	0
- 1485 007b 0A       		.uleb128 0xa
- 1486 007c 898201   		.uleb128 0x4109
- 1487 007f 00       		.byte	0
- 1488 0080 11       		.uleb128 0x11
- 1489 0081 01       		.uleb128 0x1
- 1490 0082 31       		.uleb128 0x31
- 1491 0083 13       		.uleb128 0x13
- 1492 0084 00       		.byte	0
- 1493 0085 00       		.byte	0
- 1494 0086 0B       		.uleb128 0xb
- 1495 0087 2E       		.uleb128 0x2e
- 1496 0088 01       		.byte	0x1
- 1497 0089 3F       		.uleb128 0x3f
- 1498 008a 19       		.uleb128 0x19
- 1499 008b 03       		.uleb128 0x3
- 1500 008c 0E       		.uleb128 0xe
- 1501 008d 3A       		.uleb128 0x3a
- 1502 008e 0B       		.uleb128 0xb
- 1503 008f 3B       		.uleb128 0x3b
- 1504 0090 0B       		.uleb128 0xb
- 1505 0091 27       		.uleb128 0x27
- 1506 0092 19       		.uleb128 0x19
- 1507 0093 11       		.uleb128 0x11
- 1508 0094 01       		.uleb128 0x1
- 1509 0095 12       		.uleb128 0x12
- 1510 0096 06       		.uleb128 0x6
- 1511 0097 40       		.uleb128 0x40
- 1512 0098 18       		.uleb128 0x18
- 1513 0099 9742     		.uleb128 0x2117
- 1514 009b 19       		.uleb128 0x19
- 1515 009c 01       		.uleb128 0x1
- 1516 009d 13       		.uleb128 0x13
- 1517 009e 00       		.byte	0
- 1518 009f 00       		.byte	0
- 1519 00a0 0C       		.uleb128 0xc
- 1520 00a1 05       		.uleb128 0x5
- 1521 00a2 00       		.byte	0
- 1522 00a3 03       		.uleb128 0x3
- 1523 00a4 0E       		.uleb128 0xe
- 1524 00a5 3A       		.uleb128 0x3a
- 1525 00a6 0B       		.uleb128 0xb
- 1526 00a7 3B       		.uleb128 0x3b
- 1527 00a8 0B       		.uleb128 0xb
- 1528 00a9 49       		.uleb128 0x49
- 1529 00aa 13       		.uleb128 0x13
- 1530 00ab 02       		.uleb128 0x2
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 31
-
-
- 1531 00ac 17       		.uleb128 0x17
- 1532 00ad 00       		.byte	0
- 1533 00ae 00       		.byte	0
- 1534 00af 0D       		.uleb128 0xd
- 1535 00b0 0B       		.uleb128 0xb
- 1536 00b1 01       		.byte	0x1
- 1537 00b2 11       		.uleb128 0x11
- 1538 00b3 01       		.uleb128 0x1
- 1539 00b4 12       		.uleb128 0x12
- 1540 00b5 06       		.uleb128 0x6
- 1541 00b6 01       		.uleb128 0x1
- 1542 00b7 13       		.uleb128 0x13
- 1543 00b8 00       		.byte	0
- 1544 00b9 00       		.byte	0
- 1545 00ba 0E       		.uleb128 0xe
- 1546 00bb 34       		.uleb128 0x34
- 1547 00bc 00       		.byte	0
- 1548 00bd 03       		.uleb128 0x3
- 1549 00be 08       		.uleb128 0x8
- 1550 00bf 3A       		.uleb128 0x3a
- 1551 00c0 0B       		.uleb128 0xb
- 1552 00c1 3B       		.uleb128 0x3b
- 1553 00c2 0B       		.uleb128 0xb
- 1554 00c3 49       		.uleb128 0x49
- 1555 00c4 13       		.uleb128 0x13
- 1556 00c5 02       		.uleb128 0x2
- 1557 00c6 17       		.uleb128 0x17
- 1558 00c7 00       		.byte	0
- 1559 00c8 00       		.byte	0
- 1560 00c9 0F       		.uleb128 0xf
- 1561 00ca 898201   		.uleb128 0x4109
- 1562 00cd 01       		.byte	0x1
- 1563 00ce 11       		.uleb128 0x11
- 1564 00cf 01       		.uleb128 0x1
- 1565 00d0 31       		.uleb128 0x31
- 1566 00d1 13       		.uleb128 0x13
- 1567 00d2 00       		.byte	0
- 1568 00d3 00       		.byte	0
- 1569 00d4 10       		.uleb128 0x10
- 1570 00d5 0B       		.uleb128 0xb
- 1571 00d6 01       		.byte	0x1
- 1572 00d7 55       		.uleb128 0x55
- 1573 00d8 17       		.uleb128 0x17
- 1574 00d9 01       		.uleb128 0x1
- 1575 00da 13       		.uleb128 0x13
- 1576 00db 00       		.byte	0
- 1577 00dc 00       		.byte	0
- 1578 00dd 11       		.uleb128 0x11
- 1579 00de 0B       		.uleb128 0xb
- 1580 00df 01       		.byte	0x1
- 1581 00e0 11       		.uleb128 0x11
- 1582 00e1 01       		.uleb128 0x1
- 1583 00e2 12       		.uleb128 0x12
- 1584 00e3 06       		.uleb128 0x6
- 1585 00e4 00       		.byte	0
- 1586 00e5 00       		.byte	0
- 1587 00e6 12       		.uleb128 0x12
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 32
-
-
- 1588 00e7 2E       		.uleb128 0x2e
- 1589 00e8 01       		.byte	0x1
- 1590 00e9 3F       		.uleb128 0x3f
- 1591 00ea 19       		.uleb128 0x19
- 1592 00eb 03       		.uleb128 0x3
- 1593 00ec 0E       		.uleb128 0xe
- 1594 00ed 3A       		.uleb128 0x3a
- 1595 00ee 0B       		.uleb128 0xb
- 1596 00ef 3B       		.uleb128 0x3b
- 1597 00f0 0B       		.uleb128 0xb
- 1598 00f1 49       		.uleb128 0x49
- 1599 00f2 13       		.uleb128 0x13
- 1600 00f3 8701     		.uleb128 0x87
- 1601 00f5 19       		.uleb128 0x19
- 1602 00f6 11       		.uleb128 0x11
- 1603 00f7 01       		.uleb128 0x1
- 1604 00f8 12       		.uleb128 0x12
- 1605 00f9 06       		.uleb128 0x6
- 1606 00fa 40       		.uleb128 0x40
- 1607 00fb 18       		.uleb128 0x18
- 1608 00fc 9742     		.uleb128 0x2117
- 1609 00fe 19       		.uleb128 0x19
- 1610 00ff 01       		.uleb128 0x1
- 1611 0100 13       		.uleb128 0x13
- 1612 0101 00       		.byte	0
- 1613 0102 00       		.byte	0
- 1614 0103 13       		.uleb128 0x13
- 1615 0104 34       		.uleb128 0x34
- 1616 0105 00       		.byte	0
- 1617 0106 03       		.uleb128 0x3
- 1618 0107 0E       		.uleb128 0xe
- 1619 0108 3A       		.uleb128 0x3a
- 1620 0109 0B       		.uleb128 0xb
- 1621 010a 3B       		.uleb128 0x3b
- 1622 010b 05       		.uleb128 0x5
- 1623 010c 49       		.uleb128 0x49
- 1624 010d 13       		.uleb128 0x13
- 1625 010e 3F       		.uleb128 0x3f
- 1626 010f 19       		.uleb128 0x19
- 1627 0110 3C       		.uleb128 0x3c
- 1628 0111 19       		.uleb128 0x19
- 1629 0112 00       		.byte	0
- 1630 0113 00       		.byte	0
- 1631 0114 14       		.uleb128 0x14
- 1632 0115 34       		.uleb128 0x34
- 1633 0116 00       		.byte	0
- 1634 0117 03       		.uleb128 0x3
- 1635 0118 08       		.uleb128 0x8
- 1636 0119 3A       		.uleb128 0x3a
- 1637 011a 0B       		.uleb128 0xb
- 1638 011b 3B       		.uleb128 0x3b
- 1639 011c 0B       		.uleb128 0xb
- 1640 011d 49       		.uleb128 0x49
- 1641 011e 13       		.uleb128 0x13
- 1642 011f 3F       		.uleb128 0x3f
- 1643 0120 19       		.uleb128 0x19
- 1644 0121 02       		.uleb128 0x2
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 33
-
-
- 1645 0122 18       		.uleb128 0x18
- 1646 0123 00       		.byte	0
- 1647 0124 00       		.byte	0
- 1648 0125 15       		.uleb128 0x15
- 1649 0126 34       		.uleb128 0x34
- 1650 0127 00       		.byte	0
- 1651 0128 03       		.uleb128 0x3
- 1652 0129 0E       		.uleb128 0xe
- 1653 012a 3A       		.uleb128 0x3a
- 1654 012b 0B       		.uleb128 0xb
- 1655 012c 3B       		.uleb128 0x3b
- 1656 012d 0B       		.uleb128 0xb
- 1657 012e 49       		.uleb128 0x49
- 1658 012f 13       		.uleb128 0x13
- 1659 0130 3F       		.uleb128 0x3f
- 1660 0131 19       		.uleb128 0x19
- 1661 0132 02       		.uleb128 0x2
- 1662 0133 18       		.uleb128 0x18
- 1663 0134 00       		.byte	0
- 1664 0135 00       		.byte	0
- 1665 0136 16       		.uleb128 0x16
- 1666 0137 01       		.uleb128 0x1
- 1667 0138 01       		.byte	0x1
- 1668 0139 49       		.uleb128 0x49
- 1669 013a 13       		.uleb128 0x13
- 1670 013b 01       		.uleb128 0x1
- 1671 013c 13       		.uleb128 0x13
- 1672 013d 00       		.byte	0
- 1673 013e 00       		.byte	0
- 1674 013f 17       		.uleb128 0x17
- 1675 0140 21       		.uleb128 0x21
- 1676 0141 00       		.byte	0
- 1677 0142 49       		.uleb128 0x49
- 1678 0143 13       		.uleb128 0x13
- 1679 0144 2F       		.uleb128 0x2f
- 1680 0145 0B       		.uleb128 0xb
- 1681 0146 00       		.byte	0
- 1682 0147 00       		.byte	0
- 1683 0148 18       		.uleb128 0x18
- 1684 0149 2E       		.uleb128 0x2e
- 1685 014a 00       		.byte	0
- 1686 014b 3F       		.uleb128 0x3f
- 1687 014c 19       		.uleb128 0x19
- 1688 014d 3C       		.uleb128 0x3c
- 1689 014e 19       		.uleb128 0x19
- 1690 014f 6E       		.uleb128 0x6e
- 1691 0150 0E       		.uleb128 0xe
- 1692 0151 03       		.uleb128 0x3
- 1693 0152 0E       		.uleb128 0xe
- 1694 0153 3A       		.uleb128 0x3a
- 1695 0154 0B       		.uleb128 0xb
- 1696 0155 3B       		.uleb128 0x3b
- 1697 0156 0B       		.uleb128 0xb
- 1698 0157 00       		.byte	0
- 1699 0158 00       		.byte	0
- 1700 0159 00       		.byte	0
- 1701              		.section	.debug_loc,"",%progbits
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 34
-
-
- 1702              	.Ldebug_loc0:
- 1703              	.LLST0:
- 1704 0000 00000000 		.4byte	.LVL11
- 1705 0004 06000000 		.4byte	.LVL12
- 1706 0008 0100     		.2byte	0x1
- 1707 000a 50       		.byte	0x50
- 1708 000b 06000000 		.4byte	.LVL12
- 1709 000f A8000000 		.4byte	.LFE64
- 1710 0013 0400     		.2byte	0x4
- 1711 0015 F3       		.byte	0xf3
- 1712 0016 01       		.uleb128 0x1
- 1713 0017 50       		.byte	0x50
- 1714 0018 9F       		.byte	0x9f
- 1715 0019 00000000 		.4byte	0
- 1716 001d 00000000 		.4byte	0
- 1717              	.LLST1:
- 1718 0021 00000000 		.4byte	.LVL26
- 1719 0025 0A000000 		.4byte	.LVL28
- 1720 0029 0100     		.2byte	0x1
- 1721 002b 50       		.byte	0x50
- 1722 002c 0A000000 		.4byte	.LVL28
- 1723 0030 A8000000 		.4byte	.LFE65
- 1724 0034 0400     		.2byte	0x4
- 1725 0036 F3       		.byte	0xf3
- 1726 0037 01       		.uleb128 0x1
- 1727 0038 50       		.byte	0x50
- 1728 0039 9F       		.byte	0x9f
- 1729 003a 00000000 		.4byte	0
- 1730 003e 00000000 		.4byte	0
- 1731              	.LLST2:
- 1732 0042 04000000 		.4byte	.LVL27
- 1733 0046 0A000000 		.4byte	.LVL28
- 1734 004a 0400     		.2byte	0x4
- 1735 004c 0A       		.byte	0xa
- 1736 004d 800C     		.2byte	0xc80
- 1737 004f 9F       		.byte	0x9f
- 1738 0050 0A000000 		.4byte	.LVL28
- 1739 0054 1A000000 		.4byte	.LVL31
- 1740 0058 0100     		.2byte	0x1
- 1741 005a 54       		.byte	0x54
- 1742 005b 1C000000 		.4byte	.LVL32
- 1743 005f 26000000 		.4byte	.LVL33
- 1744 0063 0100     		.2byte	0x1
- 1745 0065 54       		.byte	0x54
- 1746 0066 00000000 		.4byte	0
- 1747 006a 00000000 		.4byte	0
- 1748              	.LLST3:
- 1749 006e 28000000 		.4byte	.LVL34
- 1750 0072 46000000 		.4byte	.LVL37
- 1751 0076 0100     		.2byte	0x1
- 1752 0078 54       		.byte	0x54
- 1753 0079 48000000 		.4byte	.LVL38
- 1754 007d 5C000000 		.4byte	.LVL39
- 1755 0081 0100     		.2byte	0x1
- 1756 0083 54       		.byte	0x54
- 1757 0084 74000000 		.4byte	.LVL44
- 1758 0088 76000000 		.4byte	.LVL45
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 35
-
-
- 1759 008c 0100     		.2byte	0x1
- 1760 008e 54       		.byte	0x54
- 1761 008f 82000000 		.4byte	.LVL46
- 1762 0093 A4000000 		.4byte	.LVL51
- 1763 0097 0100     		.2byte	0x1
- 1764 0099 54       		.byte	0x54
- 1765 009a 00000000 		.4byte	0
- 1766 009e 00000000 		.4byte	0
- 1767              	.LLST4:
- 1768 00a2 5C000000 		.4byte	.LVL39
- 1769 00a6 70000000 		.4byte	.LVL42
- 1770 00aa 0100     		.2byte	0x1
- 1771 00ac 54       		.byte	0x54
- 1772 00ad 72000000 		.4byte	.LVL43
- 1773 00b1 74000000 		.4byte	.LVL44
- 1774 00b5 0100     		.2byte	0x1
- 1775 00b7 54       		.byte	0x54
- 1776 00b8 76000000 		.4byte	.LVL45
- 1777 00bc 82000000 		.4byte	.LVL46
- 1778 00c0 0100     		.2byte	0x1
- 1779 00c2 54       		.byte	0x54
- 1780 00c3 00000000 		.4byte	0
- 1781 00c7 00000000 		.4byte	0
- 1782              	.LLST5:
- 1783 00cb 82000000 		.4byte	.LVL46
- 1784 00cf 96000000 		.4byte	.LVL49
- 1785 00d3 0100     		.2byte	0x1
- 1786 00d5 56       		.byte	0x56
- 1787 00d6 98000000 		.4byte	.LVL50
- 1788 00da A4000000 		.4byte	.LVL51
- 1789 00de 0100     		.2byte	0x1
- 1790 00e0 56       		.byte	0x56
- 1791 00e1 00000000 		.4byte	0
- 1792 00e5 00000000 		.4byte	0
- 1793              		.section	.debug_aranges,"",%progbits
- 1794 0000 44000000 		.4byte	0x44
- 1795 0004 0200     		.2byte	0x2
- 1796 0006 00000000 		.4byte	.Ldebug_info0
- 1797 000a 04       		.byte	0x4
- 1798 000b 00       		.byte	0
- 1799 000c 0000     		.2byte	0
- 1800 000e 0000     		.2byte	0
- 1801 0010 00000000 		.4byte	.LFB63
- 1802 0014 94000000 		.4byte	.LFE63-.LFB63
- 1803 0018 00000000 		.4byte	.LFB64
- 1804 001c A8000000 		.4byte	.LFE64-.LFB64
- 1805 0020 00000000 		.4byte	.LFB66
- 1806 0024 0E000000 		.4byte	.LFE66-.LFB66
- 1807 0028 00000000 		.4byte	.LFB67
- 1808 002c 80000000 		.4byte	.LFE67-.LFB67
- 1809 0030 00000000 		.4byte	.LFB65
- 1810 0034 A8000000 		.4byte	.LFE65-.LFB65
- 1811 0038 00000000 		.4byte	.LFB68
- 1812 003c 58000000 		.4byte	.LFE68-.LFB68
- 1813 0040 00000000 		.4byte	0
- 1814 0044 00000000 		.4byte	0
- 1815              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 36
-
-
- 1816              	.Ldebug_ranges0:
- 1817 0000 5C000000 		.4byte	.LBB4
- 1818 0004 74000000 		.4byte	.LBE4
- 1819 0008 76000000 		.4byte	.LBB5
- 1820 000c 82000000 		.4byte	.LBE5
- 1821 0010 00000000 		.4byte	0
- 1822 0014 00000000 		.4byte	0
- 1823 0018 00000000 		.4byte	.LFB63
- 1824 001c 94000000 		.4byte	.LFE63
- 1825 0020 00000000 		.4byte	.LFB64
- 1826 0024 A8000000 		.4byte	.LFE64
- 1827 0028 00000000 		.4byte	.LFB66
- 1828 002c 0E000000 		.4byte	.LFE66
- 1829 0030 00000000 		.4byte	.LFB67
- 1830 0034 80000000 		.4byte	.LFE67
- 1831 0038 00000000 		.4byte	.LFB65
- 1832 003c A8000000 		.4byte	.LFE65
- 1833 0040 00000000 		.4byte	.LFB68
- 1834 0044 58000000 		.4byte	.LFE68
- 1835 0048 00000000 		.4byte	0
- 1836 004c 00000000 		.4byte	0
- 1837              		.section	.debug_line,"",%progbits
- 1838              	.Ldebug_line0:
- 1839 0000 8E020000 		.section	.debug_str,"MS",%progbits,1
- 1839      02009601 
- 1839      00000201 
- 1839      FB0E0D00 
- 1839      01010101 
- 1840              	.LASF42:
- 1841 0000 4953525F 		.ascii	"ISR_SWI_StartEx\000"
- 1841      5357495F 
- 1841      53746172 
- 1841      74457800 
- 1842              	.LASF30:
- 1843 0010 496E6665 		.ascii	"Inferior\000"
- 1843      72696F72 
- 1843      00
- 1844              	.LASF43:
- 1845 0019 4953525F 		.ascii	"ISR_SE_StartEx\000"
- 1845      53455F53 
- 1845      74617274 
- 1845      457800
- 1846              	.LASF9:
- 1847 0028 5F5F696E 		.ascii	"__int32_t\000"
- 1847      7433325F 
- 1847      7400
- 1848              	.LASF37:
- 1849 0032 5357495F 		.ascii	"SWI_Read\000"
- 1849      52656164 
- 1849      00
- 1850              	.LASF31:
- 1851 003b 53757065 		.ascii	"Superior\000"
- 1851      72696F72 
- 1851      00
- 1852              	.LASF38:
- 1853 0044 54696D65 		.ascii	"Timer_Stop\000"
- 1853      725F5374 
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 37
-
-
- 1853      6F7000
- 1854              	.LASF20:
- 1855 004f 494E545F 		.ascii	"INT_SWI\000"
- 1855      53574900 
- 1856              	.LASF13:
- 1857 0057 666C6F61 		.ascii	"float\000"
- 1857      7400
- 1858              	.LASF45:
- 1859 005d 4C43445F 		.ascii	"LCD_Start\000"
- 1859      53746172 
- 1859      7400
- 1860              	.LASF11:
- 1861 0067 75696E74 		.ascii	"uint8\000"
- 1861      3800
- 1862              	.LASF1:
- 1863 006d 756E7369 		.ascii	"unsigned char\000"
- 1863      676E6564 
- 1863      20636861 
- 1863      7200
- 1864              	.LASF46:
- 1865 007b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1865      43313120 
- 1865      352E342E 
- 1865      31203230 
- 1865      31363036 
- 1866 00ae 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1866      20726576 
- 1866      6973696F 
- 1866      6E203233 
- 1866      37373135 
- 1867 00e1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1867      66756E63 
- 1867      74696F6E 
- 1867      2D736563 
- 1867      74696F6E 
- 1868              	.LASF32:
- 1869 0109 5061736F 		.ascii	"PasosS\000"
- 1869      735300
- 1870              	.LASF19:
- 1871 0110 494E545F 		.ascii	"INT_SE\000"
- 1871      534500
- 1872              	.LASF5:
- 1873 0117 6C6F6E67 		.ascii	"long unsigned int\000"
- 1873      20756E73 
- 1873      69676E65 
- 1873      6420696E 
- 1873      7400
- 1874              	.LASF3:
- 1875 0129 73686F72 		.ascii	"short unsigned int\000"
- 1875      7420756E 
- 1875      7369676E 
- 1875      65642069 
- 1875      6E7400
- 1876              	.LASF24:
- 1877 013c 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1877      52784275 
- 1877      66666572 
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 38
-
-
- 1877      00
- 1878              	.LASF12:
- 1879 0149 75696E74 		.ascii	"uint16\000"
- 1879      313600
- 1880              	.LASF28:
- 1881 0150 645F686F 		.ascii	"d_hora\000"
- 1881      726100
- 1882              	.LASF14:
- 1883 0157 646F7562 		.ascii	"double\000"
- 1883      6C6500
- 1884              	.LASF21:
- 1885 015e 4E756D65 		.ascii	"Numero\000"
- 1885      726F00
- 1886              	.LASF50:
- 1887 0165 6D61696E 		.ascii	"main\000"
- 1887      00
- 1888              	.LASF26:
- 1889 016a 645F6D69 		.ascii	"d_min\000"
- 1889      6E00
- 1890              	.LASF34:
- 1891 0170 4C43445F 		.ascii	"LCD_PrintString\000"
- 1891      5072696E 
- 1891      74537472 
- 1891      696E6700 
- 1892              	.LASF49:
- 1893 0180 76697375 		.ascii	"visualLCD\000"
- 1893      616C4C43 
- 1893      4400
- 1894              	.LASF25:
- 1895 018a 755F6D69 		.ascii	"u_min\000"
- 1895      6E00
- 1896              	.LASF23:
- 1897 0190 6E756D65 		.ascii	"numero\000"
- 1897      726F00
- 1898              	.LASF39:
- 1899 0197 54696D65 		.ascii	"Timer_Start\000"
- 1899      725F5374 
- 1899      61727400 
- 1900              	.LASF8:
- 1901 01a3 756E7369 		.ascii	"unsigned int\000"
- 1901      676E6564 
- 1901      20696E74 
- 1901      00
- 1902              	.LASF7:
- 1903 01b0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1903      206C6F6E 
- 1903      6720756E 
- 1903      7369676E 
- 1903      65642069 
- 1904              	.LASF41:
- 1905 01c7 50574D5F 		.ascii	"PWM_WriteCompare1\000"
- 1905      57726974 
- 1905      65436F6D 
- 1905      70617265 
- 1905      3100
- 1906              	.LASF35:
- 1907 01d9 4C43445F 		.ascii	"LCD_PrintU32Number\000"
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 39
-
-
- 1907      5072696E 
- 1907      74553332 
- 1907      4E756D62 
- 1907      657200
- 1908              	.LASF18:
- 1909 01ec 7469656D 		.ascii	"tiempo\000"
- 1909      706F00
- 1910              	.LASF10:
- 1911 01f3 696E7433 		.ascii	"int32_t\000"
- 1911      325F7400 
- 1912              	.LASF17:
- 1913 01fb 73697A65 		.ascii	"sizetype\000"
- 1913      74797065 
- 1913      00
- 1914              	.LASF6:
- 1915 0204 6C6F6E67 		.ascii	"long long int\000"
- 1915      206C6F6E 
- 1915      6720696E 
- 1915      7400
- 1916              	.LASF47:
- 1917 0212 6D61696E 		.ascii	"main.c\000"
- 1917      2E6300
- 1918              	.LASF48:
- 1919 0219 433A5C55 		.ascii	"C:\\Users\\Nicolas Zamora\\Documents\\PSoC Creator\\"
- 1919      73657273 
- 1919      5C4E6963 
- 1919      6F6C6173 
- 1919      205A616D 
- 1920 0248 54494D45 		.ascii	"TIMER\\Dimer con PWM.cydsn\000"
- 1920      525C4469 
- 1920      6D657220 
- 1920      636F6E20 
- 1920      50574D2E 
- 1921              	.LASF29:
- 1922 0262 636F756E 		.ascii	"count\000"
- 1922      7400
- 1923              	.LASF2:
- 1924 0268 73686F72 		.ascii	"short int\000"
- 1924      7420696E 
- 1924      7400
- 1925              	.LASF44:
- 1926 0272 50574D5F 		.ascii	"PWM_Start\000"
- 1926      53746172 
- 1926      7400
- 1927              	.LASF4:
- 1928 027c 6C6F6E67 		.ascii	"long int\000"
- 1928      20696E74 
- 1928      00
- 1929              	.LASF15:
- 1930 0285 63686172 		.ascii	"char\000"
- 1930      00
- 1931              	.LASF16:
- 1932 028a 6C6F6E67 		.ascii	"long double\000"
- 1932      20646F75 
- 1932      626C6500 
- 1933              	.LASF22:
- 1934 0296 61756D65 		.ascii	"aumento\000"
-ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc0oD2Zd.s 			page 40
-
-
- 1934      6E746F00 
- 1935              	.LASF0:
- 1936 029e 7369676E 		.ascii	"signed char\000"
- 1936      65642063 
- 1936      68617200 
- 1937              	.LASF33:
- 1938 02aa 4C43445F 		.ascii	"LCD_Position\000"
- 1938      506F7369 
- 1938      74696F6E 
- 1938      00
- 1939              	.LASF40:
- 1940 02b7 5357495F 		.ascii	"SWI_ClearInterrupt\000"
- 1940      436C6561 
- 1940      72496E74 
- 1940      65727275 
- 1940      707400
- 1941              	.LASF36:
- 1942 02ca 43794465 		.ascii	"CyDelay\000"
- 1942      6C617900 
- 1943              	.LASF27:
- 1944 02d2 755F686F 		.ascii	"u_hora\000"
- 1944      726100
- 1945              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+  92:main.c        ****             switch (motor){
+ 289              		.loc 1 92 0
+ 290 00dc 6B1E     		subs	r3, r5, #1
+ 291 00de 032B     		cmp	r3, #3
+ 292 00e0 20D8     		bhi	.L24
+ 293 00e2 DFE803F0 		tbb	[pc, r3]
+ 294              	.L26:
+ 295 00e6 02       		.byte	(.L25-.L26)/2
+ 296 00e7 09       		.byte	(.L27-.L26)/2
+ 297 00e8 10       		.byte	(.L28-.L26)/2
+ 298 00e9 18       		.byte	(.L29-.L26)/2
+ 299              		.p2align 1
+ 300              	.L25:
+  93:main.c        ****                 case 1:
+  94:main.c        ****                 PWM_WriteCompare1(PasosSM1[i]);  
+ 301              		.loc 1 94 0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 8
+
+
+ 302 00ea 644B     		ldr	r3, .L61
+ 303 00ec 03EB4403 		add	r3, r3, r4, lsl #1
+ 304 00f0 188B     		ldrh	r0, [r3, #24]
+ 305 00f2 FFF7FEFF 		bl	PWM_WriteCompare1
+ 306              	.LVL31:
+  95:main.c        ****                 break;
+ 307              		.loc 1 95 0
+ 308 00f6 15E0     		b	.L24
+ 309              	.L27:
+  96:main.c        ****                 case 2:
+  97:main.c        ****                 PWM_WriteCompare2(PasosSM2[i]);  
+ 310              		.loc 1 97 0
+ 311 00f8 604B     		ldr	r3, .L61
+ 312 00fa 03EB4403 		add	r3, r3, r4, lsl #1
+ 313 00fe 988E     		ldrh	r0, [r3, #52]
+ 314 0100 FFF7FEFF 		bl	PWM_WriteCompare2
+ 315              	.LVL32:
+  98:main.c        ****                 break;
+ 316              		.loc 1 98 0
+ 317 0104 0EE0     		b	.L24
+ 318              	.L28:
+  99:main.c        ****                 case 3:
+ 100:main.c        ****                 PWM_1_WriteCompare1(PasosSM3[i]);
+ 319              		.loc 1 100 0
+ 320 0106 5D4B     		ldr	r3, .L61
+ 321 0108 03EB4403 		add	r3, r3, r4, lsl #1
+ 322 010c B3F85000 		ldrh	r0, [r3, #80]
+ 323 0110 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 324              	.LVL33:
+ 101:main.c        ****                 break;
+ 325              		.loc 1 101 0
+ 326 0114 06E0     		b	.L24
+ 327              	.L29:
+ 102:main.c        ****                 case 4:
+ 103:main.c        ****                 PWM_1_WriteCompare2(PasosSM4[i]);
+ 328              		.loc 1 103 0
+ 329 0116 594B     		ldr	r3, .L61
+ 330 0118 03EB4403 		add	r3, r3, r4, lsl #1
+ 331 011c B3F86C00 		ldrh	r0, [r3, #108]
+ 332 0120 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 333              	.LVL34:
+ 334              	.L24:
+ 104:main.c        ****                 break;
+ 105:main.c        ****                 default:
+ 106:main.c        ****                 break;
+ 107:main.c        ****             }
+ 108:main.c        ****             CyDelay(200);
+ 335              		.loc 1 108 0 discriminator 2
+ 336 0124 C820     		movs	r0, #200
+ 337 0126 FFF7FEFF 		bl	CyDelay
+ 338              	.LVL35:
+  91:main.c        ****             switch (motor){
+ 339              		.loc 1 91 0 discriminator 2
+ 340 012a 0134     		adds	r4, r4, #1
+ 341              	.LVL36:
+ 342 012c E4B2     		uxtb	r4, r4
+ 343              	.LVL37:
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 9
+
+
+ 344 012e 00E0     		b	.L22
+ 345              	.LVL38:
+ 346              	.L58:
+ 347              	.LBE4:
+ 348 0130 0024     		movs	r4, #0
+ 349              	.LVL39:
+ 350              	.L22:
+ 351              	.LBB5:
+  91:main.c        ****             switch (motor){
+ 352              		.loc 1 91 0 is_stmt 0 discriminator 1
+ 353 0132 524B     		ldr	r3, .L61
+ 354 0134 4344     		add	r3, r3, r8
+ 355 0136 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 356 0138 9C42     		cmp	r4, r3
+ 357 013a CFD9     		bls	.L30
+ 358 013c BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 359              	.LVL40:
+ 360              	.L59:
+ 361              	.LBE5:
+ 109:main.c        ****         }
+ 110:main.c        ****     }else{  
+ 111:main.c        ****             
+ 112:main.c        ****             switch (motor){
+ 362              		.loc 1 112 0 is_stmt 1
+ 363 0140 013D     		subs	r5, r5, #1
+ 364 0142 032D     		cmp	r5, #3
+ 365 0144 00F29580 		bhi	.L32
+ 366 0148 DFE805F0 		tbb	[pc, r5]
+ 367              	.L34:
+ 368 014c 02       		.byte	(.L33-.L34)/2
+ 369 014d 49       		.byte	(.L35-.L34)/2
+ 370 014e 2E       		.byte	(.L36-.L34)/2
+ 371 014f 79       		.byte	(.L37-.L34)/2
+ 372              		.p2align 1
+ 373              	.L33:
+ 113:main.c        ****                 case 1:
+ 114:main.c        ****                 PWM_WriteCompare1(PasosSM1[Inferior[numero]]);
+ 374              		.loc 1 114 0
+ 375 0150 4A4B     		ldr	r3, .L61
+ 376 0152 03EB4707 		add	r7, r3, r7, lsl #1
+ 377 0156 388B     		ldrh	r0, [r7, #24]
+ 378 0158 FFF7FEFF 		bl	PWM_WriteCompare1
+ 379              	.LVL41:
+ 115:main.c        ****                 switch(numero){
+ 380              		.loc 1 115 0
+ 381 015c 012E     		cmp	r6, #1
+ 382 015e 08D0     		beq	.L39
+ 383 0160 16B1     		cbz	r6, .L40
+ 384 0162 042E     		cmp	r6, #4
+ 385 0164 0AD0     		beq	.L41
+ 386 0166 0DE0     		b	.L38
+ 387              	.L40:
+ 116:main.c        ****                     case 0:
+ 117:main.c        ****                         PWM_WriteCompare1(2800); 
+ 388              		.loc 1 117 0
+ 389 0168 4FF42F60 		mov	r0, #2800
+ 390 016c FFF7FEFF 		bl	PWM_WriteCompare1
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 10
+
+
+ 391              	.LVL42:
+ 118:main.c        ****                     break;
+ 392              		.loc 1 118 0
+ 393 0170 7FE0     		b	.L32
+ 394              	.L39:
+ 119:main.c        ****                     case 1:
+ 120:main.c        ****                         PWM_WriteCompare1(3300); 
+ 395              		.loc 1 120 0
+ 396 0172 40F6E440 		movw	r0, #3300
+ 397 0176 FFF7FEFF 		bl	PWM_WriteCompare1
+ 398              	.LVL43:
+ 121:main.c        ****                     break;
+ 399              		.loc 1 121 0
+ 400 017a 7AE0     		b	.L32
+ 401              	.L41:
+ 122:main.c        ****                     case 4:
+ 123:main.c        ****                         PWM_WriteCompare1(4200); 
+ 402              		.loc 1 123 0
+ 403 017c 41F26800 		movw	r0, #4200
+ 404 0180 FFF7FEFF 		bl	PWM_WriteCompare1
+ 405              	.LVL44:
+ 406              	.L38:
+ 407              	.LBB6:
+ 124:main.c        ****                     default:
+ 125:main.c        ****                         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+ 408              		.loc 1 125 0
+ 409 0184 3D4B     		ldr	r3, .L61
+ 410 0186 13F80840 		ldrb	r4, [r3, r8]	@ zero_extendqisi2
+ 411              	.LVL45:
+ 412 018a 07E0     		b	.L42
+ 413              	.L43:
+ 126:main.c        ****                             PWM_WriteCompare1(PasosSM1[i]); }
+ 414              		.loc 1 126 0 discriminator 3
+ 415 018c 3B4B     		ldr	r3, .L61
+ 416 018e 03EB4403 		add	r3, r3, r4, lsl #1
+ 417 0192 188B     		ldrh	r0, [r3, #24]
+ 418 0194 FFF7FEFF 		bl	PWM_WriteCompare1
+ 419              	.LVL46:
+ 125:main.c        ****                             PWM_WriteCompare1(PasosSM1[i]); }
+ 420              		.loc 1 125 0 discriminator 3
+ 421 0198 013C     		subs	r4, r4, #1
+ 422              	.LVL47:
+ 423 019a E4B2     		uxtb	r4, r4
+ 424              	.LVL48:
+ 425              	.L42:
+ 125:main.c        ****                             PWM_WriteCompare1(PasosSM1[i]); }
+ 426              		.loc 1 125 0 is_stmt 0 discriminator 1
+ 427 019c 374B     		ldr	r3, .L61
+ 428 019e 4344     		add	r3, r3, r8
+ 429 01a0 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 430 01a2 9C42     		cmp	r4, r3
+ 431 01a4 F2D8     		bhi	.L43
+ 432 01a6 64E0     		b	.L32
+ 433              	.LVL49:
+ 434              	.L36:
+ 435              	.LBE6:
+ 127:main.c        ****                     break;
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 11
+
+
+ 128:main.c        ****                 }
+ 129:main.c        ****                 break;
+ 130:main.c        ****                 case 3:
+ 131:main.c        ****                 PWM_1_WriteCompare1(PasosSM3[Inferior[numero]]);
+ 436              		.loc 1 131 0 is_stmt 1
+ 437 01a8 344B     		ldr	r3, .L61
+ 438 01aa 03EB4707 		add	r7, r3, r7, lsl #1
+ 439 01ae B7F85000 		ldrh	r0, [r7, #80]
+ 440 01b2 FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 441              	.LVL50:
+ 132:main.c        ****                 switch(numero){
+ 442              		.loc 1 132 0
+ 443 01b6 012E     		cmp	r6, #1
+ 444 01b8 5BD9     		bls	.L32
+ 445              	.LBB7:
+ 133:main.c        ****                     case 0:
+ 134:main.c        ****                     
+ 135:main.c        ****                     break;
+ 136:main.c        ****                     case 1:
+ 137:main.c        ****                     
+ 138:main.c        ****                     break;              
+ 139:main.c        ****                     default:
+ 140:main.c        ****                         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+ 446              		.loc 1 140 0
+ 447 01ba 304B     		ldr	r3, .L61
+ 448 01bc 9C5D     		ldrb	r4, [r3, r6]	@ zero_extendqisi2
+ 449              	.LVL51:
+ 450 01be 08E0     		b	.L45
+ 451              	.L46:
+ 141:main.c        ****                              PWM_1_WriteCompare1(PasosSM3[i]);}
+ 452              		.loc 1 141 0 discriminator 3
+ 453 01c0 2E4B     		ldr	r3, .L61
+ 454 01c2 03EB4403 		add	r3, r3, r4, lsl #1
+ 455 01c6 B3F85000 		ldrh	r0, [r3, #80]
+ 456 01ca FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 457              	.LVL52:
+ 140:main.c        ****                              PWM_1_WriteCompare1(PasosSM3[i]);}
+ 458              		.loc 1 140 0 discriminator 3
+ 459 01ce 013C     		subs	r4, r4, #1
+ 460              	.LVL53:
+ 461 01d0 E4B2     		uxtb	r4, r4
+ 462              	.LVL54:
+ 463              	.L45:
+ 140:main.c        ****                              PWM_1_WriteCompare1(PasosSM3[i]);}
+ 464              		.loc 1 140 0 is_stmt 0 discriminator 1
+ 465 01d2 2A4B     		ldr	r3, .L61
+ 466 01d4 4344     		add	r3, r3, r8
+ 467 01d6 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 468 01d8 9C42     		cmp	r4, r3
+ 469 01da F1D8     		bhi	.L46
+ 470 01dc 49E0     		b	.L32
+ 471              	.LVL55:
+ 472              	.L35:
+ 473              	.LBE7:
+ 142:main.c        ****                     break;
+ 143:main.c        ****                 }
+ 144:main.c        ****                         
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 12
+
+
+ 145:main.c        ****                 break;
+ 146:main.c        ****                 case 2:
+ 147:main.c        ****                 switch(numero){
+ 474              		.loc 1 147 0 is_stmt 1
+ 475 01de 013E     		subs	r6, r6, #1
+ 476 01e0 062E     		cmp	r6, #6
+ 477 01e2 26D8     		bhi	.L47
+ 478 01e4 DFE806F0 		tbb	[pc, r6]
+ 479              	.L49:
+ 480 01e8 04       		.byte	(.L48-.L49)/2
+ 481 01e9 09       		.byte	(.L50-.L49)/2
+ 482 01ea 25       		.byte	(.L47-.L49)/2
+ 483 01eb 0E       		.byte	(.L51-.L49)/2
+ 484 01ec 13       		.byte	(.L52-.L49)/2
+ 485 01ed 25       		.byte	(.L47-.L49)/2
+ 486 01ee 18       		.byte	(.L53-.L49)/2
+ 487 01ef 00       		.p2align 1
+ 488              	.L48:
+ 148:main.c        ****                     PWM_WriteCompare2(PasosSM2[Inferior[numero]]);
+ 149:main.c        ****                     case 1:
+ 150:main.c        ****                         PWM_WriteCompare2(3300); 
+ 489              		.loc 1 150 0
+ 490 01f0 40F6E440 		movw	r0, #3300
+ 491 01f4 FFF7FEFF 		bl	PWM_WriteCompare2
+ 492              	.LVL56:
+ 151:main.c        ****                     break;
+ 493              		.loc 1 151 0
+ 494 01f8 3BE0     		b	.L32
+ 495              	.L50:
+ 152:main.c        ****                     case 2:
+ 153:main.c        ****                         PWM_WriteCompare2(3590); 
+ 496              		.loc 1 153 0
+ 497 01fa 40F60660 		movw	r0, #3590
+ 498 01fe FFF7FEFF 		bl	PWM_WriteCompare2
+ 499              	.LVL57:
+ 154:main.c        ****                     break;
+ 500              		.loc 1 154 0
+ 501 0202 36E0     		b	.L32
+ 502              	.L51:
+ 155:main.c        ****                     case 4:
+ 156:main.c        ****                         PWM_WriteCompare2(4400); 
+ 503              		.loc 1 156 0
+ 504 0204 41F23010 		movw	r0, #4400
+ 505 0208 FFF7FEFF 		bl	PWM_WriteCompare2
+ 506              	.LVL58:
+ 157:main.c        ****                     break;
+ 507              		.loc 1 157 0
+ 508 020c 31E0     		b	.L32
+ 509              	.L52:
+ 158:main.c        ****                     case 5:
+ 159:main.c        ****                         PWM_WriteCompare2(4000); 
+ 510              		.loc 1 159 0
+ 511 020e 4FF47A60 		mov	r0, #4000
+ 512 0212 FFF7FEFF 		bl	PWM_WriteCompare2
+ 513              	.LVL59:
+ 160:main.c        ****                     break;
+ 514              		.loc 1 160 0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 13
+
+
+ 515 0216 2CE0     		b	.L32
+ 516              	.L53:
+ 161:main.c        ****                     case 7:
+ 162:main.c        ****                         PWM_WriteCompare2(3690); 
+ 517              		.loc 1 162 0
+ 518 0218 40F66A60 		movw	r0, #3690
+ 519 021c FFF7FEFF 		bl	PWM_WriteCompare2
+ 520              	.LVL60:
+ 163:main.c        ****                     break;
+ 521              		.loc 1 163 0
+ 522 0220 27E0     		b	.L32
+ 523              	.LVL61:
+ 524              	.L54:
+ 525              	.LBB8:
+ 164:main.c        ****                     default:
+ 165:main.c        ****                         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+ 166:main.c        ****                         PWM_WriteCompare2(PasosSM2[i]);
+ 526              		.loc 1 166 0 discriminator 3
+ 527 0222 164B     		ldr	r3, .L61
+ 528 0224 03EB4703 		add	r3, r3, r7, lsl #1
+ 529 0228 988E     		ldrh	r0, [r3, #52]
+ 530 022a FFF7FEFF 		bl	PWM_WriteCompare2
+ 531              	.LVL62:
+ 165:main.c        ****                         PWM_WriteCompare2(PasosSM2[i]);
+ 532              		.loc 1 165 0 discriminator 3
+ 533 022e 013F     		subs	r7, r7, #1
+ 534              	.LVL63:
+ 535 0230 FFB2     		uxtb	r7, r7
+ 536              	.LVL64:
+ 537              	.L47:
+ 165:main.c        ****                         PWM_WriteCompare2(PasosSM2[i]);
+ 538              		.loc 1 165 0 is_stmt 0 discriminator 1
+ 539 0232 124B     		ldr	r3, .L61
+ 540 0234 4344     		add	r3, r3, r8
+ 541 0236 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 542 0238 9F42     		cmp	r7, r3
+ 543 023a F2D8     		bhi	.L54
+ 544 023c 19E0     		b	.L32
+ 545              	.LVL65:
+ 546              	.L37:
+ 547              	.LBE8:
+ 167:main.c        ****                         }
+ 168:main.c        ****                     break;
+ 169:main.c        ****                 }
+ 170:main.c        ****                 break;
+ 171:main.c        ****                 case 4:
+ 172:main.c        ****                 PWM_1_WriteCompare2(PasosSM4[Inferior[numero]]);
+ 548              		.loc 1 172 0 is_stmt 1
+ 549 023e 0F4B     		ldr	r3, .L61
+ 550 0240 03EB4707 		add	r7, r3, r7, lsl #1
+ 551 0244 B7F86C00 		ldrh	r0, [r7, #108]
+ 552 0248 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 553              	.LVL66:
+ 173:main.c        ****                 switch(numero){
+ 554              		.loc 1 173 0
+ 555 024c 012E     		cmp	r6, #1
+ 556 024e 10D9     		bls	.L32
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 14
+
+
+ 557              	.LBB9:
+ 174:main.c        ****                     case 0:
+ 175:main.c        ****                     
+ 176:main.c        ****                     break;
+ 177:main.c        ****                     case 1:
+ 178:main.c        ****                     
+ 179:main.c        ****                     break;              
+ 180:main.c        ****                     default:
+ 181:main.c        ****                         for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+ 558              		.loc 1 181 0
+ 559 0250 0A4B     		ldr	r3, .L61
+ 560 0252 9C5D     		ldrb	r4, [r3, r6]	@ zero_extendqisi2
+ 561              	.LVL67:
+ 562 0254 08E0     		b	.L56
+ 563              	.L57:
+ 182:main.c        ****                             PWM_1_WriteCompare2(PasosSM4[i]);
+ 564              		.loc 1 182 0 discriminator 3
+ 565 0256 094B     		ldr	r3, .L61
+ 566 0258 03EB4403 		add	r3, r3, r4, lsl #1
+ 567 025c B3F86C00 		ldrh	r0, [r3, #108]
+ 568 0260 FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 569              	.LVL68:
+ 181:main.c        ****                             PWM_1_WriteCompare2(PasosSM4[i]);
+ 570              		.loc 1 181 0 discriminator 3
+ 571 0264 013C     		subs	r4, r4, #1
+ 572              	.LVL69:
+ 573 0266 E4B2     		uxtb	r4, r4
+ 574              	.LVL70:
+ 575              	.L56:
+ 181:main.c        ****                             PWM_1_WriteCompare2(PasosSM4[i]);
+ 576              		.loc 1 181 0 is_stmt 0 discriminator 1
+ 577 0268 044B     		ldr	r3, .L61
+ 578 026a 4344     		add	r3, r3, r8
+ 579 026c 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
+ 580 026e 9C42     		cmp	r4, r3
+ 581 0270 F1D8     		bhi	.L57
+ 582              	.LVL71:
+ 583              	.L32:
+ 584              	.LBE9:
+ 183:main.c        ****                         }
+ 184:main.c        ****                     break;
+ 185:main.c        ****                 }
+ 186:main.c        ****                 break;
+ 187:main.c        ****                 
+ 188:main.c        ****                 default:
+ 189:main.c        ****                 break;
+ 190:main.c        ****             }
+ 191:main.c        ****             CyDelay(200); 
+ 585              		.loc 1 191 0 is_stmt 1
+ 586 0272 C820     		movs	r0, #200
+ 587 0274 FFF7FEFF 		bl	CyDelay
+ 588              	.LVL72:
+ 589 0278 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 590              	.L62:
+ 591              		.align	2
+ 592              	.L61:
+ 593 027c 00000000 		.word	.LANCHOR0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 15
+
+
+ 594              		.cfi_endproc
+ 595              	.LFE64:
+ 596              		.size	Numero, .-Numero
+ 597              		.section	.text.tiempo,"ax",%progbits
+ 598              		.align	2
+ 599              		.global	tiempo
+ 600              		.thumb
+ 601              		.thumb_func
+ 602              		.type	tiempo, %function
+ 603              	tiempo:
+ 604              	.LFB65:
+ 192:main.c        ****         }
+ 193:main.c        ****         
+ 194:main.c        ****     }
+ 195:main.c        **** void tiempo(uint8 aumento){
+ 605              		.loc 1 195 0
+ 606              		.cfi_startproc
+ 607              		@ args = 0, pretend = 0, frame = 0
+ 608              		@ frame_needed = 0, uses_anonymous_args = 0
+ 609              	.LVL73:
+ 610 0000 08B5     		push	{r3, lr}
+ 611              		.cfi_def_cfa_offset 8
+ 612              		.cfi_offset 3, -8
+ 613              		.cfi_offset 14, -4
+ 196:main.c        **** seg=seg+aumento;
+ 614              		.loc 1 196 0
+ 615 0002 214A     		ldr	r2, .L67
+ 616 0004 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 617 0006 1844     		add	r0, r0, r3
+ 618              	.LVL74:
+ 619 0008 C0B2     		uxtb	r0, r0
+ 620 000a 1070     		strb	r0, [r2]
+ 197:main.c        ****  if(seg>=60){    
+ 621              		.loc 1 197 0
+ 622 000c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 623 000e DBB2     		uxtb	r3, r3
+ 624 0010 3B2B     		cmp	r3, #59
+ 625 0012 37D9     		bls	.L63
+ 198:main.c        **** 		seg=0;
+ 626              		.loc 1 198 0
+ 627 0014 0022     		movs	r2, #0
+ 628 0016 1C4B     		ldr	r3, .L67
+ 629 0018 1A70     		strb	r2, [r3]
+ 199:main.c        **** 		u_min++;
+ 630              		.loc 1 199 0
+ 631 001a 1C4A     		ldr	r2, .L67+4
+ 632 001c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 633 001e 0133     		adds	r3, r3, #1
+ 634 0020 DBB2     		uxtb	r3, r3
+ 635 0022 1370     		strb	r3, [r2]
+ 200:main.c        **** 		if(u_min == 10){
+ 636              		.loc 1 200 0
+ 637 0024 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 638 0026 DBB2     		uxtb	r3, r3
+ 639 0028 0A2B     		cmp	r3, #10
+ 640 002a 26D1     		bne	.L65
+ 201:main.c        **** 			u_min=0;
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 16
+
+
+ 641              		.loc 1 201 0
+ 642 002c 0022     		movs	r2, #0
+ 643 002e 174B     		ldr	r3, .L67+4
+ 644 0030 1A70     		strb	r2, [r3]
+ 202:main.c        **** 			d_min++;
+ 645              		.loc 1 202 0
+ 646 0032 174A     		ldr	r2, .L67+8
+ 647 0034 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 648 0036 0133     		adds	r3, r3, #1
+ 649 0038 DBB2     		uxtb	r3, r3
+ 650 003a 1370     		strb	r3, [r2]
+ 203:main.c        **** 			if(d_min==6){
+ 651              		.loc 1 203 0
+ 652 003c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 653 003e DBB2     		uxtb	r3, r3
+ 654 0040 062B     		cmp	r3, #6
+ 655 0042 1AD1     		bne	.L65
+ 204:main.c        **** 				d_min=0;
+ 656              		.loc 1 204 0
+ 657 0044 0022     		movs	r2, #0
+ 658 0046 124B     		ldr	r3, .L67+8
+ 659 0048 1A70     		strb	r2, [r3]
+ 205:main.c        **** 				u_hora++;
+ 660              		.loc 1 205 0
+ 661 004a 124A     		ldr	r2, .L67+12
+ 662 004c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 663 004e 0133     		adds	r3, r3, #1
+ 664 0050 DBB2     		uxtb	r3, r3
+ 665 0052 1370     		strb	r3, [r2]
+ 206:main.c        **** 				if(u_hora==10){
+ 666              		.loc 1 206 0
+ 667 0054 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 668 0056 DBB2     		uxtb	r3, r3
+ 669 0058 0A2B     		cmp	r3, #10
+ 670 005a 0ED1     		bne	.L65
+ 207:main.c        **** 					u_hora=0;
+ 671              		.loc 1 207 0
+ 672 005c 0022     		movs	r2, #0
+ 673 005e 0D4B     		ldr	r3, .L67+12
+ 674 0060 1A70     		strb	r2, [r3]
+ 208:main.c        **** 					d_hora++;
+ 675              		.loc 1 208 0
+ 676 0062 0D4A     		ldr	r2, .L67+16
+ 677 0064 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 678 0066 0133     		adds	r3, r3, #1
+ 679 0068 DBB2     		uxtb	r3, r3
+ 680 006a 1370     		strb	r3, [r2]
+ 209:main.c        ****                     if(d_hora==2){
+ 681              		.loc 1 209 0
+ 682 006c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 683 006e DBB2     		uxtb	r3, r3
+ 684 0070 022B     		cmp	r3, #2
+ 685 0072 02D1     		bne	.L65
+ 210:main.c        **** 						    //Reinicia Reloj
+ 211:main.c        **** 			    		d_hora=0;
+ 686              		.loc 1 211 0
+ 687 0074 0022     		movs	r2, #0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 17
+
+
+ 688 0076 084B     		ldr	r3, .L67+16
+ 689 0078 1A70     		strb	r2, [r3]
+ 690              	.L65:
+ 212:main.c        **** 						}
+ 213:main.c        ****                     //Numero(d_hora,4);
+ 214:main.c        **** 					}
+ 215:main.c        ****                 //Numero(u_hora,3);
+ 216:main.c        **** 				}
+ 217:main.c        ****                 //Numero(d_min,1);
+ 218:main.c        **** 			}
+ 219:main.c        ****             Numero(u_min,3);
+ 691              		.loc 1 219 0
+ 692 007a 044B     		ldr	r3, .L67+4
+ 693 007c 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 694 007e 0321     		movs	r1, #3
+ 695 0080 FFF7FEFF 		bl	Numero
+ 696              	.LVL75:
+ 697              	.L63:
+ 698 0084 08BD     		pop	{r3, pc}
+ 699              	.L68:
+ 700 0086 00BF     		.align	2
+ 701              	.L67:
+ 702 0088 00000000 		.word	seg
+ 703 008c 00000000 		.word	u_min
+ 704 0090 00000000 		.word	d_min
+ 705 0094 00000000 		.word	u_hora
+ 706 0098 00000000 		.word	d_hora
+ 707              		.cfi_endproc
+ 708              	.LFE65:
+ 709              		.size	tiempo, .-tiempo
+ 710              		.section	.text.INT_SE,"ax",%progbits
+ 711              		.align	2
+ 712              		.global	INT_SE
+ 713              		.thumb
+ 714              		.thumb_func
+ 715              		.type	INT_SE, %function
+ 716              	INT_SE:
+ 717              	.LFB66:
+ 220:main.c        **** 		}
+ 221:main.c        ****         
+ 222:main.c        **** 	}
+ 223:main.c        **** 
+ 224:main.c        **** 
+ 225:main.c        **** CY_ISR(INT_SE){
+ 718              		.loc 1 225 0
+ 719              		.cfi_startproc
+ 720              		@ args = 0, pretend = 0, frame = 0
+ 721              		@ frame_needed = 0, uses_anonymous_args = 0
+ 722 0000 08B5     		push	{r3, lr}
+ 723              		.cfi_def_cfa_offset 8
+ 724              		.cfi_offset 3, -8
+ 725              		.cfi_offset 14, -4
+ 226:main.c        ****       tiempo(1); // Se llama tiempo cuando se llega al limite
+ 726              		.loc 1 226 0
+ 727 0002 0120     		movs	r0, #1
+ 728 0004 FFF7FEFF 		bl	tiempo
+ 729              	.LVL76:
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 18
+
+
+ 227:main.c        ****       visualLCD();  
+ 730              		.loc 1 227 0
+ 731 0008 FFF7FEFF 		bl	visualLCD
+ 732              	.LVL77:
+ 733 000c 08BD     		pop	{r3, pc}
+ 734              		.cfi_endproc
+ 735              	.LFE66:
+ 736              		.size	INT_SE, .-INT_SE
+ 737 000e 00BF     		.section	.text.INT_SWI,"ax",%progbits
+ 738              		.align	2
+ 739              		.global	INT_SWI
+ 740              		.thumb
+ 741              		.thumb_func
+ 742              		.type	INT_SWI, %function
+ 743              	INT_SWI:
+ 744              	.LFB67:
+ 228:main.c        **** }
+ 229:main.c        ****     
+ 230:main.c        **** CY_ISR(INT_SWI){
+ 745              		.loc 1 230 0
+ 746              		.cfi_startproc
+ 747              		@ args = 0, pretend = 0, frame = 0
+ 748              		@ frame_needed = 0, uses_anonymous_args = 0
+ 749 0000 08B5     		push	{r3, lr}
+ 750              		.cfi_def_cfa_offset 8
+ 751              		.cfi_offset 3, -8
+ 752              		.cfi_offset 14, -4
+ 231:main.c        ****     CyDelay(1);
+ 753              		.loc 1 231 0
+ 754 0002 0120     		movs	r0, #1
+ 755 0004 FFF7FEFF 		bl	CyDelay
+ 756              	.LVL78:
+ 232:main.c        ****     switch(SWI_Read()){
+ 757              		.loc 1 232 0
+ 758 0008 FFF7FEFF 		bl	SWI_Read
+ 759              	.LVL79:
+ 760 000c 0128     		cmp	r0, #1
+ 761 000e 02D0     		beq	.L73
+ 762 0010 0228     		cmp	r0, #2
+ 763 0012 1ED0     		beq	.L74
+ 764 0014 28E0     		b	.L72
+ 765              	.L73:
+ 233:main.c        ****     case 0b00000001:
+ 234:main.c        ****       if(aux==1){
+ 766              		.loc 1 234 0
+ 767 0016 164B     		ldr	r3, .L78
+ 768 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 769 001a 012B     		cmp	r3, #1
+ 770 001c 0CD1     		bne	.L75
+ 235:main.c        ****         LCD_Position(1,0);
+ 771              		.loc 1 235 0
+ 772 001e 0021     		movs	r1, #0
+ 773 0020 0120     		movs	r0, #1
+ 774 0022 FFF7FEFF 		bl	LCD_Position
+ 775              	.LVL80:
+ 236:main.c        ****         LCD_PrintString("Configuracion");
+ 776              		.loc 1 236 0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 19
+
+
+ 777 0026 1348     		ldr	r0, .L78+4
+ 778 0028 FFF7FEFF 		bl	LCD_PrintString
+ 779              	.LVL81:
+ 237:main.c        ****         Timer_Stop();
+ 780              		.loc 1 237 0
+ 781 002c FFF7FEFF 		bl	Timer_Stop
+ 782              	.LVL82:
+ 238:main.c        ****         aux=0;
+ 783              		.loc 1 238 0
+ 784 0030 0022     		movs	r2, #0
+ 785 0032 0F4B     		ldr	r3, .L78
+ 786 0034 1A70     		strb	r2, [r3]
+ 787 0036 17E0     		b	.L72
+ 788              	.L75:
+ 239:main.c        ****         }else{
+ 240:main.c        ****         LCD_Position(1,0);
+ 789              		.loc 1 240 0
+ 790 0038 0021     		movs	r1, #0
+ 791 003a 0120     		movs	r0, #1
+ 792 003c FFF7FEFF 		bl	LCD_Position
+ 793              	.LVL83:
+ 241:main.c        ****         LCD_PrintString("             ");
+ 794              		.loc 1 241 0
+ 795 0040 0D48     		ldr	r0, .L78+8
+ 796 0042 FFF7FEFF 		bl	LCD_PrintString
+ 797              	.LVL84:
+ 242:main.c        ****         Timer_Start();
+ 798              		.loc 1 242 0
+ 799 0046 FFF7FEFF 		bl	Timer_Start
+ 800              	.LVL85:
+ 243:main.c        ****         aux=1;
+ 801              		.loc 1 243 0
+ 802 004a 0122     		movs	r2, #1
+ 803 004c 084B     		ldr	r3, .L78
+ 804 004e 1A70     		strb	r2, [r3]
+ 805 0050 0AE0     		b	.L72
+ 806              	.L74:
+ 244:main.c        ****       }
+ 245:main.c        ****         break;
+ 246:main.c        ****     case 0b00000010:
+ 247:main.c        ****         if(aux==0){
+ 807              		.loc 1 247 0
+ 808 0052 074B     		ldr	r3, .L78
+ 809 0054 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 810 0056 2BB9     		cbnz	r3, .L76
+ 248:main.c        ****         tiempo(60);
+ 811              		.loc 1 248 0
+ 812 0058 3C20     		movs	r0, #60
+ 813 005a FFF7FEFF 		bl	tiempo
+ 814              	.LVL86:
+ 249:main.c        ****         seg=0;//Segundos en Cero
+ 815              		.loc 1 249 0
+ 816 005e 0022     		movs	r2, #0
+ 817 0060 064B     		ldr	r3, .L78+12
+ 818 0062 1A70     		strb	r2, [r3]
+ 819              	.L76:
+ 250:main.c        ****         }
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 20
+
+
+ 251:main.c        ****         visualLCD();
+ 820              		.loc 1 251 0
+ 821 0064 FFF7FEFF 		bl	visualLCD
+ 822              	.LVL87:
+ 823              	.L72:
+ 252:main.c        ****         break;
+ 253:main.c        ****      default:
+ 254:main.c        ****         break;
+ 255:main.c        ****     }
+ 256:main.c        ****     SWI_ClearInterrupt();
+ 824              		.loc 1 256 0
+ 825 0068 FFF7FEFF 		bl	SWI_ClearInterrupt
+ 826              	.LVL88:
+ 827 006c 08BD     		pop	{r3, pc}
+ 828              	.L79:
+ 829 006e 00BF     		.align	2
+ 830              	.L78:
+ 831 0070 00000000 		.word	aux
+ 832 0074 14000000 		.word	.LC2
+ 833 0078 00000000 		.word	.LC0
+ 834 007c 00000000 		.word	seg
+ 835              		.cfi_endproc
+ 836              	.LFE67:
+ 837              		.size	INT_SWI, .-INT_SWI
+ 838              		.section	.text.main,"ax",%progbits
+ 839              		.align	2
+ 840              		.global	main
+ 841              		.thumb
+ 842              		.thumb_func
+ 843              		.type	main, %function
+ 844              	main:
+ 845              	.LFB68:
+ 257:main.c        **** }
+ 258:main.c        **** 
+ 259:main.c        **** int main(){
+ 846              		.loc 1 259 0
+ 847              		.cfi_startproc
+ 848              		@ Volatile: function does not return.
+ 849              		@ args = 0, pretend = 0, frame = 0
+ 850              		@ frame_needed = 0, uses_anonymous_args = 0
+ 851 0000 08B5     		push	{r3, lr}
+ 852              		.cfi_def_cfa_offset 8
+ 853              		.cfi_offset 3, -8
+ 854              		.cfi_offset 14, -4
+ 260:main.c        **** 
+ 261:main.c        ****     
+ 262:main.c        ****     
+ 263:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 855              		.loc 1 263 0
+ 856              		.syntax unified
+ 857              	@ 263 "main.c" 1
+ 858 0002 62B6     		CPSIE   i
+ 859              	@ 0 "" 2
+ 264:main.c        **** 
+ 265:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+ 266:main.c        ****     ISR_SWI_StartEx(INT_SWI);
+ 860              		.loc 1 266 0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 21
+
+
+ 861              		.thumb
+ 862              		.syntax unified
+ 863 0004 1548     		ldr	r0, .L83
+ 864 0006 FFF7FEFF 		bl	ISR_SWI_StartEx
+ 865              	.LVL89:
+ 267:main.c        ****     ISR_SE_StartEx(INT_SE);
+ 866              		.loc 1 267 0
+ 867 000a 1548     		ldr	r0, .L83+4
+ 868 000c FFF7FEFF 		bl	ISR_SE_StartEx
+ 869              	.LVL90:
+ 268:main.c        ****     PWM_Start();
+ 870              		.loc 1 268 0
+ 871 0010 FFF7FEFF 		bl	PWM_Start
+ 872              	.LVL91:
+ 269:main.c        ****     PWM_1_Start();
+ 873              		.loc 1 269 0
+ 874 0014 FFF7FEFF 		bl	PWM_1_Start
+ 875              	.LVL92:
+ 270:main.c        ****     LCD_Start();
+ 876              		.loc 1 270 0
+ 877 0018 FFF7FEFF 		bl	LCD_Start
+ 878              	.LVL93:
+ 271:main.c        ****     Timer_Start();
+ 879              		.loc 1 271 0
+ 880 001c FFF7FEFF 		bl	Timer_Start
+ 881              	.LVL94:
+ 272:main.c        ****      
+ 273:main.c        ****     d_hora=0;
+ 882              		.loc 1 273 0
+ 883 0020 104C     		ldr	r4, .L83+8
+ 884 0022 0023     		movs	r3, #0
+ 885 0024 2370     		strb	r3, [r4]
+ 274:main.c        ****     u_hora=0;
+ 886              		.loc 1 274 0
+ 887 0026 104D     		ldr	r5, .L83+12
+ 888 0028 2B70     		strb	r3, [r5]
+ 275:main.c        ****     d_min=0;
+ 889              		.loc 1 275 0
+ 890 002a 104E     		ldr	r6, .L83+16
+ 891 002c 3370     		strb	r3, [r6]
+ 276:main.c        ****     u_min=0;
+ 892              		.loc 1 276 0
+ 893 002e 104A     		ldr	r2, .L83+20
+ 894 0030 1370     		strb	r3, [r2]
+ 277:main.c        ****     seg=0;
+ 895              		.loc 1 277 0
+ 896 0032 1049     		ldr	r1, .L83+24
+ 897 0034 0B70     		strb	r3, [r1]
+ 278:main.c        ****     aux=1;
+ 898              		.loc 1 278 0
+ 899 0036 0121     		movs	r1, #1
+ 900 0038 0F4B     		ldr	r3, .L83+28
+ 901 003a 1970     		strb	r1, [r3]
+ 279:main.c        ****     Numero(u_min,1);
+ 902              		.loc 1 279 0
+ 903 003c 1078     		ldrb	r0, [r2]	@ zero_extendqisi2
+ 904 003e FFF7FEFF 		bl	Numero
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 22
+
+
+ 905              	.LVL95:
+ 280:main.c        ****     Numero(d_min,2);
+ 906              		.loc 1 280 0
+ 907 0042 3078     		ldrb	r0, [r6]	@ zero_extendqisi2
+ 908 0044 0221     		movs	r1, #2
+ 909 0046 FFF7FEFF 		bl	Numero
+ 910              	.LVL96:
+ 281:main.c        ****     Numero(u_hora,3);
+ 911              		.loc 1 281 0
+ 912 004a 2878     		ldrb	r0, [r5]	@ zero_extendqisi2
+ 913 004c 0321     		movs	r1, #3
+ 914 004e FFF7FEFF 		bl	Numero
+ 915              	.LVL97:
+ 282:main.c        ****     Numero(d_hora,4);
+ 916              		.loc 1 282 0
+ 917 0052 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 918 0054 0421     		movs	r1, #4
+ 919 0056 FFF7FEFF 		bl	Numero
+ 920              	.LVL98:
+ 921              	.L81:
+ 922 005a FEE7     		b	.L81
+ 923              	.L84:
+ 924              		.align	2
+ 925              	.L83:
+ 926 005c 00000000 		.word	INT_SWI
+ 927 0060 00000000 		.word	INT_SE
+ 928 0064 00000000 		.word	d_hora
+ 929 0068 00000000 		.word	u_hora
+ 930 006c 00000000 		.word	d_min
+ 931 0070 00000000 		.word	u_min
+ 932 0074 00000000 		.word	seg
+ 933 0078 00000000 		.word	aux
+ 934              		.cfi_endproc
+ 935              	.LFE68:
+ 936              		.size	main, .-main
+ 937              		.global	PasosSM4
+ 938              		.global	PasosSM3
+ 939              		.global	PasosSM2
+ 940              		.global	PasosSM1
+ 941              		.global	Superior
+ 942              		.global	Inferior
+ 943              		.comm	aux,1,1
+ 944              		.global	de
+ 945              		.comm	count,2,2
+ 946              		.comm	d_hora,1,1
+ 947              		.comm	u_hora,1,1
+ 948              		.comm	d_min,1,1
+ 949              		.comm	u_min,1,1
+ 950              		.comm	seg,1,1
+ 951              		.data
+ 952              		.align	2
+ 953              		.set	.LANCHOR0,. + 0
+ 954              		.type	Inferior, %object
+ 955              		.size	Inferior, 10
+ 956              	Inferior:
+ 957 0000 0C       		.byte	12
+ 958 0001 09       		.byte	9
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 23
+
+
+ 959 0002 0B       		.byte	11
+ 960 0003 0A       		.byte	10
+ 961 0004 09       		.byte	9
+ 962 0005 0A       		.byte	10
+ 963 0006 00       		.byte	0
+ 964 0007 09       		.byte	9
+ 965 0008 00       		.byte	0
+ 966 0009 09       		.byte	9
+ 967 000a 0000     		.space	2
+ 968              		.type	Superior, %object
+ 969              		.size	Superior, 10
+ 970              	Superior:
+ 971 000c 08       		.byte	8
+ 972 000d 07       		.byte	7
+ 973 000e 06       		.byte	6
+ 974 000f 06       		.byte	6
+ 975 0010 04       		.byte	4
+ 976 0011 05       		.byte	5
+ 977 0012 05       		.byte	5
+ 978 0013 06       		.byte	6
+ 979 0014 08       		.byte	8
+ 980 0015 08       		.byte	8
+ 981 0016 0000     		.space	2
+ 982              		.type	PasosSM1, %object
+ 983              		.size	PasosSM1, 26
+ 984              	PasosSM1:
+ 985 0018 4416     		.short	5700
+ 986 001a 0415     		.short	5380
+ 987 001c 1414     		.short	5140
+ 988 001e CA12     		.short	4810
+ 989 0020 9411     		.short	4500
+ 990 0022 3C0F     		.short	3900
+ 991 0024 600E     		.short	3680
+ 992 0026 AC0D     		.short	3500
+ 993 0028 1C0C     		.short	3100
+ 994 002a 6D0B     		.short	2925
+ 995 002c FC08     		.short	2300
+ 996 002e 1608     		.short	2070
+ 997 0030 CC06     		.short	1740
+ 998 0032 0000     		.space	2
+ 999              		.type	PasosSM2, %object
+ 1000              		.size	PasosSM2, 26
+ 1001              	PasosSM2:
+ 1002 0034 4416     		.short	5700
+ 1003 0036 0415     		.short	5380
+ 1004 0038 1414     		.short	5140
+ 1005 003a CA12     		.short	4810
+ 1006 003c 9411     		.short	4500
+ 1007 003e CC10     		.short	4300
+ 1008 0040 600E     		.short	3680
+ 1009 0042 AC0D     		.short	3500
+ 1010 0044 1C0C     		.short	3100
+ 1011 0046 6D0B     		.short	2925
+ 1012 0048 FC08     		.short	2300
+ 1013 004a 1608     		.short	2070
+ 1014 004c CC06     		.short	1740
+ 1015 004e 0000     		.space	2
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 24
+
+
+ 1016              		.type	PasosSM3, %object
+ 1017              		.size	PasosSM3, 26
+ 1018              	PasosSM3:
+ 1019 0050 4416     		.short	5700
+ 1020 0052 0415     		.short	5380
+ 1021 0054 1414     		.short	5140
+ 1022 0056 CA12     		.short	4810
+ 1023 0058 9411     		.short	4500
+ 1024 005a CC10     		.short	4300
+ 1025 005c 600E     		.short	3680
+ 1026 005e AC0D     		.short	3500
+ 1027 0060 1C0C     		.short	3100
+ 1028 0062 6D0B     		.short	2925
+ 1029 0064 FC08     		.short	2300
+ 1030 0066 1608     		.short	2070
+ 1031 0068 CC06     		.short	1740
+ 1032 006a 0000     		.space	2
+ 1033              		.type	PasosSM4, %object
+ 1034              		.size	PasosSM4, 26
+ 1035              	PasosSM4:
+ 1036 006c 4416     		.short	5700
+ 1037 006e 0415     		.short	5380
+ 1038 0070 1414     		.short	5140
+ 1039 0072 CA12     		.short	4810
+ 1040 0074 9411     		.short	4500
+ 1041 0076 CC10     		.short	4300
+ 1042 0078 600E     		.short	3680
+ 1043 007a AC0D     		.short	3500
+ 1044 007c 1C0C     		.short	3100
+ 1045 007e 6D0B     		.short	2925
+ 1046 0080 FC08     		.short	2300
+ 1047 0082 1608     		.short	2070
+ 1048 0084 CC06     		.short	1740
+ 1049              		.type	de, %object
+ 1050              		.size	de, 1
+ 1051              	de:
+ 1052 0086 01       		.byte	1
+ 1053              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1054              		.align	2
+ 1055              	.LC0:
+ 1056 0000 20202020 		.ascii	"             \000"
+ 1056      20202020 
+ 1056      20202020 
+ 1056      2000
+ 1057 000e 0000     		.space	2
+ 1058              	.LC1:
+ 1059 0010 3A00     		.ascii	":\000"
+ 1060 0012 0000     		.space	2
+ 1061              	.LC2:
+ 1062 0014 436F6E66 		.ascii	"Configuracion\000"
+ 1062      69677572 
+ 1062      6163696F 
+ 1062      6E00
+ 1063              		.text
+ 1064              	.Letext0:
+ 1065              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1066              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 25
+
+
+ 1067              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 1068              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 1069              		.file 6 "Generated_Source\\PSoC5/LCD.h"
+ 1070              		.file 7 "Generated_Source\\PSoC5/PWM.h"
+ 1071              		.file 8 "Generated_Source\\PSoC5/PWM_1.h"
+ 1072              		.file 9 "Generated_Source\\PSoC5/CyLib.h"
+ 1073              		.file 10 "Generated_Source\\PSoC5/SWI.h"
+ 1074              		.file 11 "Generated_Source\\PSoC5/Timer.h"
+ 1075              		.file 12 "Generated_Source\\PSoC5/ISR_SWI.h"
+ 1076              		.file 13 "Generated_Source\\PSoC5/ISR_SE.h"
+ 1077              		.section	.debug_info,"",%progbits
+ 1078              	.Ldebug_info0:
+ 1079 0000 45080000 		.4byte	0x845
+ 1080 0004 0400     		.2byte	0x4
+ 1081 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1082 000a 04       		.byte	0x4
+ 1083 000b 01       		.uleb128 0x1
+ 1084 000c 9D020000 		.4byte	.LASF54
+ 1085 0010 0C       		.byte	0xc
+ 1086 0011 CC010000 		.4byte	.LASF55
+ 1087 0015 0F020000 		.4byte	.LASF56
+ 1088 0019 18000000 		.4byte	.Ldebug_ranges0+0x18
+ 1089 001d 00000000 		.4byte	0
+ 1090 0021 00000000 		.4byte	.Ldebug_line0
+ 1091 0025 02       		.uleb128 0x2
+ 1092 0026 01       		.byte	0x1
+ 1093 0027 06       		.byte	0x6
+ 1094 0028 09010000 		.4byte	.LASF0
+ 1095 002c 02       		.uleb128 0x2
+ 1096 002d 01       		.byte	0x1
+ 1097 002e 08       		.byte	0x8
+ 1098 002f FB000000 		.4byte	.LASF1
+ 1099 0033 02       		.uleb128 0x2
+ 1100 0034 02       		.byte	0x2
+ 1101 0035 05       		.byte	0x5
+ 1102 0036 13000000 		.4byte	.LASF2
+ 1103 003a 02       		.uleb128 0x2
+ 1104 003b 02       		.byte	0x2
+ 1105 003c 07       		.byte	0x7
+ 1106 003d 60010000 		.4byte	.LASF3
+ 1107 0041 03       		.uleb128 0x3
+ 1108 0042 FB010000 		.4byte	.LASF9
+ 1109 0046 02       		.byte	0x2
+ 1110 0047 3F       		.byte	0x3f
+ 1111 0048 4C000000 		.4byte	0x4c
+ 1112 004c 02       		.uleb128 0x2
+ 1113 004d 04       		.byte	0x4
+ 1114 004e 05       		.byte	0x5
+ 1115 004f B4000000 		.4byte	.LASF4
+ 1116 0053 02       		.uleb128 0x2
+ 1117 0054 04       		.byte	0x4
+ 1118 0055 07       		.byte	0x7
+ 1119 0056 D3010000 		.4byte	.LASF5
+ 1120 005a 02       		.uleb128 0x2
+ 1121 005b 08       		.byte	0x8
+ 1122 005c 05       		.byte	0x5
+ 1123 005d 76000000 		.4byte	.LASF6
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 26
+
+
+ 1124 0061 02       		.uleb128 0x2
+ 1125 0062 08       		.byte	0x8
+ 1126 0063 07       		.byte	0x7
+ 1127 0064 15010000 		.4byte	.LASF7
+ 1128 0068 04       		.uleb128 0x4
+ 1129 0069 04       		.byte	0x4
+ 1130 006a 05       		.byte	0x5
+ 1131 006b 696E7400 		.ascii	"int\000"
+ 1132 006f 02       		.uleb128 0x2
+ 1133 0070 04       		.byte	0x4
+ 1134 0071 07       		.byte	0x7
+ 1135 0072 2C010000 		.4byte	.LASF8
+ 1136 0076 03       		.uleb128 0x3
+ 1137 0077 8B010000 		.4byte	.LASF10
+ 1138 007b 03       		.byte	0x3
+ 1139 007c 2C       		.byte	0x2c
+ 1140 007d 41000000 		.4byte	0x41
+ 1141 0081 05       		.uleb128 0x5
+ 1142 0082 99010000 		.4byte	.LASF11
+ 1143 0086 04       		.byte	0x4
+ 1144 0087 E401     		.2byte	0x1e4
+ 1145 0089 2C000000 		.4byte	0x2c
+ 1146 008d 05       		.uleb128 0x5
+ 1147 008e 3F000000 		.4byte	.LASF12
+ 1148 0092 04       		.byte	0x4
+ 1149 0093 E501     		.2byte	0x1e5
+ 1150 0095 3A000000 		.4byte	0x3a
+ 1151 0099 02       		.uleb128 0x2
+ 1152 009a 04       		.byte	0x4
+ 1153 009b 04       		.byte	0x4
+ 1154 009c 70000000 		.4byte	.LASF13
+ 1155 00a0 02       		.uleb128 0x2
+ 1156 00a1 08       		.byte	0x8
+ 1157 00a2 04       		.byte	0x4
+ 1158 00a3 E5010000 		.4byte	.LASF14
+ 1159 00a7 02       		.uleb128 0x2
+ 1160 00a8 01       		.byte	0x1
+ 1161 00a9 08       		.byte	0x8
+ 1162 00aa 86010000 		.4byte	.LASF15
+ 1163 00ae 06       		.uleb128 0x6
+ 1164 00af 81000000 		.4byte	0x81
+ 1165 00b3 02       		.uleb128 0x2
+ 1166 00b4 08       		.byte	0x8
+ 1167 00b5 04       		.byte	0x4
+ 1168 00b6 EF000000 		.4byte	.LASF16
+ 1169 00ba 02       		.uleb128 0x2
+ 1170 00bb 04       		.byte	0x4
+ 1171 00bc 07       		.byte	0x7
+ 1172 00bd 1D000000 		.4byte	.LASF17
+ 1173 00c1 07       		.uleb128 0x7
+ 1174 00c2 BD000000 		.4byte	.LASF57
+ 1175 00c6 01       		.byte	0x1
+ 1176 00c7 1F       		.byte	0x1f
+ 1177 00c8 00000000 		.4byte	.LFB63
+ 1178 00cc 94000000 		.4byte	.LFE63-.LFB63
+ 1179 00d0 01       		.uleb128 0x1
+ 1180 00d1 9C       		.byte	0x9c
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 27
+
+
+ 1181 00d2 7C010000 		.4byte	0x17c
+ 1182 00d6 08       		.uleb128 0x8
+ 1183 00d7 0A000000 		.4byte	.LVL0
+ 1184 00db 8D070000 		.4byte	0x78d
+ 1185 00df EE000000 		.4byte	0xee
+ 1186 00e3 09       		.uleb128 0x9
+ 1187 00e4 01       		.uleb128 0x1
+ 1188 00e5 50       		.byte	0x50
+ 1189 00e6 01       		.uleb128 0x1
+ 1190 00e7 30       		.byte	0x30
+ 1191 00e8 09       		.uleb128 0x9
+ 1192 00e9 01       		.uleb128 0x1
+ 1193 00ea 51       		.byte	0x51
+ 1194 00eb 01       		.uleb128 0x1
+ 1195 00ec 30       		.byte	0x30
+ 1196 00ed 00       		.byte	0
+ 1197 00ee 08       		.uleb128 0x8
+ 1198 00ef 10000000 		.4byte	.LVL1
+ 1199 00f3 98070000 		.4byte	0x798
+ 1200 00f7 05010000 		.4byte	0x105
+ 1201 00fb 09       		.uleb128 0x9
+ 1202 00fc 01       		.uleb128 0x1
+ 1203 00fd 50       		.byte	0x50
+ 1204 00fe 05       		.uleb128 0x5
+ 1205 00ff 03       		.byte	0x3
+ 1206 0100 00000000 		.4byte	.LC0
+ 1207 0104 00       		.byte	0
+ 1208 0105 08       		.uleb128 0x8
+ 1209 0106 18000000 		.4byte	.LVL2
+ 1210 010a 8D070000 		.4byte	0x78d
+ 1211 010e 1D010000 		.4byte	0x11d
+ 1212 0112 09       		.uleb128 0x9
+ 1213 0113 01       		.uleb128 0x1
+ 1214 0114 50       		.byte	0x50
+ 1215 0115 01       		.uleb128 0x1
+ 1216 0116 30       		.byte	0x30
+ 1217 0117 09       		.uleb128 0x9
+ 1218 0118 01       		.uleb128 0x1
+ 1219 0119 51       		.byte	0x51
+ 1220 011a 01       		.uleb128 0x1
+ 1221 011b 30       		.byte	0x30
+ 1222 011c 00       		.byte	0
+ 1223 011d 0A       		.uleb128 0xa
+ 1224 011e 20000000 		.4byte	.LVL3
+ 1225 0122 A3070000 		.4byte	0x7a3
+ 1226 0126 0A       		.uleb128 0xa
+ 1227 0127 28000000 		.4byte	.LVL4
+ 1228 012b A3070000 		.4byte	0x7a3
+ 1229 012f 08       		.uleb128 0x8
+ 1230 0130 30000000 		.4byte	.LVL5
+ 1231 0134 98070000 		.4byte	0x798
+ 1232 0138 43010000 		.4byte	0x143
+ 1233 013c 09       		.uleb128 0x9
+ 1234 013d 01       		.uleb128 0x1
+ 1235 013e 50       		.byte	0x50
+ 1236 013f 02       		.uleb128 0x2
+ 1237 0140 74       		.byte	0x74
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 28
+
+
+ 1238 0141 00       		.sleb128 0
+ 1239 0142 00       		.byte	0
+ 1240 0143 0A       		.uleb128 0xa
+ 1241 0144 38000000 		.4byte	.LVL6
+ 1242 0148 A3070000 		.4byte	0x7a3
+ 1243 014c 0A       		.uleb128 0xa
+ 1244 014d 40000000 		.4byte	.LVL7
+ 1245 0151 A3070000 		.4byte	0x7a3
+ 1246 0155 08       		.uleb128 0x8
+ 1247 0156 46000000 		.4byte	.LVL8
+ 1248 015a 98070000 		.4byte	0x798
+ 1249 015e 69010000 		.4byte	0x169
+ 1250 0162 09       		.uleb128 0x9
+ 1251 0163 01       		.uleb128 0x1
+ 1252 0164 50       		.byte	0x50
+ 1253 0165 02       		.uleb128 0x2
+ 1254 0166 74       		.byte	0x74
+ 1255 0167 00       		.sleb128 0
+ 1256 0168 00       		.byte	0
+ 1257 0169 0A       		.uleb128 0xa
+ 1258 016a 58000000 		.4byte	.LVL9
+ 1259 016e A3070000 		.4byte	0x7a3
+ 1260 0172 0A       		.uleb128 0xa
+ 1261 0173 70000000 		.4byte	.LVL10
+ 1262 0177 A3070000 		.4byte	0x7a3
+ 1263 017b 00       		.byte	0
+ 1264 017c 0B       		.uleb128 0xb
+ 1265 017d 4F000000 		.4byte	.LASF20
+ 1266 0181 01       		.byte	0x1
+ 1267 0182 30       		.byte	0x30
+ 1268 0183 00000000 		.4byte	.LFB64
+ 1269 0187 80020000 		.4byte	.LFE64-.LFB64
+ 1270 018b 01       		.uleb128 0x1
+ 1271 018c 9C       		.byte	0x9c
+ 1272 018d 8C040000 		.4byte	0x48c
+ 1273 0191 0C       		.uleb128 0xc
+ 1274 0192 00000000 		.4byte	.LASF18
+ 1275 0196 01       		.byte	0x1
+ 1276 0197 30       		.byte	0x30
+ 1277 0198 81000000 		.4byte	0x81
+ 1278 019c 00000000 		.4byte	.LLST0
+ 1279 01a0 0C       		.uleb128 0xc
+ 1280 01a1 AC010000 		.4byte	.LASF19
+ 1281 01a5 01       		.byte	0x1
+ 1282 01a6 30       		.byte	0x30
+ 1283 01a7 81000000 		.4byte	0x81
+ 1284 01ab 21000000 		.4byte	.LLST1
+ 1285 01af 0D       		.uleb128 0xd
+ 1286 01b0 08000000 		.4byte	.LBB2
+ 1287 01b4 4A000000 		.4byte	.LBE2-.LBB2
+ 1288 01b8 2A020000 		.4byte	0x22a
+ 1289 01bc 0E       		.uleb128 0xe
+ 1290 01bd 6900     		.ascii	"i\000"
+ 1291 01bf 01       		.byte	0x1
+ 1292 01c0 33       		.byte	0x33
+ 1293 01c1 8D000000 		.4byte	0x8d
+ 1294 01c5 42000000 		.4byte	.LLST2
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 29
+
+
+ 1295 01c9 08       		.uleb128 0x8
+ 1296 01ca 22000000 		.4byte	.LVL14
+ 1297 01ce AE070000 		.4byte	0x7ae
+ 1298 01d2 DD010000 		.4byte	0x1dd
+ 1299 01d6 09       		.uleb128 0x9
+ 1300 01d7 01       		.uleb128 0x1
+ 1301 01d8 50       		.byte	0x50
+ 1302 01d9 02       		.uleb128 0x2
+ 1303 01da 74       		.byte	0x74
+ 1304 01db 00       		.sleb128 0
+ 1305 01dc 00       		.byte	0
+ 1306 01dd 08       		.uleb128 0x8
+ 1307 01de 2A000000 		.4byte	.LVL15
+ 1308 01e2 B9070000 		.4byte	0x7b9
+ 1309 01e6 F1010000 		.4byte	0x1f1
+ 1310 01ea 09       		.uleb128 0x9
+ 1311 01eb 01       		.uleb128 0x1
+ 1312 01ec 50       		.byte	0x50
+ 1313 01ed 02       		.uleb128 0x2
+ 1314 01ee 74       		.byte	0x74
+ 1315 01ef 00       		.sleb128 0
+ 1316 01f0 00       		.byte	0
+ 1317 01f1 08       		.uleb128 0x8
+ 1318 01f2 32000000 		.4byte	.LVL16
+ 1319 01f6 C4070000 		.4byte	0x7c4
+ 1320 01fa 05020000 		.4byte	0x205
+ 1321 01fe 09       		.uleb128 0x9
+ 1322 01ff 01       		.uleb128 0x1
+ 1323 0200 50       		.byte	0x50
+ 1324 0201 02       		.uleb128 0x2
+ 1325 0202 74       		.byte	0x74
+ 1326 0203 00       		.sleb128 0
+ 1327 0204 00       		.byte	0
+ 1328 0205 08       		.uleb128 0x8
+ 1329 0206 3A000000 		.4byte	.LVL17
+ 1330 020a CF070000 		.4byte	0x7cf
+ 1331 020e 19020000 		.4byte	0x219
+ 1332 0212 09       		.uleb128 0x9
+ 1333 0213 01       		.uleb128 0x1
+ 1334 0214 50       		.byte	0x50
+ 1335 0215 02       		.uleb128 0x2
+ 1336 0216 74       		.byte	0x74
+ 1337 0217 00       		.sleb128 0
+ 1338 0218 00       		.byte	0
+ 1339 0219 0F       		.uleb128 0xf
+ 1340 021a 40000000 		.4byte	.LVL18
+ 1341 021e DA070000 		.4byte	0x7da
+ 1342 0222 09       		.uleb128 0x9
+ 1343 0223 01       		.uleb128 0x1
+ 1344 0224 50       		.byte	0x50
+ 1345 0225 02       		.uleb128 0x2
+ 1346 0226 08       		.byte	0x8
+ 1347 0227 C8       		.byte	0xc8
+ 1348 0228 00       		.byte	0
+ 1349 0229 00       		.byte	0
+ 1350 022a 0D       		.uleb128 0xd
+ 1351 022b 52000000 		.4byte	.LBB3
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 30
+
+
+ 1352 022f 80000000 		.4byte	.LBE3-.LBB3
+ 1353 0233 DD020000 		.4byte	0x2dd
+ 1354 0237 0E       		.uleb128 0xe
+ 1355 0238 6900     		.ascii	"i\000"
+ 1356 023a 01       		.byte	0x1
+ 1357 023b 46       		.byte	0x46
+ 1358 023c 81000000 		.4byte	0x81
+ 1359 0240 6E000000 		.4byte	.LLST3
+ 1360 0244 08       		.uleb128 0x8
+ 1361 0245 76000000 		.4byte	.LVL23
+ 1362 0249 AE070000 		.4byte	0x7ae
+ 1363 024d 66020000 		.4byte	0x266
+ 1364 0251 09       		.uleb128 0x9
+ 1365 0252 01       		.uleb128 0x1
+ 1366 0253 50       		.byte	0x50
+ 1367 0254 10       		.uleb128 0x10
+ 1368 0255 0A       		.byte	0xa
+ 1369 0256 4416     		.2byte	0x1644
+ 1370 0258 74       		.byte	0x74
+ 1371 0259 00       		.sleb128 0
+ 1372 025a 32       		.byte	0x32
+ 1373 025b 24       		.byte	0x24
+ 1374 025c 74       		.byte	0x74
+ 1375 025d 00       		.sleb128 0
+ 1376 025e 22       		.byte	0x22
+ 1377 025f 08       		.byte	0x8
+ 1378 0260 21       		.byte	0x21
+ 1379 0261 1E       		.byte	0x1e
+ 1380 0262 31       		.byte	0x31
+ 1381 0263 24       		.byte	0x24
+ 1382 0264 1C       		.byte	0x1c
+ 1383 0265 00       		.byte	0
+ 1384 0266 08       		.uleb128 0x8
+ 1385 0267 8E000000 		.4byte	.LVL24
+ 1386 026b B9070000 		.4byte	0x7b9
+ 1387 026f 88020000 		.4byte	0x288
+ 1388 0273 09       		.uleb128 0x9
+ 1389 0274 01       		.uleb128 0x1
+ 1390 0275 50       		.byte	0x50
+ 1391 0276 10       		.uleb128 0x10
+ 1392 0277 0A       		.byte	0xa
+ 1393 0278 4416     		.2byte	0x1644
+ 1394 027a 74       		.byte	0x74
+ 1395 027b 00       		.sleb128 0
+ 1396 027c 32       		.byte	0x32
+ 1397 027d 24       		.byte	0x24
+ 1398 027e 74       		.byte	0x74
+ 1399 027f 00       		.sleb128 0
+ 1400 0280 22       		.byte	0x22
+ 1401 0281 08       		.byte	0x8
+ 1402 0282 21       		.byte	0x21
+ 1403 0283 1E       		.byte	0x1e
+ 1404 0284 31       		.byte	0x31
+ 1405 0285 24       		.byte	0x24
+ 1406 0286 1C       		.byte	0x1c
+ 1407 0287 00       		.byte	0
+ 1408 0288 08       		.uleb128 0x8
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 31
+
+
+ 1409 0289 A6000000 		.4byte	.LVL25
+ 1410 028d C4070000 		.4byte	0x7c4
+ 1411 0291 AA020000 		.4byte	0x2aa
+ 1412 0295 09       		.uleb128 0x9
+ 1413 0296 01       		.uleb128 0x1
+ 1414 0297 50       		.byte	0x50
+ 1415 0298 10       		.uleb128 0x10
+ 1416 0299 0A       		.byte	0xa
+ 1417 029a 4416     		.2byte	0x1644
+ 1418 029c 74       		.byte	0x74
+ 1419 029d 00       		.sleb128 0
+ 1420 029e 32       		.byte	0x32
+ 1421 029f 24       		.byte	0x24
+ 1422 02a0 74       		.byte	0x74
+ 1423 02a1 00       		.sleb128 0
+ 1424 02a2 22       		.byte	0x22
+ 1425 02a3 08       		.byte	0x8
+ 1426 02a4 21       		.byte	0x21
+ 1427 02a5 1E       		.byte	0x1e
+ 1428 02a6 31       		.byte	0x31
+ 1429 02a7 24       		.byte	0x24
+ 1430 02a8 1C       		.byte	0x1c
+ 1431 02a9 00       		.byte	0
+ 1432 02aa 08       		.uleb128 0x8
+ 1433 02ab BE000000 		.4byte	.LVL26
+ 1434 02af CF070000 		.4byte	0x7cf
+ 1435 02b3 CC020000 		.4byte	0x2cc
+ 1436 02b7 09       		.uleb128 0x9
+ 1437 02b8 01       		.uleb128 0x1
+ 1438 02b9 50       		.byte	0x50
+ 1439 02ba 10       		.uleb128 0x10
+ 1440 02bb 0A       		.byte	0xa
+ 1441 02bc 4416     		.2byte	0x1644
+ 1442 02be 74       		.byte	0x74
+ 1443 02bf 00       		.sleb128 0
+ 1444 02c0 32       		.byte	0x32
+ 1445 02c1 24       		.byte	0x24
+ 1446 02c2 74       		.byte	0x74
+ 1447 02c3 00       		.sleb128 0
+ 1448 02c4 22       		.byte	0x22
+ 1449 02c5 08       		.byte	0x8
+ 1450 02c6 21       		.byte	0x21
+ 1451 02c7 1E       		.byte	0x1e
+ 1452 02c8 31       		.byte	0x31
+ 1453 02c9 24       		.byte	0x24
+ 1454 02ca 1C       		.byte	0x1c
+ 1455 02cb 00       		.byte	0
+ 1456 02cc 0F       		.uleb128 0xf
+ 1457 02cd C4000000 		.4byte	.LVL27
+ 1458 02d1 DA070000 		.4byte	0x7da
+ 1459 02d5 09       		.uleb128 0x9
+ 1460 02d6 01       		.uleb128 0x1
+ 1461 02d7 50       		.byte	0x50
+ 1462 02d8 02       		.uleb128 0x2
+ 1463 02d9 08       		.byte	0x8
+ 1464 02da C8       		.byte	0xc8
+ 1465 02db 00       		.byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 32
+
+
+ 1466 02dc 00       		.byte	0
+ 1467 02dd 10       		.uleb128 0x10
+ 1468 02de 00000000 		.4byte	.Ldebug_ranges0+0
+ 1469 02e2 28030000 		.4byte	0x328
+ 1470 02e6 0E       		.uleb128 0xe
+ 1471 02e7 6900     		.ascii	"i\000"
+ 1472 02e9 01       		.byte	0x1
+ 1473 02ea 5B       		.byte	0x5b
+ 1474 02eb 81000000 		.4byte	0x81
+ 1475 02ef B8000000 		.4byte	.LLST4
+ 1476 02f3 0A       		.uleb128 0xa
+ 1477 02f4 F6000000 		.4byte	.LVL31
+ 1478 02f8 AE070000 		.4byte	0x7ae
+ 1479 02fc 0A       		.uleb128 0xa
+ 1480 02fd 04010000 		.4byte	.LVL32
+ 1481 0301 B9070000 		.4byte	0x7b9
+ 1482 0305 0A       		.uleb128 0xa
+ 1483 0306 14010000 		.4byte	.LVL33
+ 1484 030a C4070000 		.4byte	0x7c4
+ 1485 030e 0A       		.uleb128 0xa
+ 1486 030f 24010000 		.4byte	.LVL34
+ 1487 0313 CF070000 		.4byte	0x7cf
+ 1488 0317 0F       		.uleb128 0xf
+ 1489 0318 2A010000 		.4byte	.LVL35
+ 1490 031c DA070000 		.4byte	0x7da
+ 1491 0320 09       		.uleb128 0x9
+ 1492 0321 01       		.uleb128 0x1
+ 1493 0322 50       		.byte	0x50
+ 1494 0323 02       		.uleb128 0x2
+ 1495 0324 08       		.byte	0x8
+ 1496 0325 C8       		.byte	0xc8
+ 1497 0326 00       		.byte	0
+ 1498 0327 00       		.byte	0
+ 1499 0328 0D       		.uleb128 0xd
+ 1500 0329 84010000 		.4byte	.LBB6
+ 1501 032d 24000000 		.4byte	.LBE6-.LBB6
+ 1502 0331 4C030000 		.4byte	0x34c
+ 1503 0335 0E       		.uleb128 0xe
+ 1504 0336 6900     		.ascii	"i\000"
+ 1505 0338 01       		.byte	0x1
+ 1506 0339 7D       		.byte	0x7d
+ 1507 033a 81000000 		.4byte	0x81
+ 1508 033e E1000000 		.4byte	.LLST5
+ 1509 0342 0A       		.uleb128 0xa
+ 1510 0343 98010000 		.4byte	.LVL46
+ 1511 0347 AE070000 		.4byte	0x7ae
+ 1512 034b 00       		.byte	0
+ 1513 034c 0D       		.uleb128 0xd
+ 1514 034d BA010000 		.4byte	.LBB7
+ 1515 0351 24000000 		.4byte	.LBE7-.LBB7
+ 1516 0355 70030000 		.4byte	0x370
+ 1517 0359 0E       		.uleb128 0xe
+ 1518 035a 6900     		.ascii	"i\000"
+ 1519 035c 01       		.byte	0x1
+ 1520 035d 8C       		.byte	0x8c
+ 1521 035e 81000000 		.4byte	0x81
+ 1522 0362 FF000000 		.4byte	.LLST6
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 33
+
+
+ 1523 0366 0A       		.uleb128 0xa
+ 1524 0367 CE010000 		.4byte	.LVL52
+ 1525 036b C4070000 		.4byte	0x7c4
+ 1526 036f 00       		.byte	0
+ 1527 0370 0D       		.uleb128 0xd
+ 1528 0371 22020000 		.4byte	.LBB8
+ 1529 0375 1C000000 		.4byte	.LBE8-.LBB8
+ 1530 0379 94030000 		.4byte	0x394
+ 1531 037d 0E       		.uleb128 0xe
+ 1532 037e 6900     		.ascii	"i\000"
+ 1533 0380 01       		.byte	0x1
+ 1534 0381 A5       		.byte	0xa5
+ 1535 0382 81000000 		.4byte	0x81
+ 1536 0386 1D010000 		.4byte	.LLST7
+ 1537 038a 0A       		.uleb128 0xa
+ 1538 038b 2E020000 		.4byte	.LVL62
+ 1539 038f B9070000 		.4byte	0x7b9
+ 1540 0393 00       		.byte	0
+ 1541 0394 0D       		.uleb128 0xd
+ 1542 0395 50020000 		.4byte	.LBB9
+ 1543 0399 22000000 		.4byte	.LBE9-.LBB9
+ 1544 039d B8030000 		.4byte	0x3b8
+ 1545 03a1 0E       		.uleb128 0xe
+ 1546 03a2 6900     		.ascii	"i\000"
+ 1547 03a4 01       		.byte	0x1
+ 1548 03a5 B5       		.byte	0xb5
+ 1549 03a6 81000000 		.4byte	0x81
+ 1550 03aa 3B010000 		.4byte	.LLST8
+ 1551 03ae 0A       		.uleb128 0xa
+ 1552 03af 64020000 		.4byte	.LVL68
+ 1553 03b3 CF070000 		.4byte	0x7cf
+ 1554 03b7 00       		.byte	0
+ 1555 03b8 0A       		.uleb128 0xa
+ 1556 03b9 5C010000 		.4byte	.LVL41
+ 1557 03bd AE070000 		.4byte	0x7ae
+ 1558 03c1 08       		.uleb128 0x8
+ 1559 03c2 70010000 		.4byte	.LVL42
+ 1560 03c6 AE070000 		.4byte	0x7ae
+ 1561 03ca D6030000 		.4byte	0x3d6
+ 1562 03ce 09       		.uleb128 0x9
+ 1563 03cf 01       		.uleb128 0x1
+ 1564 03d0 50       		.byte	0x50
+ 1565 03d1 03       		.uleb128 0x3
+ 1566 03d2 0A       		.byte	0xa
+ 1567 03d3 F00A     		.2byte	0xaf0
+ 1568 03d5 00       		.byte	0
+ 1569 03d6 08       		.uleb128 0x8
+ 1570 03d7 7A010000 		.4byte	.LVL43
+ 1571 03db AE070000 		.4byte	0x7ae
+ 1572 03df EB030000 		.4byte	0x3eb
+ 1573 03e3 09       		.uleb128 0x9
+ 1574 03e4 01       		.uleb128 0x1
+ 1575 03e5 50       		.byte	0x50
+ 1576 03e6 03       		.uleb128 0x3
+ 1577 03e7 0A       		.byte	0xa
+ 1578 03e8 E40C     		.2byte	0xce4
+ 1579 03ea 00       		.byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 34
+
+
+ 1580 03eb 08       		.uleb128 0x8
+ 1581 03ec 84010000 		.4byte	.LVL44
+ 1582 03f0 AE070000 		.4byte	0x7ae
+ 1583 03f4 00040000 		.4byte	0x400
+ 1584 03f8 09       		.uleb128 0x9
+ 1585 03f9 01       		.uleb128 0x1
+ 1586 03fa 50       		.byte	0x50
+ 1587 03fb 03       		.uleb128 0x3
+ 1588 03fc 0A       		.byte	0xa
+ 1589 03fd 6810     		.2byte	0x1068
+ 1590 03ff 00       		.byte	0
+ 1591 0400 0A       		.uleb128 0xa
+ 1592 0401 B6010000 		.4byte	.LVL50
+ 1593 0405 C4070000 		.4byte	0x7c4
+ 1594 0409 08       		.uleb128 0x8
+ 1595 040a F8010000 		.4byte	.LVL56
+ 1596 040e B9070000 		.4byte	0x7b9
+ 1597 0412 1E040000 		.4byte	0x41e
+ 1598 0416 09       		.uleb128 0x9
+ 1599 0417 01       		.uleb128 0x1
+ 1600 0418 50       		.byte	0x50
+ 1601 0419 03       		.uleb128 0x3
+ 1602 041a 0A       		.byte	0xa
+ 1603 041b E40C     		.2byte	0xce4
+ 1604 041d 00       		.byte	0
+ 1605 041e 08       		.uleb128 0x8
+ 1606 041f 02020000 		.4byte	.LVL57
+ 1607 0423 B9070000 		.4byte	0x7b9
+ 1608 0427 33040000 		.4byte	0x433
+ 1609 042b 09       		.uleb128 0x9
+ 1610 042c 01       		.uleb128 0x1
+ 1611 042d 50       		.byte	0x50
+ 1612 042e 03       		.uleb128 0x3
+ 1613 042f 0A       		.byte	0xa
+ 1614 0430 060E     		.2byte	0xe06
+ 1615 0432 00       		.byte	0
+ 1616 0433 08       		.uleb128 0x8
+ 1617 0434 0C020000 		.4byte	.LVL58
+ 1618 0438 B9070000 		.4byte	0x7b9
+ 1619 043c 48040000 		.4byte	0x448
+ 1620 0440 09       		.uleb128 0x9
+ 1621 0441 01       		.uleb128 0x1
+ 1622 0442 50       		.byte	0x50
+ 1623 0443 03       		.uleb128 0x3
+ 1624 0444 0A       		.byte	0xa
+ 1625 0445 3011     		.2byte	0x1130
+ 1626 0447 00       		.byte	0
+ 1627 0448 08       		.uleb128 0x8
+ 1628 0449 16020000 		.4byte	.LVL59
+ 1629 044d B9070000 		.4byte	0x7b9
+ 1630 0451 5D040000 		.4byte	0x45d
+ 1631 0455 09       		.uleb128 0x9
+ 1632 0456 01       		.uleb128 0x1
+ 1633 0457 50       		.byte	0x50
+ 1634 0458 03       		.uleb128 0x3
+ 1635 0459 0A       		.byte	0xa
+ 1636 045a A00F     		.2byte	0xfa0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 35
+
+
+ 1637 045c 00       		.byte	0
+ 1638 045d 08       		.uleb128 0x8
+ 1639 045e 20020000 		.4byte	.LVL60
+ 1640 0462 B9070000 		.4byte	0x7b9
+ 1641 0466 72040000 		.4byte	0x472
+ 1642 046a 09       		.uleb128 0x9
+ 1643 046b 01       		.uleb128 0x1
+ 1644 046c 50       		.byte	0x50
+ 1645 046d 03       		.uleb128 0x3
+ 1646 046e 0A       		.byte	0xa
+ 1647 046f 6A0E     		.2byte	0xe6a
+ 1648 0471 00       		.byte	0
+ 1649 0472 0A       		.uleb128 0xa
+ 1650 0473 4C020000 		.4byte	.LVL66
+ 1651 0477 CF070000 		.4byte	0x7cf
+ 1652 047b 0F       		.uleb128 0xf
+ 1653 047c 78020000 		.4byte	.LVL72
+ 1654 0480 DA070000 		.4byte	0x7da
+ 1655 0484 09       		.uleb128 0x9
+ 1656 0485 01       		.uleb128 0x1
+ 1657 0486 50       		.byte	0x50
+ 1658 0487 02       		.uleb128 0x2
+ 1659 0488 08       		.byte	0x8
+ 1660 0489 C8       		.byte	0xc8
+ 1661 048a 00       		.byte	0
+ 1662 048b 00       		.byte	0
+ 1663 048c 0B       		.uleb128 0xb
+ 1664 048d C5010000 		.4byte	.LASF21
+ 1665 0491 01       		.byte	0x1
+ 1666 0492 C3       		.byte	0xc3
+ 1667 0493 00000000 		.4byte	.LFB65
+ 1668 0497 9C000000 		.4byte	.LFE65-.LFB65
+ 1669 049b 01       		.uleb128 0x1
+ 1670 049c 9C       		.byte	0x9c
+ 1671 049d C0040000 		.4byte	0x4c0
+ 1672 04a1 0C       		.uleb128 0xc
+ 1673 04a2 88020000 		.4byte	.LASF22
+ 1674 04a6 01       		.byte	0x1
+ 1675 04a7 C3       		.byte	0xc3
+ 1676 04a8 81000000 		.4byte	0x81
+ 1677 04ac 59010000 		.4byte	.LLST9
+ 1678 04b0 0F       		.uleb128 0xf
+ 1679 04b1 84000000 		.4byte	.LVL75
+ 1680 04b5 7C010000 		.4byte	0x17c
+ 1681 04b9 09       		.uleb128 0x9
+ 1682 04ba 01       		.uleb128 0x1
+ 1683 04bb 51       		.byte	0x51
+ 1684 04bc 01       		.uleb128 0x1
+ 1685 04bd 33       		.byte	0x33
+ 1686 04be 00       		.byte	0
+ 1687 04bf 00       		.byte	0
+ 1688 04c0 0B       		.uleb128 0xb
+ 1689 04c1 71020000 		.4byte	.LASF23
+ 1690 04c5 01       		.byte	0x1
+ 1691 04c6 E1       		.byte	0xe1
+ 1692 04c7 00000000 		.4byte	.LFB66
+ 1693 04cb 0E000000 		.4byte	.LFE66-.LFB66
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 36
+
+
+ 1694 04cf 01       		.uleb128 0x1
+ 1695 04d0 9C       		.byte	0x9c
+ 1696 04d1 F2040000 		.4byte	0x4f2
+ 1697 04d5 08       		.uleb128 0x8
+ 1698 04d6 08000000 		.4byte	.LVL76
+ 1699 04da 8C040000 		.4byte	0x48c
+ 1700 04de E8040000 		.4byte	0x4e8
+ 1701 04e2 09       		.uleb128 0x9
+ 1702 04e3 01       		.uleb128 0x1
+ 1703 04e4 50       		.byte	0x50
+ 1704 04e5 01       		.uleb128 0x1
+ 1705 04e6 31       		.byte	0x31
+ 1706 04e7 00       		.byte	0
+ 1707 04e8 0A       		.uleb128 0xa
+ 1708 04e9 0C000000 		.4byte	.LVL77
+ 1709 04ed C1000000 		.4byte	0xc1
+ 1710 04f1 00       		.byte	0
+ 1711 04f2 0B       		.uleb128 0xb
+ 1712 04f3 49010000 		.4byte	.LASF24
+ 1713 04f7 01       		.byte	0x1
+ 1714 04f8 E6       		.byte	0xe6
+ 1715 04f9 00000000 		.4byte	.LFB67
+ 1716 04fd 80000000 		.4byte	.LFE67-.LFB67
+ 1717 0501 01       		.uleb128 0x1
+ 1718 0502 9C       		.byte	0x9c
+ 1719 0503 BA050000 		.4byte	0x5ba
+ 1720 0507 08       		.uleb128 0x8
+ 1721 0508 08000000 		.4byte	.LVL78
+ 1722 050c DA070000 		.4byte	0x7da
+ 1723 0510 1A050000 		.4byte	0x51a
+ 1724 0514 09       		.uleb128 0x9
+ 1725 0515 01       		.uleb128 0x1
+ 1726 0516 50       		.byte	0x50
+ 1727 0517 01       		.uleb128 0x1
+ 1728 0518 31       		.byte	0x31
+ 1729 0519 00       		.byte	0
+ 1730 051a 0A       		.uleb128 0xa
+ 1731 051b 0C000000 		.4byte	.LVL79
+ 1732 051f E5070000 		.4byte	0x7e5
+ 1733 0523 08       		.uleb128 0x8
+ 1734 0524 26000000 		.4byte	.LVL80
+ 1735 0528 8D070000 		.4byte	0x78d
+ 1736 052c 3B050000 		.4byte	0x53b
+ 1737 0530 09       		.uleb128 0x9
+ 1738 0531 01       		.uleb128 0x1
+ 1739 0532 50       		.byte	0x50
+ 1740 0533 01       		.uleb128 0x1
+ 1741 0534 31       		.byte	0x31
+ 1742 0535 09       		.uleb128 0x9
+ 1743 0536 01       		.uleb128 0x1
+ 1744 0537 51       		.byte	0x51
+ 1745 0538 01       		.uleb128 0x1
+ 1746 0539 30       		.byte	0x30
+ 1747 053a 00       		.byte	0
+ 1748 053b 08       		.uleb128 0x8
+ 1749 053c 2C000000 		.4byte	.LVL81
+ 1750 0540 98070000 		.4byte	0x798
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 37
+
+
+ 1751 0544 52050000 		.4byte	0x552
+ 1752 0548 09       		.uleb128 0x9
+ 1753 0549 01       		.uleb128 0x1
+ 1754 054a 50       		.byte	0x50
+ 1755 054b 05       		.uleb128 0x5
+ 1756 054c 03       		.byte	0x3
+ 1757 054d 14000000 		.4byte	.LC2
+ 1758 0551 00       		.byte	0
+ 1759 0552 0A       		.uleb128 0xa
+ 1760 0553 30000000 		.4byte	.LVL82
+ 1761 0557 F0070000 		.4byte	0x7f0
+ 1762 055b 08       		.uleb128 0x8
+ 1763 055c 40000000 		.4byte	.LVL83
+ 1764 0560 8D070000 		.4byte	0x78d
+ 1765 0564 73050000 		.4byte	0x573
+ 1766 0568 09       		.uleb128 0x9
+ 1767 0569 01       		.uleb128 0x1
+ 1768 056a 50       		.byte	0x50
+ 1769 056b 01       		.uleb128 0x1
+ 1770 056c 31       		.byte	0x31
+ 1771 056d 09       		.uleb128 0x9
+ 1772 056e 01       		.uleb128 0x1
+ 1773 056f 51       		.byte	0x51
+ 1774 0570 01       		.uleb128 0x1
+ 1775 0571 30       		.byte	0x30
+ 1776 0572 00       		.byte	0
+ 1777 0573 08       		.uleb128 0x8
+ 1778 0574 46000000 		.4byte	.LVL84
+ 1779 0578 98070000 		.4byte	0x798
+ 1780 057c 8A050000 		.4byte	0x58a
+ 1781 0580 09       		.uleb128 0x9
+ 1782 0581 01       		.uleb128 0x1
+ 1783 0582 50       		.byte	0x50
+ 1784 0583 05       		.uleb128 0x5
+ 1785 0584 03       		.byte	0x3
+ 1786 0585 00000000 		.4byte	.LC0
+ 1787 0589 00       		.byte	0
+ 1788 058a 0A       		.uleb128 0xa
+ 1789 058b 4A000000 		.4byte	.LVL85
+ 1790 058f FB070000 		.4byte	0x7fb
+ 1791 0593 08       		.uleb128 0x8
+ 1792 0594 5E000000 		.4byte	.LVL86
+ 1793 0598 8C040000 		.4byte	0x48c
+ 1794 059c A7050000 		.4byte	0x5a7
+ 1795 05a0 09       		.uleb128 0x9
+ 1796 05a1 01       		.uleb128 0x1
+ 1797 05a2 50       		.byte	0x50
+ 1798 05a3 02       		.uleb128 0x2
+ 1799 05a4 08       		.byte	0x8
+ 1800 05a5 3C       		.byte	0x3c
+ 1801 05a6 00       		.byte	0
+ 1802 05a7 0A       		.uleb128 0xa
+ 1803 05a8 68000000 		.4byte	.LVL87
+ 1804 05ac C1000000 		.4byte	0xc1
+ 1805 05b0 0A       		.uleb128 0xa
+ 1806 05b1 6C000000 		.4byte	.LVL88
+ 1807 05b5 06080000 		.4byte	0x806
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 38
+
+
+ 1808 05b9 00       		.byte	0
+ 1809 05ba 11       		.uleb128 0x11
+ 1810 05bb 2F000000 		.4byte	.LASF58
+ 1811 05bf 01       		.byte	0x1
+ 1812 05c0 0301     		.2byte	0x103
+ 1813 05c2 68000000 		.4byte	0x68
+ 1814 05c6 00000000 		.4byte	.LFB68
+ 1815 05ca 7C000000 		.4byte	.LFE68-.LFB68
+ 1816 05ce 01       		.uleb128 0x1
+ 1817 05cf 9C       		.byte	0x9c
+ 1818 05d0 6F060000 		.4byte	0x66f
+ 1819 05d4 08       		.uleb128 0x8
+ 1820 05d5 0A000000 		.4byte	.LVL89
+ 1821 05d9 11080000 		.4byte	0x811
+ 1822 05dd EB050000 		.4byte	0x5eb
+ 1823 05e1 09       		.uleb128 0x9
+ 1824 05e2 01       		.uleb128 0x1
+ 1825 05e3 50       		.byte	0x50
+ 1826 05e4 05       		.uleb128 0x5
+ 1827 05e5 03       		.byte	0x3
+ 1828 05e6 00000000 		.4byte	INT_SWI
+ 1829 05ea 00       		.byte	0
+ 1830 05eb 08       		.uleb128 0x8
+ 1831 05ec 10000000 		.4byte	.LVL90
+ 1832 05f0 1C080000 		.4byte	0x81c
+ 1833 05f4 02060000 		.4byte	0x602
+ 1834 05f8 09       		.uleb128 0x9
+ 1835 05f9 01       		.uleb128 0x1
+ 1836 05fa 50       		.byte	0x50
+ 1837 05fb 05       		.uleb128 0x5
+ 1838 05fc 03       		.byte	0x3
+ 1839 05fd 00000000 		.4byte	INT_SE
+ 1840 0601 00       		.byte	0
+ 1841 0602 0A       		.uleb128 0xa
+ 1842 0603 14000000 		.4byte	.LVL91
+ 1843 0607 27080000 		.4byte	0x827
+ 1844 060b 0A       		.uleb128 0xa
+ 1845 060c 18000000 		.4byte	.LVL92
+ 1846 0610 32080000 		.4byte	0x832
+ 1847 0614 0A       		.uleb128 0xa
+ 1848 0615 1C000000 		.4byte	.LVL93
+ 1849 0619 3D080000 		.4byte	0x83d
+ 1850 061d 0A       		.uleb128 0xa
+ 1851 061e 20000000 		.4byte	.LVL94
+ 1852 0622 FB070000 		.4byte	0x7fb
+ 1853 0626 08       		.uleb128 0x8
+ 1854 0627 42000000 		.4byte	.LVL95
+ 1855 062b 7C010000 		.4byte	0x17c
+ 1856 062f 39060000 		.4byte	0x639
+ 1857 0633 09       		.uleb128 0x9
+ 1858 0634 01       		.uleb128 0x1
+ 1859 0635 51       		.byte	0x51
+ 1860 0636 01       		.uleb128 0x1
+ 1861 0637 31       		.byte	0x31
+ 1862 0638 00       		.byte	0
+ 1863 0639 08       		.uleb128 0x8
+ 1864 063a 4A000000 		.4byte	.LVL96
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 39
+
+
+ 1865 063e 7C010000 		.4byte	0x17c
+ 1866 0642 4C060000 		.4byte	0x64c
+ 1867 0646 09       		.uleb128 0x9
+ 1868 0647 01       		.uleb128 0x1
+ 1869 0648 51       		.byte	0x51
+ 1870 0649 01       		.uleb128 0x1
+ 1871 064a 32       		.byte	0x32
+ 1872 064b 00       		.byte	0
+ 1873 064c 08       		.uleb128 0x8
+ 1874 064d 52000000 		.4byte	.LVL97
+ 1875 0651 7C010000 		.4byte	0x17c
+ 1876 0655 5F060000 		.4byte	0x65f
+ 1877 0659 09       		.uleb128 0x9
+ 1878 065a 01       		.uleb128 0x1
+ 1879 065b 51       		.byte	0x51
+ 1880 065c 01       		.uleb128 0x1
+ 1881 065d 33       		.byte	0x33
+ 1882 065e 00       		.byte	0
+ 1883 065f 0F       		.uleb128 0xf
+ 1884 0660 5A000000 		.4byte	.LVL98
+ 1885 0664 7C010000 		.4byte	0x17c
+ 1886 0668 09       		.uleb128 0x9
+ 1887 0669 01       		.uleb128 0x1
+ 1888 066a 51       		.byte	0x51
+ 1889 066b 01       		.uleb128 0x1
+ 1890 066c 34       		.byte	0x34
+ 1891 066d 00       		.byte	0
+ 1892 066e 00       		.byte	0
+ 1893 066f 12       		.uleb128 0x12
+ 1894 0670 90020000 		.4byte	.LASF25
+ 1895 0674 05       		.byte	0x5
+ 1896 0675 1207     		.2byte	0x712
+ 1897 0677 7B060000 		.4byte	0x67b
+ 1898 067b 06       		.uleb128 0x6
+ 1899 067c 76000000 		.4byte	0x76
+ 1900 0680 13       		.uleb128 0x13
+ 1901 0681 73656700 		.ascii	"seg\000"
+ 1902 0685 01       		.byte	0x1
+ 1903 0686 0D       		.byte	0xd
+ 1904 0687 AE000000 		.4byte	0xae
+ 1905 068b 05       		.uleb128 0x5
+ 1906 068c 03       		.byte	0x3
+ 1907 068d 00000000 		.4byte	seg
+ 1908 0691 14       		.uleb128 0x14
+ 1909 0692 93010000 		.4byte	.LASF26
+ 1910 0696 01       		.byte	0x1
+ 1911 0697 0E       		.byte	0xe
+ 1912 0698 AE000000 		.4byte	0xae
+ 1913 069c 05       		.uleb128 0x5
+ 1914 069d 03       		.byte	0x3
+ 1915 069e 00000000 		.4byte	u_min
+ 1916 06a2 14       		.uleb128 0x14
+ 1917 06a3 5A010000 		.4byte	.LASF27
+ 1918 06a7 01       		.byte	0x1
+ 1919 06a8 0F       		.byte	0xf
+ 1920 06a9 AE000000 		.4byte	0xae
+ 1921 06ad 05       		.uleb128 0x5
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 40
+
+
+ 1922 06ae 03       		.byte	0x3
+ 1923 06af 00000000 		.4byte	d_min
+ 1924 06b3 14       		.uleb128 0x14
+ 1925 06b4 69000000 		.4byte	.LASF28
+ 1926 06b8 01       		.byte	0x1
+ 1927 06b9 10       		.byte	0x10
+ 1928 06ba AE000000 		.4byte	0xae
+ 1929 06be 05       		.uleb128 0x5
+ 1930 06bf 03       		.byte	0x3
+ 1931 06c0 00000000 		.4byte	u_hora
+ 1932 06c4 14       		.uleb128 0x14
+ 1933 06c5 58020000 		.4byte	.LASF29
+ 1934 06c9 01       		.byte	0x1
+ 1935 06ca 11       		.byte	0x11
+ 1936 06cb AE000000 		.4byte	0xae
+ 1937 06cf 05       		.uleb128 0x5
+ 1938 06d0 03       		.byte	0x3
+ 1939 06d1 00000000 		.4byte	d_hora
+ 1940 06d5 14       		.uleb128 0x14
+ 1941 06d6 F5010000 		.4byte	.LASF30
+ 1942 06da 01       		.byte	0x1
+ 1943 06db 13       		.byte	0x13
+ 1944 06dc 8D000000 		.4byte	0x8d
+ 1945 06e0 05       		.uleb128 0x5
+ 1946 06e1 03       		.byte	0x3
+ 1947 06e2 00000000 		.4byte	count
+ 1948 06e6 13       		.uleb128 0x13
+ 1949 06e7 646500   		.ascii	"de\000"
+ 1950 06ea 01       		.byte	0x1
+ 1951 06eb 14       		.byte	0x14
+ 1952 06ec 81000000 		.4byte	0x81
+ 1953 06f0 05       		.uleb128 0x5
+ 1954 06f1 03       		.byte	0x3
+ 1955 06f2 00000000 		.4byte	de
+ 1956 06f6 13       		.uleb128 0x13
+ 1957 06f7 61757800 		.ascii	"aux\000"
+ 1958 06fb 01       		.byte	0x1
+ 1959 06fc 15       		.byte	0x15
+ 1960 06fd 81000000 		.4byte	0x81
+ 1961 0701 05       		.uleb128 0x5
+ 1962 0702 03       		.byte	0x3
+ 1963 0703 00000000 		.4byte	aux
+ 1964 0707 15       		.uleb128 0x15
+ 1965 0708 81000000 		.4byte	0x81
+ 1966 070c 17070000 		.4byte	0x717
+ 1967 0710 16       		.uleb128 0x16
+ 1968 0711 BA000000 		.4byte	0xba
+ 1969 0715 09       		.byte	0x9
+ 1970 0716 00       		.byte	0
+ 1971 0717 14       		.uleb128 0x14
+ 1972 0718 26000000 		.4byte	.LASF31
+ 1973 071c 01       		.byte	0x1
+ 1974 071d 16       		.byte	0x16
+ 1975 071e 07070000 		.4byte	0x707
+ 1976 0722 05       		.uleb128 0x5
+ 1977 0723 03       		.byte	0x3
+ 1978 0724 00000000 		.4byte	Inferior
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 41
+
+
+ 1979 0728 14       		.uleb128 0x14
+ 1980 0729 EC010000 		.4byte	.LASF32
+ 1981 072d 01       		.byte	0x1
+ 1982 072e 17       		.byte	0x17
+ 1983 072f 07070000 		.4byte	0x707
+ 1984 0733 05       		.uleb128 0x5
+ 1985 0734 03       		.byte	0x3
+ 1986 0735 00000000 		.4byte	Superior
+ 1987 0739 15       		.uleb128 0x15
+ 1988 073a 8D000000 		.4byte	0x8d
+ 1989 073e 49070000 		.4byte	0x749
+ 1990 0742 16       		.uleb128 0x16
+ 1991 0743 BA000000 		.4byte	0xba
+ 1992 0747 0C       		.byte	0xc
+ 1993 0748 00       		.byte	0
+ 1994 0749 14       		.uleb128 0x14
+ 1995 074a 46000000 		.4byte	.LASF33
+ 1996 074e 01       		.byte	0x1
+ 1997 074f 19       		.byte	0x19
+ 1998 0750 39070000 		.4byte	0x739
+ 1999 0754 05       		.uleb128 0x5
+ 2000 0755 03       		.byte	0x3
+ 2001 0756 00000000 		.4byte	PasosSM1
+ 2002 075a 14       		.uleb128 0x14
+ 2003 075b 5F020000 		.4byte	.LASF34
+ 2004 075f 01       		.byte	0x1
+ 2005 0760 1A       		.byte	0x1a
+ 2006 0761 39070000 		.4byte	0x739
+ 2007 0765 05       		.uleb128 0x5
+ 2008 0766 03       		.byte	0x3
+ 2009 0767 00000000 		.4byte	PasosSM2
+ 2010 076b 14       		.uleb128 0x14
+ 2011 076c 68020000 		.4byte	.LASF35
+ 2012 0770 01       		.byte	0x1
+ 2013 0771 1B       		.byte	0x1b
+ 2014 0772 39070000 		.4byte	0x739
+ 2015 0776 05       		.uleb128 0x5
+ 2016 0777 03       		.byte	0x3
+ 2017 0778 00000000 		.4byte	PasosSM3
+ 2018 077c 14       		.uleb128 0x14
+ 2019 077d 56000000 		.4byte	.LASF36
+ 2020 0781 01       		.byte	0x1
+ 2021 0782 1C       		.byte	0x1c
+ 2022 0783 39070000 		.4byte	0x739
+ 2023 0787 05       		.uleb128 0x5
+ 2024 0788 03       		.byte	0x3
+ 2025 0789 00000000 		.4byte	PasosSM4
+ 2026 078d 17       		.uleb128 0x17
+ 2027 078e 9F010000 		.4byte	.LASF37
+ 2028 0792 9F010000 		.4byte	.LASF37
+ 2029 0796 06       		.byte	0x6
+ 2030 0797 3D       		.byte	0x3d
+ 2031 0798 17       		.uleb128 0x17
+ 2032 0799 39010000 		.4byte	.LASF38
+ 2033 079d 39010000 		.4byte	.LASF38
+ 2034 07a1 06       		.byte	0x6
+ 2035 07a2 3C       		.byte	0x3c
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 42
+
+
+ 2036 07a3 17       		.uleb128 0x17
+ 2037 07a4 73010000 		.4byte	.LASF39
+ 2038 07a8 73010000 		.4byte	.LASF39
+ 2039 07ac 06       		.byte	0x6
+ 2040 07ad 61       		.byte	0x61
+ 2041 07ae 17       		.uleb128 0x17
+ 2042 07af 84000000 		.4byte	.LASF40
+ 2043 07b3 84000000 		.4byte	.LASF40
+ 2044 07b7 07       		.byte	0x7
+ 2045 07b8 C7       		.byte	0xc7
+ 2046 07b9 17       		.uleb128 0x17
+ 2047 07ba 96000000 		.4byte	.LASF41
+ 2048 07be 96000000 		.4byte	.LASF41
+ 2049 07c2 07       		.byte	0x7
+ 2050 07c3 CA       		.byte	0xca
+ 2051 07c4 17       		.uleb128 0x17
+ 2052 07c5 C7000000 		.4byte	.LASF42
+ 2053 07c9 C7000000 		.4byte	.LASF42
+ 2054 07cd 08       		.byte	0x8
+ 2055 07ce C7       		.byte	0xc7
+ 2056 07cf 17       		.uleb128 0x17
+ 2057 07d0 DB000000 		.4byte	.LASF43
+ 2058 07d4 DB000000 		.4byte	.LASF43
+ 2059 07d8 08       		.byte	0x8
+ 2060 07d9 CA       		.byte	0xca
+ 2061 07da 17       		.uleb128 0x17
+ 2062 07db 2B030000 		.4byte	.LASF44
+ 2063 07df 2B030000 		.4byte	.LASF44
+ 2064 07e3 09       		.byte	0x9
+ 2065 07e4 76       		.byte	0x76
+ 2066 07e5 17       		.uleb128 0x17
+ 2067 07e6 51010000 		.4byte	.LASF45
+ 2068 07ea 51010000 		.4byte	.LASF45
+ 2069 07ee 0A       		.byte	0xa
+ 2070 07ef 29       		.byte	0x29
+ 2071 07f0 17       		.uleb128 0x17
+ 2072 07f1 34000000 		.4byte	.LASF46
+ 2073 07f5 34000000 		.4byte	.LASF46
+ 2074 07f9 0B       		.byte	0xb
+ 2075 07fa 5B       		.byte	0x5b
+ 2076 07fb 17       		.uleb128 0x17
+ 2077 07fc A8000000 		.4byte	.LASF47
+ 2078 0800 A8000000 		.4byte	.LASF47
+ 2079 0804 0B       		.byte	0xb
+ 2080 0805 5A       		.byte	0x5a
+ 2081 0806 17       		.uleb128 0x17
+ 2082 0807 B2010000 		.4byte	.LASF48
+ 2083 080b B2010000 		.4byte	.LASF48
+ 2084 080f 0A       		.byte	0xa
+ 2085 0810 2B       		.byte	0x2b
+ 2086 0811 17       		.uleb128 0x17
+ 2087 0812 78020000 		.4byte	.LASF49
+ 2088 0816 78020000 		.4byte	.LASF49
+ 2089 081a 0C       		.byte	0xc
+ 2090 081b 18       		.byte	0x18
+ 2091 081c 17       		.uleb128 0x17
+ 2092 081d 33030000 		.4byte	.LASF50
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 43
+
+
+ 2093 0821 33030000 		.4byte	.LASF50
+ 2094 0825 0D       		.byte	0xd
+ 2095 0826 18       		.byte	0x18
+ 2096 0827 17       		.uleb128 0x17
+ 2097 0828 05020000 		.4byte	.LASF51
+ 2098 082c 05020000 		.4byte	.LASF51
+ 2099 0830 07       		.byte	0x7
+ 2100 0831 92       		.byte	0x92
+ 2101 0832 17       		.uleb128 0x17
+ 2102 0833 07000000 		.4byte	.LASF52
+ 2103 0837 07000000 		.4byte	.LASF52
+ 2104 083b 08       		.byte	0x8
+ 2105 083c 92       		.byte	0x92
+ 2106 083d 17       		.uleb128 0x17
+ 2107 083e 5F000000 		.4byte	.LASF53
+ 2108 0842 5F000000 		.4byte	.LASF53
+ 2109 0846 06       		.byte	0x6
+ 2110 0847 38       		.byte	0x38
+ 2111 0848 00       		.byte	0
+ 2112              		.section	.debug_abbrev,"",%progbits
+ 2113              	.Ldebug_abbrev0:
+ 2114 0000 01       		.uleb128 0x1
+ 2115 0001 11       		.uleb128 0x11
+ 2116 0002 01       		.byte	0x1
+ 2117 0003 25       		.uleb128 0x25
+ 2118 0004 0E       		.uleb128 0xe
+ 2119 0005 13       		.uleb128 0x13
+ 2120 0006 0B       		.uleb128 0xb
+ 2121 0007 03       		.uleb128 0x3
+ 2122 0008 0E       		.uleb128 0xe
+ 2123 0009 1B       		.uleb128 0x1b
+ 2124 000a 0E       		.uleb128 0xe
+ 2125 000b 55       		.uleb128 0x55
+ 2126 000c 17       		.uleb128 0x17
+ 2127 000d 11       		.uleb128 0x11
+ 2128 000e 01       		.uleb128 0x1
+ 2129 000f 10       		.uleb128 0x10
+ 2130 0010 17       		.uleb128 0x17
+ 2131 0011 00       		.byte	0
+ 2132 0012 00       		.byte	0
+ 2133 0013 02       		.uleb128 0x2
+ 2134 0014 24       		.uleb128 0x24
+ 2135 0015 00       		.byte	0
+ 2136 0016 0B       		.uleb128 0xb
+ 2137 0017 0B       		.uleb128 0xb
+ 2138 0018 3E       		.uleb128 0x3e
+ 2139 0019 0B       		.uleb128 0xb
+ 2140 001a 03       		.uleb128 0x3
+ 2141 001b 0E       		.uleb128 0xe
+ 2142 001c 00       		.byte	0
+ 2143 001d 00       		.byte	0
+ 2144 001e 03       		.uleb128 0x3
+ 2145 001f 16       		.uleb128 0x16
+ 2146 0020 00       		.byte	0
+ 2147 0021 03       		.uleb128 0x3
+ 2148 0022 0E       		.uleb128 0xe
+ 2149 0023 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 44
+
+
+ 2150 0024 0B       		.uleb128 0xb
+ 2151 0025 3B       		.uleb128 0x3b
+ 2152 0026 0B       		.uleb128 0xb
+ 2153 0027 49       		.uleb128 0x49
+ 2154 0028 13       		.uleb128 0x13
+ 2155 0029 00       		.byte	0
+ 2156 002a 00       		.byte	0
+ 2157 002b 04       		.uleb128 0x4
+ 2158 002c 24       		.uleb128 0x24
+ 2159 002d 00       		.byte	0
+ 2160 002e 0B       		.uleb128 0xb
+ 2161 002f 0B       		.uleb128 0xb
+ 2162 0030 3E       		.uleb128 0x3e
+ 2163 0031 0B       		.uleb128 0xb
+ 2164 0032 03       		.uleb128 0x3
+ 2165 0033 08       		.uleb128 0x8
+ 2166 0034 00       		.byte	0
+ 2167 0035 00       		.byte	0
+ 2168 0036 05       		.uleb128 0x5
+ 2169 0037 16       		.uleb128 0x16
+ 2170 0038 00       		.byte	0
+ 2171 0039 03       		.uleb128 0x3
+ 2172 003a 0E       		.uleb128 0xe
+ 2173 003b 3A       		.uleb128 0x3a
+ 2174 003c 0B       		.uleb128 0xb
+ 2175 003d 3B       		.uleb128 0x3b
+ 2176 003e 05       		.uleb128 0x5
+ 2177 003f 49       		.uleb128 0x49
+ 2178 0040 13       		.uleb128 0x13
+ 2179 0041 00       		.byte	0
+ 2180 0042 00       		.byte	0
+ 2181 0043 06       		.uleb128 0x6
+ 2182 0044 35       		.uleb128 0x35
+ 2183 0045 00       		.byte	0
+ 2184 0046 49       		.uleb128 0x49
+ 2185 0047 13       		.uleb128 0x13
+ 2186 0048 00       		.byte	0
+ 2187 0049 00       		.byte	0
+ 2188 004a 07       		.uleb128 0x7
+ 2189 004b 2E       		.uleb128 0x2e
+ 2190 004c 01       		.byte	0x1
+ 2191 004d 3F       		.uleb128 0x3f
+ 2192 004e 19       		.uleb128 0x19
+ 2193 004f 03       		.uleb128 0x3
+ 2194 0050 0E       		.uleb128 0xe
+ 2195 0051 3A       		.uleb128 0x3a
+ 2196 0052 0B       		.uleb128 0xb
+ 2197 0053 3B       		.uleb128 0x3b
+ 2198 0054 0B       		.uleb128 0xb
+ 2199 0055 11       		.uleb128 0x11
+ 2200 0056 01       		.uleb128 0x1
+ 2201 0057 12       		.uleb128 0x12
+ 2202 0058 06       		.uleb128 0x6
+ 2203 0059 40       		.uleb128 0x40
+ 2204 005a 18       		.uleb128 0x18
+ 2205 005b 9742     		.uleb128 0x2117
+ 2206 005d 19       		.uleb128 0x19
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 45
+
+
+ 2207 005e 01       		.uleb128 0x1
+ 2208 005f 13       		.uleb128 0x13
+ 2209 0060 00       		.byte	0
+ 2210 0061 00       		.byte	0
+ 2211 0062 08       		.uleb128 0x8
+ 2212 0063 898201   		.uleb128 0x4109
+ 2213 0066 01       		.byte	0x1
+ 2214 0067 11       		.uleb128 0x11
+ 2215 0068 01       		.uleb128 0x1
+ 2216 0069 31       		.uleb128 0x31
+ 2217 006a 13       		.uleb128 0x13
+ 2218 006b 01       		.uleb128 0x1
+ 2219 006c 13       		.uleb128 0x13
+ 2220 006d 00       		.byte	0
+ 2221 006e 00       		.byte	0
+ 2222 006f 09       		.uleb128 0x9
+ 2223 0070 8A8201   		.uleb128 0x410a
+ 2224 0073 00       		.byte	0
+ 2225 0074 02       		.uleb128 0x2
+ 2226 0075 18       		.uleb128 0x18
+ 2227 0076 9142     		.uleb128 0x2111
+ 2228 0078 18       		.uleb128 0x18
+ 2229 0079 00       		.byte	0
+ 2230 007a 00       		.byte	0
+ 2231 007b 0A       		.uleb128 0xa
+ 2232 007c 898201   		.uleb128 0x4109
+ 2233 007f 00       		.byte	0
+ 2234 0080 11       		.uleb128 0x11
+ 2235 0081 01       		.uleb128 0x1
+ 2236 0082 31       		.uleb128 0x31
+ 2237 0083 13       		.uleb128 0x13
+ 2238 0084 00       		.byte	0
+ 2239 0085 00       		.byte	0
+ 2240 0086 0B       		.uleb128 0xb
+ 2241 0087 2E       		.uleb128 0x2e
+ 2242 0088 01       		.byte	0x1
+ 2243 0089 3F       		.uleb128 0x3f
+ 2244 008a 19       		.uleb128 0x19
+ 2245 008b 03       		.uleb128 0x3
+ 2246 008c 0E       		.uleb128 0xe
+ 2247 008d 3A       		.uleb128 0x3a
+ 2248 008e 0B       		.uleb128 0xb
+ 2249 008f 3B       		.uleb128 0x3b
+ 2250 0090 0B       		.uleb128 0xb
+ 2251 0091 27       		.uleb128 0x27
+ 2252 0092 19       		.uleb128 0x19
+ 2253 0093 11       		.uleb128 0x11
+ 2254 0094 01       		.uleb128 0x1
+ 2255 0095 12       		.uleb128 0x12
+ 2256 0096 06       		.uleb128 0x6
+ 2257 0097 40       		.uleb128 0x40
+ 2258 0098 18       		.uleb128 0x18
+ 2259 0099 9742     		.uleb128 0x2117
+ 2260 009b 19       		.uleb128 0x19
+ 2261 009c 01       		.uleb128 0x1
+ 2262 009d 13       		.uleb128 0x13
+ 2263 009e 00       		.byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 46
+
+
+ 2264 009f 00       		.byte	0
+ 2265 00a0 0C       		.uleb128 0xc
+ 2266 00a1 05       		.uleb128 0x5
+ 2267 00a2 00       		.byte	0
+ 2268 00a3 03       		.uleb128 0x3
+ 2269 00a4 0E       		.uleb128 0xe
+ 2270 00a5 3A       		.uleb128 0x3a
+ 2271 00a6 0B       		.uleb128 0xb
+ 2272 00a7 3B       		.uleb128 0x3b
+ 2273 00a8 0B       		.uleb128 0xb
+ 2274 00a9 49       		.uleb128 0x49
+ 2275 00aa 13       		.uleb128 0x13
+ 2276 00ab 02       		.uleb128 0x2
+ 2277 00ac 17       		.uleb128 0x17
+ 2278 00ad 00       		.byte	0
+ 2279 00ae 00       		.byte	0
+ 2280 00af 0D       		.uleb128 0xd
+ 2281 00b0 0B       		.uleb128 0xb
+ 2282 00b1 01       		.byte	0x1
+ 2283 00b2 11       		.uleb128 0x11
+ 2284 00b3 01       		.uleb128 0x1
+ 2285 00b4 12       		.uleb128 0x12
+ 2286 00b5 06       		.uleb128 0x6
+ 2287 00b6 01       		.uleb128 0x1
+ 2288 00b7 13       		.uleb128 0x13
+ 2289 00b8 00       		.byte	0
+ 2290 00b9 00       		.byte	0
+ 2291 00ba 0E       		.uleb128 0xe
+ 2292 00bb 34       		.uleb128 0x34
+ 2293 00bc 00       		.byte	0
+ 2294 00bd 03       		.uleb128 0x3
+ 2295 00be 08       		.uleb128 0x8
+ 2296 00bf 3A       		.uleb128 0x3a
+ 2297 00c0 0B       		.uleb128 0xb
+ 2298 00c1 3B       		.uleb128 0x3b
+ 2299 00c2 0B       		.uleb128 0xb
+ 2300 00c3 49       		.uleb128 0x49
+ 2301 00c4 13       		.uleb128 0x13
+ 2302 00c5 02       		.uleb128 0x2
+ 2303 00c6 17       		.uleb128 0x17
+ 2304 00c7 00       		.byte	0
+ 2305 00c8 00       		.byte	0
+ 2306 00c9 0F       		.uleb128 0xf
+ 2307 00ca 898201   		.uleb128 0x4109
+ 2308 00cd 01       		.byte	0x1
+ 2309 00ce 11       		.uleb128 0x11
+ 2310 00cf 01       		.uleb128 0x1
+ 2311 00d0 31       		.uleb128 0x31
+ 2312 00d1 13       		.uleb128 0x13
+ 2313 00d2 00       		.byte	0
+ 2314 00d3 00       		.byte	0
+ 2315 00d4 10       		.uleb128 0x10
+ 2316 00d5 0B       		.uleb128 0xb
+ 2317 00d6 01       		.byte	0x1
+ 2318 00d7 55       		.uleb128 0x55
+ 2319 00d8 17       		.uleb128 0x17
+ 2320 00d9 01       		.uleb128 0x1
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 47
+
+
+ 2321 00da 13       		.uleb128 0x13
+ 2322 00db 00       		.byte	0
+ 2323 00dc 00       		.byte	0
+ 2324 00dd 11       		.uleb128 0x11
+ 2325 00de 2E       		.uleb128 0x2e
+ 2326 00df 01       		.byte	0x1
+ 2327 00e0 3F       		.uleb128 0x3f
+ 2328 00e1 19       		.uleb128 0x19
+ 2329 00e2 03       		.uleb128 0x3
+ 2330 00e3 0E       		.uleb128 0xe
+ 2331 00e4 3A       		.uleb128 0x3a
+ 2332 00e5 0B       		.uleb128 0xb
+ 2333 00e6 3B       		.uleb128 0x3b
+ 2334 00e7 05       		.uleb128 0x5
+ 2335 00e8 49       		.uleb128 0x49
+ 2336 00e9 13       		.uleb128 0x13
+ 2337 00ea 8701     		.uleb128 0x87
+ 2338 00ec 19       		.uleb128 0x19
+ 2339 00ed 11       		.uleb128 0x11
+ 2340 00ee 01       		.uleb128 0x1
+ 2341 00ef 12       		.uleb128 0x12
+ 2342 00f0 06       		.uleb128 0x6
+ 2343 00f1 40       		.uleb128 0x40
+ 2344 00f2 18       		.uleb128 0x18
+ 2345 00f3 9742     		.uleb128 0x2117
+ 2346 00f5 19       		.uleb128 0x19
+ 2347 00f6 01       		.uleb128 0x1
+ 2348 00f7 13       		.uleb128 0x13
+ 2349 00f8 00       		.byte	0
+ 2350 00f9 00       		.byte	0
+ 2351 00fa 12       		.uleb128 0x12
+ 2352 00fb 34       		.uleb128 0x34
+ 2353 00fc 00       		.byte	0
+ 2354 00fd 03       		.uleb128 0x3
+ 2355 00fe 0E       		.uleb128 0xe
+ 2356 00ff 3A       		.uleb128 0x3a
+ 2357 0100 0B       		.uleb128 0xb
+ 2358 0101 3B       		.uleb128 0x3b
+ 2359 0102 05       		.uleb128 0x5
+ 2360 0103 49       		.uleb128 0x49
+ 2361 0104 13       		.uleb128 0x13
+ 2362 0105 3F       		.uleb128 0x3f
+ 2363 0106 19       		.uleb128 0x19
+ 2364 0107 3C       		.uleb128 0x3c
+ 2365 0108 19       		.uleb128 0x19
+ 2366 0109 00       		.byte	0
+ 2367 010a 00       		.byte	0
+ 2368 010b 13       		.uleb128 0x13
+ 2369 010c 34       		.uleb128 0x34
+ 2370 010d 00       		.byte	0
+ 2371 010e 03       		.uleb128 0x3
+ 2372 010f 08       		.uleb128 0x8
+ 2373 0110 3A       		.uleb128 0x3a
+ 2374 0111 0B       		.uleb128 0xb
+ 2375 0112 3B       		.uleb128 0x3b
+ 2376 0113 0B       		.uleb128 0xb
+ 2377 0114 49       		.uleb128 0x49
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 48
+
+
+ 2378 0115 13       		.uleb128 0x13
+ 2379 0116 3F       		.uleb128 0x3f
+ 2380 0117 19       		.uleb128 0x19
+ 2381 0118 02       		.uleb128 0x2
+ 2382 0119 18       		.uleb128 0x18
+ 2383 011a 00       		.byte	0
+ 2384 011b 00       		.byte	0
+ 2385 011c 14       		.uleb128 0x14
+ 2386 011d 34       		.uleb128 0x34
+ 2387 011e 00       		.byte	0
+ 2388 011f 03       		.uleb128 0x3
+ 2389 0120 0E       		.uleb128 0xe
+ 2390 0121 3A       		.uleb128 0x3a
+ 2391 0122 0B       		.uleb128 0xb
+ 2392 0123 3B       		.uleb128 0x3b
+ 2393 0124 0B       		.uleb128 0xb
+ 2394 0125 49       		.uleb128 0x49
+ 2395 0126 13       		.uleb128 0x13
+ 2396 0127 3F       		.uleb128 0x3f
+ 2397 0128 19       		.uleb128 0x19
+ 2398 0129 02       		.uleb128 0x2
+ 2399 012a 18       		.uleb128 0x18
+ 2400 012b 00       		.byte	0
+ 2401 012c 00       		.byte	0
+ 2402 012d 15       		.uleb128 0x15
+ 2403 012e 01       		.uleb128 0x1
+ 2404 012f 01       		.byte	0x1
+ 2405 0130 49       		.uleb128 0x49
+ 2406 0131 13       		.uleb128 0x13
+ 2407 0132 01       		.uleb128 0x1
+ 2408 0133 13       		.uleb128 0x13
+ 2409 0134 00       		.byte	0
+ 2410 0135 00       		.byte	0
+ 2411 0136 16       		.uleb128 0x16
+ 2412 0137 21       		.uleb128 0x21
+ 2413 0138 00       		.byte	0
+ 2414 0139 49       		.uleb128 0x49
+ 2415 013a 13       		.uleb128 0x13
+ 2416 013b 2F       		.uleb128 0x2f
+ 2417 013c 0B       		.uleb128 0xb
+ 2418 013d 00       		.byte	0
+ 2419 013e 00       		.byte	0
+ 2420 013f 17       		.uleb128 0x17
+ 2421 0140 2E       		.uleb128 0x2e
+ 2422 0141 00       		.byte	0
+ 2423 0142 3F       		.uleb128 0x3f
+ 2424 0143 19       		.uleb128 0x19
+ 2425 0144 3C       		.uleb128 0x3c
+ 2426 0145 19       		.uleb128 0x19
+ 2427 0146 6E       		.uleb128 0x6e
+ 2428 0147 0E       		.uleb128 0xe
+ 2429 0148 03       		.uleb128 0x3
+ 2430 0149 0E       		.uleb128 0xe
+ 2431 014a 3A       		.uleb128 0x3a
+ 2432 014b 0B       		.uleb128 0xb
+ 2433 014c 3B       		.uleb128 0x3b
+ 2434 014d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 49
+
+
+ 2435 014e 00       		.byte	0
+ 2436 014f 00       		.byte	0
+ 2437 0150 00       		.byte	0
+ 2438              		.section	.debug_loc,"",%progbits
+ 2439              	.Ldebug_loc0:
+ 2440              	.LLST0:
+ 2441 0000 00000000 		.4byte	.LVL11
+ 2442 0004 0E000000 		.4byte	.LVL13
+ 2443 0008 0100     		.2byte	0x1
+ 2444 000a 50       		.byte	0x50
+ 2445 000b 0E000000 		.4byte	.LVL13
+ 2446 000f 80020000 		.4byte	.LFE64
+ 2447 0013 0400     		.2byte	0x4
+ 2448 0015 F3       		.byte	0xf3
+ 2449 0016 01       		.uleb128 0x1
+ 2450 0017 50       		.byte	0x50
+ 2451 0018 9F       		.byte	0x9f
+ 2452 0019 00000000 		.4byte	0
+ 2453 001d 00000000 		.4byte	0
+ 2454              	.LLST1:
+ 2455 0021 00000000 		.4byte	.LVL11
+ 2456 0025 0E000000 		.4byte	.LVL13
+ 2457 0029 0100     		.2byte	0x1
+ 2458 002b 51       		.byte	0x51
+ 2459 002c 0E000000 		.4byte	.LVL13
+ 2460 0030 80020000 		.4byte	.LFE64
+ 2461 0034 0400     		.2byte	0x4
+ 2462 0036 F3       		.byte	0xf3
+ 2463 0037 01       		.uleb128 0x1
+ 2464 0038 51       		.byte	0x51
+ 2465 0039 9F       		.byte	0x9f
+ 2466 003a 00000000 		.4byte	0
+ 2467 003e 00000000 		.4byte	0
+ 2468              	.LLST2:
+ 2469 0042 08000000 		.4byte	.LVL12
+ 2470 0046 0E000000 		.4byte	.LVL13
+ 2471 004a 0400     		.2byte	0x4
+ 2472 004c 0A       		.byte	0xa
+ 2473 004d 800C     		.2byte	0xc80
+ 2474 004f 9F       		.byte	0x9f
+ 2475 0050 0E000000 		.4byte	.LVL13
+ 2476 0054 44000000 		.4byte	.LVL19
+ 2477 0058 0100     		.2byte	0x1
+ 2478 005a 54       		.byte	0x54
+ 2479 005b 46000000 		.4byte	.LVL20
+ 2480 005f 50000000 		.4byte	.LVL21
+ 2481 0063 0100     		.2byte	0x1
+ 2482 0065 54       		.byte	0x54
+ 2483 0066 00000000 		.4byte	0
+ 2484 006a 00000000 		.4byte	0
+ 2485              	.LLST3:
+ 2486 006e 52000000 		.4byte	.LVL22
+ 2487 0072 C6000000 		.4byte	.LVL28
+ 2488 0076 0100     		.2byte	0x1
+ 2489 0078 54       		.byte	0x54
+ 2490 0079 C8000000 		.4byte	.LVL29
+ 2491 007d DC000000 		.4byte	.LVL30
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 50
+
+
+ 2492 0081 0100     		.2byte	0x1
+ 2493 0083 54       		.byte	0x54
+ 2494 0084 30010000 		.4byte	.LVL38
+ 2495 0088 32010000 		.4byte	.LVL39
+ 2496 008c 0100     		.2byte	0x1
+ 2497 008e 54       		.byte	0x54
+ 2498 008f 40010000 		.4byte	.LVL40
+ 2499 0093 8A010000 		.4byte	.LVL45
+ 2500 0097 0100     		.2byte	0x1
+ 2501 0099 54       		.byte	0x54
+ 2502 009a A8010000 		.4byte	.LVL49
+ 2503 009e BE010000 		.4byte	.LVL51
+ 2504 00a2 0100     		.2byte	0x1
+ 2505 00a4 54       		.byte	0x54
+ 2506 00a5 DE010000 		.4byte	.LVL55
+ 2507 00a9 54020000 		.4byte	.LVL67
+ 2508 00ad 0100     		.2byte	0x1
+ 2509 00af 54       		.byte	0x54
+ 2510 00b0 00000000 		.4byte	0
+ 2511 00b4 00000000 		.4byte	0
+ 2512              	.LLST4:
+ 2513 00b8 DC000000 		.4byte	.LVL30
+ 2514 00bc 2C010000 		.4byte	.LVL36
+ 2515 00c0 0100     		.2byte	0x1
+ 2516 00c2 54       		.byte	0x54
+ 2517 00c3 2E010000 		.4byte	.LVL37
+ 2518 00c7 30010000 		.4byte	.LVL38
+ 2519 00cb 0100     		.2byte	0x1
+ 2520 00cd 54       		.byte	0x54
+ 2521 00ce 32010000 		.4byte	.LVL39
+ 2522 00d2 40010000 		.4byte	.LVL40
+ 2523 00d6 0100     		.2byte	0x1
+ 2524 00d8 54       		.byte	0x54
+ 2525 00d9 00000000 		.4byte	0
+ 2526 00dd 00000000 		.4byte	0
+ 2527              	.LLST5:
+ 2528 00e1 8A010000 		.4byte	.LVL45
+ 2529 00e5 9A010000 		.4byte	.LVL47
+ 2530 00e9 0100     		.2byte	0x1
+ 2531 00eb 54       		.byte	0x54
+ 2532 00ec 9C010000 		.4byte	.LVL48
+ 2533 00f0 A8010000 		.4byte	.LVL49
+ 2534 00f4 0100     		.2byte	0x1
+ 2535 00f6 54       		.byte	0x54
+ 2536 00f7 00000000 		.4byte	0
+ 2537 00fb 00000000 		.4byte	0
+ 2538              	.LLST6:
+ 2539 00ff BE010000 		.4byte	.LVL51
+ 2540 0103 D0010000 		.4byte	.LVL53
+ 2541 0107 0100     		.2byte	0x1
+ 2542 0109 54       		.byte	0x54
+ 2543 010a D2010000 		.4byte	.LVL54
+ 2544 010e DE010000 		.4byte	.LVL55
+ 2545 0112 0100     		.2byte	0x1
+ 2546 0114 54       		.byte	0x54
+ 2547 0115 00000000 		.4byte	0
+ 2548 0119 00000000 		.4byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 51
+
+
+ 2549              	.LLST7:
+ 2550 011d 22020000 		.4byte	.LVL61
+ 2551 0121 30020000 		.4byte	.LVL63
+ 2552 0125 0100     		.2byte	0x1
+ 2553 0127 57       		.byte	0x57
+ 2554 0128 32020000 		.4byte	.LVL64
+ 2555 012c 3E020000 		.4byte	.LVL65
+ 2556 0130 0100     		.2byte	0x1
+ 2557 0132 57       		.byte	0x57
+ 2558 0133 00000000 		.4byte	0
+ 2559 0137 00000000 		.4byte	0
+ 2560              	.LLST8:
+ 2561 013b 54020000 		.4byte	.LVL67
+ 2562 013f 66020000 		.4byte	.LVL69
+ 2563 0143 0100     		.2byte	0x1
+ 2564 0145 54       		.byte	0x54
+ 2565 0146 68020000 		.4byte	.LVL70
+ 2566 014a 72020000 		.4byte	.LVL71
+ 2567 014e 0100     		.2byte	0x1
+ 2568 0150 54       		.byte	0x54
+ 2569 0151 00000000 		.4byte	0
+ 2570 0155 00000000 		.4byte	0
+ 2571              	.LLST9:
+ 2572 0159 00000000 		.4byte	.LVL73
+ 2573 015d 08000000 		.4byte	.LVL74
+ 2574 0161 0100     		.2byte	0x1
+ 2575 0163 50       		.byte	0x50
+ 2576 0164 08000000 		.4byte	.LVL74
+ 2577 0168 9C000000 		.4byte	.LFE65
+ 2578 016c 0400     		.2byte	0x4
+ 2579 016e F3       		.byte	0xf3
+ 2580 016f 01       		.uleb128 0x1
+ 2581 0170 50       		.byte	0x50
+ 2582 0171 9F       		.byte	0x9f
+ 2583 0172 00000000 		.4byte	0
+ 2584 0176 00000000 		.4byte	0
+ 2585              		.section	.debug_aranges,"",%progbits
+ 2586 0000 44000000 		.4byte	0x44
+ 2587 0004 0200     		.2byte	0x2
+ 2588 0006 00000000 		.4byte	.Ldebug_info0
+ 2589 000a 04       		.byte	0x4
+ 2590 000b 00       		.byte	0
+ 2591 000c 0000     		.2byte	0
+ 2592 000e 0000     		.2byte	0
+ 2593 0010 00000000 		.4byte	.LFB63
+ 2594 0014 94000000 		.4byte	.LFE63-.LFB63
+ 2595 0018 00000000 		.4byte	.LFB64
+ 2596 001c 80020000 		.4byte	.LFE64-.LFB64
+ 2597 0020 00000000 		.4byte	.LFB65
+ 2598 0024 9C000000 		.4byte	.LFE65-.LFB65
+ 2599 0028 00000000 		.4byte	.LFB66
+ 2600 002c 0E000000 		.4byte	.LFE66-.LFB66
+ 2601 0030 00000000 		.4byte	.LFB67
+ 2602 0034 80000000 		.4byte	.LFE67-.LFB67
+ 2603 0038 00000000 		.4byte	.LFB68
+ 2604 003c 7C000000 		.4byte	.LFE68-.LFB68
+ 2605 0040 00000000 		.4byte	0
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 52
+
+
+ 2606 0044 00000000 		.4byte	0
+ 2607              		.section	.debug_ranges,"",%progbits
+ 2608              	.Ldebug_ranges0:
+ 2609 0000 DC000000 		.4byte	.LBB4
+ 2610 0004 30010000 		.4byte	.LBE4
+ 2611 0008 32010000 		.4byte	.LBB5
+ 2612 000c 40010000 		.4byte	.LBE5
+ 2613 0010 00000000 		.4byte	0
+ 2614 0014 00000000 		.4byte	0
+ 2615 0018 00000000 		.4byte	.LFB63
+ 2616 001c 94000000 		.4byte	.LFE63
+ 2617 0020 00000000 		.4byte	.LFB64
+ 2618 0024 80020000 		.4byte	.LFE64
+ 2619 0028 00000000 		.4byte	.LFB65
+ 2620 002c 9C000000 		.4byte	.LFE65
+ 2621 0030 00000000 		.4byte	.LFB66
+ 2622 0034 0E000000 		.4byte	.LFE66
+ 2623 0038 00000000 		.4byte	.LFB67
+ 2624 003c 80000000 		.4byte	.LFE67
+ 2625 0040 00000000 		.4byte	.LFB68
+ 2626 0044 7C000000 		.4byte	.LFE68
+ 2627 0048 00000000 		.4byte	0
+ 2628 004c 00000000 		.4byte	0
+ 2629              		.section	.debug_line,"",%progbits
+ 2630              	.Ldebug_line0:
+ 2631 0000 FC020000 		.section	.debug_str,"MS",%progbits,1
+ 2631      0200A101 
+ 2631      00000201 
+ 2631      FB0E0D00 
+ 2631      01010101 
+ 2632              	.LASF18:
+ 2633 0000 6E756D65 		.ascii	"numero\000"
+ 2633      726F00
+ 2634              	.LASF52:
+ 2635 0007 50574D5F 		.ascii	"PWM_1_Start\000"
+ 2635      315F5374 
+ 2635      61727400 
+ 2636              	.LASF2:
+ 2637 0013 73686F72 		.ascii	"short int\000"
+ 2637      7420696E 
+ 2637      7400
+ 2638              	.LASF17:
+ 2639 001d 73697A65 		.ascii	"sizetype\000"
+ 2639      74797065 
+ 2639      00
+ 2640              	.LASF31:
+ 2641 0026 496E6665 		.ascii	"Inferior\000"
+ 2641      72696F72 
+ 2641      00
+ 2642              	.LASF58:
+ 2643 002f 6D61696E 		.ascii	"main\000"
+ 2643      00
+ 2644              	.LASF46:
+ 2645 0034 54696D65 		.ascii	"Timer_Stop\000"
+ 2645      725F5374 
+ 2645      6F7000
+ 2646              	.LASF12:
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 53
+
+
+ 2647 003f 75696E74 		.ascii	"uint16\000"
+ 2647      313600
+ 2648              	.LASF33:
+ 2649 0046 5061736F 		.ascii	"PasosSM1\000"
+ 2649      73534D31 
+ 2649      00
+ 2650              	.LASF20:
+ 2651 004f 4E756D65 		.ascii	"Numero\000"
+ 2651      726F00
+ 2652              	.LASF36:
+ 2653 0056 5061736F 		.ascii	"PasosSM4\000"
+ 2653      73534D34 
+ 2653      00
+ 2654              	.LASF53:
+ 2655 005f 4C43445F 		.ascii	"LCD_Start\000"
+ 2655      53746172 
+ 2655      7400
+ 2656              	.LASF28:
+ 2657 0069 755F686F 		.ascii	"u_hora\000"
+ 2657      726100
+ 2658              	.LASF13:
+ 2659 0070 666C6F61 		.ascii	"float\000"
+ 2659      7400
+ 2660              	.LASF6:
+ 2661 0076 6C6F6E67 		.ascii	"long long int\000"
+ 2661      206C6F6E 
+ 2661      6720696E 
+ 2661      7400
+ 2662              	.LASF40:
+ 2663 0084 50574D5F 		.ascii	"PWM_WriteCompare1\000"
+ 2663      57726974 
+ 2663      65436F6D 
+ 2663      70617265 
+ 2663      3100
+ 2664              	.LASF41:
+ 2665 0096 50574D5F 		.ascii	"PWM_WriteCompare2\000"
+ 2665      57726974 
+ 2665      65436F6D 
+ 2665      70617265 
+ 2665      3200
+ 2666              	.LASF47:
+ 2667 00a8 54696D65 		.ascii	"Timer_Start\000"
+ 2667      725F5374 
+ 2667      61727400 
+ 2668              	.LASF4:
+ 2669 00b4 6C6F6E67 		.ascii	"long int\000"
+ 2669      20696E74 
+ 2669      00
+ 2670              	.LASF57:
+ 2671 00bd 76697375 		.ascii	"visualLCD\000"
+ 2671      616C4C43 
+ 2671      4400
+ 2672              	.LASF42:
+ 2673 00c7 50574D5F 		.ascii	"PWM_1_WriteCompare1\000"
+ 2673      315F5772 
+ 2673      69746543 
+ 2673      6F6D7061 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 54
+
+
+ 2673      72653100 
+ 2674              	.LASF43:
+ 2675 00db 50574D5F 		.ascii	"PWM_1_WriteCompare2\000"
+ 2675      315F5772 
+ 2675      69746543 
+ 2675      6F6D7061 
+ 2675      72653200 
+ 2676              	.LASF16:
+ 2677 00ef 6C6F6E67 		.ascii	"long double\000"
+ 2677      20646F75 
+ 2677      626C6500 
+ 2678              	.LASF1:
+ 2679 00fb 756E7369 		.ascii	"unsigned char\000"
+ 2679      676E6564 
+ 2679      20636861 
+ 2679      7200
+ 2680              	.LASF0:
+ 2681 0109 7369676E 		.ascii	"signed char\000"
+ 2681      65642063 
+ 2681      68617200 
+ 2682              	.LASF7:
+ 2683 0115 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2683      206C6F6E 
+ 2683      6720756E 
+ 2683      7369676E 
+ 2683      65642069 
+ 2684              	.LASF8:
+ 2685 012c 756E7369 		.ascii	"unsigned int\000"
+ 2685      676E6564 
+ 2685      20696E74 
+ 2685      00
+ 2686              	.LASF38:
+ 2687 0139 4C43445F 		.ascii	"LCD_PrintString\000"
+ 2687      5072696E 
+ 2687      74537472 
+ 2687      696E6700 
+ 2688              	.LASF24:
+ 2689 0149 494E545F 		.ascii	"INT_SWI\000"
+ 2689      53574900 
+ 2690              	.LASF45:
+ 2691 0151 5357495F 		.ascii	"SWI_Read\000"
+ 2691      52656164 
+ 2691      00
+ 2692              	.LASF27:
+ 2693 015a 645F6D69 		.ascii	"d_min\000"
+ 2693      6E00
+ 2694              	.LASF3:
+ 2695 0160 73686F72 		.ascii	"short unsigned int\000"
+ 2695      7420756E 
+ 2695      7369676E 
+ 2695      65642069 
+ 2695      6E7400
+ 2696              	.LASF39:
+ 2697 0173 4C43445F 		.ascii	"LCD_PrintU32Number\000"
+ 2697      5072696E 
+ 2697      74553332 
+ 2697      4E756D62 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 55
+
+
+ 2697      657200
+ 2698              	.LASF15:
+ 2699 0186 63686172 		.ascii	"char\000"
+ 2699      00
+ 2700              	.LASF10:
+ 2701 018b 696E7433 		.ascii	"int32_t\000"
+ 2701      325F7400 
+ 2702              	.LASF26:
+ 2703 0193 755F6D69 		.ascii	"u_min\000"
+ 2703      6E00
+ 2704              	.LASF11:
+ 2705 0199 75696E74 		.ascii	"uint8\000"
+ 2705      3800
+ 2706              	.LASF37:
+ 2707 019f 4C43445F 		.ascii	"LCD_Position\000"
+ 2707      506F7369 
+ 2707      74696F6E 
+ 2707      00
+ 2708              	.LASF19:
+ 2709 01ac 6D6F746F 		.ascii	"motor\000"
+ 2709      7200
+ 2710              	.LASF48:
+ 2711 01b2 5357495F 		.ascii	"SWI_ClearInterrupt\000"
+ 2711      436C6561 
+ 2711      72496E74 
+ 2711      65727275 
+ 2711      707400
+ 2712              	.LASF21:
+ 2713 01c5 7469656D 		.ascii	"tiempo\000"
+ 2713      706F00
+ 2714              	.LASF55:
+ 2715 01cc 6D61696E 		.ascii	"main.c\000"
+ 2715      2E6300
+ 2716              	.LASF5:
+ 2717 01d3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2717      20756E73 
+ 2717      69676E65 
+ 2717      6420696E 
+ 2717      7400
+ 2718              	.LASF14:
+ 2719 01e5 646F7562 		.ascii	"double\000"
+ 2719      6C6500
+ 2720              	.LASF32:
+ 2721 01ec 53757065 		.ascii	"Superior\000"
+ 2721      72696F72 
+ 2721      00
+ 2722              	.LASF30:
+ 2723 01f5 636F756E 		.ascii	"count\000"
+ 2723      7400
+ 2724              	.LASF9:
+ 2725 01fb 5F5F696E 		.ascii	"__int32_t\000"
+ 2725      7433325F 
+ 2725      7400
+ 2726              	.LASF51:
+ 2727 0205 50574D5F 		.ascii	"PWM_Start\000"
+ 2727      53746172 
+ 2727      7400
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 56
+
+
+ 2728              	.LASF56:
+ 2729 020f 433A5C55 		.ascii	"C:\\Users\\Nicolas Zamora\\Documents\\PSoC Creator\\"
+ 2729      73657273 
+ 2729      5C4E6963 
+ 2729      6F6C6173 
+ 2729      205A616D 
+ 2730 023e 54494D45 		.ascii	"TIMER\\Dimer con PWM.cydsn\000"
+ 2730      525C4469 
+ 2730      6D657220 
+ 2730      636F6E20 
+ 2730      50574D2E 
+ 2731              	.LASF29:
+ 2732 0258 645F686F 		.ascii	"d_hora\000"
+ 2732      726100
+ 2733              	.LASF34:
+ 2734 025f 5061736F 		.ascii	"PasosSM2\000"
+ 2734      73534D32 
+ 2734      00
+ 2735              	.LASF35:
+ 2736 0268 5061736F 		.ascii	"PasosSM3\000"
+ 2736      73534D33 
+ 2736      00
+ 2737              	.LASF23:
+ 2738 0271 494E545F 		.ascii	"INT_SE\000"
+ 2738      534500
+ 2739              	.LASF49:
+ 2740 0278 4953525F 		.ascii	"ISR_SWI_StartEx\000"
+ 2740      5357495F 
+ 2740      53746172 
+ 2740      74457800 
+ 2741              	.LASF22:
+ 2742 0288 61756D65 		.ascii	"aumento\000"
+ 2742      6E746F00 
+ 2743              	.LASF25:
+ 2744 0290 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2744      52784275 
+ 2744      66666572 
+ 2744      00
+ 2745              	.LASF54:
+ 2746 029d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2746      43313120 
+ 2746      352E342E 
+ 2746      31203230 
+ 2746      31363036 
+ 2747 02d0 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2747      20726576 
+ 2747      6973696F 
+ 2747      6E203233 
+ 2747      37373135 
+ 2748 0303 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2748      66756E63 
+ 2748      74696F6E 
+ 2748      2D736563 
+ 2748      74696F6E 
+ 2749              	.LASF44:
+ 2750 032b 43794465 		.ascii	"CyDelay\000"
+ 2750      6C617900 
+ARM GAS  C:\Users\NICOLA~1\AppData\Local\Temp\cc8c4xvl.s 			page 57
+
+
+ 2751              	.LASF50:
+ 2752 0333 4953525F 		.ascii	"ISR_SE_StartEx\000"
+ 2752      53455F53 
+ 2752      74617274 
+ 2752      457800
+ 2753              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

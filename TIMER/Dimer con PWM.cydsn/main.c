@@ -18,12 +18,15 @@ volatile uint8 d_hora;
 
 uint16 count;
 uint8 de=1;
-uint8 aux=0;
+uint8 aux;
 uint8 Inferior[]={12,9,11,10,9,10,0,9,0,9};
 uint8 Superior[]={8,7,6,6,4,5,5,6,8,8};
 //                0     1    2   3     4   5    6*    7*     8*    9*   10   11   12
-uint16 PasosS[]={5700/* 0*/,5380/* 1*/,5140/* 2*/,4810/* 3*/,4500/* 4*/,3900/* 5*/,3680/* 6*/,3500/* 7*/,3100/* 8*/,2925/* 9*/,2300/* 10*/,2070/* 11*/,1740/* 12*/};
-//    
+uint16 PasosSM1[]={5700/* 0*/,5380/* 1*/,5140/* 2*/,4810/* 3*/,4500/* 4*/,3900/* 5*/,3680/* 6*/,3500/* 7*/,3100/* 8*/,2925/* 9*/,2300/* 10*/,2070/* 11*/,1740/* 12*/};
+uint16 PasosSM2[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};   
+uint16 PasosSM3[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};
+uint16 PasosSM4[]={5700,5380,5140,4810,4500,4300,3680,3500,3100,2925,2300,2070,1740};
+
 
 void visualLCD(){
 
@@ -41,6 +44,154 @@ void visualLCD(){
 
 }
 
+
+void Numero(uint8 numero,uint8 motor)
+{
+    
+    for(uint16 i=3200;i<=5700;i=i+300){
+     switch (motor){
+                case 1:
+                PWM_WriteCompare1(i);  
+                break;
+                case 2:
+                PWM_WriteCompare2(i);
+                break;
+                case 3:
+                PWM_1_WriteCompare1(i);  
+                break;
+                case 4:
+                PWM_1_WriteCompare2(i);
+                break;
+                default:
+                break;
+            }
+    CyDelay(200);
+    }
+     for(uint8 i=1;i<=Inferior[numero];i++){
+     switch (motor){
+                case 1:
+                PWM_WriteCompare1(5700-330*i);  
+                break;
+                case 2:
+                PWM_WriteCompare2(5700-330*i);
+                break;
+                case 3:
+                PWM_1_WriteCompare1(5700-330*i);  
+                break;
+                case 4:
+                PWM_1_WriteCompare2(5700-330*i);
+                break;
+                default:
+                break;
+            }
+     CyDelay(200);
+    }
+    
+    if(Inferior[numero]<Superior[numero]){
+        for(uint8 i=0;i<=Superior[numero];i++){ 
+            switch (motor){
+                case 1:
+                PWM_WriteCompare1(PasosSM1[i]);  
+                break;
+                case 2:
+                PWM_WriteCompare2(PasosSM2[i]);  
+                break;
+                case 3:
+                PWM_1_WriteCompare1(PasosSM3[i]);
+                break;
+                case 4:
+                PWM_1_WriteCompare2(PasosSM4[i]);
+                break;
+                default:
+                break;
+            }
+            CyDelay(200);
+        }
+    }else{  
+            
+            switch (motor){
+                case 1:
+                PWM_WriteCompare1(PasosSM1[Inferior[numero]]);
+                switch(numero){
+                    case 0:
+                        PWM_WriteCompare1(2800); 
+                    break;
+                    case 1:
+                        PWM_WriteCompare1(3300); 
+                    break;
+                    case 4:
+                        PWM_WriteCompare1(4200); 
+                    default:
+                        for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+                            PWM_WriteCompare1(PasosSM1[i]); }
+                    break;
+                }
+                break;
+                case 3:
+                PWM_1_WriteCompare1(PasosSM3[Inferior[numero]]);
+                switch(numero){
+                    case 0:
+                    
+                    break;
+                    case 1:
+                    
+                    break;              
+                    default:
+                        for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+                             PWM_1_WriteCompare1(PasosSM3[i]);}
+                    break;
+                }
+                        
+                break;
+                case 2:
+                switch(numero){
+                    PWM_WriteCompare2(PasosSM2[Inferior[numero]]);
+                    case 1:
+                        PWM_WriteCompare2(3300); 
+                    break;
+                    case 2:
+                        PWM_WriteCompare2(3590); 
+                    break;
+                    case 4:
+                        PWM_WriteCompare2(4400); 
+                    break;
+                    case 5:
+                        PWM_WriteCompare2(4000); 
+                    break;
+                    case 7:
+                        PWM_WriteCompare2(3690); 
+                    break;
+                    default:
+                        for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+                        PWM_WriteCompare2(PasosSM2[i]);
+                        }
+                    break;
+                }
+                break;
+                case 4:
+                PWM_1_WriteCompare2(PasosSM4[Inferior[numero]]);
+                switch(numero){
+                    case 0:
+                    
+                    break;
+                    case 1:
+                    
+                    break;              
+                    default:
+                        for(uint8 i=Inferior[numero];i>Superior[numero];i--){
+                            PWM_1_WriteCompare2(PasosSM4[i]);
+                        }
+                    break;
+                }
+                break;
+                
+                default:
+                break;
+            }
+            CyDelay(200); 
+        }
+        
+    }
 void tiempo(uint8 aumento){
 seg=seg+aumento;
  if(seg>=60){    
@@ -55,71 +206,21 @@ seg=seg+aumento;
 				if(u_hora==10){
 					u_hora=0;
 					d_hora++;
-				}else{
-					if(u_hora==1){
-						if(d_hora==2){
+                    if(d_hora==2){
 						    //Reinicia Reloj
-                            u_hora=0;
-							d_hora=0;
-                            u_min=0;
-                            d_min=0;
+			    		d_hora=0;
 						}
+                    //Numero(d_hora,4);
 					}
+                //Numero(u_hora,3);
 				}
+                //Numero(d_min,1);
 			}
+            Numero(u_min,3);
 		}
+        
 	}
 
-}
-
-
-
-
-
-void Numero(uint8 numero)
-{
-    
-    for(uint16 i=3200;i<=5700;i=i+300){
-    PWM_WriteCompare1(i);
-    CyDelay(200);
-    }
-     for(uint8 i=1;i<=Inferior[numero];i++){
-     PWM_WriteCompare1(5700-330*i);
-     visual(i);
-     CyDelay(200);
-    }
-    
-    if(Inferior[numero]<Superior[numero]){
-        for(uint8 i=0;i<=Superior[numero];i++){ 
-        PWM_WriteCompare1(PasosS[i]);
-        visual(i); 
-       
-        CyDelay(200);
-        }
-    }else{
-        for(uint8 i=Inferior[numero];i>Superior[numero];i--){
-        PWM_WriteCompare1(PasosS[i]);
-        visual(i); 
-        if(numero==0)
-        {
-            PWM_WriteCompare1(2800);
-        }
-         if (numero==1)
-        {
-           
-            PWM_WriteCompare1(3300);
-            i=Superior[numero]+1;
-        }
-        if(numero==4)
-        {
-            PWM_WriteCompare1(4200);
-            i=Superior[numero]+1;
-        }
-        
-        CyDelay(200);
-        }
-    }
-}
 
 CY_ISR(INT_SE){
       tiempo(1); // Se llama tiempo cuando se llega al limite
@@ -158,13 +259,6 @@ CY_ISR(INT_SWI){
 int main(){
 
     
-    d_hora=0;
-    u_hora=2;
-    d_min=1;
-    u_min=1;
-    seg=9;
-
-    
     
     CyGlobalIntEnable; /* Enable global interrupts. */
 
@@ -172,12 +266,25 @@ int main(){
     ISR_SWI_StartEx(INT_SWI);
     ISR_SE_StartEx(INT_SE);
     PWM_Start();
+    PWM_1_Start();
     LCD_Start();
     Timer_Start();
+     
+    d_hora=0;
+    u_hora=0;
+    d_min=0;
+    u_min=0;
+    seg=0;
+    aux=1;
+    Numero(u_min,1);
+    Numero(d_min,2);
+    Numero(u_hora,3);
+    Numero(d_hora,4);
 
-    
     for(;;)
     {   
+    //Numero(uint8 numero,uint8 motor)  
+        
         
     /* CODIGO DE PRUEBA MOTOR*/    
        /*

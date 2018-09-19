@@ -44,6 +44,15 @@
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2_aliases.h" value="HEADER;;;;;Pin_min2" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2.c" value="SOURCE_C;CortexM3;;;;Pin_min2" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_min2.h" value="HEADER;;;;;Pin_min2" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\PWM_1.c" value="SOURCE_C;CortexM3;;;;PWM_1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\PWM_1.h" value="HEADER;;;;;PWM_1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\PWM_1_PM.c" value="SOURCE_C;CortexM3;;;;PWM_1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora1_aliases.h" value="HEADER;;;;;Pin_hora1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora1.c" value="SOURCE_C;CortexM3;;;;Pin_hora1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora1.h" value="HEADER;;;;;Pin_hora1" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora2_aliases.h" value="HEADER;;;;;Pin_hora2" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora2.c" value="SOURCE_C;CortexM3;;;;Pin_hora2" />
+  <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\Pin_hora2.h" value="HEADER;;;;;Pin_hora2" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD_LCDPort_aliases.h" value="HEADER;;;;;LCD_LCDPort" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD_LCDPort.c" value="SOURCE_C;CortexM3;;;;LCD_LCDPort" />
   <file name="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\codegentemp\LCD_LCDPort.h" value="HEADER;;;;;LCD_LCDPort" />
