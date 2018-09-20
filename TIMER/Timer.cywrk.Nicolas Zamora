@@ -224,6 +224,8 @@
 <name v=".\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Dimer con PWM.cydsn\main.c" />
 <name v=".\Dimer con PWM.cydsn\Dimer con PWM.cydwr" />
+<name v=".\Dimer con PWM.cydsn\Generated_Source\PSoC5\PWM.c" />
+<name v=".\Dimer con PWM.cydsn\Generated_Source\PSoC5\CyLib.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -231,7 +233,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 516" SelectedTabbedMdiWindow="f0cb066e-e84d-4276-b9a2-cfbe9a0cb7dd"><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch" Guid="76857bd1-24a1-4a29-b1cc-227c8122314f" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\main.c" Guid="f0cb066e-e84d-4276-b9a2-cfbe9a0cb7dd" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cydwr" Guid="7988b0bc-8f26-4bc5-b083-9ad835157700" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 459" SelectedTabbedMdiWindow="f0cb066e-e84d-4276-b9a2-cfbe9a0cb7dd"><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\TopDesign\TopDesign.cysch" Guid="76857bd1-24a1-4a29-b1cc-227c8122314f" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\main.c" Guid="f0cb066e-e84d-4276-b9a2-cfbe9a0cb7dd" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Dimer con PWM.cydwr" Guid="7988b0bc-8f26-4bc5-b083-9ad835157700" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5\PWM.c" Guid="faa1a934-a7a7-4ae5-ac0d-abf4b05df5a4" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\TIMER\Dimer con PWM.cydsn\Generated_Source\PSoC5\CyLib.c" Guid="b42ca308-abaa-4082-9820-d19c75f25a73" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

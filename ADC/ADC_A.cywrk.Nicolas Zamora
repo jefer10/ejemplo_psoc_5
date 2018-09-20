@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ADC_A\ADC_Aproximaciones\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="ADC_A\ADC_Aproximaciones">
 <ExpandedNodeIds>
 <v>ADC_A</v>
 <v>ADC_A\ADC_Aproximaciones</v>
@@ -204,7 +204,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 422" SelectedTabbedMdiWindow="c736e74b-51f1-4273-8586-f440a956711c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\ADC\ADC_Aproximaciones.cydsn\TopDesign\TopDesign.cysch" Guid="1cf096b0-d729-405d-b59a-8ae2b78a6991" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\ADC\ADC_Aproximaciones.cydsn\main.c" Guid="c736e74b-51f1-4273-8586-f440a956711c" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 516" SelectedTabbedMdiWindow="c736e74b-51f1-4273-8586-f440a956711c"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="db0c5d0b-f439-4b07-bdd1-1ded09f3f5a2" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\ADC\ADC_Aproximaciones.cydsn\TopDesign\TopDesign.cysch" Guid="1cf096b0-d729-405d-b59a-8ae2b78a6991" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\ADC\ADC_Aproximaciones.cydsn\main.c" Guid="c736e74b-51f1-4273-8586-f440a956711c" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
